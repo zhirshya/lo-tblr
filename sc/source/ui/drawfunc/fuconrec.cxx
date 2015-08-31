@@ -260,7 +260,7 @@ SdrObject* FuConstRectangle::CreateDefaultObject(const sal_uInt16 nID, const Rec
                     {
                         SfxItemSet aSet(pObj->GetMergedItemSet());
                         aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_CENTER));
-                        aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                        aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
                         pObj->SetMergedItemSet(aSet);
                     }
 

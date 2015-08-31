@@ -518,7 +518,7 @@ SdrObject* DrawCommandDispatch::createDefaultObject( const sal_uInt16 nID )
                                         aSet.Put( makeSdrTextAutoGrowWidthItem( true ) );
                                         aSet.Put( makeSdrTextAutoGrowHeightItem( false ) );
                                         aSet.Put( SdrTextVertAdjustItem( SDRTEXTVERTADJUST_TOP ) );
-                                        aSet.Put( SdrTextHorzAdjustItem( SDRTEXTHORZADJUST_RIGHT ) );
+                                        aSet.Put( SdrTextHorzAdjustItem( SDRTEXTHORZADJUST_LEFT ) );
                                         pTextObj->SetMergedItemSet( aSet );
                                     }
                                 }
@@ -540,7 +540,7 @@ SdrObject* DrawCommandDispatch::createDefaultObject( const sal_uInt16 nID )
                                 {
                                     SfxItemSet aSet( pObj->GetMergedItemSet() );
                                     aSet.Put( SdrTextVertAdjustItem( SDRTEXTVERTADJUST_CENTER ) );
-                                    aSet.Put( SdrTextHorzAdjustItem( SDRTEXTHORZADJUST_RIGHT ) );
+                                    aSet.Put( SdrTextHorzAdjustItem( SDRTEXTHORZADJUST_LEFT ) );
                                     pObj->SetMergedItemSet( aSet );
                                 }
                                 SdrCaptionObj* pCaptionObj = dynamic_cast< SdrCaptionObj* >( pObj );

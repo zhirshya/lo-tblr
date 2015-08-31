@@ -496,7 +496,7 @@ void FuText::ImpSetAttributesForNewTextObject(SdrTextObj* pTxtObj)
             aSet.Put(makeSdrTextAutoGrowHeightItem(false));
 
             // Needs to be set since default is SDRTEXTHORZADJUST_BLOCK
-            aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+            aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
             pTxtObj->SetMergedItemSet(aSet);
             pTxtObj->AdjustTextFrameWidthAndHeight();
             aSet.Put(makeSdrTextMaxFrameWidthItem(pTxtObj->GetLogicRect().GetSize().Width()));
@@ -518,7 +518,7 @@ void FuText::ImpSetAttributesForNewTextObject(SdrTextObj* pTxtObj)
             // SdrTextHorzAdjustItem: SDRTEXTHORZADJUST_BLOCK
             // Analog to that:
             aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_BLOCK));
-            aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+            aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
 
             pTxtObj->SetMergedItemSet(aSet);
         }

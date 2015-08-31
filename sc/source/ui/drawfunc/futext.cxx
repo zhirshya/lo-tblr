@@ -484,7 +484,7 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
                         aSet.Put(makeSdrTextAutoGrowWidthItem(true));
                         aSet.Put(makeSdrTextAutoGrowHeightItem(false));
                         aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP));
-                        aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                        aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
 
                         pText->SetMergedItemSet(aSet);
                     }
@@ -795,7 +795,7 @@ SdrObject* FuText::CreateDefaultObject(const sal_uInt16 nID, const Rectangle& rR
                 aSet.Put(makeSdrTextAutoGrowWidthItem(true));
                 aSet.Put(makeSdrTextAutoGrowHeightItem(false));
                 aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP));
-                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
 
                 pText->SetMergedItemSet(aSet);
             }

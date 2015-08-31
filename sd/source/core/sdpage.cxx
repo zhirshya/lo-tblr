@@ -2249,7 +2249,7 @@ SdrObject* SdPage::InsertAutoLayoutShape(SdrObject* pObj, PresObjKind eObjKind, 
                 // here make sure the correct anchoring is used when the object
                 // is re-used but orientation is changed
                 if(PRESOBJ_OUTLINE == eObjKind)
-                    pTextObject->SetMergedItem(SdrTextHorzAdjustItem( bVertical ? SDRTEXTHORZADJUST_RIGHT : SDRTEXTHORZADJUST_BLOCK ));
+                    pTextObject->SetMergedItem(SdrTextHorzAdjustItem( bVertical ? SDRTEXTHORZADJUST_LEFT : SDRTEXTHORZADJUST_BLOCK ));
             }
 
             if( !mbMaster && (pTextObject->GetObjIdentifier() != OBJ_TABLE) )
@@ -2309,7 +2309,7 @@ SdrObject* SdPage::InsertAutoLayoutShape(SdrObject* pObj, PresObjKind eObjKind, 
             if( eObjKind == PRESOBJ_OUTLINE )
             {
                 aNewSet.Put( SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP) );
-                aNewSet.Put( SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT) );
+                aNewSet.Put( SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT) );
             }
             pObj->SetMergedItemSet(aNewSet);
         }

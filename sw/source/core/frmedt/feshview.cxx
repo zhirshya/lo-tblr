@@ -2838,7 +2838,7 @@ long SwFEShell::GetSectionWidth( SwFormat const & rFormat ) const
             {
                 SfxItemSet aSet(pObj->GetMergedItemSet());
                 aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_CENTER));
-                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
                 pObj->SetMergedItemSet(aSet);
             }
 
@@ -2862,7 +2862,7 @@ long SwFEShell::GetSectionWidth( SwFormat const & rFormat ) const
                 aSet.Put(makeSdrTextAutoGrowWidthItem(true));
                 aSet.Put(makeSdrTextAutoGrowHeightItem(false));
                 aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP));
-                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
                 pText->SetMergedItemSet(aSet);
             }
 
