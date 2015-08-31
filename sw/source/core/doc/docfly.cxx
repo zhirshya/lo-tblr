@@ -746,8 +746,9 @@ bool SwDoc::ChgAnchor( const SdrMarkList& _rMrkList,
             case FLY_AT_PARA:
             case FLY_AT_CHAR:
                 {
-                    const Point aNewPoint = ( pOldAnchorFrm->IsVertical() ||
-                                              pOldAnchorFrm->IsRightToLeft() )
+                    //还没有发现这里的代码加入IsVertLR()后有什么不同
+                    const Point aNewPoint = pOldAnchorFrm && !pOldAnchorFrm->IsVertLR() &&
+                                            ( pOldAnchorFrm->IsVertical() || pOldAnchorFrm->IsRightToLeft() )
                                             ? aObjRect.TopRight()
                                             : aPt;
 
