@@ -3101,7 +3101,7 @@ bool SwCrsrShell::IsInRightToLeftText( const Point* pPt ) const
     const short nDir = GetTextDirection( pPt );
     // GetTextDirection uses FRMDIR_VERT_TOP_LEFT to indicate RTL in
     // vertical environment
-    return FRMDIR_VERT_TOP_LEFT == nDir || FRMDIR_HORI_RIGHT_TOP == nDir;
+    return FRMDIR_VERT_TOP_RIGHT == nDir || FRMDIR_HORI_RIGHT_TOP == nDir;
 }
 
 /// If the current cursor position is inside a hidden range, the hidden range
