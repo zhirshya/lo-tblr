@@ -314,7 +314,7 @@ SwDoc::SwDoc()
 
     // Create PageDesc, EmptyPageFormat and ColumnFormat
     if ( maPageDescs.empty() )
-        getIDocumentStylePoolAccess().GetPageDescFromPool( RES_POOLPAGE_STANDARD );
+        getIDocumentStylePoolAccess().GetPageDescFromPool( RES_POOLPAGE_STANDARD );//改变默认纸张方向为横向
 
     // Set to "Empty Page"
     mpEmptyPageFormat->SetFormatAttr( SwFormatFrmSize( ATT_FIX_SIZE ) );

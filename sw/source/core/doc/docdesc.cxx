@@ -637,7 +637,7 @@ void SwDoc::DelPageDesc( size_t i, bool bBroadcast )
 }
 
 SwPageDesc* SwDoc::MakePageDesc(const OUString &rName, const SwPageDesc *pCpy,
-                            bool bRegardLanguage, bool bBroadcast)
+                            bool /*bRegardLanguage*/, bool bBroadcast)
 {
     SwPageDesc *pNew;
     if( pCpy )
@@ -657,9 +657,9 @@ SwPageDesc* SwDoc::MakePageDesc(const OUString &rName, const SwPageDesc *pCpy,
         // Set the default page format.
         lcl_DefaultPageFormat( USHRT_MAX, pNew->GetMaster(), pNew->GetLeft(), pNew->GetFirstMaster(), pNew->GetFirstLeft() );
 
-        SvxFrameDirection aFrameDirection = bRegardLanguage ?
+        SvxFrameDirection aFrameDirection = FRMDIR_VERT_TOP_LEFT;/* bRegardLanguage ?
             GetDefaultFrameDirection(GetAppLanguage())
-            : FRMDIR_HORI_LEFT_TOP;
+            : FRMDIR_HORI_LEFT_TOP;*/
 
         pNew->GetMaster().SetFormatAttr( SvxFrameDirectionItem(aFrameDirection, RES_FRAMEDIR) );
         pNew->GetLeft().SetFormatAttr( SvxFrameDirectionItem(aFrameDirection, RES_FRAMEDIR) );
