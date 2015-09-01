@@ -11377,7 +11377,33 @@ SfxBoolItem TextdirectionTopToBottom SID_TEXTDIRECTION_TOP_TO_BOTTOM
     GroupId = GID_FORMAT;
 ]
 
+SfxBoolItem TextdirectionTopToBottomLeftToRight SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT
 
+[
+    /* flags: */
+    AutoUpdate = TRUE,
+    Cachable = Cachable,
+    FastCall = FALSE,
+    HasCoreId = FALSE,
+    HasDialog = FALSE,
+    ReadOnlyDoc = FALSE,
+    Toggle = FALSE,
+    Container = FALSE,
+    RecordAbsolute = FALSE,
+    RecordPerSet;
+    Synchron;
+
+    Readonly = FALSE,
+
+    /* config: */
+    AccelConfig = TRUE,
+    MenuConfig = TRUE,
+    StatusBarConfig = FALSE,
+    ToolBoxConfig = TRUE,
+    GroupId = GID_FORMAT;
+]
+
+//--------------------------------------------------------------------------
 SdrTextFitToSizeTypeItem TextFitToSize SID_ATTR_TEXT_FITTOSIZE
 
 [
@@ -11824,6 +11850,32 @@ SfxBoolItem VerticalCaption SID_DRAW_CAPTION_VERTICAL
     GroupId = GID_DRAWING;
 ]
 
+//--------------------------------------------------------------------------
+SfxBoolItem VerticalLeftToRightText SID_DRAW_TEXT_VERTICAL_LR
+
+[
+    /* flags: */
+    AutoUpdate = TRUE,
+    Cachable = Cachable,
+    FastCall = FALSE,
+    HasCoreId = FALSE,
+    HasDialog = FALSE,
+    ReadOnlyDoc = FALSE,
+    Toggle = FALSE,
+    Container = FALSE,
+    RecordAbsolute = FALSE,
+    RecordPerSet;
+    Synchron;
+
+    Readonly = FALSE,
+
+    /* config: */
+    AccelConfig = TRUE,
+    MenuConfig = TRUE,
+    StatusBarConfig = FALSE,
+    ToolBoxConfig = TRUE,
+    GroupId = GID_DRAWING;
+]
 
 SfxBoolItem VerticalText SID_DRAW_TEXT_VERTICAL
 

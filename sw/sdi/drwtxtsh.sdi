@@ -296,12 +296,20 @@ interface TextDrawText
         DisableFlags="SW_DISABLE_ON_PROTECTED_CURSOR";
     ]
 
-        SID_TEXTDIRECTION_LEFT_TO_RIGHT
+    SID_TEXTDIRECTION_LEFT_TO_RIGHT
     [
         ExecMethod = Execute ;
         StateMethod = GetState ;
         DisableFlags="SW_DISABLE_ON_PROTECTED_CURSOR";
     ]
+
+    SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT
+    [
+        ExecMethod = Exec ;
+        StateMethod = GetState ;
+        DisableFlags="SW_DISABLE_ON_PROTECTED_CURSOR";
+    ]
+
     SID_TEXTDIRECTION_TOP_TO_BOTTOM
     [
         ExecMethod = Execute ;

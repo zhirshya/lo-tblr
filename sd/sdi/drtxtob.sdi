@@ -215,6 +215,11 @@ shell TextObjectBar
         ExecMethod = Execute;
         StateMethod = GetAttrState;
     ]
+    SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT  // ole : ?, status : ?
+    [
+        ExecMethod = Execute;
+        StateMethod = GetAttrState;
+    ]
     SID_TEXTDIRECTION_TOP_TO_BOTTOM  // ole : ?, status : ?
     [
         ExecMethod = Execute;
