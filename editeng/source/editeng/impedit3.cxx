@@ -2884,11 +2884,9 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
 
     // Over all the paragraphs ...
 
-    int dYLine = -10;
     int nPortCount = GetParaPortions().Count();
     for (sal_uInt16 n = 0; n < nPortCount; n++)
     {
-        dYLine += 10;
         const ParaPortion* pPortion = GetParaPortions()[n];
         DBG_ASSERT( pPortion, "NULL-Pointer in TokenList in Paint" );
         // if when typing idle formatting,  asynchronous Paint.
@@ -2956,9 +2954,13 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
                     if (nLine != nLastLine)
                         aStartPos.X() -= nVertLineSpacing;
                 }
-
+                //此处aStartPos已经是下一行的开始位置(当前行的结束位置)
+                //以下条件式，判断，当前行与aClipRec是否有交集。有，则进入if语句，没有的话跳过
+                //这里只考虑开始位置，tb-rl 从右边开始，tb-lr从左边开始 lr-tb……
+                //结束位置越界的话结束整个函数，
                 if ( ( !IsVertical() && ( aStartPos.Y() > aClipRect.Top() ) )
-                    || ( IsVertical() && aStartPos.X() < aClipRect.Right() ) )
+                    //|| (IsVertical() && aStartPos.X() < aClipRec.Right()))原来的代码是从右边开始绘制的，所以X>Right 就是越界
+                    || ( IsVertical() && aStartPos.X() > aClipRect.Left() ) )//现在的代码从左边开始绘制，所以X<=Left就是越界
                 {
                     bPaintBullet = false;
 
@@ -3608,11 +3610,12 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
                 }
 
                 // no more visible actions?
+                //结束位置越界了吗？
                 if ( !IsVertical() && ( aStartPos.Y() >= aClipRect.Bottom() ) )
                     break;
-                else if ( IsVertical() && ( aStartPos.X() <= aClipRect.Left() ) )
+                else if ( IsVertical() && ( aStartPos.X() >= aClipRect.Right() ) )
                     break;
-            }
+            }//循环行
 
             if ( !aStatus.IsOutliner() )
             {
@@ -3657,11 +3660,12 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
             pPDFExtOutDevData->EndStructureElement();
 
         // no more visible actions?
+        //结束位置越界了吗？
         if ( !IsVertical() && ( aStartPos.Y() > aClipRect.Bottom() ) )
             break;
-        if ( IsVertical() && ( aStartPos.X() < aClipRect.Left() ) )
+        if ( IsVertical() && ( aStartPos.X() > aClipRect.Right() ) )
             break;
-    }
+    }//循环portion
     if ( aStatus.DoRestoreFont() )
         pOutDev->SetFont( aOldFont );
 }
@@ -3778,11 +3782,12 @@ void ImpEditEngine::Paint( ImpEditView* pView, const Rectangle& rRect, OutputDev
         }
         else
         {
-            aStartPos = aClipRect.TopRight();
+            aStartPos = aClipRect.TopLeft();
             Point aDocPos( pView->GetDocPos( aStartPos ) );
-            aStartPos.X() = aClipRect.GetSize().Width() + aDocPos.Y();
+            aStartPos.X() = /*aClipRec.GetSize().Width() +*/ -aDocPos.Y();
             aStartPos.Y() = -aDocPos.X();
         }
+        //aStartPos以aTmpRec的左上角为坐标原点
 
         Paint( pVDev, aTmpRect, aStartPos );
 
