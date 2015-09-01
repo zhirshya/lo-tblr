@@ -41,7 +41,8 @@ namespace com { namespace sun { namespace star { namespace awt {
 enum TextDirectionality {
     TextDirectionality_LeftToRight_TopToBottom,
     TextDirectionality_RightToLeft_TopToBottom,
-    TextDirectionality_TopToBottom_RightToLeft
+    TextDirectionality_TopToBottom_RightToLeft,
+    TextDirectionality_TopToBottom_LeftToRight
 };
 
 class VCL_DLLPUBLIC KeyEvent
