@@ -220,7 +220,8 @@ void EditEngine::Draw( OutputDevice* pOutDev, const Point& rStartPos, short nOri
     Point aStartPos( rStartPos );
     if ( IsVertical() )
     {
-        aStartPos.X() += GetPaperSize().Width();
+        //aStartPos.X() += GetPaperSize().Width();
+        //从单元格的左边开始
         aStartPos = Rotate( aStartPos, nOrientation, rStartPos );
     }
     pImpEditEngine->Paint( pOutDev, aBigRect, aStartPos, false, nOrientation );
