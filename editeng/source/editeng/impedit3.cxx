@@ -2884,8 +2884,11 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
 
     // Over all the paragraphs ...
 
-    for ( sal_Int32 n = 0; n < GetParaPortions().Count(); n++ )
+    int dYLine = -10;
+    int nPortCount = GetParaPortions().Count();
+    for (sal_uInt16 n = 0; n < nPortCount; n++)
     {
+        dYLine += 10;
         const ParaPortion* pPortion = GetParaPortions()[n];
         DBG_ASSERT( pPortion, "NULL-Pointer in TokenList in Paint" );
         // if when typing idle formatting,  asynchronous Paint.
@@ -2932,17 +2935,24 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
                 aTmpPos = aStartPos;
                 if ( !IsVertical() )
                 {
+                    //行的StartPosX什么时候不是0？
                     aTmpPos.X() += pLine->GetStartPosX();
+                    //如果删除这一行后看不见文本的第一行的话，表示文本绘制的原点在文本矩形的左下方
+                    //经过实验证明，第一行确实从文本框的上面溢出，但是还能看得见
                     aTmpPos.Y() += pLine->GetMaxAscent();
-                    aStartPos.Y() += pLine->GetHeight();
+                    aStartPos.Y() += pLine->GetHeight();//应该是计算下一行的开始位置
                     if (nLine != nLastLine)
                         aStartPos.Y() += nVertLineSpacing;
                 }
                 else
                 {
                     aTmpPos.Y() += pLine->GetStartPosX();
-                    aTmpPos.X() -= pLine->GetMaxAscent();
-                    aStartPos.X() -= pLine->GetHeight();
+                    //从左边开始绘制的话，应该加上Decent，可是好像没有GetMaxDescent()方法，
+                    int descent = pLine->GetHeight() - pLine->GetMaxAscent();
+                    aTmpPos.X() += descent;
+                    //aTmpPos.X() -= pLine->GetMaxAscent();原来的代码需要剪掉Ascent表示垂直绘制文本的时候坐标原点是，文本矩形的左上方
+                    //aStartPos.X() -= pLine->GetHeight();
+                    aStartPos.X() += pLine->GetHeight();
                     if (nLine != nLastLine)
                         aStartPos.X() -= nVertLineSpacing;
                 }
@@ -3317,6 +3327,8 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
                                         ImplCalcDigitLang(aTmpFont.GetLanguage()));
 
                                     // StripPortions() data callback
+                                    //删除此行，则不可编辑状态下文本不可见
+
                                     GetEditEnginePtr()->DrawingText( aOutPos, aText, nTextStart, nTextLen, pDXArray,
                                         aTmpFont, n, nIndex, pTextPortion->GetRightToLeft(),
                                         aWrongSpellVector.size() ? &aWrongSpellVector : 0,
@@ -3424,6 +3436,7 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
                                             --nTextLen;
 
                                         // output directly
+                                        //删除此行，则编辑状态下文本不可见
                                         aTmpFont.QuickDrawText( pOutDev, aRealOutPos, aText, nTextStart, nTextLen, pDXArray );
 
                                         if ( bDrawFrame )
@@ -3661,7 +3674,7 @@ void ImpEditEngine::Paint( ImpEditView* pView, const Rectangle& rRect, OutputDev
         return;
 
     // Intersection of paint area and output area.
-    Rectangle aClipRect( pView->GetOutputArea() );
+    Rectangle aClipRect(rRect/*pView->GetOutputArea()*/);
     aClipRect.Intersection( rRect );
 
     OutputDevice* pTarget = pTargetDevice ? pTargetDevice : pView->GetWindow();
@@ -3814,18 +3827,19 @@ void ImpEditEngine::Paint( ImpEditView* pView, const Rectangle& rRect, OutputDev
     else
     {
         Point aStartPos;
-        if ( !IsVertical() )
-        {
-            aStartPos = pView->GetOutputArea().TopLeft();
+        //by aron 横向与竖向的起始位置应该一样
+        //if ( !IsVertical() )
+        //{
+        aStartPos = pView->GetOutputArea().TopLeft();
             aStartPos.X() -= pView->GetVisDocLeft();
             aStartPos.Y() -= pView->GetVisDocTop();
-        }
-        else
-        {
-            aStartPos = pView->GetOutputArea().TopRight();
-            aStartPos.X() += pView->GetVisDocTop();
-            aStartPos.Y() -= pView->GetVisDocLeft();
-        }
+        //}
+        //else
+        //{
+        //  aStartPos = pView->GetOutputArea().TopRight();
+        //  aStartPos.X() += pView->GetVisDocTop();
+        //  aStartPos.Y() -= pView->GetVisDocLeft();
+        //}
 
         // If Doc-width < Output Area,Width and not wrapped fields,
         // the fields usually protrude if > line.

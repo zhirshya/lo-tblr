@@ -289,6 +289,8 @@ void ImpEditView::DrawSelection( EditSelection aTmpSel, vcl::Region* pRegion, Ou
             // Now that we have Bidi, the first/last index doesn't have to be the 'most outside' position
             if ( !bPartOfLine )
             {
+                //坐标轴旋转了吗？？？？
+                //应该预先知道每个行的长度
                 Range aLineXPosStartEnd = pEditEngine->GetLineXPosStartEnd(pTmpPortion, pLine);
                 aTopLeft.X() = aLineXPosStartEnd.Min();
                 aBottomRight.X() = aLineXPosStartEnd.Max();
@@ -389,7 +391,10 @@ void ImpEditView::ImplDrawHighlightRect( OutputDevice* _pTarget, const Point& rD
         Point aPnt1( GetWindowPos( rDocPosTopLeft ) );
         Point aPnt2( GetWindowPos( rDocPosBottomRight ) );
 
-        if ( !IsVertical() )
+        //by aron
+        //tb-lr和lr-tb是一样的
+        if ( 1/*!IsVertical()*/ )
+
         {
             lcl_AllignToPixel( aPnt1, _pTarget, +1, 0 );
             lcl_AllignToPixel( aPnt2, _pTarget, 0, ( bPixelMode ? 0 : -1 ) );
@@ -447,6 +452,17 @@ Point ImpEditView::GetDocPos( const Point& rWindowPos ) const
     // Window Position => Position Document
     Point aPoint;
 
+    //by aron
+    aPoint.X() = rWindowPos.X() - aOutArea.Left() + GetVisDocLeft();
+    aPoint.Y() = rWindowPos.Y() - aOutArea.Top() + GetVisDocTop();
+    //如果是tb-lr则X,Y互换
+    if (pEditEngine->pImpEditEngine->IsVertical())
+    {
+        int tmp = aPoint.X();
+        aPoint.X() = aPoint.Y();
+        aPoint.Y() = tmp;
+    }
+    /* original code
     if ( !pEditEngine->pImpEditEngine->IsVertical() )
     {
         aPoint.X() = rWindowPos.X() - aOutArea.Left() + GetVisDocLeft();
@@ -457,15 +473,28 @@ Point ImpEditView::GetDocPos( const Point& rWindowPos ) const
         aPoint.X() = rWindowPos.Y() - aOutArea.Top() + GetVisDocLeft();
         aPoint.Y() = aOutArea.Right() - rWindowPos.X() + GetVisDocTop();
     }
-
+    */
     return aPoint;
 }
 
 Point ImpEditView::GetWindowPos( const Point& rDocPos ) const
 {
     // Document position => window position
+    //by aron
     Point aPoint;
 
+    Point tmpPoint = rDocPos;
+    //tb-lr的话先互换XY坐标
+    if (pEditEngine->pImpEditEngine->IsVertical())
+    {
+        int tmp = tmpPoint.X();
+        tmpPoint.X() = tmpPoint.Y();
+        tmpPoint.Y() = tmp;
+    }
+    aPoint.X() = tmpPoint.X() + aOutArea.Left() - GetVisDocLeft();
+    aPoint.Y() = tmpPoint.Y() + aOutArea.Top() - GetVisDocTop();
+
+    /*original code
     if ( !pEditEngine->pImpEditEngine->IsVertical() )
     {
         aPoint.X() = rDocPos.X() + aOutArea.Left() - GetVisDocLeft();
@@ -476,6 +505,7 @@ Point ImpEditView::GetWindowPos( const Point& rDocPos ) const
         aPoint.X() = aOutArea.Right() - rDocPos.Y() + GetVisDocTop();
         aPoint.Y() = rDocPos.X() + aOutArea.Top() - GetVisDocLeft();
     }
+    */
 
     return aPoint;
 }
@@ -492,7 +522,8 @@ Rectangle ImpEditView::GetWindowPos( const Rectangle& rDocRect ) const
     }
     else
     {
-        Point aNewPos( aPos.X()-aSz.Height(), aPos.Y() );
+        //by aron
+        Point aNewPos( aPos.X()/*-aSz.Height()*/, aPos.Y() );
         aRect = Rectangle( aNewPos, Size( aSz.Height(), aSz.Width() ) );
     }
     return aRect;

@@ -832,7 +832,7 @@ void SdrTextObj::impDecomposeAutoFitTextPrimitive(
     // translate relative to given primitive to get same rotation and shear
     // as the master shape we are working on. For vertical, use the top-right
     // corner
-    const double fStartInX(bVerticalWritintg ? aAdjustTranslate.getX() + aOutlinerScale.getX() : aAdjustTranslate.getX());
+    const double fStartInX(/*bVerticalWritintg ? aAdjustTranslate.getX() + aOutlinerScale.getX() : */aAdjustTranslate.getX());
     aNewTransformA.translate(fStartInX, aAdjustTranslate.getY());
 
     // mirroring. We are now in aAnchorTextRange sizes. When mirroring in X and Y,
