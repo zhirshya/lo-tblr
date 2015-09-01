@@ -1716,7 +1716,14 @@ bool SwFEShell::ImpEndCreate()
         if( pAnch->IsVertical() )
         {
             nXOffset = nYOffset;
-            nYOffset = pAnch->Frm().Left()+pAnch->Frm().Width()-rBound.Right();
+            //修改tb-lr下新建图形对象时的位置错误
+            if (pAnch->IsVertLR())
+            {
+                nYOffset = rBound.Left() - pAnch->Frm().Left();
+            }
+            else
+                nYOffset = pAnch->Frm().Left() + pAnch->Frm().Width() - rBound.Right();
+
         }
         else if( pAnch->IsRightToLeft() )
             nXOffset = pAnch->Frm().Left()+pAnch->Frm().Width()-rBound.Right();

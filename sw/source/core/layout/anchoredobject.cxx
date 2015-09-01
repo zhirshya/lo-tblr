@@ -374,11 +374,16 @@ void SwAnchoredObject::UpdateLayoutDir()
     const SwFrm* pAnchorFrm = GetAnchorFrm();
     if ( pAnchorFrm )
     {
+        //支持tb-lr方向,
         const bool bVert = pAnchorFrm->IsVertical();
+        const bool bVL2R = pAnchorFrm->IsVertLR();
         const bool bR2L = pAnchorFrm->IsRightToLeft();
         if ( bVert )
         {
-            nLayoutDir = SwFrameFormat::VERT_R2L;
+            if (bVL2R)
+                nLayoutDir = SwFrmFmt::VERT_L2R;
+            else
+                nLayoutDir = SwFrmFmt::VERT_R2L;
         }
         else if ( bR2L )
         {

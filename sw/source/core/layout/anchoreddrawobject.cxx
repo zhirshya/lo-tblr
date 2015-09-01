@@ -786,6 +786,16 @@ void SwAnchoredDrawObject::_SetPositioningAttr()
                     nVertPos = -aObjRect.Left() - aObjRect.Width();
                 }
                 break;
+                case SwFrameFormat::VERT_L2R:
+                {
+                    //加入VERT_L2R后尚未发现错误
+                    ASSERT(false,
+                    "<SwAnchoredDrawObject::_SetPositioningAttr()> - unsupported layout direction VERT_L2R.\naronsoyol@gmail.com");
+                    nHoriPos = aObjRect.Top();
+                    nVertPos = -aObjRect.Left() - aObjRect.Width();
+
+                }
+                break;
                 default:
                 {
                     OSL_FAIL( "<SwAnchoredDrawObject::_SetPositioningAttr()> - unsupported layout direction" );
