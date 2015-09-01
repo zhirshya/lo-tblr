@@ -32,6 +32,7 @@
 
 #include <com/sun/star/drawing/BitmapMode.hpp>
 #include <com/sun/star/text/WritingMode.hpp>
+#include <com/sun/star/text/WritingMode2.hpp>
 #include <xmloff/EnumPropertyHdl.hxx>
 #include <xmloff/NamedBoolPropertyHdl.hxx>
 #include <xmloff/WordWrapPropertyHdl.hxx>
@@ -563,8 +564,9 @@ SvXMLEnumMapEntry const aXML_CircleKind_EnumMap[] =
 
 static SvXMLEnumMapEntry const aXML_WritingMode_EnumMap[] =
 {
-    { XML_TB_RL,        text::WritingMode_TB_RL },
-    { XML_LR_TB,        text::WritingMode_LR_TB },
+    { XML_TB_RL,        text::WritingMode2::TB_RL },
+    { XML_LR_TB,        text::WritingMode2::LR_TB },
+    { XML_TB_LR,        text::WritingMode2::TB_LR },
     { XML_TOKEN_INVALID, 0 }
 };
 
