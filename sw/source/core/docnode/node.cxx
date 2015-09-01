@@ -1957,7 +1957,7 @@ short SwContentNode::GetTextDirection( const SwPosition& rPos,
     {
         if ( pFrm->IsVertical() )
         {
-            if ( pFrm->IsRightToLeft() )
+            if ( pFrm->IsVertLR() )
                 nRet = FRMDIR_VERT_TOP_LEFT;
             else
                 nRet = FRMDIR_VERT_TOP_RIGHT;

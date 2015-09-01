@@ -819,6 +819,7 @@ public:
 
     // is cursor or the point in/over a vertical formatted text?
     bool IsInVerticalText( const Point* pPt = 0 ) const;
+    bool IsInVerticalText(bool& bVertL2R, const Point* pPt = 0 ) const;
     // is cursor or the point in/over a right to left formatted text?
     bool IsInRightToLeftText( const Point* pPt = 0 ) const;
 

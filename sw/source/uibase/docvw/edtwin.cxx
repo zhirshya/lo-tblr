@@ -1419,7 +1419,9 @@ void SwEditWin::KeyInput(const KeyEvent &rKEvt)
             //               directions should never be mapped.
             // 2. Exception: For a table cursor in a vertical table, the
             //               directions should always be mapped.
-            const bool bVertText = rSh.IsInVerticalText();
+            bool bTmpVertL2R;
+            const bool bVertText = rSh.IsInVerticalText(bTmpVertL2R);
+            const bool bVertL2R = bTmpVertL2R;
             const bool bTableCrsr = rSh.GetTableCrsr();
             const bool bVertTable = rSh.IsTableVertical();
             if( ( bVertText && ( !bTableCrsr || bVertTable ) ) ||
@@ -1429,8 +1431,8 @@ void SwEditWin::KeyInput(const KeyEvent &rKEvt)
                 // Thus, back to previous mapping of cursor keys to direction keys.
                 if( KEY_UP == nKey ) nKey = KEY_LEFT;
                 else if( KEY_DOWN == nKey ) nKey = KEY_RIGHT;
-                else if( KEY_LEFT == nKey ) nKey = KEY_DOWN;
-                else if( KEY_RIGHT == nKey ) nKey = KEY_UP;
+                else if( KEY_LEFT == nKey ) nKey = bVertL2R ? KEY_UP : KEY_DOWN;
+                else if( KEY_RIGHT == nKey ) nKey = bVertL2R ? KEY_DOWN : KEY_UP;
             }
 
             if ( rSh.IsInRightToLeftText() )

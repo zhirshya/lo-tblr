@@ -3089,6 +3089,13 @@ bool SwCrsrShell::IsInVerticalText( const Point* pPt ) const
     return FRMDIR_VERT_TOP_RIGHT == nDir || FRMDIR_VERT_TOP_LEFT == nDir;
 }
 
+bool SwCrsrShell::IsInVerticalText(bool& bVertL2R, const Point* pPt ) const
+{
+     const short nDir = GetTextDirection( pPt );
+    bVertL2R = FRMDIR_VERT_TOP_LEFT == nDir;
+    return FRMDIR_VERT_TOP_RIGHT == nDir || FRMDIR_VERT_TOP_LEFT == nDir;
+}
+
 bool SwCrsrShell::IsInRightToLeftText( const Point* pPt ) const
 {
     const short nDir = GetTextDirection( pPt );
