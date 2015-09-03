@@ -2,3 +2,5 @@
 *.sdw binary
 *.svg binary
 *.jcs binary
+
+text eol=lf
