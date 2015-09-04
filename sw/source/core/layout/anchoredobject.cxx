@@ -381,9 +381,9 @@ void SwAnchoredObject::UpdateLayoutDir()
         if ( bVert )
         {
             if (bVL2R)
-                nLayoutDir = SwFrmFmt::VERT_L2R;
+                nLayoutDir = SwFrameFormat::VERT_L2R;
             else
-                nLayoutDir = SwFrmFmt::VERT_R2L;
+                nLayoutDir = SwFrameFormat::VERT_R2L;
         }
         else if ( bR2L )
         {
