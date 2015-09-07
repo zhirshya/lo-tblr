@@ -56,8 +56,9 @@ public:
     void SetOutlinerMode(sal_uInt16 nNew);
 
     // vertical access
+    bool IsVertLR() const;
     bool IsVertical() const;
-    void SetVertical(bool bNew);
+    void SetVertical(bool bNew, bool bVertLR);
 
     // data read access
     sal_Int32 Count() const;

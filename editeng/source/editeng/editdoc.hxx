@@ -754,6 +754,8 @@ private:
     SvxFont         aDefFont;           //faster than ever from the pool!!
     sal_uInt16          nDefTab;
     bool            bIsVertical:1;
+    bool            bIsVertLR:1; //for Mongolian Script
+
     bool            bIsFixedCellHeight:1;
 
     bool            bOwnerOfPool:1;
@@ -780,8 +782,13 @@ public:
     void            SetDefTab( sal_uInt16 nTab )    { nDefTab = nTab ? nTab : DEFTAB; }
     sal_uInt16          GetDefTab() const           { return nDefTab; }
 
-    void            SetVertical( bool bVertical )   { bIsVertical = bVertical; }
+    void            SetVertical( bool bVertical, bool bVertL2R )
+    {
+        bIsVertical = bVertical;
+        bIsVertLR =bVertL2R;
+    }
     bool            IsVertical() const              { return bIsVertical; }
+    bool            IsVertLR() const                { return bIsVertLR; }
 
     void            SetFixedCellHeight( bool bUseFixedCellHeight )  { bIsFixedCellHeight = bUseFixedCellHeight; }
     bool            IsFixedCellHeight() const               { return bIsFixedCellHeight; }

@@ -1019,9 +1019,10 @@ void SdXShape::SetEmptyPresObj(bool bEmpty)
                 OutlinerParaObject* pOutlinerParaObject = pObj->GetOutlinerParaObject();
                 pOutliner->SetText( *pOutlinerParaObject );
                 const bool bVertical = pOutliner->IsVertical();
+                const bool bVertL2R  = pOutliner->IsVertLR();
 
                 pOutliner->Clear();
-                pOutliner->SetVertical( bVertical );
+                pOutliner->SetVertical( bVertical, bVertL2R );
                 pOutliner->SetStyleSheetPool( static_cast<SfxStyleSheetPool*>(pDoc->GetStyleSheetPool()) );
                 pOutliner->SetStyleSheet( 0, pPage->GetTextStyleSheetForObject( pObj ) );
                 pOutliner->Insert( pPage->GetPresObjText( pPage->GetPresObjKind(pObj) ) );

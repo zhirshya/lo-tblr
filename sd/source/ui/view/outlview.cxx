@@ -1102,9 +1102,10 @@ void OutlineView::FillOutliner()
             if (pOPO)
             {
                 bool bVertical = pOPO->IsVertical();
-                pOPO->SetVertical( false );
+                bool bVertL2R = pOPO->IsVertLR();
+                pOPO->SetVertical( false, false );
                 mrOutliner.AddText(*pOPO);
-                pOPO->SetVertical( bVertical );
+                pOPO->SetVertical( bVertical, bVertL2R );
                 pPara = mrOutliner.GetParagraph( mrOutliner.GetParagraphCount()-1 );
             }
         }
@@ -1145,9 +1146,10 @@ void OutlineView::FillOutliner()
             {
                 sal_Int32 nParaCount1 = mrOutliner.GetParagraphCount();
                 bool bVertical = pOPO->IsVertical();
-                pOPO->SetVertical( false );
+                bool bVertL2R = pOPO->IsVertLR();
+                pOPO->SetVertical( false, false );
                 mrOutliner.AddText(*pOPO);
-                pOPO->SetVertical( bVertical );
+                pOPO->SetVertical( bVertical, bVertL2R );
 
                 sal_Int32 nParaCount2 = mrOutliner.GetParagraphCount();
                 for (sal_Int32 n = nParaCount1; n < nParaCount2; n++)

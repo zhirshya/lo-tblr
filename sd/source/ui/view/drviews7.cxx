@@ -262,6 +262,7 @@ void DrawViewShell::GetMenuState( SfxItemSet &rSet )
         rSet.DisableItem( SID_DRAW_CAPTION_VERTICAL );
         rSet.DisableItem( SID_TEXT_FITTOSIZE_VERTICAL );
         rSet.DisableItem( SID_DRAW_TEXT_VERTICAL );
+        rSet.DisableItem( SID_DRAW_TEXT_VERTICAL_LR );
     }
 
     bool bConvertToPathPossible = mpDrawView->IsConvertToPathObjPossible(false);

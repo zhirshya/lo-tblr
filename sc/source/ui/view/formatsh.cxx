@@ -2558,6 +2558,7 @@ void ScFormatShell::GetNumFormatState( SfxItemSet& rSet )
 
 void ScFormatShell::ExecuteTextDirection( SfxRequest& rReq )
 {
+    //需要再看看
     ScTabViewShell* pTabViewShell = GetViewData()->GetViewShell();
     pTabViewShell->HideListBox();               // Autofilter-DropDown-Listbox
     bool bEditMode = false;
@@ -2572,6 +2573,7 @@ void ScFormatShell::ExecuteTextDirection( SfxRequest& rReq )
     {
         case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
         case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
+        case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
         {
             bool bVert = (nSlot == SID_TEXTDIRECTION_TOP_TO_BOTTOM);
             ScPatternAttr aAttr( GetViewData()->GetDocument()->GetPool() );

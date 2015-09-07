@@ -462,7 +462,7 @@ SdrObject* SdPage::CreatePresObj(PresObjKind eObjKind, bool bVertical, const Rec
             sal_uInt16 nOutlMode = pOutliner->GetMode();
             pOutliner->Init( OUTLINERMODE_TEXTOBJECT );
             pOutliner->SetStyleSheet( 0, NULL );
-            pOutliner->SetVertical( bVertical );
+            pOutliner->SetVertical( bVertical, false );
 
             SetObjText( static_cast<SdrTextObj*>(pSdrObj), static_cast<SdrOutliner*>(pOutliner), eObjKind, aString );
 
@@ -2885,9 +2885,13 @@ bool SdPage::RestoreDefaultText( SdrObject* pObj )
             if (!aString.isEmpty())
             {
                 bool bVertical = false;
+                bool bVertL2R = false;
                 OutlinerParaObject* pOldPara = pTextObj->GetOutlinerParaObject();
                 if( pOldPara )
+                {
                     bVertical = pOldPara->IsVertical();  // is old para object vertical?
+                    bVertL2R = pOldPara->IsVertLR();
+                }
 
                 SetObjText( pTextObj, 0, ePresObjKind, aString );
 
@@ -2902,7 +2906,7 @@ bool SdPage::RestoreDefaultText( SdrObject* pObj )
                         && pTextObj->GetOutlinerParaObject()->IsVertical() != (bool)bVertical)
                     {
                         Rectangle aObjectRect = pTextObj->GetSnapRect();
-                        pTextObj->GetOutlinerParaObject()->SetVertical(bVertical);
+                        pTextObj->GetOutlinerParaObject()->SetVertical(bVertical, bVertL2R);
                         pTextObj->SetSnapRect(aObjectRect);
                     }
                 }

@@ -363,9 +363,15 @@ bool EditTextObject::IsVertical() const
     return mpImpl->IsVertical();
 }
 
-void EditTextObject::SetVertical( bool bVertical )
+void EditTextObject::SetVertical( bool bVertical, bool bVertL2R )
 {
-    return mpImpl->SetVertical(bVertical);
+    return mpImpl->SetVertical(bVertical, bVertL2R);
+}
+
+bool EditTextObject::IsVertLR() const
+//Add a comment to this line
+{
+    return sal_False;
 }
 
 SvtScriptType EditTextObject::GetScriptType() const
@@ -568,6 +574,7 @@ EditTextObjectImpl::EditTextObjectImpl( EditTextObject* pFront, SfxItemPool* pP 
     }
 
     bVertical = false;
+    bVertL2R = false;
     bStoreUnicodeStrings = false;
     nScriptType = SvtScriptType::NONE;
 }
@@ -580,6 +587,7 @@ EditTextObjectImpl::EditTextObjectImpl( EditTextObject* pFront, const EditTextOb
     nUserType = r.nUserType;
     nObjSettings = r.nObjSettings;
     bVertical = r.bVertical;
+    bVertL2R = r.bVertL2R;
     nScriptType = r.nScriptType;
     pPortionInfo = NULL;    // Do not copy PortionInfo
     bStoreUnicodeStrings = false;
@@ -662,11 +670,12 @@ std::vector<svl::SharedString> EditTextObjectImpl::GetSharedStrings() const
 }
 
 
-void EditTextObjectImpl::SetVertical( bool b )
+void EditTextObjectImpl::SetVertical( bool bVert, bool bL2R )
 {
-    if ( b != bVertical )
+    if ( bVert != bVertical || bL2R !=bVertL2R)
     {
-        bVertical = b;
+        bVertical = bVert;
+        bVertL2R = bL2R;
         ClearPortionInfo();
     }
 }
@@ -1097,7 +1106,7 @@ public:
 
 void EditTextObjectImpl::StoreData( SvStream& rOStream ) const
 {
-    sal_uInt16 nVer = 602;
+    sal_uInt16 nVer = 603;//old is 602, according to support Mongolian so changed version number
     rOStream.WriteUInt16( nVer );
 
     rOStream.WriteBool( bOwnerOfPool );
@@ -1244,6 +1253,7 @@ void EditTextObjectImpl::StoreData( SvStream& rOStream ) const
     rOStream.WriteUInt32( nObjSettings );
 
     rOStream.WriteBool( bVertical );
+    rOStream.WriteBool( bVertL2R );
     rOStream.WriteUInt16( static_cast<sal_uInt16>(nScriptType) );
 
     rOStream.WriteBool( bStoreUnicodeStrings );
@@ -1500,7 +1510,12 @@ void EditTextObjectImpl::CreateData( SvStream& rIStream )
         rIStream.ReadCharAsBool( bTmp );
         bVertical = bTmp;
     }
-
+    if ( nVersion >= 603 )
+    {
+        bool bTmp(false);
+        rIStream.ReadCharAsBool( bTmp );
+        bVertL2R = bTmp;
+    }
     if ( nVersion >= 602 )
     {
         sal_uInt16 aTmp16;
@@ -1590,7 +1605,8 @@ bool EditTextObjectImpl::operator==( const EditTextObjectImpl& rCompare ) const
             ( nMetric != rCompare.nMetric ) ||
             ( nUserType!= rCompare.nUserType ) ||
             ( nScriptType != rCompare.nScriptType ) ||
-            ( bVertical != rCompare.bVertical ) )
+            ( bVertical != rCompare.bVertical ) ||
+            ( bVertL2R != rCompare.bVertL2R) )
         return false;
 
     for (size_t i = 0, n = aContents.size(); i < n; ++i)

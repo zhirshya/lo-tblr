@@ -120,7 +120,7 @@ namespace frm
         if ( !pEngine )
             return;
 
-        pEngine->SetVertical( !pEngine->IsVertical() );
+        pEngine->SetVertical( !pEngine->IsVertical(), false );
     }
 
 

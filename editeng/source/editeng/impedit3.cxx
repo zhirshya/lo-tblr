@@ -2517,11 +2517,11 @@ void ImpEditEngine::SetTextRanger( TextRanger* pRanger )
     }
 }
 
-void ImpEditEngine::SetVertical( bool bVertical )
+void ImpEditEngine::SetVertical( bool bVertical, bool bVertLR )
 {
-    if ( IsVertical() != bVertical )
+    if ( IsVertical() != bVertical || IsVertLR() != bVertLR )
     {
-        GetEditDoc().SetVertical( bVertical );
+        GetEditDoc().SetVertical( bVertical, bVertLR);
         bool bUseCharAttribs = bool(aStatus.GetControlWord() & EEControlBits::USECHARATTRIBS);
         GetEditDoc().CreateDefFont( bUseCharAttribs );
         if ( IsFormatted() )
@@ -2899,9 +2899,10 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
 
         long nParaHeight = pPortion->GetHeight();
         sal_Int32 nIndex = 0;
-        if ( pPortion->IsVisible() && (
+        if ( pPortion->IsVisible() && ((
                 ( !IsVertical() && ( ( aStartPos.Y() + nParaHeight ) > aClipRect.Top() ) ) ||
-                ( IsVertical() && ( ( aStartPos.X() - nParaHeight ) < aClipRect.Right() ) ) ) )
+                ( IsVertical() && !IsVertLR() && ( ( aStartPos.X() - nParaHeight ) < aClipRect.Right() ) ) ) ||
+                ( IsVertical() && IsVertLR() && ( (aStartPos.X() + nParaHeight) > aClipRect.Left()))))
 
         {
 
@@ -2938,11 +2939,17 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
                     //如果删除这一行后看不见文本的第一行的话，表示文本绘制的原点在文本矩形的左下方
                     //经过实验证明，第一行确实从文本框的上面溢出，但是还能看得见
                     aTmpPos.Y() += pLine->GetMaxAscent();
-                    aStartPos.Y() += pLine->GetHeight();//应该是计算下一行的开始位置
+                    aStartPos.Y() += pLine->GetHeight();//应该是计算下一行的开始位置,或这一行的结束位置
                     if (nLine != nLastLine)
                         aStartPos.Y() += nVertLineSpacing;
                 }
-                else
+                else if (!IsVertLR())
+                {
+                    aTmpPos.Y() += pLine->GetStartPosX();
+                    aTmpPos.X() -= pLine->GetMaxAscent();
+                    aStartPos.X() -= pLine->GetHeight();
+                }
+                else //tb-lr
                 {
                     aTmpPos.Y() += pLine->GetStartPosX();
                     //从左边开始绘制的话，应该加上Decent，可是好像没有GetMaxDescent()方法，
@@ -2958,11 +2965,12 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
                 //以下条件式，判断，当前行与aClipRec是否有交集。有，则进入if语句，没有的话跳过
                 //这里只考虑开始位置，tb-rl 从右边开始，tb-lr从左边开始 lr-tb……
                 //结束位置越界的话结束整个函数，
-                if ( ( !IsVertical() && ( aStartPos.Y() > aClipRect.Top() ) )
-                    //|| (IsVertical() && aStartPos.X() < aClipRec.Right()))原来的代码是从右边开始绘制的，所以X>Right 就是越界
-                    || ( IsVertical() && aStartPos.X() > aClipRect.Left() ) )//现在的代码从左边开始绘制，所以X<=Left就是越界
-                {
-                    bPaintBullet = false;
+                bool bTmpVert = IsVertical();
+                bool bTmpVeLR = IsVertLR();
+                if ((!bTmpVert && (aStartPos.Y() > aClipRect.Top()))
+                    || (bTmpVert && !bTmpVeLR && aStartPos.X() < aClipRect.Right())//tb-rl从右边开始绘制的，所以X>Right 就是越界
+                    || (bTmpVert && bTmpVeLR && aStartPos.X() > aClipRect.Left()))//tb-lr从左边开始绘制，所以X<=Left就是越界
+                {                    bPaintBullet = false;
 
                     // Why not just also call when stripping portions? This will give the correct values
                     // and needs no position corrections in OutlinerEditEng::DrawingText which tries to call
@@ -3613,7 +3621,9 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
                 //结束位置越界了吗？
                 if ( !IsVertical() && ( aStartPos.Y() >= aClipRect.Bottom() ) )
                     break;
-                else if ( IsVertical() && ( aStartPos.X() >= aClipRect.Right() ) )
+                else if (IsVertical() && IsVertLR() && ( aStartPos.X() >= aClipRect.Right() ) )
+                    break;
+                else if (IsVertical() && !IsVertLR() && (aStartPos.X() <= aClipRect.Left() ) )
                     break;
             }//循环行
 
@@ -3650,10 +3660,13 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
         }
         else
         {
+            //以下代码需要再观察一下
             if ( !IsVertical() )
                 aStartPos.Y() += nParaHeight;
-            else
+            else if (!IsVertLR())
                 aStartPos.X() -= nParaHeight;
+            else
+                aStartPos.X() += nParaHeight;
         }
 
         if ( pPDFExtOutDevData )
@@ -3663,7 +3676,9 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, Rectangle aClipRect, Point aSt
         //结束位置越界了吗？
         if ( !IsVertical() && ( aStartPos.Y() > aClipRect.Bottom() ) )
             break;
-        if ( IsVertical() && ( aStartPos.X() > aClipRect.Right() ) )
+        if (IsVertical() && IsVertLR() && ( aStartPos.X() > aClipRect.Right()))
+            break;
+        if (IsVertical() && !IsVertLR() && ( aStartPos.X() < aClipRect.Left()))
             break;
     }//循环portion
     if ( aStatus.DoRestoreFont() )
@@ -3780,11 +3795,18 @@ void ImpEditEngine::Paint( ImpEditView* pView, const Rectangle& rRect, OutputDev
             aStartPos.X() *= (-1);
             aStartPos.Y() *= (-1);
         }
-        else
+        else if (IsVertLR())
         {
             aStartPos = aClipRect.TopLeft();
             Point aDocPos( pView->GetDocPos( aStartPos ) );
             aStartPos.X() = /*aClipRec.GetSize().Width() +*/ -aDocPos.Y();
+            aStartPos.Y() = -aDocPos.X();
+        }
+        else
+        {
+            aStartPos = aClipRect.TopRight();
+            Point aDocPos(pView->GetDocPos(aStartPos));
+            aStartPos.X() = aClipRect.GetSize().Width() + aDocPos.Y();
             aStartPos.Y() = -aDocPos.X();
         }
         //aStartPos以aTmpRec的左上角为坐标原点
@@ -3832,19 +3854,21 @@ void ImpEditEngine::Paint( ImpEditView* pView, const Rectangle& rRect, OutputDev
     else
     {
         Point aStartPos;
-        //by aron 横向与竖向的起始位置应该一样
-        //if ( !IsVertical() )
-        //{
-        aStartPos = pView->GetOutputArea().TopLeft();
+        //by aron 横向与tb-lr向的起始位置应该一样
+        if (IsVertical() && !IsVertLR())
+        {
+            //tb-rl
+            aStartPos = pView->GetOutputArea().TopRight();
+            aStartPos.X() += pView->GetVisDocTop();
+            aStartPos.Y() -= pView->GetVisDocLeft();
+        }
+        else
+        {
+            //lr-tb tb-lr
+            aStartPos = pView->GetOutputArea().TopLeft();
             aStartPos.X() -= pView->GetVisDocLeft();
             aStartPos.Y() -= pView->GetVisDocTop();
-        //}
-        //else
-        //{
-        //  aStartPos = pView->GetOutputArea().TopRight();
-        //  aStartPos.X() += pView->GetVisDocTop();
-        //  aStartPos.Y() -= pView->GetVisDocLeft();
-        //}
+        }
 
         // If Doc-width < Output Area,Width and not wrapped fields,
         // the fields usually protrude if > line.

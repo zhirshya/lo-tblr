@@ -183,15 +183,20 @@ bool OutlinerParaObject::IsVertical() const
     return mpImpl->mxData->mpEditTextObject->IsVertical();
 }
 
-void OutlinerParaObject::SetVertical(bool bNew)
+void OutlinerParaObject::SetVertical(bool bVert, bool bVerL2R)
 {
-    if (mpImpl->mxData->mpEditTextObject->IsVertical() != bNew)
+    if (mpImpl->mxData->mpEditTextObject->IsVertical() != bVert ||
+        mpImpl->mxData->mpEditTextObject->IsVertLR() != bVerL2R )
     {
         ImplMakeUnique();
-        mpImpl->mxData->mpEditTextObject->SetVertical(bNew);
+        mpImpl->mxData->mpEditTextObject->SetVertical(bVert, bVerL2R);
     }
 }
 
+bool OutlinerParaObject::IsVertLR() const
+{
+    return mpImpl->mxData->mpEditTextObject->IsVertLR();
+}
 sal_Int32 OutlinerParaObject::Count() const
 {
     size_t nSize = mpImpl->mxData->maParagraphDataVector.size();

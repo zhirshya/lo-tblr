@@ -121,6 +121,7 @@ static sal_uInt16 SidArray[] = {
     SID_HYPERLINK_GETLINK,            //   10361
     SID_CHARMAP,                      //   10503
     SID_TEXTDIRECTION_LEFT_TO_RIGHT,  //   10907
+    SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT,  //   10907
     SID_TEXTDIRECTION_TOP_TO_BOTTOM,  //   10908
     SID_ATTR_PARA_LEFT_TO_RIGHT,      //   10950
     SID_ATTR_PARA_RIGHT_TO_LEFT,      //   10951
@@ -472,6 +473,8 @@ bool FuText::MouseMove(const MouseEvent& rMEvt)
 
 void FuText::ImpSetAttributesForNewTextObject(SdrTextObj* pTxtObj)
 {
+    //by aron
+    //OpenOffice Impress 的文本框相关的代码
     if(mpDoc->GetDocumentType() == DOCUMENT_TYPE_IMPRESS)
     {
         if( nSlotId == SID_ATTR_CHAR )
@@ -677,7 +680,7 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
             bool bVertical((pOPO && pOPO->IsVertical())
                 || nSlotId == SID_ATTR_CHAR_VERTICAL
                 || nSlotId == SID_TEXT_FITTOSIZE_VERTICAL);
-            rOutl.SetVertical(bVertical);
+            rOutl.SetVertical(bVertical, false);//by aron
 
             // Before ImpSetAttributesForNewTextObject the vertical writing mode
             // needs to be set at the object. This is done here at the OutlinerParaObject
@@ -694,7 +697,7 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
             if(pPara && (bool)bVertical != pPara->IsVertical())
             {
                 // set ParaObject orientation accordingly
-                pPara->SetVertical(bVertical);
+                pPara->SetVertical(bVertical, false);
             }
 
             ImpSetAttributesForNewTextObject(GetTextObj());
@@ -816,7 +819,7 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
                     if(pPara && !pPara->IsVertical())
                     {
                         // set ParaObject orientation accordingly
-                        pPara->SetVertical(true);
+                        pPara->SetVertical(true, false);
                     }
 
                     aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
@@ -1048,7 +1051,7 @@ void FuText::SetInEditMode(const MouseEvent& rMEvt, bool bQuickDrag)
                 {
                     OutlinerParaObject* pOPO = pTextObj->GetOutlinerParaObject();
                     if( ( pOPO && pOPO->IsVertical() ) || (nSlotId == SID_ATTR_CHAR_VERTICAL) || (nSlotId == SID_TEXT_FITTOSIZE_VERTICAL) )
-                        pOutl->SetVertical( true );
+                        pOutl->SetVertical( true, false );
 
                     if( pTextObj->getTextCount() > 1 )
                     {

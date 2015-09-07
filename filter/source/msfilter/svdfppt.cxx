@@ -2217,7 +2217,7 @@ SdrObject* SdrPowerPointImport::ApplyTextObj( PPTTextObj* pTextObj, SdrTextObj* 
             if ( rOutliner.GetStyleSheet( 0 ) != pSheet )
                 rOutliner.SetStyleSheet( 0, pSheet );
         }
-        rOutliner.SetVertical( pTextObj->GetVertical() );
+        rOutliner.SetVertical( pTextObj->GetVertical(), false );
         const PPTParagraphObj* pPreviousParagraph = NULL;
         for ( PPTParagraphObj* pPara = pTextObj->First(); pPara; pPara = pTextObj->Next() )
         {

@@ -683,8 +683,9 @@ public:
     void            Init( sal_uInt16 nOutlinerMode );
     sal_uInt16      GetMode() const { return nOutlinerMode; }
 
-    void            SetVertical( bool bVertical );
+    void            SetVertical( bool bVertical, bool bVertLR );
     bool            IsVertical() const;
+    bool            IsVertLR() const;
 
     void            SetFixedCellHeight( bool bUseFixedCellHeight );
 

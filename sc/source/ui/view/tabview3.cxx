@@ -248,6 +248,7 @@ void ScTabView::InvalidateAttribs()
     rBindings.Invalidate( SID_NUMBER_FORMAT );
 
     rBindings.Invalidate( SID_TEXTDIRECTION_LEFT_TO_RIGHT );
+    rBindings.Invalidate( SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT );
     rBindings.Invalidate( SID_TEXTDIRECTION_TOP_TO_BOTTOM );
     rBindings.Invalidate( SID_ATTR_PARA_LEFT_TO_RIGHT );
     rBindings.Invalidate( SID_ATTR_PARA_RIGHT_TO_LEFT );

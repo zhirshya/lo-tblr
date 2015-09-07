@@ -292,6 +292,7 @@ public:
     const Rectangle&    GetOutputArea() const   { return aOutArea; }
 
     bool            IsVertical() const;
+    bool            IsVertLR() const;
 
     bool            PostKeyEvent( const KeyEvent& rKeyEvent, vcl::Window* pFrameWin = NULL );
 
@@ -712,8 +713,9 @@ public:
     const Size&             GetPaperSize() const                    { return aPaperSize; }
     void                    SetPaperSize( const Size& rSz )         { aPaperSize = rSz; }
 
-    void                    SetVertical( bool bVertical );
+    void                    SetVertical( bool bVertical, bool bVertL2R );
     bool                    IsVertical() const                      { return GetEditDoc().IsVertical(); }
+    bool                    IsVertLR() const                        { return GetEditDoc().IsVertLR(); }
 
     void                    SetFixedCellHeight( bool bUseFixedCellHeight );
     bool                    IsFixedCellHeight() const { return GetEditDoc().IsFixedCellHeight(); }

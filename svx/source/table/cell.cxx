@@ -313,7 +313,9 @@ namespace sdr
         {
             if(pNewItem && (SDRATTR_TEXTDIRECTION == nWhich))
             {
-                bool bVertical(com::sun::star::text::WritingMode_TB_RL == static_cast<const SvxWritingModeItem*>(pNewItem)->GetValue());
+                const sal_uInt16 nVal = static_cast<const SvxWritingModeItem*>(pNewItem)->GetValue();
+                bool bVertical(com::sun::star::text::WritingMode_TB_RL == nVal || com::sun::star::text::WritingMode_TB_LR == nVal);
+                bool bVertLR(com::sun::star::text::WritingMode_TB_LR == nVal);
 
                 sdr::table::SdrTableObj& rObj = static_cast<sdr::table::SdrTableObj&>(GetSdrObject());
                 if( rObj.IsVerticalWriting() != bVertical )
@@ -325,7 +327,7 @@ namespace sdr
                     pParaObj = mxCell->GetOutlinerParaObject();
                 if(pParaObj)
                 {
-                    pParaObj->SetVertical(bVertical);
+                    pParaObj->SetVertical(bVertical, bVertLR);
                 }
 
             }

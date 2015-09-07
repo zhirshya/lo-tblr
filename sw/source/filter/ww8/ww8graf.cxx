@@ -1118,14 +1118,16 @@ SwFrameFormat* SwWW8ImplReader::InsertTxbxText(SdrTextObj* pTextObj,
             InsertAttrsAsDrawingAttrs(nStartCp, nEndCp, eType);
         }
 
-        bool bVertical = pTextObj->IsVerticalWriting();
+        bool bVertLR = false;
+        bool bVertical = pTextObj->IsVerticalWriting(&bVertLR);
+
         EditTextObject* pTemporaryText = m_pDrawEditEngine->CreateTextObject();
         OutlinerParaObject* pOp = new OutlinerParaObject(*pTemporaryText);
         pOp->SetOutlinerMode( OUTLINERMODE_TEXTOBJECT );
-        pOp->SetVertical( bVertical );
+        pOp->SetVertical( bVertical, bVertLR );
         delete pTemporaryText;
         pTextObj->NbcSetOutlinerParaObject( pOp );
-        pTextObj->SetVerticalWriting(bVertical);
+        pTextObj->SetVerticalWriting(bVertical, bVertLR);
 
         // Fuer die naechste Textbox noch die alten Absatz-Attribute
         // und Styles entfernen, sonst startet die naechste Box

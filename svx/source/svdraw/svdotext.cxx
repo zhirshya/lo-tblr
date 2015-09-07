@@ -1395,11 +1395,13 @@ void SdrTextObj::NbcSetOutlinerParaObjectForText( OutlinerParaObject* pTextObjec
 
     if (pText && pText->GetOutlinerParaObject())
     {
-        SvxWritingModeItem aWritingMode(pText->GetOutlinerParaObject()->IsVertical()
-            ? com::sun::star::text::WritingMode_TB_RL
-            : com::sun::star::text::WritingMode_LR_TB,
-            SDRATTR_TEXTDIRECTION);
-        GetProperties().SetObjectItemDirect(aWritingMode);
+        ::com::sun::star::text::WritingMode wm = com::sun::star::text::WritingMode_LR_TB;
+        if (pText->GetOutlinerParaObject()->IsVertical())
+        {
+            wm = pText->GetOutlinerParaObject()->IsVertLR() ?
+                com::sun::star::text::WritingMode_TB_LR : com::sun::star::text::WritingMode_TB_RL;
+        }
+        SvxWritingModeItem aWritingMode(wm, SDRATTR_TEXTDIRECTION);
     }
 
     SetTextSizeDirty();
@@ -1513,23 +1515,86 @@ void SdrTextObj::ForceOutlinerParaObject()
     }
 }
 
-bool SdrTextObj::IsVerticalWriting() const
+bool SdrTextObj::IsVerticalWriting(bool *pVertLR) const
 {
     if(pEdtOutl)
     {
+        if (pVertLR)
+            *pVertLR = pEdtOutl->IsVertLR();
         return pEdtOutl->IsVertical();
     }
 
     OutlinerParaObject* pOutlinerParaObject = GetOutlinerParaObject();
     if(pOutlinerParaObject)
     {
+        if (pVertLR)
+            *pVertLR = pOutlinerParaObject->IsVertLR();
         return pOutlinerParaObject->IsVertical();
     }
 
     return false;
 }
+//lr-tb <-> tb-rl
+void ExchangeDirection(bool ToVertical, SdrTextHorzAdjust& eHorz, SdrTextVertAdjust& eVert)
+{
+    SdrTextHorzAdjust eHorzNew;
+    SdrTextVertAdjust eVertNew;
+    switch (eVert)
+    {
+    case SDRTEXTVERTADJUST_TOP:
+        if (ToVertical)
+            eHorzNew = SDRTEXTHORZADJUST_RIGHT;
+        else
+            eHorzNew = SDRTEXTHORZADJUST_LEFT;
+        break;
+    case SDRTEXTVERTADJUST_CENTER:
+        eHorzNew = SDRTEXTHORZADJUST_CENTER; break;
+    case SDRTEXTVERTADJUST_BOTTOM:
+        if (ToVertical)
+            eHorzNew = SDRTEXTHORZADJUST_LEFT;
+        else
+            eHorzNew = SDRTEXTHORZADJUST_RIGHT;
+        break;
+    case SDRTEXTVERTADJUST_BLOCK:
+        eHorzNew = SDRTEXTHORZADJUST_BLOCK; break;
+    }
+    switch (eHorz)
+    {
+    case SDRTEXTHORZADJUST_LEFT:
+        if (ToVertical)
+            eVertNew = SDRTEXTVERTADJUST_TOP;
+        else
+            eVertNew = SDRTEXTVERTADJUST_BOTTOM;
+        break;
+    case SDRTEXTHORZADJUST_CENTER:
+        eVertNew = SDRTEXTVERTADJUST_CENTER; break;
+    case SDRTEXTHORZADJUST_RIGHT:
+        if (ToVertical)
+            eVertNew = SDRTEXTVERTADJUST_BOTTOM;
+        else
+            eVertNew = SDRTEXTVERTADJUST_TOP;
+        break;
+    case SDRTEXTHORZADJUST_BLOCK:
+        eVertNew = SDRTEXTVERTADJUST_BLOCK; break;
+    }
+    eHorz = eHorzNew;
+    eVert = eVertNew;
+}
+//tb-lr <-> tr-rl
+void ExchangeDirection(SdrTextHorzAdjust& eHorz)
+{
+    switch (eHorz)
+    {
+    case SDRTEXTHORZADJUST_LEFT:
+        eHorz = SDRTEXTHORZADJUST_RIGHT; break;
+    case SDRTEXTHORZADJUST_RIGHT:
+        eHorz = SDRTEXTHORZADJUST_LEFT; break;
+    default :
+        break;
+    }
+}
 
-void SdrTextObj::SetVerticalWriting(bool bVertical)
+void SdrTextObj::SetVerticalWriting(bool bVertical, bool bVertLR)
 {
     OutlinerParaObject* pOutlinerParaObject = GetOutlinerParaObject();
     if( !pOutlinerParaObject && bVertical )
@@ -1540,7 +1605,7 @@ void SdrTextObj::SetVerticalWriting(bool bVertical)
         pOutlinerParaObject = GetOutlinerParaObject();
     }
 
-    if( pOutlinerParaObject && (pOutlinerParaObject->IsVertical() != (bool)bVertical) )
+    if( pOutlinerParaObject && ((pOutlinerParaObject->IsVertical() != (bool)bVertical) || pOutlinerParaObject->IsVertLR() != (bool)bVertLR))
     {
         // get item settings
         const SfxItemSet& rSet = GetObjectItemSet();
@@ -1550,6 +1615,8 @@ void SdrTextObj::SetVerticalWriting(bool bVertical)
         // Also exchange hor/ver adjust items
         SdrTextHorzAdjust eHorz = static_cast<const SdrTextHorzAdjustItem&>(rSet.Get(SDRATTR_TEXT_HORZADJUST)).GetValue();
         SdrTextVertAdjust eVert = static_cast<const SdrTextVertAdjustItem&>(rSet.Get(SDRATTR_TEXT_VERTADJUST)).GetValue();
+        SdrTextHorzAdjust eHorzNew = eHorz;//static_cast<const SdrTextHorzAdjustItem&>(rSet.Get(SDRATTR_TEXT_HORZADJUST)).GetValue();
+        SdrTextVertAdjust eVertNew = eVert;//static_cast<const SdrTextVertAdjustItem&>(rSet.Get(SDRATTR_TEXT_VERTADJUST)).GetValue();
 
         // rescue object size
         Rectangle aObjectRect = GetSnapRect();
@@ -1563,23 +1630,33 @@ void SdrTextObj::SetVerticalWriting(bool bVertical)
             0, 0);
 
         aNewSet.Put(rSet);
-        aNewSet.Put(makeSdrTextAutoGrowWidthItem(bAutoGrowHeight));
-        aNewSet.Put(makeSdrTextAutoGrowHeightItem(bAutoGrowWidth));
 
         // Exchange horz and vert adjusts
-        switch(eVert)
         {
-            case SDRTEXTVERTADJUST_TOP: aNewSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT)); break;
-            case SDRTEXTVERTADJUST_CENTER: aNewSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_CENTER)); break;
-            case SDRTEXTVERTADJUST_BOTTOM: aNewSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT)); break;
-            case SDRTEXTVERTADJUST_BLOCK: aNewSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_BLOCK)); break;
-        }
-        switch(eHorz)
-        {
-            case SDRTEXTHORZADJUST_LEFT: aNewSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_BOTTOM)); break;
-            case SDRTEXTHORZADJUST_CENTER: aNewSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_CENTER)); break;
-            case SDRTEXTHORZADJUST_RIGHT: aNewSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP)); break;
-            case SDRTEXTHORZADJUST_BLOCK: aNewSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_BLOCK)); break;
+            if (pOutlinerParaObject->IsVertical() != (bool)bVertical)
+            {
+                aNewSet.Put(makeSdrTextAutoGrowWidthItem(bAutoGrowHeight));
+                aNewSet.Put(makeSdrTextAutoGrowHeightItem(bAutoGrowWidth));
+                //|| pOutlinerParaObject->IsVertLR() != (bool)bVertLR
+                if (bVertical)
+                {
+                    ExchangeDirection(bVertical, eHorzNew, eVertNew);
+                    if (bVertLR)
+                        ExchangeDirection(eHorzNew);
+                }
+                else
+                {
+                    if (pOutlinerParaObject->IsVertLR())
+                        ExchangeDirection(eHorzNew);
+                    ExchangeDirection(bVertical, eHorzNew, eVertNew);
+                }
+            }
+            else
+            {
+                ExchangeDirection(eHorzNew);
+            }
+            aNewSet.Put(SdrTextHorzAdjustItem(eHorzNew));
+            aNewSet.Put(SdrTextVertAdjustItem(eVertNew));
         }
 
         SetObjectItemSet(aNewSet);
@@ -1588,7 +1665,7 @@ void SdrTextObj::SetVerticalWriting(bool bVertical)
         if( pOutlinerParaObject )
         {
             // set ParaObject orientation accordingly
-            pOutlinerParaObject->SetVertical(bVertical);
+            pOutlinerParaObject->SetVertical(bVertical, bVertLR);
         }
 
         // restore object size

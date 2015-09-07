@@ -2044,22 +2044,40 @@ void SdrTableObj::ReformatText()
 
 
 
-bool SdrTableObj::IsVerticalWriting() const
+bool SdrTableObj::IsVerticalWriting(bool *pVertLR) const
 {
     const SvxWritingModeItem* pModeItem = dynamic_cast< const SvxWritingModeItem* >( &GetObjectItem( SDRATTR_TEXTDIRECTION ) );
-    return pModeItem && pModeItem->GetValue() == com::sun::star::text::WritingMode_TB_RL;
+    sal_Bool vert = false;
+    sal_Bool veLR = false;
+    if (pModeItem)
+    {
+        const WritingMode aWm = (WritingMode)pModeItem->GetValue();
+        vert = aWm == com::sun::star::text::WritingMode_TB_LR || aWm == com::sun::star::text::WritingMode_TB_RL;
+        veLR = vert && aWm == com::sun::star::text::WritingMode_TB_LR;
+        if (pVertLR)*pVertLR = veLR;
+        return vert;
+    }
+    return false;
+    //if (pVertLR)pVertLR = pModeItem && pModeItem->GetValue() == com::sun::star::text::WritingMode_TB_LR;
+    //return pModeItem && pModeItem->GetValue() == com::sun::star::text::WritingMode_TB_RL;
 }
 
 
 
-void SdrTableObj::SetVerticalWriting(bool bVertical )
+void SdrTableObj::SetVerticalWriting(bool bVertical, bool bVertLR )
 {
     if( bVertical != IsVerticalWriting() )
     {
-        SvxWritingModeItem aModeItem( com::sun::star::text::WritingMode_LR_TB, SDRATTR_TEXTDIRECTION );
+        SvxWritingModeItem aModeItem = SvxWritingModeItem(com::sun::star::text::WritingMode_LR_TB, SDRATTR_TEXTDIRECTION);
+        if (bVertical)
+        {
+            if (bVertLR)
+                aModeItem = SvxWritingModeItem(com::sun::star::text::WritingMode_TB_LR, SDRATTR_TEXTDIRECTION);
+            else
+                aModeItem = SvxWritingModeItem(com::sun::star::text::WritingMode_TB_RL, SDRATTR_TEXTDIRECTION);
+        }
         SetObjectItem( aModeItem );
-    }
-}
+    }}
 
 
 

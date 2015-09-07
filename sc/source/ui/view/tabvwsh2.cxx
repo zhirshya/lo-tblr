@@ -119,6 +119,7 @@ void ScTabViewShell::ExecDraw(SfxRequest& rReq)
                 case SVX_SNAP_DRAW_CIRCLECUT:       nNewId = SID_DRAW_CIRCLECUT;        break;
                 case SVX_SNAP_DRAW_TEXT:            nNewId = SID_DRAW_TEXT;             break;
                 case SVX_SNAP_DRAW_TEXT_VERTICAL:   nNewId = SID_DRAW_TEXT_VERTICAL;    break;
+                case SVX_SNAP_DRAW_TEXT_VERTICAL_LR:nNewId = SID_DRAW_TEXT_VERTICAL_LR; break;
                 case SVX_SNAP_DRAW_TEXT_MARQUEE:    nNewId = SID_DRAW_TEXT_MARQUEE;     break;
                 case SVX_SNAP_DRAW_CAPTION:         nNewId = SID_DRAW_CAPTION;          break;
                 case SVX_SNAP_DRAW_CAPTION_VERTICAL: nNewId = SID_DRAW_CAPTION_VERTICAL; break;
@@ -223,6 +224,7 @@ void ScTabViewShell::ExecDraw(SfxRequest& rReq)
     if ( nNewId != SID_DRAW_CHART )             // Chart nicht mit DrawShell
     {
         if ( nNewId == SID_DRAW_TEXT || nNewId == SID_DRAW_TEXT_VERTICAL ||
+             nNewId == SID_DRAW_TEXT_VERTICAL_LR ||
                 nNewId == SID_DRAW_TEXT_MARQUEE || nNewId == SID_DRAW_NOTEEDIT )
             SetDrawTextShell( true );
         else
@@ -285,6 +287,7 @@ void ScTabViewShell::ExecDraw(SfxRequest& rReq)
 
         case SID_DRAW_TEXT:
         case SID_DRAW_TEXT_VERTICAL:
+        case SID_DRAW_TEXT_VERTICAL_LR:
         case SID_DRAW_TEXT_MARQUEE:
         case SID_DRAW_NOTEEDIT:
             pTabView->SetDrawFuncPtr(new FuText(this, pWin, pView, pDoc, aNewReq));

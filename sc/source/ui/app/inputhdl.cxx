@@ -1824,7 +1824,7 @@ void ScInputHandler::UpdateAdjust( sal_Unicode cTyped )
 
     nEditAdjust = sal::static_int_cast<sal_uInt16>(eSvxAdjust); //! set at ViewData or with PostEditView
 
-    pEngine->SetVertical( bAsianVertical );
+    pEngine->SetVertical( bAsianVertical, false );
 }
 
 void ScInputHandler::RemoveAdjust()

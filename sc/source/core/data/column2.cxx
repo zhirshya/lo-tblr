@@ -442,7 +442,7 @@ long ScColumn::GetNeededSize(
         }
 
         bool bEngineVertical = pEngine->IsVertical();
-        pEngine->SetVertical( bAsianVertical );
+        pEngine->SetVertical( bAsianVertical, false );
         pEngine->SetUpdateMode( true );
 
         bool bEdWidth = bWidth;
@@ -536,7 +536,7 @@ long ScColumn::GetNeededSize(
         }
 
         //  EditEngine is cached and re-used, so the old vertical flag must be restored
-        pEngine->SetVertical( bEngineVertical );
+        pEngine->SetVertical( bEngineVertical, false );
 
         pDocument->DisposeFieldEditEngine(pEngine);
 

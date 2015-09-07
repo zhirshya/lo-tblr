@@ -2660,7 +2660,7 @@ void ScOutputData::DrawEditParam::setAlignmentToEngine()
         }
     }
 
-    mpEngine->SetVertical(mbAsianVertical);
+    mpEngine->SetVertical(mbAsianVertical, false);
     if (maCell.meType == CELLTYPE_EDIT)
     {
         // We need to synchronize the vertical mode in the EditTextObject
@@ -2668,7 +2668,7 @@ void ScOutputData::DrawEditParam::setAlignmentToEngine()
         // instances.
         const EditTextObject* pData = maCell.mpEditText;
         if (pData)
-            const_cast<EditTextObject*>(pData)->SetVertical(mbAsianVertical);
+            const_cast<EditTextObject*>(pData)->SetVertical(mbAsianVertical, false);
     }
 }
 
@@ -4408,7 +4408,7 @@ void ScOutputData::DrawEditAsianVertical(DrawEditParam& rParam)
         aLogicStart.X() += (nAvailWidth - nEngineWidth) / 2;
 
     // paper size is subtracted below
-    aLogicStart.X() += nEngineWidth;
+    // aLogicStart.X() += nEngineWidth;
 
     // vertical adjustment is within the EditEngine
     if (rParam.mbPixelToLogic)
@@ -4425,7 +4425,7 @@ void ScOutputData::DrawEditAsianVertical(DrawEditParam& rParam)
 
     //  with SetVertical, the start position is top left of
     //  the whole output area, not the text itself
-    aLogicStart.X() -= rParam.mpEngine->GetPaperSize().Width();
+    // aLogicStart.X() -= rParam.mpEngine->GetPaperSize().Width();
 
     rParam.mpEngine->Draw(mpDev, aLogicStart, 0);
 
@@ -4440,6 +4440,8 @@ void ScOutputData::DrawEditAsianVertical(DrawEditParam& rParam)
     rParam.adjustForHyperlinkInPDF(aURLStart, mpDev);
 }
 
+//by aron
+//干啥的函数？？
 void ScOutputData::DrawEdit(bool bPixelToLogic)
 {
     boost::scoped_ptr<ScFieldEditEngine> pEngine;

@@ -91,7 +91,8 @@ public:
     void SetUserType( sal_uInt16 n );
 
     bool IsVertical() const;
-    void SetVertical( bool bVertical );
+    void SetVertical( bool bVertical, bool bVertL2R );
+    bool IsVertLR() const;
 
     SvtScriptType GetScriptType() const;
 

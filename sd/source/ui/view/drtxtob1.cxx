@@ -305,13 +305,23 @@ void TextObjectBar::Execute( SfxRequest &rReq )
 
         case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
         case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
+        case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
         {
             mpView->SdrEndTextEdit();
             SfxItemSet aAttr( mpView->GetDoc().GetPool(), SDRATTR_TEXTDIRECTION, SDRATTR_TEXTDIRECTION, 0 );
-            aAttr.Put( SvxWritingModeItem(
-                nSlot == SID_TEXTDIRECTION_LEFT_TO_RIGHT ?
-                    com::sun::star::text::WritingMode_LR_TB : com::sun::star::text::WritingMode_TB_RL,
-                    SDRATTR_TEXTDIRECTION ) );
+            com::sun::star::text::WritingMode aWritingMode ;
+            switch(nSlot)
+            {
+            case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
+                aWritingMode = com::sun::star::text::WritingMode_LR_TB;break;
+            case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
+                aWritingMode = com::sun::star::text::WritingMode_TB_RL;break;
+            case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
+                aWritingMode = com::sun::star::text::WritingMode_TB_LR;break;
+            default :
+                aWritingMode = com::sun::star::text::WritingMode_LR_TB;break;
+            }
+            aAttr.Put( SvxWritingModeItem(aWritingMode, SDRATTR_TEXTDIRECTION ) );
             rReq.Done( aAttr );
             mpView->SetAttributes( aAttr );
             Invalidate();

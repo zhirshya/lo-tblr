@@ -259,8 +259,8 @@ public:
 
     void SetTextEditOutliner(SdrOutliner* pOutl) { pEdtOutl=pOutl; }
 
-    virtual bool IsVerticalWriting() const SAL_OVERRIDE;
-    virtual void SetVerticalWriting(bool bVertical) SAL_OVERRIDE;
+    virtual bool IsVerticalWriting(bool *bVertLR = 0) const SAL_OVERRIDE;
+    virtual void SetVerticalWriting(bool bVertical, bool bVertLR = false) SAL_OVERRIDE;
 
     com::sun::star::text::WritingMode GetWritingMode() const;
 

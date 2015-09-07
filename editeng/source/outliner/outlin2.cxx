@@ -527,14 +527,19 @@ const EditEngine& Outliner::GetEditEngine() const
     return *pEditEngine;
 }
 
-void Outliner::SetVertical( bool b )
+void Outliner::SetVertical( bool bVert, bool bVertLR)
 {
-    pEditEngine->SetVertical( b );
+    pEditEngine->SetVertical( bVert, bVertLR );
 }
 
 bool Outliner::IsVertical() const
 {
     return pEditEngine->IsVertical();
+}
+
+bool Outliner::IsVertLR() const
+{
+    return pEditEngine->IsVertLR();
 }
 
 void Outliner::SetFixedCellHeight( bool bUseFixedCellHeight )

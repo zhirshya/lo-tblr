@@ -393,16 +393,16 @@ void ImpEditView::ImplDrawHighlightRect( OutputDevice* _pTarget, const Point& rD
 
         //by aron
         //tb-lr和lr-tb是一样的
-        if ( 1/*!IsVertical()*/ )
+        if ( IsVertical() && !IsVertLR() )
 
         {
-            lcl_AllignToPixel( aPnt1, _pTarget, +1, 0 );
-            lcl_AllignToPixel( aPnt2, _pTarget, 0, ( bPixelMode ? 0 : -1 ) );
+            lcl_AllignToPixel( aPnt1, _pTarget, 0, +1);
+            lcl_AllignToPixel( aPnt2, _pTarget, (bPixelMode ? 0 : +1), 0);
         }
         else
         {
-            lcl_AllignToPixel( aPnt1, _pTarget, 0, +1 );
-            lcl_AllignToPixel( aPnt2, _pTarget, ( bPixelMode ? 0 : +1 ), 0 );
+            lcl_AllignToPixel( aPnt1, _pTarget, +1, 0 );
+            lcl_AllignToPixel( aPnt2, _pTarget, 0, ( bPixelMode ? 0 : -1 ) );
         }
 
         Rectangle aRect( aPnt1, aPnt2 );
@@ -441,7 +441,10 @@ bool ImpEditView::IsVertical() const
 {
     return pEditEngine->pImpEditEngine->IsVertical();
 }
-
+bool ImpEditView::IsVertLR() const
+{
+    return pEditEngine->pImpEditEngine->IsVertLR();
+}
 Rectangle ImpEditView::GetVisDocArea() const
 {
     return Rectangle( GetVisDocLeft(), GetVisDocTop(), GetVisDocRight(), GetVisDocBottom() );
@@ -453,27 +456,27 @@ Point ImpEditView::GetDocPos( const Point& rWindowPos ) const
     Point aPoint;
 
     //by aron
-    aPoint.X() = rWindowPos.X() - aOutArea.Left() + GetVisDocLeft();
-    aPoint.Y() = rWindowPos.Y() - aOutArea.Top() + GetVisDocTop();
-    //如果是tb-lr则X,Y互换
-    if (pEditEngine->pImpEditEngine->IsVertical())
-    {
-        int tmp = aPoint.X();
-        aPoint.X() = aPoint.Y();
-        aPoint.Y() = tmp;
-    }
-    /* original code
-    if ( !pEditEngine->pImpEditEngine->IsVertical() )
+    if ( !pEditEngine->pImpEditEngine->IsVertical())
     {
         aPoint.X() = rWindowPos.X() - aOutArea.Left() + GetVisDocLeft();
-        aPoint.Y() = rWindowPos.Y() - aOutArea.Top() + GetVisDocTop();
-    }
-    else
+        aPoint.Y() = rWindowPos.Y() - aOutArea.Top() + GetVisDocTop();    }
+
+    else if (!pEditEngine->pImpEditEngine->IsVertLR())
     {
         aPoint.X() = rWindowPos.Y() - aOutArea.Top() + GetVisDocLeft();
         aPoint.Y() = aOutArea.Right() - rWindowPos.X() + GetVisDocTop();
     }
-    */
+    else /*if (pEditEngine->pImpEditEngine->IsVertical() && pEditEngine->pImpEditEngine->IsVertLR())*/
+    {
+        aPoint.X() = rWindowPos.X() - aOutArea.Left() + GetVisDocLeft();
+        aPoint.Y() = rWindowPos.Y() - aOutArea.Top() + GetVisDocTop();
+        //如果是tb-lr则X,Y互换
+        int tmp = aPoint.X();
+        aPoint.X() = aPoint.Y();
+        aPoint.Y() = tmp;
+
+    }
+
     return aPoint;
 }
 
@@ -483,29 +486,29 @@ Point ImpEditView::GetWindowPos( const Point& rDocPos ) const
     //by aron
     Point aPoint;
 
-    Point tmpPoint = rDocPos;
-    //tb-lr的话先互换XY坐标
-    if (pEditEngine->pImpEditEngine->IsVertical())
-    {
-        int tmp = tmpPoint.X();
-        tmpPoint.X() = tmpPoint.Y();
-        tmpPoint.Y() = tmp;
-    }
-    aPoint.X() = tmpPoint.X() + aOutArea.Left() - GetVisDocLeft();
-    aPoint.Y() = tmpPoint.Y() + aOutArea.Top() - GetVisDocTop();
 
-    /*original code
     if ( !pEditEngine->pImpEditEngine->IsVertical() )
     {
         aPoint.X() = rDocPos.X() + aOutArea.Left() - GetVisDocLeft();
         aPoint.Y() = rDocPos.Y() + aOutArea.Top() - GetVisDocTop();
     }
-    else
+    else if(!pEditEngine->pImpEditEngine->IsVertLR() )
     {
         aPoint.X() = aOutArea.Right() - rDocPos.Y() + GetVisDocTop();
         aPoint.Y() = rDocPos.X() + aOutArea.Top() - GetVisDocLeft();
     }
-    */
+    else /*if(pEditEngine->pImpEditEngine->IsVertical() && pEditEngine->pImpEditEngine->IsVertLR())*/
+    {
+        //tb-lr的话先互换XY坐标
+        Point tmpPoint = rDocPos;
+
+        int tmp = tmpPoint.X();
+        tmpPoint.X() = tmpPoint.Y();
+        tmpPoint.Y() = tmp;
+
+        aPoint.X() = tmpPoint.X() + aOutArea.Left() - GetVisDocLeft();
+        aPoint.Y() = tmpPoint.Y() + aOutArea.Top() - GetVisDocTop();
+    }
 
     return aPoint;
 }
@@ -520,11 +523,16 @@ Rectangle ImpEditView::GetWindowPos( const Rectangle& rDocRect ) const
     {
         aRect = Rectangle( aPos, aSz );
     }
+    else if (!pEditEngine->pImpEditEngine->IsVertLR())
+    {
+        Point aNewPos( aPos.X()-aSz.Height(), aPos.Y() );
+        aRect = Rectangle( aNewPos, Size( aSz.Height(), aSz.Width() ) );
+    }
     else
     {
         //by aron
-        Point aNewPos( aPos.X()/*-aSz.Height()*/, aPos.Y() );
-        aRect = Rectangle( aNewPos, Size( aSz.Height(), aSz.Width() ) );
+        Point aNewPos(aPos.X()/*-aSz.Height()*/, aPos.Y());
+        aRect = Rectangle(aNewPos, Size(aSz.Height(), aSz.Width()));
     }
     return aRect;
 }

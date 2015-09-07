@@ -222,6 +222,11 @@ void EditEngine::Draw( OutputDevice* pOutDev, const Point& rStartPos, short nOri
     {
         //aStartPos.X() += GetPaperSize().Width();
         //从单元格的左边开始
+        if (!IsVertLR())
+        {
+            //tb-rl 从单元格的左边开始
+            aStartPos.X() += GetPaperSize().Width();
+        }
         aStartPos = Rotate( aStartPos, nOrientation, rStartPos );
     }
     pImpEditEngine->Paint( pOutDev, aBigRect, aStartPos, false, nOrientation );
@@ -435,14 +440,19 @@ const Size& EditEngine::GetPaperSize() const
     return pImpEditEngine->GetPaperSize();
 }
 
-void EditEngine::SetVertical( bool bVertical )
+void EditEngine::SetVertical( bool bVertical, bool bVertL2R )
 {
-    pImpEditEngine->SetVertical( bVertical );
+    pImpEditEngine->SetVertical( bVertical, bVertL2R );
 }
 
 bool EditEngine::IsVertical() const
 {
     return pImpEditEngine->IsVertical();
+}
+
+bool EditEngine::IsVertLR() const
+{
+    return pImpEditEngine->IsVertLR();
 }
 
 void EditEngine::SetFixedCellHeight( bool bUseFixedCellHeight )
@@ -1764,6 +1774,11 @@ void EditEngine::StripPortions()
     //     aBigRect.Right() = 0;
     //     aBigRect.Left() = -0x7FFFFFFF;
     // }
+    if ( IsVertical() && !IsVertLR())
+    {
+        aBigRect.Right() = 0;
+        aBigRect.Left() = -0x7FFFFFFF;
+    }
     pImpEditEngine->Paint( aTmpDev.get(), aBigRect, Point(), true );
 }
 

@@ -357,29 +357,41 @@ void TextObjectBar::GetAttrState( SfxItemSet& rSet )
 
             case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
             case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
+            case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
             {
                 if ( bDisableVerticalText )
                 {
                     rSet.DisableItem( SID_TEXTDIRECTION_LEFT_TO_RIGHT );
+                    rSet.DisableItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT );
                     rSet.DisableItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM );
                 }
                 else
                 {
-                    bool bLeftToRight = true;
+                    bool bVertical = true;
+                    bool bVertLR = true;
 
                     SdrOutliner* pOutl = mpView->GetTextEditOutliner();
                     if( pOutl )
                     {
                         if( pOutl->IsVertical() )
-                            bLeftToRight = false;
+                            {
+                                bVertical = true;
+                                if(pOutl->IsVertLR())
+                                    bVertLR = true;
+                            }
                     }
                     else
-                        bLeftToRight = static_cast<const SvxWritingModeItem&>( aAttrSet.Get( SDRATTR_TEXTDIRECTION ) ).GetValue() == com::sun::star::text::WritingMode_LR_TB;
+                    {
+                        text::WritingMode wm = (text::WritingMode)( (const SvxWritingModeItem&) aAttrSet.Get( SDRATTR_TEXTDIRECTION ) ).GetValue();// == com::sun::star::text::WritingMode_LR_TB;
+                        bVertical = wm == com::sun::star::text::WritingMode_TB_LR || wm == com::sun::star::text::WritingMode_TB_RL;
+                        bVertLR = wm == com::sun::star::text::WritingMode_TB_LR;
+                    }
+                    rSet.Put( SfxBoolItem( SID_TEXTDIRECTION_LEFT_TO_RIGHT, !bVertical ) );
+                    rSet.Put( SfxBoolItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM, bVertical && !bVertLR ) );
+                    rSet.Put( SfxBoolItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT, bVertical && bVertLR) );
 
-                    rSet.Put( SfxBoolItem( SID_TEXTDIRECTION_LEFT_TO_RIGHT, bLeftToRight ) );
-                    rSet.Put( SfxBoolItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM, !bLeftToRight ) );
 
-                    if( !bLeftToRight )
+                    if( bVertical )
                         bDisableParagraphTextDirection = true;
                 }
             }
@@ -439,6 +451,7 @@ void TextObjectBar::GetAttrState( SfxItemSet& rSet )
         rSet.DisableItem( SID_PARASPACE_INCREASE );
         rSet.DisableItem( SID_PARASPACE_DECREASE );
         rSet.DisableItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM );
+        rSet.DisableItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT );
         rSet.DisableItem( SID_TEXTDIRECTION_LEFT_TO_RIGHT );
         rSet.DisableItem( SID_ATTR_PARA_LEFT_TO_RIGHT );
         rSet.DisableItem( SID_ATTR_PARA_RIGHT_TO_LEFT );
