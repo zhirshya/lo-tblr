@@ -43,6 +43,7 @@
  <toolbar:toolbaritem xlink:href=".uno:SubScript"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:TextdirectionLeftToRight"/>
+ <toolbar:toolbaritem xlink:href=".uno:TextdirectionTopToBottomLeftToRight"/>
  <toolbar:toolbaritem xlink:href=".uno:TextdirectionTopToBottom"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:FontDialog"/>

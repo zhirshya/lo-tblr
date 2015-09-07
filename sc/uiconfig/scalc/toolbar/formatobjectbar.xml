@@ -78,5 +78,6 @@
  <toolbar:toolbaritem xlink:href=".uno:ParaRightToLeft" toolbar:style="radio"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:TextdirectionLeftToRight"/>
+ <toolbar:toolbaritem xlink:href=".uno:TextdirectionTopToBottomLeftToRight"/>
  <toolbar:toolbaritem xlink:href=".uno:TextdirectionTopToBottom"/>
 </toolbar:toolbar>

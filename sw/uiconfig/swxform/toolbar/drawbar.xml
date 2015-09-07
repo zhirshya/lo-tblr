@@ -30,6 +30,7 @@
  <toolbar:toolbaritem xlink:href=".uno:Pie" toolbar:visible="false" toolbar:helpid="10112"/>
  <toolbar:toolbaritem xlink:href=".uno:CircleCut" toolbar:visible="false" toolbar:helpid="10115"/>
  <toolbar:toolbaritem xlink:href=".uno:DrawText" toolbar:helpid="10253"/>
+ <toolbar:toolbaritem xlink:href=".uno:VerticalLeftToRightText"/>
  <toolbar:toolbaritem xlink:href=".uno:VerticalText" toolbar:helpid="10905"/>
  <toolbar:toolbaritem xlink:href=".uno:Text_Marquee" toolbar:visible="false" toolbar:helpid="10465"/>
  <toolbar:toolbaritem xlink:href=".uno:DrawCaption" toolbar:helpid="10254"/>

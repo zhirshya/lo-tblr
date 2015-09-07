@@ -51,6 +51,7 @@
  <toolbar:toolbaritem xlink:href=".uno:ToggleObjectBezierMode" toolbar:helpid="10126"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:DrawText" toolbar:helpid="10253"/>
+ <toolbar:toolbaritem xlink:href=".uno:VerticalLeftToRightText"/>
  <toolbar:toolbaritem xlink:href=".uno:VerticalText" toolbar:helpid="10905"/>
  <toolbar:toolbaritem xlink:href=".uno:FontworkGalleryFloater" toolbar:helpid="10977"/>
  <toolbar:toolbaritem xlink:href=".uno:Text_Marquee" toolbar:visible="false" toolbar:helpid="10465"/>

@@ -51,6 +51,7 @@
  <toolbar:toolbaritem xlink:href=".uno:DefaultNumbering"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:TextdirectionLeftToRight" toolbar:helpid="10907"/>
+ <toolbar:toolbaritem xlink:href=".uno:TextdirectionTopToBottomLeftToRight"/>
  <toolbar:toolbaritem xlink:href=".uno:TextdirectionTopToBottom" toolbar:helpid="10908"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:FontDialog" toolbar:helpid="10296"/>
