@@ -172,7 +172,12 @@ svt::ToolboxController* SAL_CALL SfxToolBoxControllerFactory( const Reference< X
         pSlotPool = pModule->GetSlotPool();
     else
         pSlotPool = &(SfxSlotPool::GetSlotPool( NULL ));
-
+/*
+    if (aTargetURL.Complete == rtl::OUString(RTL_CONSTASCII_USTRINGPARAM(".uno:VerticalLeftToRightText")))
+    {
+        int stop = 1;
+    }
+*/
     const SfxSlot* pSlot = pSlotPool->GetUnoSlot( aTargetURL.Path );
     if ( pSlot )
     {
@@ -573,6 +578,13 @@ throw ( ::com::sun::star::uno::RuntimeException, std::exception )
                 }
             }
 
+            //just for test
+            /*
+            if(nSlotId == SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT)
+            {
+                int stop = 1;
+            }
+            */
             StateChanged( nSlotId, eState, pItem );
             delete pItem;
         }
