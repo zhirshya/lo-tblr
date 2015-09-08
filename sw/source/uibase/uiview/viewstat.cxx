@@ -512,6 +512,7 @@ void SwView::GetDrawState(SfxItemSet &rSet)
                 {
                     aEnum.DisableValue( SID_DRAW_CAPTION_VERTICAL );
                     aEnum.DisableValue( SID_DRAW_TEXT_VERTICAL );
+                    aEnum.DisableValue( SID_DRAW_TEXT_VERTICAL_LR );
                 }
                 rSet.Put(aEnum);
             }

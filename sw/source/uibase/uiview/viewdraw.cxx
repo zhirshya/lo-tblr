@@ -375,6 +375,7 @@ void SwView::ExecDraw(SfxRequest& rReq)
                 const SdrMarkList& rMarkList = pTmpSdrView->GetMarkedObjectList();
                 if(rMarkList.GetMarkCount() == 1 &&
                         (SID_DRAW_TEXT == nSlotId || SID_DRAW_TEXT_VERTICAL == nSlotId ||
+                            SID_DRAW_TEXT_VERTICAL_LR == nSlotId ||
                             SID_DRAW_TEXT_MARQUEE == nSlotId ))
                 {
                     SdrObject* pObj = rMarkList.GetMark(0)->GetMarkedSdrObj();
