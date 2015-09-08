@@ -199,6 +199,7 @@ void ScDLL::Init()
     SvxGrafFilterToolBoxControl     ::RegisterControl(SID_GRFFILTER,            pMod);
 
     SvxVertTextTbxCtrl::RegisterControl(SID_DRAW_CAPTION_VERTICAL,          pMod);
+    SvxVertTextTbxCtrl::RegisterControl(SID_DRAW_TEXT_VERTICAL_LR,          pMod);
     SvxVertTextTbxCtrl::RegisterControl(SID_DRAW_TEXT_VERTICAL,             pMod);
     SvxVertTextTbxCtrl::RegisterControl(SID_TEXTDIRECTION_LEFT_TO_RIGHT,    pMod);
     SvxVertTextTbxCtrl::RegisterControl(SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT,    pMod);
