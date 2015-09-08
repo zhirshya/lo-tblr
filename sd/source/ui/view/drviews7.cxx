@@ -243,7 +243,7 @@ void DrawViewShell::GetDrawAttrState(SfxItemSet& rSet)
 
     return pOL;
 }
-
+//by aron 需要再看看
 void DrawViewShell::GetMenuState( SfxItemSet &rSet )
 {
     if (mpDrawView == NULL)
@@ -1073,7 +1073,8 @@ void DrawViewShell::GetMenuState( SfxItemSet &rSet )
         }
         if( nCurrentSId != SID_TEXT_FITTOSIZE &&
             nCurrentSId != SID_TEXT_FITTOSIZE_VERTICAL &&
-            nCurrentSId != SID_ATTR_CHAR_VERTICAL )
+            nCurrentSId != SID_ATTR_CHAR_VERTICAL &&
+            nCurrentSId != SID_DRAW_TEXT_VERTICAL_LR)
             nCurrentSId = SID_ATTR_CHAR;
 
         rSet.Put( SfxBoolItem( nCurrentSId, true ) );
@@ -1157,6 +1158,8 @@ void DrawViewShell::GetMenuState( SfxItemSet &rSet )
         rSet.DisableItem( SID_ATTR_CHAR );
         rSet.ClearItem( SID_ATTR_CHAR_VERTICAL );
         rSet.DisableItem( SID_ATTR_CHAR_VERTICAL );
+        rSet.ClearItem(SID_DRAW_TEXT_VERTICAL_LR);
+        rSet.DisableItem(SID_DRAW_TEXT_VERTICAL_LR);
         rSet.ClearItem(SID_DRAW_LINE);
         rSet.DisableItem(SID_DRAW_LINE);
         rSet.ClearItem(SID_DRAW_MEASURELINE);

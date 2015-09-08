@@ -26,6 +26,7 @@
  <toolbar:toolbaritem xlink:href=".uno:BasicShapes.ellipse" toolbar:style="radio"/>
  <toolbar:toolbaritem xlink:href=".uno:LineToolbox" toolbar:style="radio dropdown"/>
  <toolbar:toolbaritem xlink:href=".uno:Text" toolbar:style="radio"/>
+ <toolbar:toolbaritem xlink:href=".uno:VerticalLeftToRightText" toolbar:style="radio"/>
  <toolbar:toolbaritem xlink:href=".uno:VerticalText" toolbar:style="radio"/>
  <toolbar:toolbaritem xlink:href=".uno:FontworkGalleryFloater"/>
  <toolbar:toolbarseparator/>

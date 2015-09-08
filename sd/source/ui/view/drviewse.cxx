@@ -148,7 +148,7 @@ void DrawViewShell::FuPermanent(SfxRequest& rReq)
 
     if( HasCurrentFunction() &&
         ( nSId == SID_TEXTEDIT || nSId == SID_ATTR_CHAR || nSId == SID_TEXT_FITTOSIZE ||
-          nSId == SID_ATTR_CHAR_VERTICAL || nSId == SID_TEXT_FITTOSIZE_VERTICAL ) )
+          nSId == SID_ATTR_CHAR_VERTICAL || nSId == SID_DRAW_TEXT_VERTICAL_LR || nSId == SID_TEXT_FITTOSIZE_VERTICAL))
     {
         rtl::Reference<FuPoor> xFunc( GetCurrentFunction() );
 
@@ -210,9 +210,9 @@ void DrawViewShell::FuPermanent(SfxRequest& rReq)
 
             if (nOldSId == nSId ||
                 ((nOldSId == SID_TEXTEDIT || nOldSId == SID_ATTR_CHAR || nOldSId == SID_TEXT_FITTOSIZE ||
-                nOldSId == SID_ATTR_CHAR_VERTICAL || nOldSId == SID_TEXT_FITTOSIZE_VERTICAL) &&
+                nOldSId == SID_ATTR_CHAR_VERTICAL || nOldSId == SID_DRAW_TEXT_VERTICAL_LR || nOldSId == SID_TEXT_FITTOSIZE_VERTICAL) &&
                 (nSId == SID_TEXTEDIT || nSId == SID_ATTR_CHAR || nSId == SID_TEXT_FITTOSIZE ||
-                nSId == SID_ATTR_CHAR_VERTICAL || nSId == SID_TEXT_FITTOSIZE_VERTICAL )))
+                nSId == SID_ATTR_CHAR_VERTICAL || nSId == SID_DRAW_TEXT_VERTICAL_LR || nSId == SID_TEXT_FITTOSIZE_VERTICAL )))
             {
                 bPermanent = true;
             }
@@ -236,6 +236,7 @@ void DrawViewShell::FuPermanent(SfxRequest& rReq)
         case SID_ATTR_CHAR:
         case SID_ATTR_CHAR_VERTICAL:
         case SID_TEXT_FITTOSIZE:
+        case SID_DRAW_TEXT_VERTICAL_LR:
         case SID_TEXT_FITTOSIZE_VERTICAL:
         {
             SetCurrentFunction( FuText::Create(this, GetActiveWindow(), mpDrawView, GetDoc(), rReq) );
@@ -246,7 +247,8 @@ void DrawViewShell::FuPermanent(SfxRequest& rReq)
             rBindings.Invalidate( SID_ATTR_CHAR_VERTICAL );
             rBindings.Invalidate( SID_TEXT_FITTOSIZE );
             rBindings.Invalidate( SID_TEXT_FITTOSIZE_VERTICAL );
-
+            rBindings.Invalidate( SID_DRAW_TEXT_VERTICAL_LR );
+            
             // evtl. feed characters to activated textedit
             if(SID_ATTR_CHAR == nSId && GetView() && GetView()->IsTextEdit())
                 ImpAddPrintableCharactersToTextEdit(rReq, GetView());
