@@ -371,7 +371,7 @@ void EditTextObject::SetVertical( bool bVertical, bool bVertL2R )
 bool EditTextObject::IsVertLR() const
 //Add a comment to this line
 {
-    return sal_False;
+    return mpImpl->IsVertLR();
 }
 
 SvtScriptType EditTextObject::GetScriptType() const
