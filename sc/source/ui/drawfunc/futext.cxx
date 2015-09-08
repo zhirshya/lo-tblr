@@ -212,6 +212,7 @@ bool FuText::MouseButtonDown(const MouseEvent& rMEvt)
                 //  deduced from slot ids only if text object has no content
 
                 sal_uInt16 nSlotID = aSfxRequest.GetSlot();
+                //by aron 需要再看看
                 bool bVertical = ( nSlotID == SID_DRAW_TEXT_VERTICAL );
                 OutlinerParaObject* pOPO = pObj->GetOutlinerParaObject();
                 if ( pOPO )

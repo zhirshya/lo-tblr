@@ -793,7 +793,7 @@ void SfxTabDialog::SavePosAndId()
 }
 
 
-
+//sw/frame/option/ok按钮的动作
 short SfxTabDialog::Ok()
 
 /*  [Description]

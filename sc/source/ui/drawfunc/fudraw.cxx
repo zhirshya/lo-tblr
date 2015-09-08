@@ -193,6 +193,7 @@ static bool lcl_KeyEditMode( SdrObject* pObj, ScTabViewShell* pViewShell, const 
 
         OutlinerParaObject* pOPO = pObj->GetOutlinerParaObject();
         bool bVertical = ( pOPO && pOPO->IsVertical() );
+        //by aron 需要再看看
         sal_uInt16 nTextSlotId = bVertical ? SID_DRAW_TEXT_VERTICAL : SID_DRAW_TEXT;
 
         // don't switch shells if text shell is already active
