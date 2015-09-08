@@ -221,7 +221,7 @@ void EditEngine::Draw( OutputDevice* pOutDev, const Point& rStartPos, short nOri
     if ( IsVertical() )
     {
         //aStartPos.X() += GetPaperSize().Width();
-        //从单元格的左边开始
+        //从单元格的右边开始
         if (!IsVertLR())
         {
             //tb-rl 从单元格的左边开始
