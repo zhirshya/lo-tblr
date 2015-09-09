@@ -171,7 +171,7 @@ void ConstRectangle::Activate(const sal_uInt16 nSlotId)
     case SID_DRAW_TEXT_VERTICAL:
         // #93382#
         mbVertical = true;
-        mbVertLR = true;
+        mbVertLR = false;
          m_pWin->SetSdrDrawMode(OBJ_TEXT);
         break;
     case SID_DRAW_TEXT:
