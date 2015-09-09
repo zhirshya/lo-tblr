@@ -925,6 +925,9 @@ void SdrTextObj::impDecomposeBlockTextPrimitive(
     const sal_uInt32 nAnchorTextWidth(FRound(aAnchorTextRange.getWidth() + 1L));
     const sal_uInt32 nAnchorTextHeight(FRound(aAnchorTextRange.getHeight() + 1L));
     const bool bVerticalWritintg(rSdrBlockTextPrimitive.getOutlinerParaObject().IsVertical());
+	//by aron
+	const bool bVertcalLeft2Right(rSdrBlockTextPrimitive.getOutlinerParaObject().IsVertLR());
+	//
     const Size aAnchorTextSize(Size(nAnchorTextWidth, nAnchorTextHeight));
 
     if(bIsCell)
@@ -1068,7 +1071,10 @@ void SdrTextObj::impDecomposeBlockTextPrimitive(
     // Translate relative to given primitive to get same rotation and shear
     // as the master shape we are working on. For vertical, use the top-right
     // corner
-    const double fStartInX(bVerticalWritintg ? aAdjustTranslate.getX() + aOutlinerScale.getX() : aAdjustTranslate.getX());
+
+	//by aron
+	//非编辑状态文本框的开始位置
+	const double fStartInX(bVerticalWritintg && !bVertcalLeft2Right ? aAdjustTranslate.getX() + aOutlinerScale.getX() : aAdjustTranslate.getX());
     const basegfx::B2DTuple aAdjOffset(fStartInX, aAdjustTranslate.getY());
     basegfx::B2DHomMatrix aNewTransformA(basegfx::tools::createTranslateB2DHomMatrix(aAdjOffset.getX(), aAdjOffset.getY()));
 
