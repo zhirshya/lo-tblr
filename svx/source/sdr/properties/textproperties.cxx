@@ -170,8 +170,6 @@ namespace sdr
                 if (nDir == com::sun::star::text::WritingMode2::TB_RL)
                     bVert = sal_True;
                 if (nDir == com::sun::star::text::WritingMode2::TB_LR)
-                    bVert = sal_True;
-                rObj.SetVerticalWriting(bVert);
                 {
                     bVert = bVl2r = true;
                 }
