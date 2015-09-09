@@ -101,6 +101,10 @@ bool SvxWritingModeItem::PutValue( const com::sun::star::uno::Any& rVal, sal_uIn
                 SetValue( (sal_uInt16)nVal );
                 bRet = true;
                 break;
+            case WritingMode_TB_LR://by aron
+                SetValue( (sal_uInt16)nVal );
+                bRet = true;
+                break;
             default:
                 bRet = false;
                 break;
