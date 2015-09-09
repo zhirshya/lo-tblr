@@ -4146,9 +4146,9 @@ bool SvxShapeText::getPropertyValueImpl( const OUString& rName, const SfxItemPro
         if( pTextObj && pTextObj->IsVerticalWriting(&bVertLR) )
         {
             if(bVertLR)
-                rValue <<= com::sun::star::text::WritingMode_TB_RL;
-            else
                 rValue <<= com::sun::star::text::WritingMode_TB_LR;
+            else
+                rValue <<= com::sun::star::text::WritingMode_TB_RL;
         }
         else
             rValue <<= com::sun::star::text::WritingMode_LR_TB;
