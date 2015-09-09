@@ -164,7 +164,7 @@ private:
     // Calc specific
     SvxHorJustifyItem           aHorJustify;
     SvxVerJustifyItem           aVerJustify;
-    SfxBoolItem                 aStacked;
+    SvxOrientationItem          aStacked;
     SvxMarginItem               aMargin;
     SfxBoolItem                 aLinebreak;
     // from SO5, 504k on, rotated text
@@ -200,7 +200,7 @@ public:
     const SvxColorItem&         GetColor() const        { return aColor; }
     const SvxHorJustifyItem&    GetHorJustify() const   { return aHorJustify; }
     const SvxVerJustifyItem&    GetVerJustify() const   { return aVerJustify; }
-    const SfxBoolItem&          GetStacked() const      { return aStacked; }
+    const SvxOrientationItem&   GetStacked() const      { return aStacked; }
     const SfxBoolItem&          GetLinebreak() const    { return aLinebreak; }
     const SvxMarginItem&        GetMargin() const       { return aMargin; }
     const SvxBoxItem&           GetBox() const          { return aBox; }
@@ -232,7 +232,7 @@ public:
     void    SetColor( const SvxColorItem& rColor )                  { aColor = rColor; }
     void    SetHorJustify( const SvxHorJustifyItem& rHorJustify )   { aHorJustify = rHorJustify; }
     void    SetVerJustify( const SvxVerJustifyItem& rVerJustify )   { aVerJustify = rVerJustify; }
-    void    SetStacked( const SfxBoolItem& rStacked )               { aStacked.SetValue( rStacked.GetValue() ); }
+    void    SetStacked(const SvxOrientationItem& rStacked)          { aStacked.SetValue(rStacked.GetValue()); }
     void    SetLinebreak( const SfxBoolItem& rLinebreak )           { aLinebreak.SetValue( rLinebreak.GetValue() ); }
     void    SetMargin( const SvxMarginItem& rMargin )               { aMargin = rMargin; }
     void    SetBox( const SvxBoxItem& rBox )                        { aBox = rBox; }

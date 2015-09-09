@@ -192,11 +192,11 @@ SvStream& ScPatternAttr::Store(SvStream& rStream, sal_uInt16 /* nItemVersion */)
 
 SvxCellOrientation ScPatternAttr::GetCellOrientation( const SfxItemSet& rItemSet, const SfxItemSet* pCondSet )
 {
-    SvxCellOrientation eOrient = SVX_ORIENTATION_STANDARD;
+    sal_uInt16 eOrient = ((const SvxOrientationItem&)GetItem( ATTR_STACKED, rItemSet, pCondSet )).GetValue();//SVX_ORIENTATION_STANDARD;
 
-    if( static_cast<const SfxBoolItem&>(GetItem( ATTR_STACKED, rItemSet, pCondSet )).GetValue() )
+    if( eOrient == SVX_ORIENTATION_STANDARD || eOrient == SVX_ORIENTATION_STACKED || eOrient == SVX_ORIENTATION_STACKED_LR )
     {
-        eOrient = SVX_ORIENTATION_STACKED;
+        return (SvxCellOrientation)eOrient ;
     }
     else
     {
@@ -207,7 +207,7 @@ SvxCellOrientation ScPatternAttr::GetCellOrientation( const SfxItemSet& rItemSet
             eOrient = SVX_ORIENTATION_TOPBOTTOM;
     }
 
-    return eOrient;
+    return (SvxCellOrientation)eOrient;
 }
 
 SvxCellOrientation ScPatternAttr::GetCellOrientation( const SfxItemSet* pCondSet ) const

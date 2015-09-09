@@ -323,7 +323,8 @@ Rectangle ScEditUtil::GetEditArea( const ScPatternAttr* pPattern, bool bForceToT
                                                 GetItem(ATTR_VER_JUSTIFY)).GetValue();
 
     //  asian vertical is always edited top-aligned
-    bool bAsianVertical = static_cast<const SfxBoolItem&>(pPattern->GetItem( ATTR_STACKED )).GetValue() &&
+    bool sal_uInt16 eOrient = ((const SvxOrientationItem&)pPattern->GetItem( ATTR_STACKED )).GetValue();
+    bool bAsianVertical = (eOrient == SVX_ORIENTATION_STACKED || eOrient == SVX_ORIENTATION_STACKED_LR) &&
         static_cast<const SfxBoolItem&>(pPattern->GetItem( ATTR_VERTICAL_ASIAN )).GetValue();
 
     if ( eJust == SVX_VER_JUSTIFY_TOP ||

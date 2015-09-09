@@ -723,6 +723,7 @@ void FuText::SetInEditMode(SdrObject* pObj, const Point* pMousePixel,
                 OutlinerParaObject* pOPO = pObj->GetOutlinerParaObject();
                 if ( pOPO )
                     bVertical = pOPO->IsVertical();     // content wins
+                //这个需要再看看
                 pO->SetVertical( bVertical, false );
 
                 //!??   ohne uebergebenen Outliner stimmen die Defaults nicht ???!?

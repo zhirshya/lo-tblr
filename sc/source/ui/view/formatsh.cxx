@@ -2575,10 +2575,21 @@ void ScFormatShell::ExecuteTextDirection( SfxRequest& rReq )
         case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
         case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
         {
-            bool bVert = (nSlot == SID_TEXTDIRECTION_TOP_TO_BOTTOM);
+            bool bVert = (nSlot == SID_TEXTDIRECTION_TOP_TO_BOTTOM || nSlot == SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT);
+            bool bVertLR = (nSlot == SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT);
             ScPatternAttr aAttr( GetViewData()->GetDocument()->GetPool() );
             SfxItemSet& rItemSet = aAttr.GetItemSet();
-            rItemSet.Put( SfxBoolItem( ATTR_STACKED, bVert ) );
+            if(bVert)
+            {
+                if(!bVertLR)
+                {
+                    rItemSet.Put( SvxOrientationItem(SVX_ORIENTATION_STACKED , ATTR_STACKED ) );
+                }
+                else// if(bVertLR)
+                    rItemSet.Put( SvxOrientationItem(SVX_ORIENTATION_STACKED_LR , ATTR_STACKED ) );
+            }
+            else
+                rItemSet.Put( SvxOrientationItem(SVX_ORIENTATION_STANDARD , ATTR_STACKED ) );
             rItemSet.Put( SfxBoolItem( ATTR_VERTICAL_ASIAN, bVert ) );
             pTabViewShell->ApplySelectionPattern( aAttr );
             pTabViewShell->AdjustBlockHeight();
@@ -2606,10 +2617,9 @@ void ScFormatShell::GetTextDirectionState( SfxItemSet& rSet )
     bool bVertDontCare =
         (rAttrSet.GetItemState( ATTR_VERTICAL_ASIAN ) == SfxItemState::DONTCARE) ||
         (rAttrSet.GetItemState( ATTR_STACKED ) == SfxItemState::DONTCARE);
-    bool bLeftRight = !bVertDontCare &&
-        !static_cast<const SfxBoolItem&>(rAttrSet.Get( ATTR_STACKED )).GetValue();
-    bool bTopBottom = !bVertDontCare && !bLeftRight &&
-        static_cast<const SfxBoolItem&>(rAttrSet.Get( ATTR_VERTICAL_ASIAN )).GetValue();
+    sal_uInt16 nOrient = ((const SvxOrientationItem&) rAttrSet.Get( ATTR_STACKED )).GetValue();
+    sal_Bool bVertLR = !bVertDontCare && SVX_ORIENTATION_STACKED_LR == nOrient;
+    sal_Bool bVertical = (bVertLR || SVX_ORIENTATION_STACKED == nOrient) && ((const SfxBoolItem&) rAttrSet.Get( ATTR_VERTICAL_ASIAN )).GetValue();
 
     bool bBidiDontCare = (rAttrSet.GetItemState( ATTR_WRITINGDIR ) == SfxItemState::DONTCARE);
     EEHorizontalTextDirection eBidiDir = EE_HTEXTDIR_DEFAULT;
@@ -2638,6 +2648,7 @@ void ScFormatShell::GetTextDirectionState( SfxItemSet& rSet )
         {
             case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
             case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
+            case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
                 if ( bDisableVerticalText )
                     rSet.DisableItem( nWhich );
                 else
@@ -2645,9 +2656,11 @@ void ScFormatShell::GetTextDirectionState( SfxItemSet& rSet )
                     if( bVertDontCare )
                         rSet.InvalidateItem( nWhich );
                     else if ( nWhich == SID_TEXTDIRECTION_LEFT_TO_RIGHT )
-                        rSet.Put( SfxBoolItem( nWhich, bLeftRight ) );
-                    else
-                        rSet.Put( SfxBoolItem( nWhich, bTopBottom ) );
+                        rSet.Put( SfxBoolItem( nWhich, !bVertical ) );
+                    else if ( nWhich == SID_TEXTDIRECTION_TOP_TO_BOTTOM )
+                        rSet.Put(SfxBoolItem(nWhich, bVertical && !bVertLR));
+                    else //if ( nWhich == SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT)
+                        rSet.Put( SfxBoolItem( nWhich, bVertLR ) );
                 }
             break;
 
@@ -2657,7 +2670,7 @@ void ScFormatShell::GetTextDirectionState( SfxItemSet& rSet )
                     rSet.DisableItem( nWhich );
                 else
                 {
-                    if ( bTopBottom )
+                    if ( bVertical )
                         rSet.DisableItem( nWhich );
                     else if ( bBidiDontCare )
                         rSet.InvalidateItem( nWhich );

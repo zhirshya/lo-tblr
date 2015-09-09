@@ -47,7 +47,13 @@ published enum CellOrientation
     /** contents are printed from top to bottom with individual
         characters in normal (horizontal) orientation.
      */
-    STACKED
+    STACKED,
+
+    /** 
+    add by aron
+    contents are printed from top to bottom left to right for Mongolian script .
+     */
+    STACKED_LR
 
 };
 

@@ -231,6 +231,9 @@ ScAutoFormatDataField::ScAutoFormatDataField() :
     aBLTR( ATTR_BORDER_BLTR ),
     aBackground( ATTR_BACKGROUND ),
     aAdjust( SVX_ADJUST_LEFT, 0 ),
+
+    aStacked(SVX_ORIENTATION_STANDARD, ATTR_STACKED),
+
     aHorJustify( SVX_HOR_JUSTIFY_STANDARD, ATTR_HOR_JUSTIFY ),
     aVerJustify( SVX_VER_JUSTIFY_STANDARD, ATTR_VER_JUSTIFY ),
     aMargin( ATTR_MARGIN ),
@@ -416,7 +419,20 @@ bool ScAutoFormatDataField::Save( SvStream& rStream, sal_uInt16 fileVersion )
 
     aHorJustify.Store   ( rStream, aHorJustify.GetVersion( fileVersion ) );
     aVerJustify.Store   ( rStream, aVerJustify.GetVersion( fileVersion ) );
-    aOrientation.Store  ( rStream, aOrientation.GetVersion( fileVersion ) );
+    //
+    sal_uInt64 nOrient = aStacked.GetValue();
+    bool bStacked = nOrient == SVX_ORIENTATION_STACKED || nOrient == SVX_ORIENTATION_STACKED_LR;
+    if (bStacked)
+    {
+        SvxOrientationItem aOrientation((SvxCellOrientation)nOrient, 0);
+        aOrientation.Store(rStream, aOrientation.GetVersion(SOFFICE_FILEFORMAT_40));
+    }
+    else
+    {
+        SvxOrientationItem aOrientation(aRotateAngle.GetValue(), bStacked, 0);
+        aOrientation.Store(rStream, aOrientation.GetVersion(SOFFICE_FILEFORMAT_40));
+    }
+    //
     aMargin.Store       ( rStream, aMargin.GetVersion( fileVersion ) );
     aLinebreak.Store    ( rStream, aLinebreak.GetVersion( fileVersion ) );
     // Rotation ab SO5
@@ -548,7 +564,7 @@ void ScAutoFormatData::PutItem( sal_uInt16 nIndex, const SfxPoolItem& rItem )
         case ATTR_BACKGROUND:       rField.SetBackground( static_cast<const SvxBrushItem&>(rItem) );       break;
         case ATTR_HOR_JUSTIFY:      rField.SetHorJustify( static_cast<const SvxHorJustifyItem&>(rItem) );  break;
         case ATTR_VER_JUSTIFY:      rField.SetVerJustify( static_cast<const SvxVerJustifyItem&>(rItem) );  break;
-        case ATTR_STACKED:          rField.SetStacked( static_cast<const SfxBoolItem&>(rItem) );           break;
+        case ATTR_STACKED:          rField.SetStacked( static_cast<const SvxOrientationItem&>(rItem) );           break;
         case ATTR_MARGIN:           rField.SetMargin( static_cast<const SvxMarginItem&>(rItem) );          break;
         case ATTR_LINEBREAK:        rField.SetLinebreak( static_cast<const SfxBoolItem&>(rItem) );         break;
         case ATTR_ROTATE_VALUE:     rField.SetRotateAngle( static_cast<const SfxInt32Item&>(rItem) );      break;
@@ -729,7 +745,7 @@ void ScAutoFormatData::GetFromItemSet( sal_uInt16 nIndex, const SfxItemSet& rIte
     rField.SetBLTR          ( static_cast<const SvxLineItem&>          (rItemSet.Get( ATTR_BORDER_BLTR )) );
     rField.SetHorJustify    ( static_cast<const SvxHorJustifyItem&>    (rItemSet.Get( ATTR_HOR_JUSTIFY )) );
     rField.SetVerJustify    ( static_cast<const SvxVerJustifyItem&>    (rItemSet.Get( ATTR_VER_JUSTIFY )) );
-    rField.SetStacked       ( static_cast<const SfxBoolItem&>          (rItemSet.Get( ATTR_STACKED )) );
+    rField.SetStacked       ( static_cast<const SvxOrientationItem&>   (rItemSet.Get( ATTR_STACKED )) );
     rField.SetLinebreak     ( static_cast<const SfxBoolItem&>          (rItemSet.Get( ATTR_LINEBREAK )) );
     rField.SetMargin        ( static_cast<const SvxMarginItem&>        (rItemSet.Get( ATTR_MARGIN )) );
     rField.SetBackground    ( static_cast<const SvxBrushItem&>         (rItemSet.Get( ATTR_BACKGROUND )) );

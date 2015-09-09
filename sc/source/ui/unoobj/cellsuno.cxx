@@ -2217,20 +2217,22 @@ static void lcl_SetCellProperty( const SfxItemPropertySimpleEntry& rEntry, const
                     switch( eOrient )
                     {
                         case table::CellOrientation_STANDARD:
-                            rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
+                            rSet.Put( SvxOrientationItem(SVX_ORIENTATION_STANDARD, ATTR_STACKED ) );
                         break;
                         case table::CellOrientation_TOPBOTTOM:
-                            rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
+                            rSet.Put( SvxOrientationItem(SVX_ORIENTATION_TOPBOTTOM, ATTR_STACKED ) );
                             rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 27000 ) );
                             rSecondItemId = ATTR_ROTATE_VALUE;
                         break;
+                        case table::CellOrientation_STACKED_LR:
+                            rSet.Put( SvxOrientationItem(SVX_ORIENTATION_STACKED_LR, ATTR_STACKED ) );
                         case table::CellOrientation_BOTTOMTOP:
-                            rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
+                            rSet.Put( SvxOrientationItem(SVX_ORIENTATION_BOTTOMTOP, ATTR_STACKED ) );
                             rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 9000 ) );
                             rSecondItemId = ATTR_ROTATE_VALUE;
                         break;
                         case table::CellOrientation_STACKED:
-                            rSet.Put( SfxBoolItem( ATTR_STACKED, true ) );
+                            rSet.Put( SvxOrientationItem(SVX_ORIENTATION_STACKED, ATTR_STACKED ) );
                         break;
                         default:
                         {
@@ -2239,6 +2241,8 @@ static void lcl_SetCellProperty( const SfxItemPropertySimpleEntry& rEntry, const
                     }
                 }
             }
+            break;
+        case ATTR_VERTICAL_ASIAN:
             break;
         default:
             {
@@ -2516,8 +2520,11 @@ void ScCellRangesBase::GetOnePropertyValue( const SfxItemPropertySimpleEntry* pE
                     case ATTR_STACKED:
                         {
                             sal_Int32 nRot = static_cast<const SfxInt32Item&>(pDataSet->Get(ATTR_ROTATE_VALUE)).GetValue();
-                            bool bStacked = static_cast<const SfxBoolItem&>(pDataSet->Get(pEntry->nWID)).GetValue();
-                            SvxOrientationItem( nRot, bStacked, 0 ).QueryValue( rAny );
+                            sal_uInt16 nOrient = ((const SvxOrientationItem&)pDataSet->Get(pEntry->nWID)).GetValue();
+                            if(nOrient == SVX_ORIENTATION_STACKED || nOrient == SVX_ORIENTATION_STACKED_LR)
+                                SvxOrientationItem((SvxCellOrientation)nOrient, 0).QueryValue(rAny);
+                            else
+                                SvxOrientationItem( nRot, sal_False, 0 ).QueryValue( rAny );
                         }
                         break;
                     default:

@@ -179,8 +179,9 @@ long ScColumn::GetNeededSize(
     //  get other attributes from pattern and conditional formatting
 
     SvxCellOrientation eOrient = pPattern->GetCellOrientation( pCondSet );
-    bool bAsianVertical = ( eOrient == SVX_ORIENTATION_STACKED &&
+    bool bAsianVertical = ( eOrient == SVX_ORIENTATION_STACKED || eOrient == SVX_ORIENTATION_STACKED_LR)&&
             static_cast<const SfxBoolItem&>(pPattern->GetItem( ATTR_VERTICAL_ASIAN, pCondSet )).GetValue() );
+    bool bMongolVertical = (eOrient == SVX_ORIENTATION_STACKED_LR);
     if ( bAsianVertical )
         bBreak = false;
 
@@ -215,7 +216,7 @@ long ScColumn::GetNeededSize(
         // ignore orientation/rotation if "repeat" is active
         eOrient = SVX_ORIENTATION_STANDARD;
         nRotate = 0;
-        bAsianVertical = false;
+        bAsianVertical = bMongolVertical = false;
     }
 
     const SvxMarginItem* pMargin;
@@ -252,7 +253,7 @@ long ScColumn::GetNeededSize(
     CellType eCellType = aCell.meType;
 
     bool bEditEngine = (eCellType == CELLTYPE_EDIT ||
-                        eOrient == SVX_ORIENTATION_STACKED ||
+                        eOrient == SVX_ORIENTATION_STACKED || eOrient == SVX_ORIENTATION_STACKED_LR ||
                         IsAmbiguousScript(nScript) ||
                         ((eCellType == CELLTYPE_FORMULA) && aCell.mpFormula->IsMultilineResult()));
 
@@ -442,11 +443,12 @@ long ScColumn::GetNeededSize(
         }
 
         bool bEngineVertical = pEngine->IsVertical();
-        pEngine->SetVertical( bAsianVertical, false );
+        bool bEngineVertLR = pEngine->IsVertLR();
+        pEngine->SetVertical( bAsianVertical, bEngineVertLR );
         pEngine->SetUpdateMode( true );
 
         bool bEdWidth = bWidth;
-        if ( eOrient != SVX_ORIENTATION_STANDARD && eOrient != SVX_ORIENTATION_STACKED )
+        if ( eOrient != SVX_ORIENTATION_STANDARD && eOrient != SVX_ORIENTATION_STACKED && eOrient != SVX_ORIENTATION_STACKED_LR )
             bEdWidth = !bEdWidth;
         if ( nRotate )
         {

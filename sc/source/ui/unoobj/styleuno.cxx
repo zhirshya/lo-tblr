@@ -1663,18 +1663,21 @@ void ScStyleObj::SetOnePropertyValue( const OUString& rPropertyName, const SfxIt
                                         switch( eOrient )
                                         {
                                             case table::CellOrientation_STANDARD:
-                                                rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
+                                                rSet.Put( SvxOrientationItem( SVX_ORIENTATION_STANDARD, ATTR_STACKED) );
                                             break;
                                             case table::CellOrientation_TOPBOTTOM:
-                                                rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
+                                                rSet.Put( SvxOrientationItem( SVX_ORIENTATION_TOPBOTTOM, ATTR_STACKED) );
                                                 rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 27000 ) );
                                             break;
+                                            case table::CellOrientation_STACKED_LR:
+                                                rSet.Put( SvxOrientationItem( SVX_ORIENTATION_STACKED_LR, ATTR_STACKED) );
+                                            break;
                                             case table::CellOrientation_BOTTOMTOP:
-                                                rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
+                                                rSet.Put( SvxOrientationItem( SVX_ORIENTATION_BOTTOMTOP, ATTR_STACKED) );
                                                 rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 9000 ) );
                                             break;
                                             case table::CellOrientation_STACKED:
-                                                rSet.Put( SfxBoolItem( ATTR_STACKED, true ) );
+                                                rSet.Put( SvxOrientationItem( SVX_ORIENTATION_STACKED, ATTR_STACKED) );
                                             break;
                                             default:
                                             {
@@ -1913,9 +1916,11 @@ uno::Any SAL_CALL ScStyleObj::getPropertyValue( const OUString& aPropertyName )
                     case ATTR_STACKED:
                         {
                             sal_Int32 nRot = static_cast<const SfxInt32Item&>(pItemSet->Get(ATTR_ROTATE_VALUE)).GetValue();
-                            bool bStacked = static_cast<const SfxBoolItem&>(pItemSet->Get(nWhich)).GetValue();
-                            SvxOrientationItem( nRot, bStacked, 0 ).QueryValue( aAny );
-                        }
+                            sal_Int16 nOrient = ((const SvxOrientationItem&)pItemSet->Get(nWhich)).GetValue();
+                            if(nOrient == SVX_ORIENTATION_STACKED || nOrient == SVX_ORIENTATION_STACKED_LR)
+                                SvxOrientationItem((SvxCellOrientation)nOrient, 0).QueryValue(aAny);
+                            else
+                                SvxOrientationItem( nRot, sal_False, 0 ).QueryValue( aAny );                        }
                         break;
                     case ATTR_PAGE_SCALE:
                     case ATTR_PAGE_SCALETOPAGES:

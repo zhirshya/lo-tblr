@@ -240,6 +240,7 @@ bool SwCrsrShell::_SelTableRowOrCol( bool bRow, bool bRowSimple )
 
     // set PtPos 'close' to the reference table, otherwise we might get problems
     // with the repeated headlines check in UpdateCrsr():
+    //by aron
     if ( !bRow )
         m_pTableCrsr->GetPtPos() = pMasterTabFrm->IsVertical()
                                    ? pMasterTabFrm->Frm().TopRight()
@@ -275,6 +276,7 @@ bool SwCrsrShell::SelTable()
     m_pTableCrsr->SetMark();
     // set MkPos 'close' to the master table, otherwise we might get problems
     // with the repeated headlines check in UpdateCrsr():
+    // by aron
     m_pTableCrsr->GetMkPos() = pMasterTabFrm->IsVertical() ? pMasterTabFrm->Frm().TopRight() : pMasterTabFrm->Frm().TopLeft();
     m_pTableCrsr->GetPoint()->nNode = *pTableNd->EndOfSectionNode();
     m_pTableCrsr->Move( fnMoveBackward, fnGoContent );

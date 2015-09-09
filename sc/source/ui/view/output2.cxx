@@ -361,6 +361,7 @@ void ScDrawStringsVars::SetPattern(
                        !bRepeat;
             break;
         case SVX_ORIENTATION_STACKED:
+        case SVX_ORIENTATION_STACKED_LR:
             nRot = 0;
             bRotated = false;
             break;
@@ -1665,7 +1666,8 @@ Rectangle ScOutputData::LayoutStrings(bool bPixelToLogic, bool bPaint, const ScA
                     }
 
                     //  use edit engine for rotated, stacked or mixed-script text
-                    if ( aVars.GetOrient() == SVX_ORIENTATION_STACKED ||
+                    const sal_uInt16 nOri = aVars.GetOrient();
+                    if ( nOri == SVX_ORIENTATION_STACKED || nOri == SVX_ORIENTATION_STACKED_LR ||
                          aVars.IsRotated() || IsAmbiguousScript(nScript) )
                         bNeedEdit = true;
                 }
@@ -2497,7 +2499,7 @@ void ScOutputData::DrawEditParam::calcPaperSize(
 void ScOutputData::DrawEditParam::getEngineSize(ScFieldEditEngine* pEngine, long& rWidth, long& rHeight) const
 {
     long nEngineWidth = 0;
-    if (!mbBreak || meOrient == SVX_ORIENTATION_STACKED || mbAsianVertical)
+    if (!mbBreak || meOrient == SVX_ORIENTATION_STACKED || meOrient == SVX_ORIENTATION_STACKED_LR || mbAsianVertical)
         nEngineWidth = static_cast<long>(pEngine->CalcTextWidth());
 
     long nEngineHeight = pEngine->GetTextHeight();
@@ -2509,7 +2511,7 @@ void ScOutputData::DrawEditParam::getEngineSize(ScFieldEditEngine* pEngine, long
         nEngineHeight = nTemp;
     }
 
-    if (meOrient == SVX_ORIENTATION_STACKED)
+    if (meOrient == SVX_ORIENTATION_STACKED || meOrient == SVX_ORIENTATION_STACKED_LR)
         nEngineWidth = nEngineWidth * 11 / 10;
 
     rWidth = nEngineWidth;
@@ -2518,7 +2520,7 @@ void ScOutputData::DrawEditParam::getEngineSize(ScFieldEditEngine* pEngine, long
 
 bool ScOutputData::DrawEditParam::hasLineBreak() const
 {
-    return (mbBreak || (meOrient == SVX_ORIENTATION_STACKED) || mbAsianVertical);
+    return (mbBreak || (meOrient == SVX_ORIENTATION_STACKED) || meOrient == SVX_ORIENTATION_STACKED_LR || mbAsianVertical);
 }
 
 bool ScOutputData::DrawEditParam::isHyperlinkCell() const
@@ -4607,6 +4609,7 @@ void ScOutputData::DrawEdit(bool bPixelToLogic)
                                 DrawEditTopBottom(aParam);
                             break;
                             case SVX_ORIENTATION_STACKED:
+                            case SVX_ORIENTATION_STACKED_LR:
                                 // this can be vertically stacked or asian vertical.
                                 DrawEditStacked(aParam);
                             break;
