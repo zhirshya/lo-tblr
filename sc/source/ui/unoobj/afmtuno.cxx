@@ -691,6 +691,9 @@ void SAL_CALL ScAutoFormatFieldObj::setPropertyValue(
                                     pData->PutItem( nFieldIndex, SvxOrientationItem( SVX_ORIENTATION_TOPBOTTOM, ATTR_STACKED ) );
                                     pData->PutItem( nFieldIndex, SfxInt32Item( ATTR_ROTATE_VALUE, 27000 ) );
                                 break;
+                                case table::CellOrientation_STACKED_LR:
+                                     pData->PutItem( nFieldIndex, SvxOrientationItem( SVX_ORIENTATION_STACKED_LR, ATTR_STACKED ) );
+                                break;
                                 case table::CellOrientation_BOTTOMTOP:
                                     pData->PutItem( nFieldIndex, SvxOrientationItem( SVX_ORIENTATION_BOTTOMTOP, ATTR_STACKED ) );
                                     pData->PutItem( nFieldIndex, SfxInt32Item( ATTR_ROTATE_VALUE, 9000 ) );
@@ -784,8 +787,12 @@ uno::Any SAL_CALL ScAutoFormatFieldObj::getPropertyValue( const OUString& aPrope
                     {
                         const SfxInt32Item* pRotItem = static_cast<const SfxInt32Item*>(pData->GetItem( nFieldIndex, ATTR_ROTATE_VALUE ));
                         sal_Int32 nRot = pRotItem ? pRotItem->GetValue() : 0;
-                        bool bStacked = static_cast<const SfxBoolItem*>(pItem)->GetValue();
-                        SvxOrientationItem( nRot, bStacked, 0 ).QueryValue( aVal );
+                        sal_Int16 nOrient = ((const SvxOrientationItem*)pItem)->GetValue();
+
+                        if(nOrient == SVX_ORIENTATION_STACKED || nOrient == SVX_ORIENTATION_STACKED_LR)
+                            SvxOrientationItem((SvxCellOrientation)nOrient, 0).QueryValue(aVal);
+                        else
+                            SvxOrientationItem( nRot, sal_False, 0 ).QueryValue( aVal );
                     }
                     break;
                     default:

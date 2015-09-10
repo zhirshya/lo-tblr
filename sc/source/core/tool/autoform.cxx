@@ -231,9 +231,9 @@ ScAutoFormatDataField::ScAutoFormatDataField() :
     aBLTR( ATTR_BORDER_BLTR ),
     aBackground( ATTR_BACKGROUND ),
     aAdjust( SVX_ADJUST_LEFT, 0 ),
-
+    //
     aStacked(SVX_ORIENTATION_STANDARD, ATTR_STACKED),
-
+    //
     aHorJustify( SVX_HOR_JUSTIFY_STANDARD, ATTR_HOR_JUSTIFY ),
     aVerJustify( SVX_VER_JUSTIFY_STANDARD, ATTR_VER_JUSTIFY ),
     aMargin( ATTR_MARGIN ),

@@ -1519,6 +1519,7 @@ bool XmlScPropHdl_Orientation::exportXML(
             {
                 rStrExpValue = GetXMLToken(XML_LTR);
                 bRetval = true;
+                break;
             }
         }
     }

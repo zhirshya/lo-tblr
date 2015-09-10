@@ -180,7 +180,7 @@ long ScColumn::GetNeededSize(
 
     SvxCellOrientation eOrient = pPattern->GetCellOrientation( pCondSet );
     bool bAsianVertical = ( eOrient == SVX_ORIENTATION_STACKED || eOrient == SVX_ORIENTATION_STACKED_LR)&&
-            static_cast<const SfxBoolItem&>(pPattern->GetItem( ATTR_VERTICAL_ASIAN, pCondSet )).GetValue() );
+            static_cast<const SfxBoolItem&>(pPattern->GetItem( ATTR_VERTICAL_ASIAN, pCondSet )).GetValue() ;
     bool bMongolVertical = (eOrient == SVX_ORIENTATION_STACKED_LR);
     if ( bAsianVertical )
         bBreak = false;

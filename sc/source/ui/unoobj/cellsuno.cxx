@@ -2226,6 +2226,7 @@ static void lcl_SetCellProperty( const SfxItemPropertySimpleEntry& rEntry, const
                         break;
                         case table::CellOrientation_STACKED_LR:
                             rSet.Put( SvxOrientationItem(SVX_ORIENTATION_STACKED_LR, ATTR_STACKED ) );
+                        break;
                         case table::CellOrientation_BOTTOMTOP:
                             rSet.Put( SvxOrientationItem(SVX_ORIENTATION_BOTTOMTOP, ATTR_STACKED ) );
                             rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 9000 ) );
@@ -2237,13 +2238,14 @@ static void lcl_SetCellProperty( const SfxItemPropertySimpleEntry& rEntry, const
                         default:
                         {
                             // added to avoid warnings
+                        break;
                         }
                     }
                 }
             }
             break;
         case ATTR_VERTICAL_ASIAN:
-            break;
+            //break;
         default:
             {
                 lcl_GetCellsPropertySet()->setPropertyValue(rEntry, rValue, rSet);
