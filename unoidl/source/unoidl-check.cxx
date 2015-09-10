@@ -201,7 +201,8 @@ void checkMap(
                         static_cast<unoidl::EnumTypeEntity *>(entA.get()));
                     rtl::Reference<unoidl::EnumTypeEntity> ent2B(
                         static_cast<unoidl::EnumTypeEntity *>(entB.get()));
-                    if (name != OUString("com.sun.star.text.WritingMode") && ent2A->getMembers().size()
+                    if (name != OUString("com.sun.star.text.WritingMode") && name != OUString("com.sun.star.table.CellOrientation") &&
+                        ent2A->getMembers().size()
                         != ent2B->getMembers().size())
                     {
                         std::cerr

@@ -79,6 +79,9 @@ bool SvxOrientationItem::QueryValue( uno::Any& rVal, sal_uInt8 /*nMemberId*/ ) c
     case SVX_ORIENTATION_TOPBOTTOM: eUno = table::CellOrientation_TOPBOTTOM; break;
     case SVX_ORIENTATION_BOTTOMTOP: eUno = table::CellOrientation_BOTTOMTOP; break;
     case SVX_ORIENTATION_STACKED:   eUno = table::CellOrientation_STACKED;    break;
+    //by aron
+    case SVX_ORIENTATION_STACKED_LR:eUno = table::CellOrientation_STACKED_LR; break;
+    //
     }
     rVal <<= eUno;
     return true;
@@ -101,6 +104,7 @@ bool SvxOrientationItem::PutValue( const uno::Any& rVal, sal_uInt8 /*nMemberId*/
         case table::CellOrientation_TOPBOTTOM:  eSvx = SVX_ORIENTATION_TOPBOTTOM; break;
         case table::CellOrientation_BOTTOMTOP:  eSvx = SVX_ORIENTATION_BOTTOMTOP; break;
         case table::CellOrientation_STACKED:    eSvx = SVX_ORIENTATION_STACKED;   break;
+        case table::CellOrientation_STACKED_LR: eSvx = SVX_ORIENTATION_STACKED_LR;break;
         default: ; //prevent warning
     }
     SetValue( (sal_uInt16)eSvx );
@@ -159,6 +163,7 @@ sal_Int32 SvxOrientationItem::GetRotation( sal_Int32 nStdAngle ) const
 
 void SvxOrientationItem::SetFromRotation( sal_Int32 nRotation, bool bStacked )
 {
+    //怎么影响蒙文？
     if( bStacked )
     {
         SetValue( SVX_ORIENTATION_STACKED );
