@@ -3,4 +3,4 @@
 *.svg binary
 *.jcs binary
 
-text eol=lf
+* text eol=lf
