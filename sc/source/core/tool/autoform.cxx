@@ -231,11 +231,11 @@ ScAutoFormatDataField::ScAutoFormatDataField() :
     aBLTR( ATTR_BORDER_BLTR ),
     aBackground( ATTR_BACKGROUND ),
     aAdjust( SVX_ADJUST_LEFT, 0 ),
-    //
-    aStacked(SVX_ORIENTATION_STANDARD, ATTR_STACKED),
-    //
     aHorJustify( SVX_HOR_JUSTIFY_STANDARD, ATTR_HOR_JUSTIFY ),
     aVerJustify( SVX_VER_JUSTIFY_STANDARD, ATTR_VER_JUSTIFY ),
+    //by aron
+    aStacked(SVX_ORIENTATION_STANDARD, ATTR_STACKED),
+    //
     aMargin( ATTR_MARGIN ),
     aLinebreak( ATTR_LINEBREAK ),
     aRotateAngle( ATTR_ROTATE_VALUE ),
@@ -382,7 +382,7 @@ bool ScAutoFormatDataField::Load( SvStream& rStream, const ScAfVersions& rVersio
 
 bool ScAutoFormatDataField::Save( SvStream& rStream, sal_uInt16 fileVersion )
 {
-    SvxOrientationItem aOrientation( aRotateAngle.GetValue(), aStacked.GetValue(), 0 );
+    //SvxOrientationItem aOrientation( aRotateAngle.GetValue(), aStacked.GetValue(), 0 );
 
     aFont.Store         ( rStream, aFont.GetVersion( fileVersion ) );
     aHeight.Store       ( rStream, aHeight.GetVersion( fileVersion ) );
