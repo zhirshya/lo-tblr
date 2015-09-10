@@ -367,18 +367,15 @@ void TextObjectBar::GetAttrState( SfxItemSet& rSet )
                 }
                 else
                 {
-                    bool bVertical = true;
-                    bool bVertLR = true;
+                    bool bVertical = false;
+                    bool bVertLR = false;
 
                     SdrOutliner* pOutl = mpView->GetTextEditOutliner();
-                    if( pOutl )
+                    if( pOutl && pOutl->IsVertical())
                     {
-                        if( pOutl->IsVertical() )
-                            {
-                                bVertical = true;
-                                if(pOutl->IsVertLR())
-                                    bVertLR = true;
-                            }
+                        bVertical = true;
+                        if(pOutl->IsVertLR())
+                            bVertLR = true;
                     }
                     else
                     {
