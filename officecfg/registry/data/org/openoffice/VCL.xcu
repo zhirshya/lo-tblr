@@ -602,22 +602,22 @@
     </node>
     <node oor:name="hi" oor:op="replace">
       <prop oor:name="UI_SANS" oor:op="replace" oor:type="xs:string">
-        <value>Lohit Hindi;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS;Lucida Sans Unicode;clearlyU</value>
+        <value>Lohit Hindi;Mongolian White;Mongolian Sonin;Mongolian White Universal;Mongolian baiti;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS;Lucida Sans Unicode;clearlyU</value>
       </prop>
       <prop oor:name="CTL_DISPLAY" oor:op="replace" oor:type="xs:string">
-        <value>Lohit Hindi;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
+        <value>Lohit Hindi;Mongolian White;Mongolian Sonin;Mongolian White Universal;Mongolian baiti;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
       </prop>
       <prop oor:name="CTL_HEADING" oor:op="replace" oor:type="xs:string">
-        <value>Lohit Hindi;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
+        <value>Lohit Hindi;Mongolian White;Mongolian Sonin;Mongolian White Universal;Mongolian baiti;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
       </prop>
       <prop oor:name="CTL_PRESENTATION" oor:op="replace" oor:type="xs:string">
-        <value>Lohit Hindi;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
+        <value>Lohit Hindi;Mongolian White;Mongolian Sonin;Mongolian White Universal;Mongolian baiti;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
       </prop>
       <prop oor:name="CTL_SPREADSHEET" oor:op="replace" oor:type="xs:string">
-        <value>Lohit Hindi;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
+        <value>Lohit Hindi;Mongolian White;Mongolian Sonin;Mongolian White Universal;Mongolian baiti;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
       </prop>
       <prop oor:name="CTL_TEXT" oor:op="replace" oor:type="xs:string">
-        <value>Lohit Hindi;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
+        <value>Lohit Hindi;Mongolian White;Mongolian Sonin;Mongolian White Universal;Mongolian baiti;Mangal;Lucidasans;Lucida Sans;Arial Unicode MS</value>
       </prop>
     </node>
     <node oor:name="gu" oor:op="replace">
@@ -853,6 +853,86 @@
       </prop>
       <prop oor:name="UI_SANS" oor:type="xs:string" oor:op="replace">
         <value>Arial Unicode MS;Lucida Sans Unicode;Gentium;Aboriginal Sans;FreeSans;Albany AMT;Albany;Arial;Nimbus Sans L;Luxi Sans;Helvetica;Lucida;Geneva;Helmet;Tahoma;SansSerif</value>
+      </prop>
+    </node>
+    <node oor:name="mn" oor:op="replace">
+      <prop oor:name="UI_SANS" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_DISPLAY" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_HEADING" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_PRESENTATION" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_SPREADSHEET" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_TEXT" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+    </node>
+    <node oor:name="mn-Mong" oor:op="replace">
+      <prop oor:name="UI_SANS" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_DISPLAY" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_HEADING" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_PRESENTATION" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_SPREADSHEET" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_TEXT" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+    </node>
+    <node oor:name="mn-mn" oor:op="replace">
+      <prop oor:name="UI_SANS" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_DISPLAY" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_HEADING" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_PRESENTATION" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_SPREADSHEET" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_TEXT" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+    </node>
+    <node oor:name="mn-n" oor:op="replace">
+      <prop oor:name="UI_SANS" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_DISPLAY" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_HEADING" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_PRESENTATION" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_SPREADSHEET" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
+      </prop>
+      <prop oor:name="CTL_TEXT" oor:op="replace" oor:type="xs:string">
+        <value>Mongolian White</value>
       </prop>
     </node>
     <node oor:name="si" oor:op="replace">
