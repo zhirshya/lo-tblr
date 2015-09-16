@@ -1,7 +1,6 @@
+* eol=lf
 *.doc binary
 *.sdw binary
 *.svg binary
 *.jcs binary
 *.png binary
-
-* text eol=lf
