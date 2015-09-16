@@ -17,5 +17,7 @@
 *.crt binary
 *.p12 binary
 *.sxw binary
-
-
+*.docx binary
+*.ods binary
+*.odp binary
+*.pptx binary
