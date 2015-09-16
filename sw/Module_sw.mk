@@ -51,15 +51,13 @@ $(eval $(call gb_Module_add_slowcheck_targets,sw,\
     CppunitTest_sw_htmlexport \
     CppunitTest_sw_htmlimport \
     CppunitTest_sw_macros_test \
-    CppunitTest_sw_ooxmlexport \
     CppunitTest_sw_ooxmlexport6 \
     CppunitTest_sw_ooxmlexport7 \
-    CppunitTest_sw_ooxmlfieldexport \
     CppunitTest_sw_ooxmlw14export \
-    CppunitTest_sw_odfexport \
     CppunitTest_sw_tiledrendering \
     CppunitTest_sw_mailmerge \
 ))
+#    CppunitTest_sw_ooxmlexport \
 #    CppunitTest_sw_ooxmlexport2 \
 #    CppunitTest_sw_ooxmlexport3 \
 #    CppunitTest_sw_ooxmlexport4 \
@@ -72,7 +70,8 @@ $(eval $(call gb_Module_add_slowcheck_targets,sw,\
 #    CppunitTest_sw_rtfimport \
 #    CppunitTest_sw_uiwriter \
 #    CppunitTest_sw_globalfilter \
-#
+#    CppunitTest_sw_odfexport \
+#    CppunitTest_sw_ooxmlfieldexport \
 #
 ifneq ($(DISABLE_CVE_TESTS),TRUE)
 $(eval $(call gb_Module_add_slowcheck_targets,sw,\
