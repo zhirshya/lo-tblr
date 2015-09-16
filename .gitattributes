@@ -4,3 +4,18 @@
 *.svg binary
 *.jcs binary
 *.png binary
+*.odt binary
+*.wps binary
+*.cwk binary
+*.zip binary
+*.jpg binary
+*.png binary
+*.key binary
+*.pdb binary
+*.pages binary
+*.5 binary
+*.crt binary
+*.p12 binary
+*.sxw binary
+
+
