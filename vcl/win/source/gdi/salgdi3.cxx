@@ -538,6 +538,7 @@ bool WinGlyphFallbackSubstititution::FindFontSubstitute( FontSelectPattern& rFon
         if( HasMissingChars( pFace, rMissingChars ) )
         {
             rFontSelData.maSearchName = pFontFamily->GetSearchName();
+            rFontSelData.maTargetName = pFontFamily->GetSearchName();
             return true;
         }
     }
@@ -554,6 +555,7 @@ bool WinGlyphFallbackSubstititution::FindFontSubstitute( FontSelectPattern& rFon
         if( HasMissingChars( pFace, rMissingChars ) )
         {
             rFontSelData.maSearchName = pFontFamily->GetSearchName();
+            rFontSelData.maTargetName = pFontFamily->GetSearchName();
             return true;
         }
     }
