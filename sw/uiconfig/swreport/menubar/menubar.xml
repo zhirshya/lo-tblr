@@ -238,7 +238,7 @@
       </menu:menu>
       <menu:menuitem menu:id=".uno:DrawText"/>
       <menu:menuitem menu:id=".uno:InsertTable"/>
-       <menu:menuitem menu:id=".uno:InsertFrame"/>
+      <menu:menuitem menu:id=".uno:InsertFrame"/>
       <menu:menuitem menu:id=".uno:InsertObjectFloatingFrame"/>
       <menu:menuseparator/>
       <menu:menuitem menu:id=".uno:InsertDoc"/>
