@@ -1043,6 +1043,9 @@ FontSelectPatternAttributes::FontSelectPatternAttributes( const vcl::Font& rFont
 
     rFont.GetFontAttributes( *this );
 
+    bool isCJK = meLanguage == rFont.GetCJKContextLanguage();
+    mbVertical = rFont.IsVertical() && isCJK;
+
     // normalize orientation between 0 and 3600
     if( 3600 <= (unsigned)mnOrientation )
     {
