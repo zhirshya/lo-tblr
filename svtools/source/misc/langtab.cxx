@@ -156,7 +156,10 @@ const OUString SvtLanguageTableImpl::GetString( const LanguageType eType, bool b
 
     if ( RESARRAY_INDEX_NOTFOUND != nPos && nPos < Count() )
         return ResStringArray::GetString( nPos );
-
+    //if (LANGUAGE_MONGOLIAN_MONGOLIAN_CHINA == eType)
+    //{
+    //    return  OUString("传统蒙古文-haha");
+    //}
     //Rather than return a fairly useless "Unknown" name, return a geeky but usable-in-a-pinch lang-tag
     OUString sLangTag(LanguageTag::convertToBcp47(eType));
     SAL_WARN("svtools.misc", "Language: 0x"

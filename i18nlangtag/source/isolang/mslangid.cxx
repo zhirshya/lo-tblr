@@ -130,7 +130,7 @@ LanguageType MsLangId::resolveSystemLanguageByScriptType( LanguageType nLang, sa
                 break;
             case ::com::sun::star::i18n::ScriptType::COMPLEX:
                 if (nConfiguredComplexFallback == LANGUAGE_SYSTEM)
-                    nLang = LANGUAGE_HINDI;
+                    nLang = LANGUAGE_MONGOLIAN_MONGOLIAN_MONGOLIA;
                 else
                     nLang = nConfiguredComplexFallback;
                 break;
