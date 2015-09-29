@@ -7,20 +7,20 @@ Globals
             UREPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             URELAYERVERSION 1
             REFERENCEOOOMAJORMINOR 4.1
-            WINDOWSBASISROOTNAME LibreOffice @LIBO_VERSION_MAJOR@
-            UNIXBASISROOTNAME libreoffice@LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            WINDOWSBASISROOTNAME AronOffice 2015
+            UNIXBASISROOTNAME aronoffice2015
             HIDELICENSEDIALOG 1
             PACKAGEPREFIX
             BASISPACKAGEPREFIX libobasis
-            UREPACKAGEPREFIX libreoffice
-            SOLSUREPACKAGEPREFIX libreoffice
+            UREPACKAGEPREFIX aronoffice
+            SOLSUREPACKAGEPREFIX aronoffice
             REGISTRATION_HOST https://registration.libreoffice.org/RegistrationWeb
             REGISTRATIONURL http://survey.libreoffice.org/user/index.php
-            PROGRESSBARCOLOR 128,128,128
-            PROGRESSSIZE 409,8
-            PROGRESSPOSITION 72,189
-            PROGRESSFRAMECOLOR 245,245,245
-            PROGRESSTEXTBASELINE 170
+            PROGRESSBARCOLOR 0,0,0
+            PROGRESSSIZE 444,8
+            PROGRESSPOSITION 35,153
+            PROGRESSFRAMECOLOR 102,102,102
+            PROGRESSTEXTBASELINE 145
             PROGRESSTEXTCOLOR 255,255,255
             NATIVEPROGRESS false
             REGISTRYLAYERNAME Layers
@@ -39,19 +39,21 @@ Globals
     }
 }
 
-LibreOffice
+AronOffice
 {
     Settings
     {
         variables
         {
-            PRODUCTNAME LibreOffice
-            PRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            PRODUCTEXTENSION .@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
+            PRODUCTNAME AronOffice
+            PRODUCTVERSION 2015
+            PRODUCTEXTENSION
+            WINDOWSBASISROOTNAME AronOffice 2015
+            UNIXBASISROOTNAME aronoffice2015
             POSTVERSIONEXTENSION
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@
-            BRANDPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            USERDIRPRODUCTVERSION 4
+            BRANDPACKAGEVERSION 2015
+            USERDIRPRODUCTVERSION 2015
             ABOUTBOXPRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             ABOUTBOXPRODUCTVERSIONSUFFIX @LIBO_VERSION_SUFFIX_SUFFIX@
             BASEPRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
@@ -69,7 +71,7 @@ LibreOffice
             CHANGETARGETDIR 1
             PATCHCODEFILE ooo_patchcodes.txt
             STARTCENTER_ADDFEATURE_URL http://extensions.libreoffice.org/
-            STARTCENTER_INFO_URL http://www.libreoffice.org/
+            STARTCENTER_INFO_URL https://www.libreoffice.org/
             STARTCENTER_TEMPLREP_URL http://templates.libreoffice.org/
             DICT_REPO_URL http://extensions.libreoffice.org/dictionaries/
             STARTCENTER_HIDE_EXTERNAL_LINKS 0
@@ -77,28 +79,29 @@ LibreOffice
         active          1
         compression     5
         script          setup_osl
-        downloadname    LibreOffice_{productversion}_{os}_install_{languages}
+        downloadname    AronOffice_{productversion}_{os}_install_{languages}
         langpackdownloadname    LibreOffice_{productversion}_languagepack_{os}_install_{languages}
         helppackdownloadname    LibreOffice_{productversion}_helppack_{os}_install_{languages}
         include         {installscriptdir},{customtargetpath}/readlicense_oo/readme,{customtargetpath}/sysui/{pkgtype},{customtargetpath}/setup_native,{filelistpath}/PackageSet,{filelistpath}/GeneratedPackage,{filelistpath}/Package,{filelistpath}/ExtensionPackage,{extensionsdir},{licensepath},{packinfopath}
     }
 }
 
-LibreOffice_Dev
+
+AronOfficeDev
 {
     Settings
     {
         variables
         {
-            PRODUCTNAME LibreOfficeDev
-            PRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            PRODUCTEXTENSION .@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
-            WINDOWSBASISROOTNAME LibreOfficeDev @LIBO_VERSION_MAJOR@
-            UNIXBASISROOTNAME libreofficedev@LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            PRODUCTNAME AronOfficeDev
+            PRODUCTVERSION 2015
+            PRODUCTEXTENSION
+            WINDOWSBASISROOTNAME AronOfficeDev 2015
+            UNIXBASISROOTNAME aronofficedev@LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
             POSTVERSIONEXTENSION
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@
-            BRANDPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            USERDIRPRODUCTVERSION 4
+            BRANDPACKAGEVERSION 2015
+            USERDIRPRODUCTVERSION 2015
             ABOUTBOXPRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             ABOUTBOXPRODUCTVERSIONSUFFIX @LIBO_VERSION_SUFFIX_SUFFIX@
             BASEPRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
@@ -122,7 +125,7 @@ LibreOffice_Dev
             CODEFILENAME codes_ooodev.txt
             LOCALUSERDIR $ORIGIN/..
             STARTCENTER_ADDFEATURE_URL http://extensions.libreoffice.org/
-            STARTCENTER_INFO_URL http://www.libreoffice.org/
+            STARTCENTER_INFO_URL https://www.libreoffice.org/
             STARTCENTER_TEMPLREP_URL http://templates.libreoffice.org/
             DICT_REPO_URL http://extensions.libreoffice.org/dictionaries/
             STARTCENTER_HIDE_EXTERNAL_LINKS 0
@@ -130,26 +133,26 @@ LibreOffice_Dev
         active          1
         compression     5
         script          setup_osl
-        downloadname    LibreOfficeDev_{productversion}_{os}_install_{languages}
-        langpackdownloadname    LibreOfficeDev_{productversion}_languagepack_{os}_install_{languages}
-        helppackdownloadname    LibreOfficeDev_{productversion}_helppack_{os}_install_{languages}
+        downloadname    AronOfficeDev_{productversion}_{os}_install_{languages}
+        langpackdownloadname    AronOfficeDev_{productversion}_languagepack_{os}_install_{languages}
+        helppackdownloadname    AronOfficeDev_{productversion}_helppack_{os}_install_{languages}
         include         {installscriptdir},{customtargetpath}/readlicense_oo/readme,{customtargetpath}/sysui/{pkgtype},{customtargetpath}/setup_native,{filelistpath}/PackageSet,{filelistpath}/GeneratedPackage,{filelistpath}/Package,{filelistpath}/ExtensionPackage,{extensionsdir},{licensepath},{packinfopath}
     }
 }
 
-LibreOffice_SDK
+AronOffice_SDK
 {
     Settings
     {
-        downloadname LibreOffice-SDK_{packageversion}_{os}_install_{languages}
+        downloadname AronOffice-SDK_{packageversion}_{os}_install_{languages}
         variables
         {
-            PRODUCTNAME LibreOffice
-            PRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            PRODUCTEXTENSION .@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
+            PRODUCTNAME AronOffice
+            PRODUCTVERSION 2015
+            PRODUCTEXTENSION
             POSTVERSIONEXTENSION SDK
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@.SDK
-            BRANDPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            BRANDPACKAGEVERSION 2015
             PACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             PACKAGEREVISION {buildid}
             PACK_INSTALLED 1
@@ -164,7 +167,7 @@ LibreOffice_SDK
             CHANGETARGETDIR 1
             DONTUSESTARTMENUFOLDER 1
             STARTCENTER_ADDFEATURE_URL http://extensions.libreoffice.org/
-            STARTCENTER_INFO_URL http://www.libreoffice.org/
+            STARTCENTER_INFO_URL https://www.libreoffice.org/
             STARTCENTER_TEMPLREP_URL http://templates.libreoffice.org/
             DICT_REPO_URL http://extensions.libreoffice.org/dictionaries/
             STARTCENTER_HIDE_EXTERNAL_LINKS 0
@@ -176,21 +179,21 @@ LibreOffice_SDK
     }
 }
 
-LibreOffice_Dev_SDK
+AronOffice_Dev_SDK
 {
     Settings
     {
-        downloadname LibreOfficeDev-SDK_{packageversion}_{os}_install_{languages}
+        downloadname AronOfficeDev-SDK_{packageversion}_{os}_install_{languages}
         variables
         {
-            PRODUCTNAME LibreOfficeDev
-            PRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            PRODUCTEXTENSION .@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
-            WINDOWSBASISROOTNAME LibreOfficeDev @LIBO_VERSION_MAJOR@
-            UNIXBASISROOTNAME libreofficedev@LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            PRODUCTNAME AronOfficeDev
+            PRODUCTVERSION 2015
+            PRODUCTEXTENSION
+            WINDOWSBASISROOTNAME AronOfficeDev 2015
+            UNIXBASISROOTNAME libreofficedev2015
             POSTVERSIONEXTENSION SDK
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@.SDK
-            BRANDPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            BRANDPACKAGEVERSION 2015
             PACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             PACKAGEREVISION {buildid}
             BASISPACKAGEPREFIX lodevbasis
@@ -210,7 +213,7 @@ LibreOffice_Dev_SDK
             CHANGETARGETDIR 1
             DONTUSESTARTMENUFOLDER 1
             STARTCENTER_ADDFEATURE_URL http://extensions.libreoffice.org/
-            STARTCENTER_INFO_URL http://www.libreoffice.org/
+            STARTCENTER_INFO_URL https://www.libreoffice.org/
             STARTCENTER_TEMPLREP_URL http://templates.libreoffice.org/
             DICT_REPO_URL http://extensions.libreoffice.org/dictionaries/
             STARTCENTER_HIDE_EXTERNAL_LINKS 0
