@@ -1010,8 +1010,8 @@
 
 #define SID_EDIT_POSTIT                                 ( SID_SVX_START + 1148 )
 
-#define SID_DRAW_TEXT_VERTICAL_LR                       ( SID_SVX_START + 1149 )
-#define SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT   ( SID_SVX_START + 1150 )
+#define SID_DRAW_TEXT_VERTICAL_LR                       ( SID_SVX_START + 1154 )
+#define SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT   ( SID_SVX_START + 1155 )
 
 // IMPORTANT NOTE: adjust SID_SVX_FIRSTFREE, when adding new slot id
 #define SID_SVX_FIRSTFREE                               ( SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT + 1)
