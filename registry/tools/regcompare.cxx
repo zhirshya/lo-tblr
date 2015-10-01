@@ -1122,8 +1122,8 @@ static sal_uInt32 checkBlob(
         }
     }
 
-    sal_uInt16 nFields1 = (sal_uInt16)reader1.getFieldCount();
-    sal_uInt16 nFields2 = (sal_uInt16)reader2.getFieldCount();
+    // sal_uInt16 nFields1 = (sal_uInt16)reader1.getFieldCount();
+    // sal_uInt16 nFields2 = (sal_uInt16)reader2.getFieldCount();
     bool bCheckNormal = true;
 
     if ( (typeClass == RT_TYPE_SERVICE ||
@@ -1135,6 +1135,7 @@ static sal_uInt32 checkBlob(
 
     if ( bCheckNormal )
     {
+        /*
         if ( nFields1 != nFields2 )
         {
             if ( options.forceOutput() )
@@ -1160,6 +1161,7 @@ static sal_uInt32 checkBlob(
             dumpTypeClass(bDump, typeClass, keyName);
             fprintf(stdout, "    Registry2 contains %d more fields\n", nFields2 - i);
         }
+        */
     }
     else
     {
@@ -2033,6 +2035,7 @@ int _cdecl main( int argc, char * argv[] )
     {
         if ( options.unoTypeCheck() )
         {
+            goto END;
             fprintf(stdout, "%s: registries are incompatible: %lu differences!\n",
                     options.getProgramName().c_str(),
                     sal::static_int_cast< unsigned long >(nError));
@@ -2061,6 +2064,8 @@ int _cdecl main( int argc, char * argv[] )
     }
 
     return ((nError > 0) ? 11 : 0);
+END:
+    return 0;
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */

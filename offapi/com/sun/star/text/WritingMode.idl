@@ -53,7 +53,12 @@ published enum WritingMode
         <p>
         Typically, this writing mode is used in Chinese and Japanese text.
      */
-    TB_RL
+    TB_RL,
+    
+    /**
+
+    */
+    TB_LR
 
 };
 
