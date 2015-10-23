@@ -1239,7 +1239,7 @@ void SdDrawDocument::SetTextDefaults() const
 
 ::com::sun::star::text::WritingMode SdDrawDocument::GetDefaultWritingMode() const
 {
-    const SfxPoolItem*                  pItem = ( pItemPool ? pItemPool->GetPoolDefaultItem( EE_PARA_WRITINGDIR ) : NULL );
+    const SfxPoolItem* pItem = ( pItemPool ? pItemPool->GetPoolDefaultItem( EE_PARA_WRITINGDIR ) : NULL );
     ::com::sun::star::text::WritingMode eRet = ::com::sun::star::text::WritingMode_LR_TB;
 
     if( pItem )
@@ -1249,6 +1249,7 @@ void SdDrawDocument::SetTextDefaults() const
             case( FRMDIR_HORI_LEFT_TOP ): eRet = ::com::sun::star::text::WritingMode_LR_TB; break;
             case( FRMDIR_HORI_RIGHT_TOP ): eRet = ::com::sun::star::text::WritingMode_RL_TB; break;
             case( FRMDIR_VERT_TOP_RIGHT ): eRet = ::com::sun::star::text::WritingMode_TB_RL; break;
+            case( FRMDIR_VERT_TOP_LEFT ): eRet = ::com::sun::star::text::WritingMode_TB_LR; break;
 
             default:
                 OSL_FAIL( "Frame direction not supported yet" );
@@ -1269,6 +1270,7 @@ void SdDrawDocument::SetDefaultWritingMode(::com::sun::star::text::WritingMode e
         case ::com::sun::star::text::WritingMode_LR_TB: nVal = FRMDIR_HORI_LEFT_TOP; break;
         case ::com::sun::star::text::WritingMode_RL_TB: nVal = FRMDIR_HORI_RIGHT_TOP; break;
         case ::com::sun::star::text::WritingMode_TB_RL: nVal = FRMDIR_VERT_TOP_RIGHT; break;
+        case ::com::sun::star::text::WritingMode_TB_LR: nVal = FRMDIR_VERT_TOP_LEFT; break;
         default:
             OSL_FAIL( "Frame direction not supported yet" );
             return;
