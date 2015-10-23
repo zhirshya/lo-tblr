@@ -7,13 +7,13 @@ Globals
             UREPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             URELAYERVERSION 1
             REFERENCEOOOMAJORMINOR 4.1
-            WINDOWSBASISROOTNAME AronOffice 2015
-            UNIXBASISROOTNAME aronoffice2015
+            WINDOWSBASISROOTNAME DelehiOffice 2015
+            UNIXBASISROOTNAME delehioffice2015
             HIDELICENSEDIALOG 1
             PACKAGEPREFIX
             BASISPACKAGEPREFIX libobasis
-            UREPACKAGEPREFIX aronoffice
-            SOLSUREPACKAGEPREFIX aronoffice
+            UREPACKAGEPREFIX delehioffice
+            SOLSUREPACKAGEPREFIX delehioffice
             REGISTRATION_HOST https://registration.libreoffice.org/RegistrationWeb
             REGISTRATIONURL http://survey.libreoffice.org/user/index.php
             PROGRESSBARCOLOR 0,0,0
@@ -39,17 +39,17 @@ Globals
     }
 }
 
-AronOffice
+DelehiOffice
 {
     Settings
     {
         variables
         {
-            PRODUCTNAME AronOffice
+            PRODUCTNAME DelehiOffice
             PRODUCTVERSION 2015
             PRODUCTEXTENSION
-            WINDOWSBASISROOTNAME AronOffice 2015
-            UNIXBASISROOTNAME aronoffice2015
+            WINDOWSBASISROOTNAME DelehiOffice 2015
+            UNIXBASISROOTNAME delehioffice2015
             POSTVERSIONEXTENSION
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@
             BRANDPACKAGEVERSION 2015
@@ -79,25 +79,24 @@ AronOffice
         active          1
         compression     5
         script          setup_osl
-        downloadname    AronOffice_{productversion}_{os}_install_{languages}
+        downloadname    DelehiOffice_{productversion}_{os}_install_{languages}
         langpackdownloadname    LibreOffice_{productversion}_languagepack_{os}_install_{languages}
         helppackdownloadname    LibreOffice_{productversion}_helppack_{os}_install_{languages}
         include         {installscriptdir},{customtargetpath}/readlicense_oo/readme,{customtargetpath}/sysui/{pkgtype},{customtargetpath}/setup_native,{filelistpath}/PackageSet,{filelistpath}/GeneratedPackage,{filelistpath}/Package,{filelistpath}/ExtensionPackage,{extensionsdir},{licensepath},{packinfopath}
     }
 }
 
-
-AronOfficeDev
+DelehiOfficeDev
 {
     Settings
     {
         variables
         {
-            PRODUCTNAME AronOfficeDev
+            PRODUCTNAME DelehiOfficeDev
             PRODUCTVERSION 2015
             PRODUCTEXTENSION
-            WINDOWSBASISROOTNAME AronOfficeDev 2015
-            UNIXBASISROOTNAME aronofficedev@LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            WINDOWSBASISROOTNAME DelehiOfficeDev 2015
+            UNIXBASISROOTNAME delehiofficedev2015
             POSTVERSIONEXTENSION
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@
             BRANDPACKAGEVERSION 2015
@@ -133,21 +132,21 @@ AronOfficeDev
         active          1
         compression     5
         script          setup_osl
-        downloadname    AronOfficeDev_{productversion}_{os}_install_{languages}
-        langpackdownloadname    AronOfficeDev_{productversion}_languagepack_{os}_install_{languages}
-        helppackdownloadname    AronOfficeDev_{productversion}_helppack_{os}_install_{languages}
+        downloadname    DelehiOfficeDev_{productversion}_{os}_install_{languages}
+        langpackdownloadname    DelehiOfficeDev_{productversion}_languagepack_{os}_install_{languages}
+        helppackdownloadname    DelehiOfficeDev_{productversion}_helppack_{os}_install_{languages}
         include         {installscriptdir},{customtargetpath}/readlicense_oo/readme,{customtargetpath}/sysui/{pkgtype},{customtargetpath}/setup_native,{filelistpath}/PackageSet,{filelistpath}/GeneratedPackage,{filelistpath}/Package,{filelistpath}/ExtensionPackage,{extensionsdir},{licensepath},{packinfopath}
     }
 }
 
-AronOffice_SDK
+DelehiOffice_SDK
 {
     Settings
     {
-        downloadname AronOffice-SDK_{packageversion}_{os}_install_{languages}
+        downloadname DelehiOffice-SDK_{packageversion}_{os}_install_{languages}
         variables
         {
-            PRODUCTNAME AronOffice
+            PRODUCTNAME DelehiOffice
             PRODUCTVERSION 2015
             PRODUCTEXTENSION
             POSTVERSIONEXTENSION SDK
@@ -179,17 +178,17 @@ AronOffice_SDK
     }
 }
 
-AronOffice_Dev_SDK
+DelehiOffice_Dev_SDK
 {
     Settings
     {
-        downloadname AronOfficeDev-SDK_{packageversion}_{os}_install_{languages}
+        downloadname DelehiOfficeDev-SDK_{packageversion}_{os}_install_{languages}
         variables
         {
-            PRODUCTNAME AronOfficeDev
+            PRODUCTNAME DelehiOfficeDev
             PRODUCTVERSION 2015
             PRODUCTEXTENSION
-            WINDOWSBASISROOTNAME AronOfficeDev 2015
+            WINDOWSBASISROOTNAME DelehiOfficeDev 2015
             UNIXBASISROOTNAME libreofficedev2015
             POSTVERSIONEXTENSION SDK
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@.SDK

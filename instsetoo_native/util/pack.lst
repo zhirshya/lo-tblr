@@ -9,6 +9,7 @@
 
 LibreOffice             unxlngi6.pro,unxmacxi.pro,unxsoli4.pro,unxsols4.pro,wntmsci12.pro,unxlngx6.pro en-US|ar|bg|bn|ca|ca-valencia|cs|da|de|el|en-GB|es|et|eu|fi|fr|ga|gl|he|hu|it|ja|km|ko|lt|mk|nb|nl|om|pl|pt|pt-BR|ru|sl|sr|sr-Latn|sv|tr|vi|zh-CN|zh-TW openoffice
 AronOffice             unxlngi6.pro,unxmacxi.pro,unxsoli4.pro,unxsols4.pro,wntmsci12.pro,unxlngx6.pro en-US|ar|bg|bn|ca|ca-valencia|cs|da|de|el|en-GB|es|et|eu|fi|fr|ga|gl|he|hu|it|ja|km|ko|lt|mk|nb|nl|om|pl|pt|pt-BR|ru|sl|sr|sr-Latn|sv|tr|vi|zh-CN|zh-TW openoffice
+DelehiOffice             unxlngi6.pro,unxmacxi.pro,unxsoli4.pro,unxsols4.pro,wntmsci12.pro,unxlngx6.pro en-US|ar|bg|bn|ca|ca-valencia|cs|da|de|el|en-GB|es|et|eu|fi|fr|ga|gl|he|hu|it|ja|km|ko|lt|mk|nb|nl|om|pl|pt|pt-BR|ru|sl|sr|sr-Latn|sv|tr|vi|zh-CN|zh-TW openoffice
 #LibreOffice      unxlngi6,unxmacxi,unxsoli4,unxsols4,wntmsci12                                  en-US   openoffice
 #LibreOffice_Dev  unxlngi6.pro,unxsoli4.pro,unxsols4.pro,wntmsci12.pro,unxmacxi.pro,unxlngx6.pro    en-US   openofficedev
 LibreOffice_SDK         unxlngi6.pro,unxmacxi.pro,unxsoli4.pro,unxsols4.pro,wntmsci12.pro,unxlngx6.pro  en-US   sdkoo

@@ -27,7 +27,7 @@ eval 'exec perl -wS $0 ${1+"$@"}'
 #
 
 my ($prefix, $ext, $key);
-my $productname = "AronOffice";
+my $productname = "DelehiOffice";
 my $workdir = ".";
 my $template_dir;
 
