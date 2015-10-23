@@ -973,11 +973,11 @@ void SdXShape::SetEmptyPresObj(bool bEmpty)
         {
             OutlinerParaObject* pOutlinerParaObject = pObj->GetOutlinerParaObject();
             const bool bVertical = pOutlinerParaObject && pOutlinerParaObject->IsVertical();
-
+            const bool bVertL2R = pOutlinerParaObject && pOutlinerParaObject->IsVertLR();
             // really delete SdrOutlinerObj at pObj
             pObj->NbcSetOutlinerParaObject(0L);
             if( bVertical && PTR_CAST( SdrTextObj, pObj ) )
-                static_cast<SdrTextObj*>(pObj)->SetVerticalWriting( true );
+                static_cast<SdrTextObj*>(pObj)->SetVerticalWriting( true, bVertL2R );
 
             SdrGrafObj* pGraphicObj = PTR_CAST( SdrGrafObj, pObj );
             if( pGraphicObj )

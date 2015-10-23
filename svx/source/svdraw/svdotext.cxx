@@ -1402,6 +1402,7 @@ void SdrTextObj::NbcSetOutlinerParaObjectForText( OutlinerParaObject* pTextObjec
                 com::sun::star::text::WritingMode_TB_LR : com::sun::star::text::WritingMode_TB_RL;
         }
         SvxWritingModeItem aWritingMode(wm, SDRATTR_TEXTDIRECTION);
+        GetProperties().SetObjectItemDirect(aWritingMode);
     }
 
     SetTextSizeDirty();
