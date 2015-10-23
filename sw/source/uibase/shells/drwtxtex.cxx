@@ -513,6 +513,17 @@ void SwDrawTextShell::Execute( SfxRequest &rReq )
 
                 rSh.GetView().BeginTextEdit( pTmpObj, pTmpPV, &rSh.GetView().GetEditWin(), false);
                 rSh.GetView().AttrChangedNotify( &rSh );
+
+                /*
+                在drwtxtsh.cxx::ExecDraw 函数里是这么用的
+                    if (IsTextEdit() && pOLV->GetOutliner()->IsModified())
+                        rSh.SetModified();
+                但是在这里不能这么用，因为下面的pTemp指针在当前case块的某些语句执行后
+                会发生变化,也有变成0的情况
+                Outliner *  pTemp = pOLV->GetOutliner();
+                很奇妙！！！
+                */
+                rSh.SetModified();
             }
             return;
 
