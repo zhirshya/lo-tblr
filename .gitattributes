@@ -21,3 +21,10 @@
 *.ods binary
 *.odp binary
 *.pptx binary
+*.ico binary
+*.icns binary
+*.numbers binary
+*.pub binary
+*.vsd binary
+*.rtf binary
+*.bmp binary
