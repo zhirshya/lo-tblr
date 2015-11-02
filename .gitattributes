@@ -28,3 +28,6 @@
 *.vsd binary
 *.rtf binary
 *.bmp binary
+*.wpd binary
+*.drw binary
+*.rag binary
