@@ -4468,6 +4468,7 @@ if test "$cross_compiling" = "yes"; then
         instsetoo_native/util/openoffice.lst.in \
         config_host/*.in \
         sysui/desktop/macosx/Info.plist.in \
+        setup_native/scripts/osx_install_languagepack.applescript.in \
         ios/lo.xcconfig.in) \
     | (cd CONF-FOR-BUILD && tar xf -)
     cp configure CONF-FOR-BUILD
@@ -12980,6 +12981,7 @@ AC_CONFIG_FILES([config_host.mk
                  lo.xcent
                  instsetoo_native/util/openoffice.lst
                  sysui/desktop/macosx/Info.plist
+                 setup_native/scripts/osx_install_languagepack.applescript
                  ios/lo.xcconfig])
 AC_CONFIG_HEADERS([config_host/config_buildid.h])
 AC_CONFIG_HEADERS([config_host/config_clang.h])
