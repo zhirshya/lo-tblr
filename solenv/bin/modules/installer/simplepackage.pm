@@ -393,7 +393,7 @@ sub create_package
 
             chdir $localfrom;
         }
-        elsif ($volume_name_classic_app eq 'LibreOffice' || $volume_name_classic_app eq 'LibreOfficeDev' || $volume_name_classic_app eq 'AronOffice')
+        elsif ($volume_name_classic_app eq 'LibreOffice' || $volume_name_classic_app eq 'LibreOfficeDev' || $volume_name_classic_app eq 'DelehiOffice' || $volume_name_classic_app eq 'DelehiOfficeDev')
         {
             my $subdir = "$tempdir/$packagename/$volume_name_classic_app.app/Contents/Resources";
             if ( ! -d $subdir ) { installer::systemactions::create_directory($subdir); }

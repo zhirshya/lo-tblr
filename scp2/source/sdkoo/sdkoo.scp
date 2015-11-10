@@ -48,7 +48,7 @@ Directory gid_Dir_Sdkoo_Sdk
     ParentID = PREDEFINED_PROGDIR;
 #endif
 #ifdef MACOSX
-    DosName = "AronOffice${PRODUCTVERSION}_SDK";
+    DosName = "${PRODUCTNAME}5.1_SDK";
 #else
     DosName = "sdk";
 #endif

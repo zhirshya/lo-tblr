@@ -80,8 +80,8 @@ DelehiOffice
         compression     5
         script          setup_osl
         downloadname    DelehiOffice_{productversion}_{os}_install_{languages}
-        langpackdownloadname    LibreOffice_{productversion}_languagepack_{os}_install_{languages}
-        helppackdownloadname    LibreOffice_{productversion}_helppack_{os}_install_{languages}
+        langpackdownloadname    DelehiOffice_{productversion}_languagepack_{os}_install_{languages}
+        helppackdownloadname    DelehiOffice_{productversion}_helppack_{os}_install_{languages}
         include         {installscriptdir},{customtargetpath}/readlicense_oo/readme,{customtargetpath}/sysui/{pkgtype},{customtargetpath}/setup_native,{filelistpath}/PackageSet,{filelistpath}/GeneratedPackage,{filelistpath}/Package,{filelistpath}/ExtensionPackage,{extensionsdir},{licensepath},{packinfopath}
     }
 }
@@ -106,8 +106,8 @@ DelehiOfficeDev
             BASEPRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
             DEVELOPMENTPRODUCT 1
             BASISPACKAGEPREFIX lodevbasis
-            UREPACKAGEPREFIX libreofficedev
-            SOLSUREPACKAGEPREFIX libreofficedev
+            UREPACKAGEPREFIX delehiofficedev
+            SOLSUREPACKAGEPREFIX delehiofficedev
             REGISTRYLAYERNAME LayerDev
             UPDATEURL http://update.libreoffice.org/check.php
             ADD_INCLUDE_FILES cli_ure/version/version.txt,unoil/climaker/version.txt
@@ -128,7 +128,7 @@ DelehiOfficeDev
             STARTCENTER_TEMPLREP_URL http://templates.libreoffice.org/
             DICT_REPO_URL http://extensions.libreoffice.org/dictionaries/
             STARTCENTER_HIDE_EXTERNAL_LINKS 0
-        }
+        } 
         active          1
         compression     5
         script          setup_osl
@@ -178,7 +178,7 @@ DelehiOffice_SDK
     }
 }
 
-DelehiOffice_Dev_SDK
+DelehiOfficeDev_SDK
 {
     Settings
     {
@@ -189,15 +189,15 @@ DelehiOffice_Dev_SDK
             PRODUCTVERSION 2015
             PRODUCTEXTENSION
             WINDOWSBASISROOTNAME DelehiOfficeDev 2015
-            UNIXBASISROOTNAME libreofficedev2015
+            UNIXBASISROOTNAME delehiofficedev2015
             POSTVERSIONEXTENSION SDK
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@.SDK
             BRANDPACKAGEVERSION 2015
             PACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             PACKAGEREVISION {buildid}
             BASISPACKAGEPREFIX lodevbasis
-            UREPACKAGEPREFIX libreofficedev
-            SOLSUREPACKAGEPREFIX libreofficedev
+            UREPACKAGEPREFIX delehiofficedev
+            SOLSUREPACKAGEPREFIX delehiofficedev
             REGISTRYLAYERNAME LayerDev
             DEVELOPMENTPRODUCT 1
             PACK_INSTALLED 1
