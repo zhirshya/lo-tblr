@@ -993,7 +993,7 @@ std::unique_ptr<EditTextObject> ImpEditEngine::CreateTextObject(const EditSelect
 std::unique_ptr<EditTextObject> ImpEditEngine::CreateTextObject( EditSelection aSel, SfxItemPool* pPool, bool bAllowBigObjects, sal_Int32 nBigObjectStart )
 {
     std::unique_ptr<EditTextObject> pTxtObj(new EditTextObject(pPool));
-    pTxtObj->SetVertical( IsVertical(), IsTopToBottom());
+    pTxtObj->SetVertical( IsVertical(), IsVertLR());
     MapUnit eMapUnit = aEditDoc.GetItemPool().GetMetric( DEF_METRIC );
     pTxtObj->mpImpl->SetMetric( static_cast<sal_uInt16>(eMapUnit) );
     if ( pTxtObj->mpImpl->IsOwnerOfPool() )
@@ -1151,7 +1151,7 @@ void ImpEditEngine::SetText( const EditTextObject& rTextObject )
     EnableUndo( false );
 
     InsertText( rTextObject, EditSelection( aPaM, aPaM ) );
-    SetVertical( rTextObject.IsVertical(), rTextObject.IsTopToBottom());
+    SetVertical( rTextObject.IsVertical(), rTextObject.IsVertLR());
 
     DBG_ASSERT( !HasUndoManager() || !GetUndoManager().GetUndoActionCount(), "From where comes the Undo in SetText ?!" );
     SetUpdateMode( _bUpdate );

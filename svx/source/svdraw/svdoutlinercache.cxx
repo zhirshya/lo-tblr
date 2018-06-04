@@ -69,7 +69,7 @@ void SdrOutlinerCache::disposeOutliner( SdrOutliner* pOutliner )
         {
             maModeOutline.emplace_back(pOutliner);
             pOutliner->Clear();
-            pOutliner->SetVertical( false );
+            pOutliner->SetVertical( false, false );
 
             // Deregister on outliner, might be reused from outliner cache
             pOutliner->SetNotifyHdl( Link<EENotify&,void>() );
@@ -78,7 +78,7 @@ void SdrOutlinerCache::disposeOutliner( SdrOutliner* pOutliner )
         {
             maModeText.emplace_back(pOutliner);
             pOutliner->Clear();
-            pOutliner->SetVertical( false );
+            pOutliner->SetVertical( false, false );
 
             // Deregister on outliner, might be reused from outliner cache
             pOutliner->SetNotifyHdl( Link<EENotify&,void>() );

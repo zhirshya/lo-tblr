@@ -194,7 +194,8 @@ private:
 
     bool                    bOwnerOfPool:1;
     bool                    bVertical:1;
-    bool                    bIsTopToBottomVert : 1;
+    bool                    bVertL2R:1; //add by aron for Mongolian
+    bool                    bStoreUnicodeStrings:1;
 
     bool ImpChangeStyleSheets( const OUString& rOldName, SfxStyleFamily eOldFamily,
                                const OUString& rNewName, SfxStyleFamily eNewFamily );
@@ -214,8 +215,8 @@ public:
     std::vector<svl::SharedString> GetSharedStrings() const;
 
     bool                    IsVertical() const;
-    bool                    IsTopToBottom() const;
-    void                    SetVertical( bool bVert, bool bTopToBottom);
+    bool                    IsVertLR() const;
+    void                    SetVertical( bool bVert, bool bL2R );
 
     SvtScriptType           GetScriptType() const { return nScriptType;}
     void                    SetScriptType( SvtScriptType nType );

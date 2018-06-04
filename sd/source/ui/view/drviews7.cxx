@@ -312,6 +312,7 @@ void DrawViewShell::GetMenuState( SfxItemSet &rSet )
         rSet.DisableItem( SID_DRAW_CAPTION_VERTICAL );
         rSet.DisableItem( SID_TEXT_FITTOSIZE_VERTICAL );
         rSet.DisableItem( SID_DRAW_TEXT_VERTICAL );
+        rSet.DisableItem( SID_DRAW_TEXT_VERTICAL_LR );
     }
 
     bool bConvertToPathPossible = mpDrawView->IsConvertToPathObjPossible();
@@ -999,7 +1000,8 @@ void DrawViewShell::GetMenuState( SfxItemSet &rSet )
         }
         if( nCurrentSId != SID_TEXT_FITTOSIZE &&
             nCurrentSId != SID_TEXT_FITTOSIZE_VERTICAL &&
-            nCurrentSId != SID_ATTR_CHAR_VERTICAL )
+            nCurrentSId != SID_ATTR_CHAR_VERTICAL &&
+            nCurrentSId != SID_DRAW_TEXT_VERTICAL_LR)
             nCurrentSId = SID_ATTR_CHAR;
 
         rSet.Put( SfxBoolItem( nCurrentSId, true ) );
@@ -1077,6 +1079,8 @@ void DrawViewShell::GetMenuState( SfxItemSet &rSet )
         rSet.DisableItem( SID_ATTR_CHAR );
         rSet.ClearItem( SID_ATTR_CHAR_VERTICAL );
         rSet.DisableItem( SID_ATTR_CHAR_VERTICAL );
+        rSet.ClearItem(SID_DRAW_TEXT_VERTICAL_LR);
+        rSet.DisableItem(SID_DRAW_TEXT_VERTICAL_LR);
         rSet.ClearItem(SID_DRAW_LINE);
         rSet.DisableItem(SID_DRAW_LINE);
         rSet.ClearItem(SID_DRAW_MEASURELINE);

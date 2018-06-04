@@ -827,7 +827,7 @@ SdrObject* SwMSDffManager::ProcessObj(SvStream& rSt,
                 case mso_anchorTop:
                 {
                     if ( bVerticalText )
-                        eTHA = SDRTEXTHORZADJUST_RIGHT;
+                        eTHA = SDRTEXTHORZADJUST_LEFT;
                     else
                         eTVA = SDRTEXTVERTADJUST_TOP;
                 }
@@ -835,7 +835,7 @@ SdrObject* SwMSDffManager::ProcessObj(SvStream& rSt,
                 case mso_anchorTopCentered:
                 {
                     if ( bVerticalText )
-                        eTHA = SDRTEXTHORZADJUST_RIGHT;
+                        eTHA = SDRTEXTHORZADJUST_LEFT;
                     else
                         eTVA = SDRTEXTVERTADJUST_TOP;
                 }

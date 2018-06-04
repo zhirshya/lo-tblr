@@ -488,7 +488,7 @@ SdrObject* SdPage::CreatePresObj(PresObjKind eObjKind, bool bVertical, const ::t
             OutlinerMode nOutlMode = pOutliner->GetMode();
             pOutliner->Init( OutlinerMode::TextObject );
             pOutliner->SetStyleSheet( 0, nullptr );
-            pOutliner->SetVertical( bVertical );
+            pOutliner->SetVertical( bVertical, false );
 
             SetObjText( static_cast<SdrTextObj*>(pSdrObj), pOutliner, eObjKind, aString );
 
@@ -2252,7 +2252,7 @@ SdrObject* SdPage::InsertAutoLayoutShape(SdrObject* pObj, PresObjKind eObjKind, 
                 // here make sure the correct anchoring is used when the object
                 // is re-used but orientation is changed
                 if(PRESOBJ_OUTLINE == eObjKind)
-                    pTextObject->SetMergedItem(SdrTextHorzAdjustItem( bVertical ? SDRTEXTHORZADJUST_RIGHT : SDRTEXTHORZADJUST_BLOCK ));
+                    pTextObject->SetMergedItem(SdrTextHorzAdjustItem( bVertical ? SDRTEXTHORZADJUST_LEFT : SDRTEXTHORZADJUST_BLOCK ));
             }
 
             if( !mbMaster && (pTextObject->GetObjIdentifier() != OBJ_TABLE) )
@@ -2312,7 +2312,7 @@ SdrObject* SdPage::InsertAutoLayoutShape(SdrObject* pObj, PresObjKind eObjKind, 
             if( eObjKind == PRESOBJ_OUTLINE )
             {
                 aNewSet.Put( SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP) );
-                aNewSet.Put( SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT) );
+                aNewSet.Put( SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT) );
             }
             pObj->SetMergedItemSet(aNewSet);
         }
@@ -2900,9 +2900,13 @@ bool SdPage::RestoreDefaultText( SdrObject* pObj )
             if (!aString.isEmpty())
             {
                 bool bVertical = false;
+                bool bVertL2R = false;
                 OutlinerParaObject* pOldPara = pTextObj->GetOutlinerParaObject();
                 if( pOldPara )
+                {
                     bVertical = pOldPara->IsVertical();  // is old para object vertical?
+                    bVertL2R = pOldPara->IsVertLR();
+                }
 
                 SetObjText( pTextObj, nullptr, ePresObjKind, aString );
 
@@ -2917,7 +2921,7 @@ bool SdPage::RestoreDefaultText( SdrObject* pObj )
                         && pTextObj->GetOutlinerParaObject()->IsVertical() != bVertical)
                     {
                         ::tools::Rectangle aObjectRect = pTextObj->GetSnapRect();
-                        pTextObj->GetOutlinerParaObject()->SetVertical(bVertical);
+                        pTextObj->GetOutlinerParaObject()->SetVertical(bVertical, bVertL2R);
                         pTextObj->SetSnapRect(aObjectRect);
                     }
                 }

@@ -9,7 +9,7 @@ dnl in order to create a configure script.
 # several non-alphanumeric characters, those are split off and used only for the
 # ABOUTBOXPRODUCTVERSIONSUFFIX in openoffice.lst. Why that is necessary, no idea.
 
-AC_INIT([LibreOffice],[6.1.0.0.alpha1+],[],[],[http://documentfoundation.org/])
+AC_INIT([DelehiOffice],[6.1.0.0.alpha1+],[],[],[http://documentfoundation.org/])
 
 AC_PREREQ([2.59])
 
@@ -4483,7 +4483,8 @@ if test "$cross_compiling" = "yes"; then
         bin/officeotron.sh.in \
         instsetoo_native/util/openoffice.lst.in \
         config_host/*.in \
-        sysui/desktop/macosx/Info.plist.in) \
+        sysui/desktop/macosx/Info.plist.in \
+        setup_native/scripts/osx_install_languagepack.applescript.in) \
     | (cd CONF-FOR-BUILD && tar xf -)
     cp configure CONF-FOR-BUILD
     test -d config_build && cp -p config_build/*.h CONF-FOR-BUILD/config_host 2>/dev/null
@@ -12720,7 +12721,8 @@ AC_CONFIG_FILES([config_host.mk
                  bin/odfvalidator.sh
                  bin/officeotron.sh
                  instsetoo_native/util/openoffice.lst
-                 sysui/desktop/macosx/Info.plist])
+                 sysui/desktop/macosx/Info.plist
+                 setup_native/scripts/osx_install_languagepack.applescript])
 AC_CONFIG_HEADERS([config_host/config_buildid.h])
 AC_CONFIG_HEADERS([config_host/config_clang.h])
 AC_CONFIG_HEADERS([config_host/config_dconf.h])

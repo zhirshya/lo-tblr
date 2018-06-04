@@ -85,7 +85,7 @@ public:
     void SetUserType( OutlinerMode n );
 
     bool IsVertical() const;
-    bool IsTopToBottom() const;
+    bool IsVertLR() const;
     void SetVertical( bool bVertical, bool bTopToBottom = true);
 
     SvtScriptType GetScriptType() const;

@@ -1960,7 +1960,9 @@ void ScInputHandler::UpdateAdjust( sal_Unicode cTyped )
             eSvxAdjust = SvxAdjust::Left;
             break;
     }
-
+    // sal_uInt16 eOrient = pLastPattern ? ((const SvxOrientationItem&)pLastPattern->GetItem( ATTR_STACKED )).GetValue() : SvxCellOrientation::Standard;
+    sal_uInt16 eOrient = pLastPattern ? static_cast<sal_uInt16>(pLastPattern->GetItem( ATTR_STACKED ).GetValue()) : static_cast<sal_uInt16>(SvxCellOrientation::Standard);
+    sal_Bool bMongolVertical = pLastPattern && eOrient == static_cast<sal_uInt16>(SvxCellOrientation::Stacked_LR);
     bool bAsianVertical = pLastPattern &&
         pLastPattern->GetItem( ATTR_STACKED ).GetValue() &&
         pLastPattern->GetItem( ATTR_VERTICAL_ASIAN ).GetValue();
@@ -1977,7 +1979,7 @@ void ScInputHandler::UpdateAdjust( sal_Unicode cTyped )
     {
         pActiveViewSh->GetViewData().SetEditAdjust( eSvxAdjust );
     }
-    mpEditEngine->SetVertical( bAsianVertical );
+    mpEditEngine->SetVertical( bAsianVertical, bMongolVertical );
 }
 
 void ScInputHandler::RemoveAdjust()

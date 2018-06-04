@@ -23,6 +23,7 @@
  <toolbar:toolbaritem xlink:href=".uno:ZoomToolBox" toolbar:visible="false"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:Text" toolbar:visible="false"/>
+ <toolbar:toolbaritem xlink:href=".uno:VerticalLeftToRightText" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:VerticalText" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:FontworkGalleryFloater" toolbar:visible="false"/>
  <toolbar:toolbarseparator/>

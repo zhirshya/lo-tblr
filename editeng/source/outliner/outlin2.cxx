@@ -522,9 +522,9 @@ const EditEngine& Outliner::GetEditEngine() const
     return *pEditEngine;
 }
 
-void Outliner::SetVertical( bool bVertical, bool bTopToBottom)
+void Outliner::SetVertical( bool bVertical, bool bTopToBottom )
 {
-    pEditEngine->SetVertical(bVertical, bTopToBottom);
+    pEditEngine->SetVertical( bVertical, bTopToBottom );
 }
 
 bool Outliner::IsVertical() const
@@ -532,9 +532,9 @@ bool Outliner::IsVertical() const
     return pEditEngine->IsVertical();
 }
 
-bool Outliner::IsTopToBottom() const
+bool Outliner::IsVertLR() const
 {
-    return pEditEngine->IsTopToBottom();
+    return pEditEngine->IsVertLR();
 }
 
 void Outliner::SetFixedCellHeight( bool bUseFixedCellHeight )

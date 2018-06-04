@@ -42,6 +42,7 @@ ConstRectangle::ConstRectangle( SwWrtShell* pWrtShell, SwEditWin* pEditWin,
     , bMarquee(false)
     , bCapVertical(false)
     , mbVertical(false)
+    , mbVertLR(false)
 {
 }
 
@@ -114,14 +115,14 @@ bool ConstRectangle::MouseButtonUp(const MouseEvent& rMEvt)
                 {
                     SfxItemSet aSet(pSdrView->GetModel()->GetItemPool());
 
-                    pText->SetVerticalWriting(true);
+                pText->SetVerticalWriting(true, mbVertLR);
 
-                    aSet.Put(makeSdrTextAutoGrowWidthItem(true));
-                    aSet.Put(makeSdrTextAutoGrowHeightItem(false));
-                    aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP));
-                    aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                aSet.Put(makeSdrTextAutoGrowWidthItem(true));
+                aSet.Put(makeSdrTextAutoGrowHeightItem(false));
+                aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP));
+                aSet.Put(SdrTextHorzAdjustItem(mbVertLR ? SDRTEXTHORZADJUST_LEFT : SDRTEXTHORZADJUST_RIGHT));
 
-                    pText->SetMergedItemSet(aSet);
+                pText->SetMergedItemSet(aSet);
                 }
             }
 
@@ -142,7 +143,7 @@ bool ConstRectangle::MouseButtonUp(const MouseEvent& rMEvt)
                 pCaptObj->ForceOutlinerParaObject();
                 OutlinerParaObject* pOPO = pCaptObj->GetOutlinerParaObject();
                 if( pOPO && !pOPO->IsVertical() )
-                    pOPO->SetVertical( true );
+                    pOPO->SetVertical( true, false );
             }
         }
         break;
@@ -188,13 +189,22 @@ void ConstRectangle::Activate(const sal_uInt16 nSlotId)
         m_pWin->SetSdrDrawMode(OBJ_TEXT);
         break;
 
-    case SID_DRAW_TEXT_VERTICAL:
+    case SID_DRAW_TEXT_VERTICAL_LR:
+        // #93382#
         mbVertical = true;
+        mbVertLR = true;
         m_pWin->SetSdrDrawMode(OBJ_TEXT);
         break;
-
+    case SID_DRAW_TEXT_VERTICAL:
+        // #93382#
+        mbVertical = true;
+        mbVertLR = false;
+         m_pWin->SetSdrDrawMode(OBJ_TEXT);
+        break;
     case SID_DRAW_TEXT:
-        m_pWin->SetSdrDrawMode(OBJ_TEXT);
+        mbVertical = false;
+        mbVertLR = false;
+         m_pWin->SetSdrDrawMode(OBJ_TEXT);
         break;
 
     case SID_DRAW_CAPTION_VERTICAL:

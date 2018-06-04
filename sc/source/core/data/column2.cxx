@@ -191,8 +191,9 @@ long ScColumn::GetNeededSize(
     //  get other attributes from pattern and conditional formatting
 
     SvxCellOrientation eOrient = pPattern->GetCellOrientation( pCondSet );
-    bool bAsianVertical = ( eOrient == SvxCellOrientation::Stacked &&
-            pPattern->GetItem( ATTR_VERTICAL_ASIAN, pCondSet ).GetValue() );
+    bool bMongolVertical = SvxCellOrientation::Stacked_LR == eOrient;
+    bool bAsianVertical = ( SvxCellOrientation::Stacked == eOrient || bMongolVertical ) &&
+            pPattern->GetItem( ATTR_VERTICAL_ASIAN, pCondSet ).GetValue();
     if ( bAsianVertical )
         bBreak = false;
 
@@ -226,7 +227,7 @@ long ScColumn::GetNeededSize(
         // ignore orientation/rotation if "repeat" is active
         eOrient = SvxCellOrientation::Standard;
         nRotate = 0;
-        bAsianVertical = false;
+        bAsianVertical = bMongolVertical = false;
     }
 
     const SvxMarginItem* pMargin;
@@ -263,7 +264,7 @@ long ScColumn::GetNeededSize(
     CellType eCellType = aCell.meType;
 
     bool bEditEngine = (eCellType == CELLTYPE_EDIT ||
-                        eOrient == SvxCellOrientation::Stacked ||
+                        eOrient == SvxCellOrientation::Stacked || eOrient == SvxCellOrientation::Stacked_LR ||
                         IsAmbiguousScript(nScript) ||
                         ((eCellType == CELLTYPE_FORMULA) && aCell.mpFormula->IsMultilineResult()));
 
@@ -453,11 +454,12 @@ long ScColumn::GetNeededSize(
         }
 
         bool bEngineVertical = pEngine->IsVertical();
-        pEngine->SetVertical( bAsianVertical );
+        bool bEngineVertLR = pEngine->IsVertLR();
+        pEngine->SetVertical( bAsianVertical, bEngineVertLR );
         pEngine->SetUpdateMode( true );
 
         bool bEdWidth = bWidth;
-        if ( eOrient != SvxCellOrientation::Standard && eOrient != SvxCellOrientation::Stacked )
+        if ( eOrient != SvxCellOrientation::Standard && eOrient != SvxCellOrientation::Stacked && eOrient != SvxCellOrientation::Stacked_LR )
             bEdWidth = !bEdWidth;
         if ( nRotate )
         {
@@ -547,7 +549,7 @@ long ScColumn::GetNeededSize(
         }
 
         //  EditEngine is cached and re-used, so the old vertical flag must be restored
-        pEngine->SetVertical( bEngineVertical );
+        pEngine->SetVertical( bEngineVertical, false );
 
         pDocument->DisposeFieldEditEngine(pEngine);
 

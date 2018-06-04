@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE toolbar:toolbar PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "toolbar.dtd">
 <!--
@@ -65,6 +66,7 @@
  <toolbar:toolbaritem xlink:href=".uno:InsertObjectChart"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:Text"/>
+ <toolbar:toolbaritem xlink:href=".uno:VerticalLeftToRightText" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:VerticalText" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:FontworkGalleryFloater"/>
  <toolbar:toolbaritem xlink:href=".uno:HyperlinkDialog"/>

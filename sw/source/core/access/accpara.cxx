@@ -1767,7 +1767,10 @@ void SwAccessibleParagraph::_getDefaultAttributesImpl(
                         {
                             if ( pUpperFrame->IsVertical() )
                             {
-                                nVal = text::WritingMode2::TB_RL;
+                                if (pUpperFrame->IsVertLR())
+                                    nVal = text::WritingMode2::TB_LR;
+                                else
+                                    nVal = text::WritingMode2::TB_RL;
                             }
                             else if ( pUpperFrame->IsRightToLeft() )
                             {

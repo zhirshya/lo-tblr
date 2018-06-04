@@ -338,6 +338,8 @@
           <menu:menuitem menu:id=".uno:InsertPageFooter"/>
         </menu:menupopup>
       </menu:menu>
+      <menu:menuitem menu:id=".uno:VerticalLeftToRightText"/>
+      <menu:menuitem menu:id=".uno:VerticalText"/>
       <menu:menuseparator/>
       <menu:menuitem menu:id=".uno:InsertEnvelope"/>
       <menu:menuitem menu:id=".uno:InsertSignatureLine"/>

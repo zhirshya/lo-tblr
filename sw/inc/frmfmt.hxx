@@ -148,6 +148,7 @@ public:
     {
         HORI_L2R,
         HORI_R2L,
+        VERT_L2R,
         VERT_R2L
     };
 

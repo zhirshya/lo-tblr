@@ -1232,7 +1232,7 @@ css::text::WritingMode SdDrawDocument::GetDefaultWritingMode() const
             case SvxFrameDirection::Horizontal_LR_TB: eRet = css::text::WritingMode_LR_TB; break;
             case SvxFrameDirection::Horizontal_RL_TB: eRet = css::text::WritingMode_RL_TB; break;
             case SvxFrameDirection::Vertical_RL_TB: eRet = css::text::WritingMode_TB_RL; break;
-
+            case SvxFrameDirection::Vertical_LR_TB: eRet = css::text::WritingMode_TB_LR; break;
             default:
                 OSL_FAIL( "Frame direction not supported yet" );
             break;
@@ -1252,6 +1252,7 @@ void SdDrawDocument::SetDefaultWritingMode(css::text::WritingMode eMode )
         case css::text::WritingMode_LR_TB: nVal = SvxFrameDirection::Horizontal_LR_TB; break;
         case css::text::WritingMode_RL_TB: nVal = SvxFrameDirection::Horizontal_RL_TB; break;
         case css::text::WritingMode_TB_RL: nVal = SvxFrameDirection::Vertical_RL_TB; break;
+        case css::text::WritingMode_TB_LR: nVal = SvxFrameDirection::Vertical_LR_TB; break;
         default:
             OSL_FAIL( "Frame direction not supported yet" );
             return;

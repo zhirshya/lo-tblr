@@ -1926,7 +1926,11 @@ bool SwFEShell::ImpEndCreate()
         if( pAnch->IsVertical() )
         {
             nXOffset = nYOffset;
-            nYOffset = pAnch->getFrameArea().Left()+pAnch->getFrameArea().Width()-rBound.Right();
+            //修改tb-lr下新建图形对象时的位置错误
+            if (pAnch->IsVertLR())
+                nYOffset = rBound.Left() - pAnch->getFrameArea().Left();
+            else
+                nYOffset = pAnch->getFrameArea().Left() + pAnch->getFrameArea().Width() - rBound.Right();
         }
         else if( pAnch->IsRightToLeft() )
             nXOffset = pAnch->getFrameArea().Left()+pAnch->getFrameArea().Width()-rBound.Right();
@@ -3074,7 +3078,7 @@ long SwFEShell::GetSectionWidth( SwFormat const & rFormat ) const
             {
                 SfxItemSet aSet(pObj->GetMergedItemSet());
                 aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_CENTER));
-                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
                 pObj->SetMergedItemSet(aSet);
             }
 
@@ -3098,7 +3102,7 @@ long SwFEShell::GetSectionWidth( SwFormat const & rFormat ) const
                 aSet.Put(makeSdrTextAutoGrowWidthItem(true));
                 aSet.Put(makeSdrTextAutoGrowHeightItem(false));
                 aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP));
-                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
                 pText->SetMergedItemSet(aSet);
             }
 

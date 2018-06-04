@@ -321,7 +321,7 @@ tools::Rectangle ScEditUtil::GetEditArea( const ScPatternAttr* pPattern, bool bF
     SvxCellVerJustify eJust = pPattern->GetItem(ATTR_VER_JUSTIFY).GetValue();
 
     //  asian vertical is always edited top-aligned
-    bool bAsianVertical = pPattern->GetItem( ATTR_STACKED ).GetValue() &&
+    bool bAsianVertical = pPattern->GetItem( ATTR_STACKED ).GetValue() && //todo: eOrient == SVX_ORIENTATION_STACKED_LR (by Chinbat 2018-05-29 14:18:24)
         pPattern->GetItem( ATTR_VERTICAL_ASIAN ).GetValue();
 
     if ( eJust == SvxCellVerJustify::Top ||

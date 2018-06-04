@@ -636,17 +636,26 @@ void SAL_CALL ScAutoFormatFieldObj::setPropertyValue(
                             {
                                 case table::CellOrientation_STANDARD:
                                     pData->PutItem( nFieldIndex, SfxBoolItem( ATTR_STACKED, false ) );
+                                    // pData->PutItem( nFieldIndex, SvxOrientationItem( SVX_ORIENTATION_STANDARD, ATTR_STACKED ) );
                                 break;
                                 case table::CellOrientation_TOPBOTTOM:
                                     pData->PutItem( nFieldIndex, SfxBoolItem( ATTR_STACKED, false ) );
+                                    // pData->PutItem( nFieldIndex, SvxOrientationItem( SVX_ORIENTATION_TOPBOTTOM, ATTR_STACKED ) );
                                     pData->PutItem( nFieldIndex, SfxInt32Item( ATTR_ROTATE_VALUE, 27000 ) );
                                 break;
                                 case table::CellOrientation_BOTTOMTOP:
                                     pData->PutItem( nFieldIndex, SfxBoolItem( ATTR_STACKED, false ) );
+                                    // pData->PutItem( nFieldIndex, SvxOrientationItem( SVX_ORIENTATION_BOTTOMTOP, ATTR_STACKED ) );
                                     pData->PutItem( nFieldIndex, SfxInt32Item( ATTR_ROTATE_VALUE, 9000 ) );
                                 break;
                                 case table::CellOrientation_STACKED:
                                     pData->PutItem( nFieldIndex, SfxBoolItem( ATTR_STACKED, true ) );
+                                    // pData->PutItem( nFieldIndex, SvxOrientationItem( SVX_ORIENTATION_STACKED, ATTR_STACKED ) );
+                                break;
+                                case table::CellOrientation_STACKED_LR:
+                                    // pData->PutItem( nFieldIndex, SvxOrientationItem( SvxCellOrientation::Stacked_LR, ATTR_STACKED ) );
+                                    pData->PutItem( nFieldIndex, SfxBoolItem( ATTR_STACKED, true ) );
+                                    pData->PutItem( nFieldIndex, SfxInt32Item( ATTR_ROTATE_VALUE, 27000 ) );
                                 break;
                                 default:
                                 {

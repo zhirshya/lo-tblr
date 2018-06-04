@@ -517,6 +517,13 @@ void SAL_CALL SfxToolBoxControl::statusChanged( const FeatureStateEvent& rEvent 
                 }
             }
 
+            //just for test
+            /*
+            if(nSlotId == SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT)
+            {
+                int stop = 1;
+            }
+            */
             StateChanged( nSlotId, eState, pItem );
             delete pItem;
         }

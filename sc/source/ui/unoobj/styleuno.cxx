@@ -1588,18 +1588,27 @@ void ScStyleObj::setPropertyValue_Impl( const OUString& rPropertyName, const Sfx
                                         switch( eOrient )
                                         {
                                             case table::CellOrientation_STANDARD:
+                                                // rSet.Put( SvxOrientationItem( SVX_ORIENTATION_STANDARD, ATTR_STACKED) );
                                                 rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
                                             break;
                                             case table::CellOrientation_TOPBOTTOM:
+                                                // rSet.Put( SvxOrientationItem( SVX_ORIENTATION_TOPBOTTOM, ATTR_STACKED) );
                                                 rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
                                                 rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 27000 ) );
                                             break;
                                             case table::CellOrientation_BOTTOMTOP:
+                                                // rSet.Put( SvxOrientationItem( SVX_ORIENTATION_BOTTOMTOP, ATTR_STACKED) );
                                                 rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
                                                 rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 9000 ) );
                                             break;
                                             case table::CellOrientation_STACKED:
+                                                // rSet.Put( SvxOrientationItem( SVX_ORIENTATION_STACKED, ATTR_STACKED) );
                                                 rSet.Put( SfxBoolItem( ATTR_STACKED, true ) );
+                                            break;
+                                            case table::CellOrientation_STACKED_LR:
+                                                // rSet.Put( SvxOrientationItem( SVX_ORIENTATION_STACKED_LR, ATTR_STACKED) );
+                                                rSet.Put( SfxBoolItem( ATTR_STACKED, true ) );
+                                                rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 27000 ) );
                                             break;
                                             default:
                                             {

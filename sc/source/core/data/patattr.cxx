@@ -154,11 +154,16 @@ SvxCellOrientation ScPatternAttr::GetCellOrientation( const SfxItemSet& rItemSet
         sal_Int32 nAngle = GetItem( ATTR_ROTATE_VALUE, rItemSet, pCondSet ).GetValue();
         if( nAngle == 9000 )
             eOrient = SvxCellOrientation::BottomUp;
-        else if( nAngle == 27000 )
-            eOrient = SvxCellOrientation::TopBottom;
+        else if( nAngle == 27000 ) {
+            if( GetItem( ATTR_STACKED, rItemSet, pCondSet ).GetValue() )
+            {
+                eOrient = SvxCellOrientation::Stacked_LR;
+            } else
+                eOrient = SvxCellOrientation::TopBottom; //Isn't this for TB_LR? Difference between SvxCellOrientation::Stacked_LR and SvxCellOrientation::TopBottom?
+        }
     }
 
-    return eOrient;
+    return (SvxCellOrientation)eOrient;
 }
 
 SvxCellOrientation ScPatternAttr::GetCellOrientation( const SfxItemSet* pCondSet ) const

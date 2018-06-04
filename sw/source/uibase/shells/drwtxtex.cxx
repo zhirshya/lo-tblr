@@ -487,6 +487,7 @@ void SwDrawTextShell::Execute( SfxRequest &rReq )
         break;
 
         case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
+        case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
         case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
             // Shell switch!
             {
@@ -500,14 +501,33 @@ void SwDrawTextShell::Execute( SfxRequest &rReq )
                             svl::Items<SDRATTR_TEXTDIRECTION,
                             SDRATTR_TEXTDIRECTION>{} );
 
-                aAttr.Put( SvxWritingModeItem(
-                    nSlot == SID_TEXTDIRECTION_LEFT_TO_RIGHT ?
-                        text::WritingMode_LR_TB
-                        : text::WritingMode_TB_RL, SDRATTR_TEXTDIRECTION ) );
+                com::sun::star::text::WritingMode eWm;
+                switch (nSlot)
+                {
+                case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
+                    eWm = text::WritingMode_LR_TB; break;
+                case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
+                    eWm = text::WritingMode_TB_LR; break;
+                default:
+                    eWm = text::WritingMode_TB_RL;
+                    break;
+                }
+                aAttr.Put(SvxWritingModeItem(eWm, SDRATTR_TEXTDIRECTION));
                 pTmpView->SetAttributes( aAttr );
 
                 rSh.GetView().BeginTextEdit( pTmpObj, pTmpPV, &rSh.GetView().GetEditWin());
                 rSh.GetView().AttrChangedNotify( &rSh );
+
+                /*
+                在drwtxtsh.cxx::ExecDraw 函数里是这么用的
+                    if (IsTextEdit() && pOLV->GetOutliner()->IsModified())
+                        rSh.SetModified();
+                但是在这里不能这么用，因为下面的pTemp指针在当前case块的某些语句执行后
+                会发生变化,也有变成0的情况
+                Outliner *  pTemp = pOLV->GetOutliner();
+                很奇妙！！！
+                */
+                rSh.SetModified();
             }
             return;
 
@@ -785,6 +805,7 @@ ASK_ESCAPE:
 
         case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
         case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
+        case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
             if ( !SvtLanguageOptions().IsVerticalTextEnabled() )
             {
                 rSet.DisableItem( nSlotId );
@@ -793,9 +814,21 @@ ASK_ESCAPE:
             else
             {
                 SdrOutliner * pOutliner = pSdrView->GetTextEditOutliner();
-                if( pOutliner )
-                    bFlag = pOutliner->IsVertical() ==
-                            (SID_TEXTDIRECTION_TOP_TO_BOTTOM == nSlotId);
+                if (pOutliner)
+                {
+                    if (!pOutliner->IsVertical())
+                    {
+                        bFlag = SID_TEXTDIRECTION_LEFT_TO_RIGHT == nSlotId;
+                    }
+                    else if (!pOutliner->IsVertLR())
+                    {
+                        bFlag = SID_TEXTDIRECTION_TOP_TO_BOTTOM == nSlotId;
+                    }
+                    else
+                    {
+                        bFlag = SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT == nSlotId;
+                    }
+                }
                 else
                 {
                     text::WritingMode eMode =
@@ -805,9 +838,13 @@ ASK_ESCAPE:
                     {
                         bFlag = eMode == text::WritingMode_LR_TB;
                     }
-                    else
+                    else if (nSlotId == SID_TEXTDIRECTION_TOP_TO_BOTTOM)
                     {
                         bFlag = eMode != text::WritingMode_TB_RL;
+                    }
+                    else
+                    {
+                        bFlag = eMode != text::WritingMode_TB_LR;
                     }
                 }
             }

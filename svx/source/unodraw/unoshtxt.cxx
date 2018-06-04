@@ -573,6 +573,7 @@ SvxTextForwarder* SvxTextEditSourceImpl::GetBackgroundTextForwarder()
         else
         {
             bool bVertical = pOutlinerParaObject && pOutlinerParaObject->IsVertical();
+            bool bVertL2R = pOutlinerParaObject && pOutlinerParaObject->IsVertLR();
 
             // set objects style sheet on empty outliner
             SfxStyleSheetPool* pPool = static_cast<SfxStyleSheetPool*>(mpObject->getSdrModelFromSdrObject().GetStyleSheetPool());
@@ -584,7 +585,7 @@ SvxTextForwarder* SvxTextEditSourceImpl::GetBackgroundTextForwarder()
                 mpOutliner->SetStyleSheet( 0, pStyleSheet );
 
             if( bVertical )
-                mpOutliner->SetVertical( true, pOutlinerParaObject->IsTopToBottom());
+                mpOutliner->SetVertical( true, bVertL2R );
         }
 
         // maybe we have to set the border attributes

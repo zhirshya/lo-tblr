@@ -1508,7 +1508,7 @@ bool XclExpCellAlign::FillFromItemSet(
             bUsed |= ScfTools::CheckItem( rItemSet, ATTR_VER_JUSTIFY, bStyle );
 
             // stacked/rotation
-            bool bStacked = rItemSet.Get( ATTR_STACKED ).GetValue();
+            bool bStacked = rItemSet.Get( ATTR_STACKED ).GetValue();  //todo: eOrient == SVX_ORIENTATION_STACKED_LR (by Chinbat 2018-05-29 14:18:24)
             bUsed |= ScfTools::CheckItem( rItemSet, ATTR_STACKED, bStyle );
             if( bStacked )
             {

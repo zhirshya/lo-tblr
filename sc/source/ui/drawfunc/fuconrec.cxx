@@ -149,7 +149,7 @@ bool FuConstRectangle::MouseButtonUp(const MouseEvent& rMEvt)
                     static_cast<SdrTextObj*>(pObj)->ForceOutlinerParaObject();
                 OutlinerParaObject* pOPO = pObj->GetOutlinerParaObject();
                 if( pOPO && !pOPO->IsVertical() )
-                    pOPO->SetVertical( true );
+                    pOPO->SetVertical( true, false );
             }
         }
 
@@ -417,7 +417,7 @@ SdrObject* FuConstRectangle::CreateDefaultObject(const sal_uInt16 nID, const too
                     {
                         SfxItemSet aSet(pObj->GetMergedItemSet());
                         aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_CENTER));
-                        aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                        aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
                         pObj->SetMergedItemSet(aSet);
                     }
 

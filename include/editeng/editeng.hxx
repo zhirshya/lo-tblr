@@ -237,9 +237,9 @@ public:
     void            SetPaperSize( const Size& rSize );
     const Size&     GetPaperSize() const;
 
-    void            SetVertical( bool bVertical, bool bTopToBottom = true );
+    void            SetVertical( bool bVertical, bool bVertL2R = true );
     bool            IsVertical() const;
-    bool            IsTopToBottom() const;
+    bool            IsVertLR() const;
 
     void            SetFixedCellHeight( bool bUseFixedCellHeight );
 

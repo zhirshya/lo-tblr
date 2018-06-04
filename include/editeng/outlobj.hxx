@@ -83,9 +83,9 @@ public:
     void SetOutlinerMode(OutlinerMode nNew);
 
     // vertical access
+    bool IsVertLR() const;
     bool IsVertical() const;
-    bool IsTopToBottom() const;
-    void SetVertical(bool bNew, bool bTopToBottom = true);
+    void SetVertical(bool bNew, bool bVertLR = true);
 
     // data read access
     sal_Int32 Count() const;

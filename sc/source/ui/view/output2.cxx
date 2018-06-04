@@ -368,6 +368,7 @@ void ScDrawStringsVars::SetPattern(
                        !bRepeat;
             break;
         case SvxCellOrientation::Stacked:
+        case SvxCellOrientation::Stacked_LR:
             nRot = 0;
             bRotated = false;
             break;
@@ -431,7 +432,6 @@ void ScDrawStringsVars::SetPattern(
         nIndent = 0;
 
     // "Shrink to fit"
-
     bShrink = pPattern->GetItem( ATTR_SHRINKTOFIT, pCondSet ).GetValue();
 
     // at least the text size needs to be retrieved again
@@ -1676,7 +1676,8 @@ tools::Rectangle ScOutputData::LayoutStrings(bool bPixelToLogic, bool bPaint, co
 
                     //  use edit engine for rotated, stacked or mixed-script text
                     if ( aVars.GetOrient() == SvxCellOrientation::Stacked ||
-                         aVars.IsRotated() || IsAmbiguousScript(nScript) )
+                        aVars.GetOrient() == SvxCellOrientation::Stacked_LR ||
+                        aVars.IsRotated() || IsAmbiguousScript(nScript) )
                         bNeedEdit = true;
                 }
                 if (bDoCell && !bNeedEdit)
@@ -2318,6 +2319,7 @@ ScOutputData::DrawEditParam::DrawEditParam(const ScPatternAttr* pPattern, const 
     mbBreak( (meHorJustAttr == SvxCellHorJustify::Block) || lcl_GetBoolValue(*pPattern, ATTR_LINEBREAK, pCondSet) ),
     mbCellIsValue(bCellIsValue),
     mbAsianVertical(false),
+    mbMongolVertical(false),
     mbPixelToLogic(false),
     mbHyphenatorSet(false),
     mpEngine(nullptr),
@@ -2421,7 +2423,7 @@ void ScOutputData::DrawEditParam::setPatternToEngine(bool bUseStyleColor)
     mpOldPreviewFontSet = mpPreviewFontSet;
 
     EEControlBits nControl = mpEngine->GetControlWord();
-    if (meOrient == SvxCellOrientation::Stacked)
+    if (meOrient == SvxCellOrientation::Stacked || meOrient == SvxCellOrientation::Stacked_LR)
         nControl |= EEControlBits::ONECHARPERLINE;
     else
         nControl &= ~EEControlBits::ONECHARPERLINE;
@@ -2477,7 +2479,7 @@ void ScOutputData::DrawEditParam::calcPaperSize(
         rPaperSize.setHeight( rAlignRect.GetHeight() - nTopM - nBottomM );
     }
 
-    if (mbAsianVertical)
+    if (mbAsianVertical || mbMongolVertical)
     {
         rPaperSize.setHeight( rAlignRect.GetHeight() - nTopM - nBottomM );
         // Subtract some extra value from the height or else the text would go
@@ -2490,7 +2492,7 @@ void ScOutputData::DrawEditParam::calcPaperSize(
 void ScOutputData::DrawEditParam::getEngineSize(ScFieldEditEngine* pEngine, long& rWidth, long& rHeight) const
 {
     long nEngineWidth = 0;
-    if (!mbBreak || meOrient == SvxCellOrientation::Stacked || mbAsianVertical)
+    if (!mbBreak || meOrient == SvxCellOrientation::Stacked || mbAsianVertical || meOrient == SvxCellOrientation::Stacked_LR || mbMongolVertical )
         nEngineWidth = static_cast<long>(pEngine->CalcTextWidth());
 
     long nEngineHeight = pEngine->GetTextHeight();
@@ -2502,7 +2504,7 @@ void ScOutputData::DrawEditParam::getEngineSize(ScFieldEditEngine* pEngine, long
         nEngineHeight = nTemp;
     }
 
-    if (meOrient == SvxCellOrientation::Stacked)
+    if (meOrient == SvxCellOrientation::Stacked || meOrient == SvxCellOrientation::Stacked_LR)
         nEngineWidth = nEngineWidth * 11 / 10;
 
     rWidth = nEngineWidth;
@@ -2511,7 +2513,7 @@ void ScOutputData::DrawEditParam::getEngineSize(ScFieldEditEngine* pEngine, long
 
 bool ScOutputData::DrawEditParam::hasLineBreak() const
 {
-    return (mbBreak || (meOrient == SvxCellOrientation::Stacked) || mbAsianVertical);
+    return (mbBreak || (meOrient == SvxCellOrientation::Stacked) || (meOrient == SvxCellOrientation::Stacked_LR) || mbAsianVertical || mbMongolVertical);
 }
 
 bool ScOutputData::DrawEditParam::isHyperlinkCell() const
@@ -2559,7 +2561,7 @@ void ScOutputData::DrawEditParam::calcStartPosForVertical(
 
 void ScOutputData::DrawEditParam::setAlignmentToEngine()
 {
-    if (isVerticallyOriented() || mbAsianVertical)
+    if (isVerticallyOriented() || mbAsianVertical || mbMongolVertical)
     {
         SvxAdjust eSvxAdjust = SvxAdjust::Left;
         switch (meVerJust)
@@ -2594,7 +2596,7 @@ void ScOutputData::DrawEditParam::setAlignmentToEngine()
         //  -> always set adjustment
 
         SvxAdjust eSvxAdjust = SvxAdjust::Left;
-        if (meOrient == SvxCellOrientation::Stacked)
+        if (meOrient == SvxCellOrientation::Stacked || meOrient == SvxCellOrientation::Stacked_LR)
             eSvxAdjust = SvxAdjust::Center;
         else if (mbBreak)
         {
@@ -2653,7 +2655,7 @@ void ScOutputData::DrawEditParam::setAlignmentToEngine()
         }
     }
 
-    mpEngine->SetVertical(mbAsianVertical);
+    mpEngine->SetVertical(mbAsianVertical, mbMongolVertical);
     if (maCell.meType == CELLTYPE_EDIT)
     {
         // We need to synchronize the vertical mode in the EditTextObject
@@ -2661,7 +2663,7 @@ void ScOutputData::DrawEditParam::setAlignmentToEngine()
         // instances.
         const EditTextObject* pData = maCell.mpEditText;
         if (pData)
-            const_cast<EditTextObject*>(pData)->SetVertical(mbAsianVertical);
+            const_cast<EditTextObject*>(pData)->SetVertical(mbAsianVertical, mbMongolVertical);
     }
 }
 
@@ -2802,7 +2804,7 @@ void ScOutputData::DrawEditStandard(DrawEditParam& rParam)
 {
     OSL_ASSERT(rParam.meOrient == SvxCellOrientation::Standard);
     OSL_ASSERT(!rParam.mbAsianVertical);
-
+    OSL_ASSERT(!rParam.mbMongolVertical);
     Size aRefOne = mpRefDevice->PixelToLogic(Size(1,1));
 
     bool bRepeat = (rParam.meHorJustAttr == SvxCellHorJustify::Repeat && !rParam.mbBreak);
@@ -3124,7 +3126,6 @@ void ScOutputData::DrawEditStandard(DrawEditParam& rParam)
 
         // bMoveClipped handling has been replaced by complete alignment
         // handling (also extending to the left).
-
         if (bSimClip)
         {
             // no hard clip, only draw the affected rows
@@ -3701,6 +3702,8 @@ void ScOutputData::DrawEditStacked(DrawEditParam& rParam)
     if ( rParam.mbAsianVertical )
     {
         // in asian mode, use EditEngine::SetVertical instead of EEControlBits::ONECHARPERLINE
+        if (rParam.meOrient == SvxCellOrientation::Stacked_LR)
+            rParam.mbMongolVertical = true;
         rParam.meOrient = SvxCellOrientation::Standard;
         DrawEditAsianVertical(rParam);
         return;
@@ -3996,7 +3999,7 @@ void ScOutputData::DrawEditAsianVertical(DrawEditParam& rParam)
      * SvxCellHorJustify::Right really wanted? Seems this was done all the time,
      * also before context was introduced and everything was attr only. */
     if ( rParam.meHorJustAttr == SvxCellHorJustify::Standard )
-        rParam.meHorJustResult = rParam.meHorJustContext = SvxCellHorJustify::Right;
+        rParam.meHorJustResult = rParam.meHorJustContext = SvxCellHorJustify::Left;
 
     if (bHidden)
         return;
@@ -4165,7 +4168,7 @@ void ScOutputData::DrawEditAsianVertical(DrawEditParam& rParam)
         //  Only with automatic line breaks, to avoid having to find
         //  the cells with the horizontal end of the text again.
         if ( nEngineHeight - aCellSize.Height() > 100 &&
-             ( rParam.mbBreak || rParam.meOrient == SvxCellOrientation::Stacked ) &&
+             ( rParam.mbBreak || rParam.meOrient == SvxCellOrientation::Stacked || rParam.meOrient == SvxCellOrientation::Stacked_LR ) &&
              !rParam.mbAsianVertical && bMarkClipped &&
              ( rParam.mpEngine->GetParagraphCount() > 1 || rParam.mpEngine->GetLineCount(0) > 1 ) )
         {
@@ -4203,15 +4206,13 @@ void ScOutputData::DrawEditAsianVertical(DrawEditParam& rParam)
         long nAvailWidth = aCellSize.Width();
         // space for AutoFilter is already handled in GetOutputArea
 
-        //  horizontal alignment
-
         if (rParam.meHorJustResult==SvxCellHorJustify::Right)
-            aLogicStart.AdjustX(nAvailWidth - nEngineWidth );
+            aLogicStart.AdjustX( nAvailWidth - nEngineWidth );
         else if (rParam.meHorJustResult==SvxCellHorJustify::Center)
-            aLogicStart.AdjustX((nAvailWidth - nEngineWidth) / 2 );
+            aLogicStart.AdjustX( (nAvailWidth - nEngineWidth) / 2 );
 
         // paper size is subtracted below
-        aLogicStart.AdjustX(nEngineWidth );
+        aLogicStart.AdjustX( nEngineWidth );
 
         // vertical adjustment is within the EditEngine
         if (rParam.mbPixelToLogic)
@@ -4234,6 +4235,8 @@ void ScOutputData::DrawEditAsianVertical(DrawEditParam& rParam)
     rParam.adjustForHyperlinkInPDF(aURLStart, mpDev);
 }
 
+//by aron
+//干啥的函数？？
 void ScOutputData::DrawEdit(bool bPixelToLogic)
 {
     std::unique_ptr<ScFieldEditEngine> pEngine;
@@ -4398,6 +4401,7 @@ void ScOutputData::DrawEdit(bool bPixelToLogic)
                                 DrawEditTopBottom(aParam);
                             break;
                             case SvxCellOrientation::Stacked:
+                            case SvxCellOrientation::Stacked_LR:
                                 // this can be vertically stacked or asian vertical.
                                 DrawEditStacked(aParam);
                             break;
@@ -4569,7 +4573,7 @@ void ScOutputData::DrawRotated(bool bPixelToLogic)
 
                                                                     // adjustment for EditEngine
                                 SvxAdjust eSvxAdjust = SvxAdjust::Left;
-                                if (eOrient==SvxCellOrientation::Stacked)
+                                if (eOrient==SvxCellOrientation::Stacked || eOrient==SvxCellOrientation::Stacked_LR)
                                     eSvxAdjust = SvxAdjust::Center;
                                 // adjustment for bBreak is omitted here
                                 pSet->Put( SvxAdjustItem( eSvxAdjust, EE_PARA_JUST ) );
@@ -4579,7 +4583,7 @@ void ScOutputData::DrawRotated(bool bPixelToLogic)
                                 pOldCondSet = pCondSet;
 
                                 EEControlBits nControl = pEngine->GetControlWord();
-                                if (eOrient==SvxCellOrientation::Stacked)
+                                if (eOrient==SvxCellOrientation::Stacked || eOrient==SvxCellOrientation::Stacked_LR)
                                     nControl |= EEControlBits::ONECHARPERLINE;
                                 else
                                     nControl &= ~EEControlBits::ONECHARPERLINE;
@@ -4649,7 +4653,7 @@ void ScOutputData::DrawRotated(bool bPixelToLogic)
                             }
 
                             Size aPaperSize( 1000000, 1000000 );
-                            if (eOrient==SvxCellOrientation::Stacked)
+                            if (eOrient==SvxCellOrientation::Stacked || eOrient == SvxCellOrientation::Stacked_LR)
                                 aPaperSize.setWidth( nOutWidth );             // to center
                             else if (bBreak)
                             {
@@ -4854,7 +4858,6 @@ void ScOutputData::DrawRotated(bool bPixelToLogic)
                                 if (nX<nX1)
                                 {
                                     //! clipping is not needed when on the left side of the window
-
                                     if (nStartX<nScrX)
                                     {
                                         long nDif = nScrX - nStartX;
@@ -4905,7 +4908,7 @@ void ScOutputData::DrawRotated(bool bPixelToLogic)
                                 {
                                     long nAvailWidth = aCellSize.Width();
                                     if (eType==OUTTYPE_WINDOW &&
-                                            eOrient!=SvxCellOrientation::Stacked &&
+                                            eOrient!=SvxCellOrientation::Stacked && eOrient!=SvxCellOrientation::Stacked_LR &&
                                             pInfo->bAutoFilter)
                                     {
                                         // filter drop-down width is now independent from row height
@@ -4948,7 +4951,7 @@ void ScOutputData::DrawRotated(bool bPixelToLogic)
                                             aLogicStart.AdjustX(nAvailWidth - nEngineWidth );
                                         else if (eHorJust==SvxCellHorJustify::Center ||
                                                  eHorJust==SvxCellHorJustify::Standard)
-                                            aLogicStart.AdjustX((nAvailWidth - nEngineWidth) / 2 );
+                                            aLogicStart.AdjustX( (nAvailWidth - nEngineWidth) / 2 );
                                     }
                                 }
 
@@ -4962,7 +4965,7 @@ void ScOutputData::DrawRotated(bool bPixelToLogic)
                                 }
 
                                 if ( eOrient==SvxCellOrientation::Standard ||
-                                     eOrient==SvxCellOrientation::Stacked || !bBreak )
+                                     eOrient==SvxCellOrientation::Stacked || eOrient==SvxCellOrientation::Stacked_LR || !bBreak )
                                 {
                                     if (eVerJust==SvxCellVerJustify::Bottom ||
                                         eVerJust==SvxCellVerJustify::Standard)

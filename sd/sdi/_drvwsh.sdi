@@ -730,6 +730,11 @@ interface DrawView
         ExecMethod = FuPermanent ;
         StateMethod = GetMenuState ;
     ]
+    SID_DRAW_TEXT_VERTICAL_LR // ole : no, status : ?
+    [
+        ExecMethod = FuPermanent ;
+        StateMethod = GetMenuState ;
+    ]
     SID_DRAW_TEXT_VERTICAL // ole : no, status : ?
     [
         ExecMethod = FuPermanent ;

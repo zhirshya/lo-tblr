@@ -3118,12 +3118,19 @@ bool SwCursorShell::IsInVerticalText( const Point* pPt ) const
     return SvxFrameDirection::Vertical_RL_TB == nDir || SvxFrameDirection::Vertical_LR_TB == nDir;
 }
 
+bool SwCursorShell::IsInVerticalText( bool& bVertL2R, const Point* pPt ) const
+{
+    const SvxFrameDirection nDir = GetTextDirection( pPt );
+    bVertL2R = SvxFrameDirection::Vertical_LR_TB == nDir;
+    return bVertL2R || SvxFrameDirection::Vertical_RL_TB == nDir;
+}
+
 bool SwCursorShell::IsInRightToLeftText() const
 {
     const SvxFrameDirection nDir = GetTextDirection();
     // GetTextDirection uses SvxFrameDirection::Vertical_LR_TB to indicate RTL in
     // vertical environment
-    return SvxFrameDirection::Vertical_LR_TB == nDir || SvxFrameDirection::Horizontal_RL_TB == nDir;
+    return SvxFrameDirection::Vertical_RL_TB == nDir || SvxFrameDirection::Horizontal_RL_TB == nDir;
 }
 
 /// If the current cursor position is inside a hidden range, the hidden range

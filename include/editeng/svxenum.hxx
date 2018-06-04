@@ -126,7 +126,8 @@ enum class SvxCellOrientation
     Standard,
     TopBottom,
     BottomUp,
-    Stacked
+    Stacked,
+    Stacked_LR
 };
 
 enum class SvxSpellArea

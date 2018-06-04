@@ -1474,6 +1474,12 @@ bool XmlScPropHdl_Orientation::importXML(
         rValue <<= nValue;
         bRetval = true;
     }
+    else if (IsXMLToken(rStrImpValue, XML_TB_LR))
+    {
+        nValue = table::CellOrientation_STACKED_LR;
+        rValue <<= nValue;
+        bRetval = sal_True;
+    }
 
     return bRetval;
 }
@@ -1494,14 +1500,20 @@ bool XmlScPropHdl_Orientation::exportXML(
             {
                 rStrExpValue = GetXMLToken(XML_TTB);
                 bRetval = true;
+                break;
             }
-            break;
+            case table::CellOrientation_STACKED_LR:
+            {
+                rStrExpValue = GetXMLToken(XML_TB_LR);
+                bRetval = sal_True;
+                break;
+            }
             default:
             {
                 rStrExpValue = GetXMLToken(XML_LTR);
                 bRetval = true;
+                break;
             }
-            break;
         }
     }
 

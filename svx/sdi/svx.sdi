@@ -8351,7 +8351,26 @@ SfxBoolItem TextdirectionTopToBottom SID_TEXTDIRECTION_TOP_TO_BOTTOM
     GroupId = SfxGroupId::Format;
 ]
 
+SfxBoolItem TextdirectionTopToBottomLeftToRight SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT
 
+[
+    /* flags: */
+    AutoUpdate = TRUE,
+    FastCall = FALSE,
+    ReadOnlyDoc = FALSE,
+    Toggle = FALSE,
+    Container = FALSE,
+    RecordAbsolute = FALSE,
+    RecordPerSet;
+
+    /* config: */
+    AccelConfig = TRUE,
+    MenuConfig = TRUE,
+    ToolBoxConfig = TRUE,
+    GroupId = SfxGroupId::Format;
+]
+
+//--------------------------------------------------------------------------
 SdrTextFitToSizeTypeItem TextFitToSize SID_ATTR_TEXT_FITTOSIZE
 
 [
@@ -8608,7 +8627,6 @@ SvxOverlineItem Overline SID_ATTR_CHAR_OVERLINE
     RecordAbsolute = FALSE,
     RecordPerSet;
 
-
     AccelConfig = TRUE,
     MenuConfig = TRUE,
     ToolBoxConfig = TRUE,
@@ -8654,6 +8672,24 @@ SfxBoolItem VerticalCaption SID_DRAW_CAPTION_VERTICAL
     GroupId = SfxGroupId::Drawing;
 ]
 
+SfxBoolItem VerticalLeftToRightText SID_DRAW_TEXT_VERTICAL_LR
+
+[
+    /* flags: */
+    AutoUpdate = TRUE,
+    FastCall = FALSE,
+    ReadOnlyDoc = FALSE,
+    Toggle = FALSE,
+    Container = FALSE,
+    RecordAbsolute = FALSE,
+    RecordPerSet;
+
+    /* config: */
+    AccelConfig = TRUE,
+    MenuConfig = TRUE,
+    ToolBoxConfig = TRUE,
+    GroupId = SfxGroupId::Drawing;
+]
 
 SfxBoolItem VerticalText SID_DRAW_TEXT_VERTICAL
 
@@ -9169,7 +9205,6 @@ SfxBoolItem AlignmentHyphenation SID_ATTR_ALIGN_HYPHENATION
     Container = FALSE,
     RecordAbsolute = FALSE,
     RecordPerSet;
-
 
     AccelConfig = FALSE,
     MenuConfig = FALSE,

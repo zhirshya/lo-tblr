@@ -675,9 +675,9 @@ public:
     void            Init( OutlinerMode nOutlinerMode );
     OutlinerMode    GetMode() const { return nOutlinerMode; }
 
-    void            SetVertical( bool bVertical, bool bTopToBottom = true);
+    void            SetVertical( bool bVertical, bool bVertLR = true );
     bool            IsVertical() const;
-    bool            IsTopToBottom() const;
+    bool            IsVertLR() const;
 
     void            SetFixedCellHeight( bool bUseFixedCellHeight );
 

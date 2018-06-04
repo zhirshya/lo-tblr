@@ -73,7 +73,6 @@ public:
 private:
 
     std::unique_ptr<ScConditionalFormat> mxFormat;
-    ScRangeList maRange;
 
     ScXMLConditionalFormatsContext& mrParent;
 };
@@ -102,7 +101,6 @@ public:
         sal_Int32 nElement, const css::uno::Reference< css::xml::sax::XFastAttributeList >& xAttrList ) override;
 private:
 
-    ScDataBarFormat* mpDataBarFormat;
     ScDataBarFormatData* mpFormatData;
 
     sal_Int32 mnIndex;
@@ -127,9 +125,6 @@ public:
     ScXMLColorScaleFormatEntryContext( ScXMLImport& rImport,
                         const rtl::Reference<sax_fastparser::FastAttributeList>& rAttrList,
                         ScColorScaleFormat* pFormat);
-
-private:
-    ScColorScaleEntry* mpFormatEntry;
 };
 
 class ScXMLFormattingEntryContext : public ScXMLImportContext

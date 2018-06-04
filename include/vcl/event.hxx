@@ -42,7 +42,7 @@ enum class TextDirectionality {
     LeftToRight_TopToBottom,
     RightToLeft_TopToBottom,
     TopToBottom_RightToLeft,
-    BottomToTop_LeftToRight
+    TopToBottom_LeftToRight
 };
 
 class VCL_DLLPUBLIC KeyEvent

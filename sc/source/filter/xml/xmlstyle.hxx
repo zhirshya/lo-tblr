@@ -282,6 +282,9 @@ public:
     virtual bool exportXML( OUString& rStrExpValue, const css::uno::Any& rValue, const SvXMLUnitConverter& rUnitConverter ) const override;
 };
 
+//
+//对应XML文件中cell的style里的direction属性
+//
 class XmlScPropHdl_Orientation : public XMLPropertyHandler
 {
 public:
@@ -344,6 +347,9 @@ public:
     virtual bool exportXML( OUString& rStrExpValue, const css::uno::Any& rValue, const SvXMLUnitConverter& rUnitConverter ) const override;
 };
 
+//
+//对应XML文件中cell的style里的glyph-orientation-vertical属性
+//
 class XmlScPropHdl_Vertical : public XMLPropertyHandler
 {
 public:

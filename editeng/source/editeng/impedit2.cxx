@@ -759,10 +759,10 @@ EditSelection const & ImpEditEngine::MoveCursor( const KeyEvent& rKeyEvent, Edit
     EditPaM aOldPaM( aPaM );
 
     TextDirectionality eTextDirection = TextDirectionality::LeftToRight_TopToBottom;
-    if (IsVertical() && IsTopToBottom())
+    if ( IsVertical() && IsVertLR())//强制tb-lr
+        eTextDirection = TextDirectionality::TopToBottom_LeftToRight;
+    else if (IsVertical() && !IsVertLR())
         eTextDirection = TextDirectionality::TopToBottom_RightToLeft;
-    else if (IsVertical() && !IsTopToBottom())
-        eTextDirection = TextDirectionality::BottomToTop_LeftToRight;
     else if ( IsRightToLeft( GetEditDoc().GetPos( aPaM.GetNode() ) ) )
         eTextDirection = TextDirectionality::RightToLeft_TopToBottom;
 

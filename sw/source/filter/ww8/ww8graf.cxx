@@ -1192,14 +1192,16 @@ void SwWW8ImplReader::InsertTxbxText(SdrTextObj* pTextObj,
             InsertAttrsAsDrawingAttrs(nStartCp, nEndCp, eType);
         }
 
-        bool bVertical = pTextObj->IsVerticalWriting();
+        bool bVertLR = false;
+        bool bVertical = pTextObj->IsVerticalWriting(&bVertLR);
+
         std::unique_ptr<EditTextObject> pTemporaryText = m_pDrawEditEngine->CreateTextObject();
         OutlinerParaObject* pOp = new OutlinerParaObject(*pTemporaryText);
         pOp->SetOutlinerMode( OutlinerMode::TextObject );
-        pOp->SetVertical( bVertical );
+        pOp->SetVertical( bVertical, bVertLR );
         pTemporaryText.reset();
         pTextObj->NbcSetOutlinerParaObject( pOp );
-        pTextObj->SetVerticalWriting(bVertical);
+        pTextObj->SetVerticalWriting(bVertical, bVertLR);
 
         // For the next TextBox also remove the old paragraph attributes
         // and styles, otherwise the next box will start with the wrong

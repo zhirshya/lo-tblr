@@ -91,12 +91,24 @@ void ScDrawTextObjectBar::ExecuteGlobal( SfxRequest &rReq )
 
         case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
         case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
+        case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
             {
                 SfxItemSet aAttr( pView->GetModel()->GetItemPool(), svl::Items<SDRATTR_TEXTDIRECTION, SDRATTR_TEXTDIRECTION>{} );
-                aAttr.Put( SvxWritingModeItem(
-                    nSlot == SID_TEXTDIRECTION_LEFT_TO_RIGHT ?
-                        css::text::WritingMode_LR_TB : css::text::WritingMode_TB_RL,
-                        SDRATTR_TEXTDIRECTION ) );
+                css::text::WritingMode aWritingMode ;
+                switch(nSlot)
+                {
+                case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
+                    aWritingMode = css::text::WritingMode_TB_RL;
+                    break;
+                case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
+                    aWritingMode = css::text::WritingMode_TB_LR;
+                    break;
+                case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
+                default :
+                    aWritingMode = css::text::WritingMode_LR_TB;
+                    break;
+                }
+                aAttr.Put( SvxWritingModeItem( aWritingMode, SDRATTR_TEXTDIRECTION ) );
                 pView->SetAttributes( aAttr );
                 pViewData->GetScDrawView()->InvalidateDrawTextAttrs();  // Bidi slots may be disabled
                 rReq.Done( aAttr );

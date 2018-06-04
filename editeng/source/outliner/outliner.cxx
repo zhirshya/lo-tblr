@@ -858,7 +858,7 @@ vcl::Font Outliner::ImpCalcBulletFont( sal_Int32 nPara ) const
     aBulletFont.SetFontSize( Size( 0, nScaledLineHeight ) );
     bool bVertical = IsVertical();
     aBulletFont.SetVertical( bVertical );
-    aBulletFont.SetOrientation( bVertical ? (IsTopToBottom() ? 2700 : 900) : 0 );
+    aBulletFont.SetOrientation( bVertical ? 2700 : 0 );
 
     Color aColor( COL_AUTO );
     if( !pEditEngine->IsFlatMode() && !( pEditEngine->GetControlWord() & EEControlBits::NOCOLORS ) )
@@ -887,7 +887,6 @@ void Outliner::PaintBullet( sal_Int32 nPara, const Point& rStartPos,
     if (bDrawBullet && ImplHasNumberFormat(nPara))
     {
         bool bVertical = IsVertical();
-        bool bTopToBottom = IsTopToBottom();
 
         bool bRightToLeftPara = pEditEngine->IsRightToLeft( nPara );
 
@@ -925,17 +924,9 @@ void Outliner::PaintBullet( sal_Int32 nPara, const Point& rStartPos,
                 }
                 else
                 {
-                    if (bTopToBottom)
-                    {
-//                      aTextPos.X() = rStartPos.X() - aBulletArea.Bottom();
-                        aTextPos.setX( rStartPos.X() - (bSymbol ? aBulletArea.Bottom() : aParaInfos.nFirstLineMaxAscent) );
-                        aTextPos.setY( rStartPos.Y() + aBulletArea.Left() );
-                    }
-                    else
-                    {
-                        aTextPos.setX( rStartPos.X() + (bSymbol ? aBulletArea.Bottom() : aParaInfos.nFirstLineMaxAscent) );
-                        aTextPos.setY( rStartPos.Y() + aBulletArea.Left() );
-                    }
+//                  aTextPos.X() = rStartPos.X() - aBulletArea.Bottom();
+                    aTextPos.setX( rStartPos.X() - (bSymbol ? aBulletArea.Bottom() : aParaInfos.nFirstLineMaxAscent) );
+                    aTextPos.setY( rStartPos.Y() + aBulletArea.Left() );
                 }
 
                 if ( nOrientation )
@@ -1004,16 +995,8 @@ void Outliner::PaintBullet( sal_Int32 nPara, const Point& rStartPos,
                     }
                     else
                     {
-                        if (bTopToBottom)
-                        {
-                            aBulletPos.setX( rStartPos.X() - aBulletArea.Bottom() );
-                            aBulletPos.setY( rStartPos.Y() + aBulletArea.Left() );
-                        }
-                        else
-                        {
-                            aBulletPos.setX( rStartPos.X() + aBulletArea.Top() );
-                            aBulletPos.setY( rStartPos.Y() - aBulletArea.Right() );
-                        }
+                        aBulletPos.setX( rStartPos.X() - aBulletArea.Bottom() );
+                        aBulletPos.setY( rStartPos.Y() + aBulletArea.Left() );
                     }
 
                     if(bStrippingPortions)

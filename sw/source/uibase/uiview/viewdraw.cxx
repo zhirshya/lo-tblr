@@ -259,6 +259,7 @@ void SwView::ExecDraw(SfxRequest& rReq)
         case SID_DRAW_ELLIPSE:
         case SID_DRAW_TEXT:
         case SID_DRAW_TEXT_VERTICAL:
+        case SID_DRAW_TEXT_VERTICAL_LR:
         case SID_DRAW_TEXT_MARQUEE:
         case SID_DRAW_CAPTION:
         case SID_DRAW_CAPTION_VERTICAL:
@@ -358,6 +359,7 @@ void SwView::ExecDraw(SfxRequest& rReq)
                 const SdrMarkList& rMarkList = pTmpSdrView->GetMarkedObjectList();
                 if(rMarkList.GetMarkCount() == 1 &&
                         (SID_DRAW_TEXT == nSlotId || SID_DRAW_TEXT_VERTICAL == nSlotId ||
+                            SID_DRAW_TEXT_VERTICAL_LR == nSlotId ||
                             SID_DRAW_TEXT_MARQUEE == nSlotId ))
                 {
                     SdrObject* pObj = rMarkList.GetMark(0)->GetMarkedSdrObj();
@@ -497,7 +499,7 @@ bool SwView::EnterShapeDrawTextMode(SdrObject* pObject)
 }
 
 // Enable DrawTextEditMode
-
+//绘制文本框的函数吗？
 bool SwView::BeginTextEdit(SdrObject* pObj, SdrPageView* pPV, vcl::Window* pWin,
         bool bIsNewObj, bool bSetSelectionToStart)
 {
@@ -532,9 +534,13 @@ bool SwView::BeginTextEdit(SdrObject* pObj, SdrPageView* pPV, vcl::Window* pWin,
         const SfxPoolItem& rItem = pSh->GetDoc()->GetDefault(RES_CHRATR_LANGUAGE);
         pOutliner->SetDefaultLanguage(static_cast<const SvxLanguageItem&>(rItem).GetLanguage());
 
-        if( bIsNewObj )
-            pOutliner->SetVertical( SID_DRAW_TEXT_VERTICAL == m_nDrawSfxId ||
-                                    SID_DRAW_CAPTION_VERTICAL == m_nDrawSfxId );
+        if (bIsNewObj)
+        {
+            const bool bIsVert = SID_DRAW_TEXT_VERTICAL == m_nDrawSfxId || SID_DRAW_CAPTION_VERTICAL == m_nDrawSfxId
+                || SID_DRAW_TEXT_VERTICAL_LR == m_nDrawSfxId;
+            const bool bIsVertLR = SID_DRAW_TEXT_VERTICAL_LR == m_nDrawSfxId;
+            pOutliner->SetVertical(bIsVert, bIsVertLR);//aron
+        }
 
         // set default horizontal text direction at outliner
         EEHorizontalTextDirection aDefHoriTextDir =

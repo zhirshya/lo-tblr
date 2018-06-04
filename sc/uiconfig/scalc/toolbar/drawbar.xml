@@ -52,6 +52,7 @@
  <toolbar:toolbaritem xlink:href=".uno:VerticalCaption"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:DrawText"/>
+ <toolbar:toolbaritem xlink:href=".uno:VerticalLeftToRightText"/>
  <toolbar:toolbaritem xlink:href=".uno:VerticalText"/>
  <toolbar:toolbaritem xlink:href=".uno:FontworkGalleryFloater"/>
  <toolbar:toolbaritem xlink:href=".uno:Text_Marquee" toolbar:visible="false"/>

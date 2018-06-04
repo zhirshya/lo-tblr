@@ -28,7 +28,6 @@ SlotIdFile( "basslots.hrc" )
     include "svxitems.sdi"
     include "xoitems.sdi"
     include "svx.sdi"
-
     include "baside.sdi"
 
 }

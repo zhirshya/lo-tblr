@@ -19,12 +19,14 @@
 #ifndef INCLUDED_SVX_ALGITEM_HXX
 #define INCLUDED_SVX_ALGITEM_HXX
 
+#include <svx/svxids.hrc>
 #include <com/sun/star/uno/Any.hxx>
 #include <editeng/svxenum.hxx>
 #include <rtl/ustring.hxx>
 #include <sal/types.h>
 #include <svl/poolitem.hxx>
 #include <svl/eitem.hxx>
+#include <editeng/svxenum.hxx>
 #include <svx/svxdllapi.h>
 
 class IntlWrapper;
@@ -65,6 +67,7 @@ public:
     bool                    IsStacked() const;
     /** Returns the rotation this item represents (returns nStdAngle for STANDARD and STACKED state). */
     sal_Int32               GetRotation( sal_Int32 nStdAngle ) const;
+    void                    SetFromRotation( sal_Int32 nRotation, bool bStacked );
 };
 
 class SAL_WARN_UNUSED SVX_DLLPUBLIC SvxMarginItem: public SfxPoolItem

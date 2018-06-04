@@ -24,6 +24,7 @@
 #include <com/sun/star/drawing/CircleKind.hpp>
 #include <com/sun/star/embed/NoVisualAreaSizeException.hpp>
 #include <com/sun/star/lang/NoSupportException.hpp>
+#include <com/sun/star/text/WritingMode2.hpp>
 #include <vcl/svapp.hxx>
 #include <svl/itemprop.hxx>
 #include <vcl/fltcall.hxx>
@@ -4041,9 +4042,17 @@ bool SvxShapeText::setPropertyValueImpl( const OUString& rName, const SfxItemPro
         if( pTextObj )
         {
             css::text::WritingMode eMode;
+            //vertical aron
             if( rValue >>= eMode )
             {
-                pTextObj->SetVerticalWriting( eMode == css::text::WritingMode_TB_RL );
+                bool bVert = false;
+                bool bVeLR = false;
+                if (eMode == css::text::WritingMode_TB_RL)
+                    bVert = true;
+                else if (eMode == css::text::WritingMode_TB_LR)
+                    bVert = bVeLR = true;
+
+                pTextObj->SetVerticalWriting( bVert, bVeLR);
             }
         }
         return true;
@@ -4055,9 +4064,16 @@ bool SvxShapeText::getPropertyValueImpl( const OUString& rName, const SfxItemPro
 {
     if( pProperty->nWID == SDRATTR_TEXTDIRECTION )
     {
+        //SdrTextObj* pTextObj = dynamic_cast< SdrTextObj* >( mpObj.get() );
         SdrTextObj* pTextObj = dynamic_cast< SdrTextObj* >( GetSdrObject() );
-        if( pTextObj && pTextObj->IsVerticalWriting() )
-            rValue <<= css::text::WritingMode_TB_RL;
+        bool bVertLR = false;
+        if( pTextObj && pTextObj->IsVerticalWriting(&bVertLR) )
+        {
+            if(bVertLR)
+                rValue <<= css::text::WritingMode_TB_LR;
+            else
+                rValue <<= css::text::WritingMode_TB_RL;
+        }
         else
             rValue <<= css::text::WritingMode_LR_TB;
         return true;

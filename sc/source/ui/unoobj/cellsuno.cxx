@@ -2207,29 +2207,41 @@ static void lcl_SetCellProperty( const SfxItemPropertySimpleEntry& rEntry, const
                     switch( eOrient )
                     {
                         case table::CellOrientation_STANDARD:
+                            // rSet.Put( SvxOrientationItem(SVX_ORIENTATION_STANDARD, ATTR_STACKED ) );
                             rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
                         break;
                         case table::CellOrientation_TOPBOTTOM:
+                            // rSet.Put( SvxOrientationItem(SVX_ORIENTATION_TOPBOTTOM, ATTR_STACKED ) );
                             rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
                             rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 27000 ) );
                             rSecondItemId = ATTR_ROTATE_VALUE;
                         break;
                         case table::CellOrientation_BOTTOMTOP:
+                            // rSet.Put( SvxOrientationItem(SVX_ORIENTATION_BOTTOMTOP, ATTR_STACKED ) );
                             rSet.Put( SfxBoolItem( ATTR_STACKED, false ) );
                             rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 9000 ) );
                             rSecondItemId = ATTR_ROTATE_VALUE;
                         break;
                         case table::CellOrientation_STACKED:
+                            // rSet.Put( SvxOrientationItem(SVX_ORIENTATION_STACKED, ATTR_STACKED ) );
                             rSet.Put( SfxBoolItem( ATTR_STACKED, true ) );
+                        break;
+                        case table::CellOrientation_STACKED_LR:
+                            // rSet.Put( SvxOrientationItem(SVX_ORIENTATION_STACKED_LR, ATTR_STACKED ) );
+                            rSet.Put( SfxBoolItem( ATTR_STACKED, true ) );
+                            rSet.Put( SfxInt32Item( ATTR_ROTATE_VALUE, 27000 ) );
                         break;
                         default:
                         {
                             // added to avoid warnings
+                        break;
                         }
                     }
                 }
             }
             break;
+        case ATTR_VERTICAL_ASIAN:
+            //break;
         default:
             {
                 lcl_GetCellsPropertySet()->setPropertyValue(rEntry, rValue, rSet);

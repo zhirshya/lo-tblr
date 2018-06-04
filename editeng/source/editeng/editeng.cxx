@@ -224,7 +224,13 @@ void EditEngine::Draw( OutputDevice* pOutDev, const Point& rStartPos, short nOri
     Point aStartPos( rStartPos );
     if ( IsVertical() )
     {
-        aStartPos.AdjustX(GetPaperSize().Width() );
+        //aStartPos.X() += GetPaperSize().Width();
+        //从单元格的右边开始
+        if (!IsVertLR())
+        {
+            //tb-rl 从单元格的左边开始
+            aStartPos.AdjustX( GetPaperSize().Width() );
+        }
         aStartPos = Rotate( aStartPos, nOrientation, rStartPos );
     }
     pImpEditEngine->Paint( pOutDev, aBigRect, aStartPos, false, nOrientation );
@@ -432,9 +438,9 @@ const Size& EditEngine::GetPaperSize() const
     return pImpEditEngine->GetPaperSize();
 }
 
-void EditEngine::SetVertical( bool bVertical, bool bTopToBottom )
+void EditEngine::SetVertical( bool bVertical, bool bVertL2R )
 {
-    pImpEditEngine->SetVertical( bVertical, bTopToBottom);
+    pImpEditEngine->SetVertical( bVertical, bVertL2R );
 }
 
 bool EditEngine::IsVertical() const
@@ -442,9 +448,9 @@ bool EditEngine::IsVertical() const
     return pImpEditEngine->IsVertical();
 }
 
-bool EditEngine::IsTopToBottom() const
+bool EditEngine::IsVertLR() const
 {
-    return pImpEditEngine->IsTopToBottom();
+    return pImpEditEngine->IsVertLR();
 }
 
 void EditEngine::SetFixedCellHeight( bool bUseFixedCellHeight )
@@ -1816,18 +1822,16 @@ void EditEngine::StripPortions()
 {
     ScopedVclPtrInstance< VirtualDevice > aTmpDev;
     tools::Rectangle aBigRect( Point( 0, 0 ), Size( 0x7FFFFFFF, 0x7FFFFFFF ) );
-    if ( IsVertical() )
+    //aron
+    // if ( IsVertical() )
+    // {
+    //     aBigRect.Right() = 0;
+    //     aBigRect.Left() = -0x7FFFFFFF;
+    // }
+    if ( IsVertical() && !IsVertLR())
     {
-        if( IsTopToBottom() )
-        {
-            aBigRect.SetRight( 0 );
-            aBigRect.SetLeft( -0x7FFFFFFF );
-        }
-        else
-        {
-            aBigRect.SetTop( -0x7FFFFFFF );
-            aBigRect.SetBottom( 0 );
-        }
+        aBigRect.SetRight( 0 );
+        aBigRect.SetLeft( -0x7FFFFFFF );
     }
     pImpEditEngine->Paint( aTmpDev.get(), aBigRect, Point(), true );
 }
@@ -1962,16 +1966,8 @@ Point EditEngine::GetDocPos( const Point& rPaperPos ) const
     Point aDocPos( rPaperPos );
     if ( IsVertical() )
     {
-        if ( IsTopToBottom() )
-        {
-            aDocPos.setX( rPaperPos.Y() );
-            aDocPos.setY( GetPaperSize().Width() - rPaperPos.X() );
-        }
-        else
-        {
-            aDocPos.setX( rPaperPos.Y() );
-            aDocPos.setY( rPaperPos.X() );
-        }
+        aDocPos.setX( rPaperPos.Y() );
+        aDocPos.setY( GetPaperSize().Width() - rPaperPos.X() );
     }
     return aDocPos;
 }

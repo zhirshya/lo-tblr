@@ -1263,6 +1263,13 @@ void SwDrawContact::Changed_( const SdrObject& rObj,
                         nYPosDiff = aOldObjRect.Right() - aObjRect.Right();
                     }
                     break;
+                    case SwFrameFormat::VERT_L2R:
+                    {
+                        //支持tb-lr下对图形对象的鼠标拖拽
+                        nXPosDiff = aObjRect.Top() - aOldObjRect.Top();
+                        nYPosDiff = aObjRect.Left() - aOldObjRect.Left();
+                    }
+                    break;
                     default:
                     {
                         assert(!"<SwDrawContact::Changed_(..)> - unsupported layout direction");

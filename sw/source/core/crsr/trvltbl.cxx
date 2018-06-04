@@ -241,6 +241,7 @@ bool SwCursorShell::SelTableRowOrCol( bool bRow, bool bRowSimple )
 
     // set PtPos 'close' to the reference table, otherwise we might get problems
     // with the repeated headlines check in UpdateCursor():
+    //by aron
     if ( !bRow )
         m_pTableCursor->GetPtPos() = pMasterTabFrame->IsVertical()
                                    ? pMasterTabFrame->getFrameArea().TopRight()
@@ -276,6 +277,7 @@ bool SwCursorShell::SelTable()
     m_pTableCursor->SetMark();
     // set MkPos 'close' to the master table, otherwise we might get problems
     // with the repeated headlines check in UpdateCursor():
+    // by aron
     m_pTableCursor->GetMkPos() = pMasterTabFrame->IsVertical() ? pMasterTabFrame->getFrameArea().TopRight() : pMasterTabFrame->getFrameArea().TopLeft();
     m_pTableCursor->GetPoint()->nNode = *pTableNd->EndOfSectionNode();
     m_pTableCursor->Move( fnMoveBackward, GoInContent );

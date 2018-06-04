@@ -274,6 +274,7 @@
                 </menu:menupopup>
             </menu:menu>
             <menu:menuitem menu:id=".uno:EditHeaderAndFooter"/>
+            <menu:menuitem menu:id=".uno:VerticalLeftToRightText"/>
             <menu:menuseparator/>
             <menu:menu menu:id=".uno:InsertFormMenu">
                 <menu:menupopup>

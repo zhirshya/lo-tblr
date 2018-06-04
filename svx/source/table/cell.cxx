@@ -302,7 +302,9 @@ namespace sdr
         {
             if(pNewItem && (SDRATTR_TEXTDIRECTION == nWhich))
             {
-                bool bVertical(css::text::WritingMode_TB_RL == static_cast<const SvxWritingModeItem*>(pNewItem)->GetValue());
+                const sal_uInt16 nVal = static_cast<sal_uInt16>( static_cast<const SvxWritingModeItem*>(pNewItem)->GetValue() );
+                bool bVertLR( static_cast<sal_uInt16>( css::text::WritingMode_TB_LR ) == nVal );
+                bool bVertical( bVertLR || static_cast<sal_uInt16>( css::text::WritingMode_TB_RL ) == nVal );
 
                 sdr::table::SdrTableObj& rObj = static_cast<sdr::table::SdrTableObj&>(GetSdrObject());
                 rObj.SetVerticalWriting(bVertical);
@@ -339,6 +341,7 @@ namespace sdr
                 if (pParaObj)
                 {
                     pParaObj->SetVertical(pRotateItem->IsVertical(), pRotateItem->IsTopToBottom());
+                    //pParaObj->SetVertical(bVertical, bVertLR);
 
                     if (bOwnParaObj)
                         delete pParaObj;

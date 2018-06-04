@@ -29,6 +29,7 @@
 #include <svx/svdotext.hxx>
 #include <svx/svdoutl.hxx>
 #include <editeng/writingmodeitem.hxx>
+#include <com/sun/star/text/WritingMode2.hpp>
 #include <svx/svdmodel.hxx>
 #include <editeng/outlobj.hxx>
 #include <svx/xflclit.hxx>
@@ -162,8 +163,12 @@ namespace sdr
 
             if(pNewItem && (SDRATTR_TEXTDIRECTION == nWhich))
             {
-                bool bVertical(css::text::WritingMode_TB_RL == static_cast<const SvxWritingModeItem*>(pNewItem)->GetValue());
-                rObj.SetVerticalWriting(bVertical);
+                //sal_Int16 nDir = (static_cast<const SvxWritingModeItem*>(pNewItem))->GetValue();
+                sal_Int16 nDir = (static_cast<const SvxWritingModeItem*>(pNewItem))->Which();
+                bool bVertical(com::sun::star::text::WritingMode2::TB_RL == nDir
+                                || com::sun::star::text::WritingMode2::TB_LR == nDir);
+                bool bVertL2R(com::sun::star::text::WritingMode2::TB_LR == nDir);
+                rObj.SetVerticalWriting( bVertical, bVertL2R );
             }
 
             // #95501# reset to default

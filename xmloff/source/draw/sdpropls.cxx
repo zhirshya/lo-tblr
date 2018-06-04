@@ -561,11 +561,12 @@ SvXMLEnumMapEntry<drawing::CircleKind> const aXML_CircleKind_EnumMap[] =
     { XML_TOKEN_INVALID, drawing::CircleKind(0) }
 };
 
-static SvXMLEnumMapEntry<text::WritingMode> const aXML_WritingMode_EnumMap[] =
+static SvXMLEnumMapEntry<const ::sal_Int16> const aXML_WritingMode_EnumMap[] =
 {
-    { XML_TB_RL,        text::WritingMode_TB_RL },
-    { XML_LR_TB,        text::WritingMode_LR_TB },
-    { XML_TOKEN_INVALID, text::WritingMode(0) }
+    { XML_TB_RL,        text::WritingMode2::TB_RL },
+    { XML_LR_TB,        text::WritingMode2::LR_TB },
+    { XML_TB_LR,        text::WritingMode2::TB_LR },
+    { XML_TOKEN_INVALID, 0 }
 };
 
 static SvXMLEnumMapEntry<drawing::TextAnimationKind> const pXML_TextAnimation_Enum[] =

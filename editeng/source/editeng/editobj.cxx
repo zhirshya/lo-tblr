@@ -373,9 +373,9 @@ bool EditTextObject::IsVertical() const
     return mpImpl->IsVertical();
 }
 
-bool EditTextObject::IsTopToBottom() const
+bool EditTextObject::IsVertLR() const
 {
-    return mpImpl->IsTopToBottom();
+    return mpImpl->IsVertLR();
 }
 
 void EditTextObject::SetVertical( bool bVertical, bool bTopToBottom )
@@ -533,7 +533,8 @@ EditTextObjectImpl::EditTextObjectImpl( EditTextObject* pFront, SfxItemPool* pP 
     }
 
     bVertical = false;
-    bIsTopToBottomVert = false;
+    bVertL2R = false;
+    bStoreUnicodeStrings = false;
     nScriptType = SvtScriptType::NONE;
 }
 
@@ -545,7 +546,7 @@ EditTextObjectImpl::EditTextObjectImpl( EditTextObject* pFront, const EditTextOb
     nUserType = r.nUserType;
     nObjSettings = r.nObjSettings;
     bVertical = r.bVertical;
-    bIsTopToBottomVert = r.bIsTopToBottomVert;
+    bVertL2R = r.bVertL2R;
     nScriptType = r.nScriptType;
     pPortionInfo = nullptr;    // Do not copy PortionInfo
 
@@ -628,21 +629,20 @@ bool EditTextObjectImpl::IsVertical() const
     return bVertical;
 }
 
-bool EditTextObjectImpl::IsTopToBottom() const
+bool EditTextObjectImpl::IsVertLR() const
 {
-    return bIsTopToBottomVert;
+    return bVertL2R;
 }
 
-void EditTextObjectImpl::SetVertical( bool bVert, bool bTopToBottom)
+void EditTextObjectImpl::SetVertical( bool bVert, bool bL2R )
 {
-    if (bVert != bVertical || bTopToBottom != (bVert && bIsTopToBottomVert))
+    if ( bVert != bVertical || bL2R != bVertL2R )
     {
         bVertical = bVert;
-        bIsTopToBottomVert = bVert && bTopToBottom;
+        bVertL2R = bL2R;
         ClearPortionInfo();
     }
 }
-
 
 void EditTextObjectImpl::SetScriptType( SvtScriptType nType )
 {
@@ -1047,6 +1047,515 @@ bool EditTextObjectImpl::operator==( const EditTextObjectImpl& rCompare ) const
     return Equals( rCompare, true);
 }
 
+/*
+namespace {
+
+class FindAttribByChar : public std::unary_function<XEditAttribute, bool>
+{
+    sal_uInt16 mnWhich;
+    sal_uInt16 mnChar;
+public:
+    FindAttribByChar(sal_uInt16 nWhich, sal_uInt16 nChar) : mnWhich(nWhich), mnChar(nChar) {}
+    bool operator() (const XEditAttribute& rAttr) const
+    {
+        return (rAttr.GetItem()->Which() == mnWhich) && (rAttr.GetStart() <= mnChar) && (rAttr.GetEnd() > mnChar);
+    }
+};
+
+}
+
+void EditTextObjectImpl::StoreData( SvStream& rOStream ) const
+{
+    sal_uInt16 nVer = 603;//old is 602, according to support Mongolian so changed version number
+    rOStream.WriteUInt16( nVer );
+
+    rOStream.WriteBool( bOwnerOfPool );
+
+    // First store the pool, later only the Surregate
+    if ( bOwnerOfPool )
+    {
+        GetPool()->SetFileFormatVersion( SOFFICE_FILEFORMAT_50 );
+        GetPool()->Store( rOStream );
+    }
+
+    // Store Current text encoding ...
+    rtl_TextEncoding eEncoding = GetSOStoreTextEncoding( osl_getThreadTextEncoding() );
+    rOStream.WriteUInt16( eEncoding );
+
+    // The number of paragraphs ...
+    size_t nParagraphs = aContents.size();
+    // FIXME: this truncates, check usage of stream and if it can be changed,
+    // i.e. is not persistent, adapt this and reader.
+    sal_uInt16 nParagraphs_Stream = static_cast<sal_uInt16>(nParagraphs);
+    rOStream.WriteUInt16( nParagraphs_Stream );
+
+    sal_Unicode nUniChar = CH_FEATURE;
+    char cFeatureConverted = OString(&nUniChar, 1, eEncoding).toChar();
+
+    // The individual paragraphs ...
+    for (size_t nPara = 0; nPara < nParagraphs_Stream; ++nPara)
+    {
+        const ContentInfo& rC = aContents[nPara];
+
+        // Text...
+        OStringBuffer aBuffer(OUStringToOString(rC.GetText(), eEncoding));
+
+        // Symbols?
+        bool bSymbolPara = false;
+        if (rC.GetParaAttribs().GetItemState( EE_CHAR_FONTINFO ) == SfxItemState::SET)
+        {
+            const SvxFontItem& rFontItem = static_cast<const SvxFontItem&>(rC.GetParaAttribs().Get(EE_CHAR_FONTINFO));
+            if ( rFontItem.GetCharSet() == RTL_TEXTENCODING_SYMBOL )
+            {
+                aBuffer = OStringBuffer(OUStringToOString(rC.GetText(), RTL_TEXTENCODING_SYMBOL));
+                bSymbolPara = true;
+            }
+        }
+        for (size_t nA = 0; nA < rC.aAttribs.size(); ++nA)
+        {
+            const XEditAttribute& rAttr = rC.aAttribs[nA];
+
+            if (rAttr.GetItem()->Which() == EE_CHAR_FONTINFO)
+            {
+                const SvxFontItem& rFontItem = static_cast<const SvxFontItem&>(*rAttr.GetItem());
+                if ( ( !bSymbolPara && ( rFontItem.GetCharSet() == RTL_TEXTENCODING_SYMBOL ) )
+                      || ( bSymbolPara && ( rFontItem.GetCharSet() != RTL_TEXTENCODING_SYMBOL ) ) )
+                {
+                    // Not correctly converted
+                    OUString aPart = rC.GetText().copy( rAttr.GetStart(), rAttr.GetEnd() - rAttr.GetStart() );
+                    OString aNew(OUStringToOString(aPart, rFontItem.GetCharSet()));
+                    aBuffer.remove(rAttr.GetStart(), rAttr.GetEnd() - rAttr.GetStart());
+                    aBuffer.insert(rAttr.GetStart(), aNew);
+                }
+
+                // Convert StarSymbol back to StarBats
+                FontToSubsFontConverter hConv = CreateFontToSubsFontConverter( rFontItem.GetFamilyName(), FontToSubsFontFlags::EXPORT | FontToSubsFontFlags::ONLYOLDSOSYMBOLFONTS );
+                if ( hConv )
+                {
+                    // Don't create a new Attrib with StarBats font, MBR changed the
+                    // SvxFontItem::Store() to store StarBats instead of StarSymbol!
+                    for (sal_uInt16 nChar = rAttr.GetStart(); nChar < rAttr.GetEnd(); ++nChar)
+                    {
+                        sal_Unicode cOld = rC.GetText()[ nChar ];
+                        char cConv = OUStringToOString(OUString(ConvertFontToSubsFontChar(hConv, cOld)), RTL_TEXTENCODING_SYMBOL).toChar();
+                        if ( cConv )
+                            aBuffer[nChar] = cConv;
+                    }
+
+                    DestroyFontToSubsFontConverter( hConv );
+                }
+            }
+        }
+
+        // Convert StarSymbol back to StarBats
+        // StarSymbol as paragraph attribute or in StyleSheet?
+
+        FontToSubsFontConverter hConv = NULL;
+        if (rC.GetParaAttribs().GetItemState( EE_CHAR_FONTINFO ) == SfxItemState::SET)
+        {
+            hConv = CreateFontToSubsFontConverter( static_cast<const SvxFontItem&>(rC.GetParaAttribs().Get( EE_CHAR_FONTINFO )).GetFamilyName(), FontToSubsFontFlags::EXPORT | FontToSubsFontFlags::ONLYOLDSOSYMBOLFONTS );
+        }
+        if ( hConv )
+        {
+            for ( sal_uInt16 nChar = 0; nChar < rC.GetText().getLength(); nChar++ )
+            {
+                const ContentInfo::XEditAttributesType& rAttribs = rC.aAttribs;
+                ContentInfo::XEditAttributesType::const_iterator it =
+                    std::find_if(rAttribs.begin(), rAttribs.end(),
+                                 FindAttribByChar(EE_CHAR_FONTINFO, nChar));
+
+                if (it == rAttribs.end())
+                {
+                    sal_Unicode cOld = rC.GetText()[ nChar ];
+                    char cConv = OUStringToOString(OUString(ConvertFontToSubsFontChar(hConv, cOld)), RTL_TEXTENCODING_SYMBOL).toChar();
+                    if ( cConv )
+                        aBuffer[nChar] = cConv;
+                }
+            }
+
+            DestroyFontToSubsFontConverter( hConv );
+
+        }
+
+
+        // Convert CH_FEATURE to CH_FEATURE_OLD
+        OString aText = aBuffer.makeStringAndClear().replace(cFeatureConverted, CH_FEATURE_OLD);
+        write_uInt16_lenPrefixed_uInt8s_FromOString(rOStream, aText);
+
+        // StyleName and Family...
+        write_uInt16_lenPrefixed_uInt8s_FromOUString(rOStream, rC.GetStyle(), eEncoding);
+        rOStream.WriteUInt16( rC.GetFamily() );
+
+        // Paragraph attributes ...
+        rC.GetParaAttribs().Store( rOStream );
+
+        // The number of attributes ...
+        size_t nAttribs = rC.aAttribs.size();
+        rOStream.WriteUInt16( nAttribs );
+
+        // And the individual attributes
+        // Items as Surregate => always 8 bytes per Attribute
+        // Which = 2; Surregat = 2; Start = 2; End = 2;
+        for (size_t nAttr = 0; nAttr < nAttribs; ++nAttr)
+        {
+            const XEditAttribute& rX = rC.aAttribs[nAttr];
+
+            rOStream.WriteUInt16( rX.GetItem()->Which() );
+            GetPool()->StoreSurrogate(rOStream, rX.GetItem());
+            rOStream.WriteUInt16( rX.GetStart() );
+            rOStream.WriteUInt16( rX.GetEnd() );
+        }
+    }
+
+    rOStream.WriteUInt16( nMetric );
+
+    rOStream.WriteUInt16( nUserType );
+    rOStream.WriteUInt32( nObjSettings );
+
+    rOStream.WriteBool( bVertical );
+    rOStream.WriteBool( bVertL2R );
+    rOStream.WriteUInt16( static_cast<sal_uInt16>(nScriptType) );
+
+    rOStream.WriteBool( bStoreUnicodeStrings );
+    if ( bStoreUnicodeStrings )
+    {
+        for ( size_t nPara = 0; nPara < nParagraphs_Stream; nPara++ )
+        {
+            const ContentInfo& rC = aContents[nPara];
+            sal_uInt16 nL = rC.GetText().getLength();
+            rOStream.WriteUInt16( nL );
+            rOStream.Write(rC.GetText().getStr(), nL*sizeof(sal_Unicode));
+
+            // StyleSheetName must be Unicode too!
+            // Copy/Paste from EA3 to BETA or from BETA to EA3 not possible, not needed...
+            // If needed, change nL back to sal_uLong and increase version...
+            nL = rC.GetStyle().getLength();
+            rOStream.WriteUInt16( nL );
+            rOStream.Write(rC.GetStyle().getStr(), nL*sizeof(sal_Unicode));
+        }
+    }
+}
+
+void EditTextObjectImpl::CreateData( SvStream& rIStream )
+{
+    rIStream.ReadUInt16( nVersion );
+
+    // The text object was first created with the current setting of
+    // pTextObjectPool.
+    bool bOwnerOfCurrent = bOwnerOfPool;
+    bool b;
+    rIStream.ReadCharAsBool( b );
+    bOwnerOfPool = b;
+
+    if ( bOwnerOfCurrent && !bOwnerOfPool )
+    {
+        // A global Pool was used, but not handed over to me, but I need it!
+        OSL_FAIL( "Give me the global TextObjectPool!" );
+        return;
+    }
+    else if ( !bOwnerOfCurrent && bOwnerOfPool )
+    {
+        // A global Pool should be used, but this Textobject has its own.
+        pPool = EditEngine::CreatePool();
+    }
+
+    if ( bOwnerOfPool )
+        GetPool()->Load( rIStream );
+
+    // CharSet, in which it was saved:
+    sal_uInt16 nCharSet;
+    rIStream.ReadUInt16( nCharSet );
+
+    rtl_TextEncoding eSrcEncoding = GetSOLoadTextEncoding( (rtl_TextEncoding)nCharSet );
+
+    // The number of paragraphs ...
+    sal_uInt16 nParagraphs(0);
+    rIStream.ReadUInt16( nParagraphs );
+
+    const size_t nMinParaRecordSize = 6 + eSrcEncoding == RTL_TEXTENCODING_UNICODE ? 4 : 2;
+    const size_t nMaxParaRecords = rIStream.remainingSize() / nMinParaRecordSize;
+    if (nParagraphs > nMaxParaRecords)
+    {
+        SAL_WARN("editeng", "Parsing error: " << nMaxParaRecords <<
+                 " max possible entries, but " << nParagraphs<< " claimed, truncating");
+        nParagraphs = nMaxParaRecords;
+    }
+
+    // The individual paragraphs ...
+    for ( sal_uLong nPara = 0; nPara < nParagraphs; nPara++ )
+    {
+        ContentInfo* pC = CreateAndInsertContent();
+
+        // The Text...
+        OString aByteString = read_uInt16_lenPrefixed_uInt8s_ToOString(rIStream);
+        pC->SetText(OStringToOUString(aByteString, eSrcEncoding));
+
+        // StyleName and Family...
+        pC->GetStyle() = rIStream.ReadUniOrByteString(eSrcEncoding);
+        sal_uInt16 nStyleFamily(0);
+        rIStream.ReadUInt16( nStyleFamily );
+        pC->GetFamily() = (SfxStyleFamily)nStyleFamily;
+
+        // Paragraph attributes ...
+        pC->GetParaAttribs().Load( rIStream );
+
+        // The number of attributes ...
+        sal_uInt16 nTmp16(0);
+        rIStream.ReadUInt16( nTmp16 );
+        size_t nAttribs = nTmp16;
+
+        const size_t nMinRecordSize(10);
+        const size_t nMaxRecords = rIStream.remainingSize() / nMinRecordSize;
+        if (nAttribs > nMaxRecords)
+        {
+            SAL_WARN("editeng", "Parsing error: " << nMaxRecords <<
+                     " max possible entries, but " << nAttribs << " claimed, truncating");
+            nAttribs = nMaxRecords;
+        }
+
+        // And the individual attributes
+        // Items as Surregate => always 8 bytes per Attributes
+        // Which = 2; Surregat = 2; Start = 2; End = 2;
+        for (size_t nAttr = 0; nAttr < nAttribs; ++nAttr)
+        {
+            sal_uInt16 _nWhich(0), nStart(0), nEnd(0);
+            const SfxPoolItem* pItem;
+
+            rIStream.ReadUInt16( _nWhich );
+            _nWhich = pPool->GetNewWhich( _nWhich );
+            pItem = pPool->LoadSurrogate( rIStream, _nWhich, 0 );
+            rIStream.ReadUInt16( nStart );
+            rIStream.ReadUInt16( nEnd );
+            if ( pItem )
+            {
+                if ( pItem->Which() == EE_FEATURE_NOTCONV )
+                {
+                    sal_Char cEncodedChar = aByteString[nStart];
+                    sal_Unicode cChar = OUString(&cEncodedChar, 1,
+                        static_cast<const SvxCharSetColorItem*>(pItem)->GetCharSet()).toChar();
+                    pC->SetText(pC->GetText().replaceAt(nStart, 1, OUString(cChar)));
+                }
+                else
+                {
+                    XEditAttribute* pAttr = new XEditAttribute( *pItem, nStart, nEnd );
+                    pC->aAttribs.push_back(pAttr);
+
+                    if ( ( _nWhich >= EE_FEATURE_START ) && ( _nWhich <= EE_FEATURE_END ) )
+                    {
+                        // Convert CH_FEATURE to CH_FEATURE_OLD
+                        DBG_ASSERT( (sal_uInt8) aByteString[nStart] == CH_FEATURE_OLD, "CreateData: CH_FEATURE expected!" );
+                        if ( (sal_uInt8) aByteString[nStart] == CH_FEATURE_OLD )
+                            pC->SetText(pC->GetText().replaceAt(nStart, 1, OUString(CH_FEATURE)));
+                    }
+                }
+            }
+        }
+
+        // But check for paragraph and character symbol attribs here,
+        // FinishLoad will not be called in OpenOffice Calc, no StyleSheets...
+
+        bool bSymbolPara = false;
+        if ( pC->GetParaAttribs().GetItemState( EE_CHAR_FONTINFO ) == SfxItemState::SET )
+        {
+            const SvxFontItem& rFontItem = static_cast<const SvxFontItem&>(pC->GetParaAttribs().Get( EE_CHAR_FONTINFO ));
+            if ( rFontItem.GetCharSet() == RTL_TEXTENCODING_SYMBOL )
+            {
+                pC->SetText(OStringToOUString(aByteString, RTL_TEXTENCODING_SYMBOL));
+                bSymbolPara = true;
+            }
+        }
+
+        for (size_t nAttr = pC->aAttribs.size(); nAttr; )
+        {
+            const XEditAttribute& rAttr = pC->aAttribs[--nAttr];
+            if ( rAttr.GetItem()->Which() == EE_CHAR_FONTINFO )
+            {
+                const SvxFontItem& rFontItem = static_cast<const SvxFontItem&>(*rAttr.GetItem());
+                if ( ( !bSymbolPara && ( rFontItem.GetCharSet() == RTL_TEXTENCODING_SYMBOL ) )
+                      || ( bSymbolPara && ( rFontItem.GetCharSet() != RTL_TEXTENCODING_SYMBOL ) ) )
+                {
+                    // Not correctly converted
+                    OString aPart(aByteString.copy(rAttr.GetStart(), rAttr.GetEnd()-rAttr.GetStart()));
+                    OUString aNew(OStringToOUString(aPart, rFontItem.GetCharSet()));
+                    pC->SetText(pC->GetText().replaceAt(rAttr.GetStart(), rAttr.GetEnd()-rAttr.GetStart(), aNew));
+                }
+
+                // Convert StarMath and StarBats to StarSymbol
+                FontToSubsFontConverter hConv = CreateFontToSubsFontConverter( rFontItem.GetFamilyName(), FontToSubsFontFlags::IMPORT | FontToSubsFontFlags::ONLYOLDSOSYMBOLFONTS );
+                if ( hConv )
+                {
+                    SvxFontItem aNewFontItem( rFontItem );
+                    aNewFontItem.SetFamilyName( GetFontToSubsFontName( hConv ) );
+
+                    // Replace the existing attribute with a new one.
+                    XEditAttribute* pNewAttr = CreateAttrib(aNewFontItem, rAttr.GetStart(), rAttr.GetEnd());
+
+                    pPool->Remove(*rAttr.GetItem());
+                    pC->aAttribs.erase(pC->aAttribs.begin()+nAttr);
+                    pC->aAttribs.insert(pC->aAttribs.begin()+nAttr, pNewAttr);
+
+                    for ( sal_uInt16 nChar = pNewAttr->GetStart(); nChar < pNewAttr->GetEnd(); nChar++ )
+                    {
+                        sal_Unicode cOld = pC->GetText()[ nChar ];
+                        DBG_ASSERT( cOld >= 0xF000, "cOld not converted?!" );
+                        sal_Unicode cConv = ConvertFontToSubsFontChar( hConv, cOld );
+                        if ( cConv )
+                            pC->SetText(pC->GetText().replaceAt(nChar, 1, OUString(cConv)));
+                    }
+
+                    DestroyFontToSubsFontConverter( hConv );
+                }
+            }
+        }
+
+
+        // Convert StarMath and StarBats to StarSymbol
+        // Maybe old symbol font as paragraph attribute?
+        if ( pC->GetParaAttribs().GetItemState( EE_CHAR_FONTINFO ) == SfxItemState::SET )
+        {
+            const SvxFontItem& rFontItem = static_cast<const SvxFontItem&>(pC->GetParaAttribs().Get( EE_CHAR_FONTINFO ));
+            FontToSubsFontConverter hConv = CreateFontToSubsFontConverter( rFontItem.GetFamilyName(), FontToSubsFontFlags::IMPORT | FontToSubsFontFlags::ONLYOLDSOSYMBOLFONTS );
+            if ( hConv )
+            {
+                SvxFontItem aNewFontItem( rFontItem );
+                aNewFontItem.SetFamilyName( GetFontToSubsFontName( hConv ) );
+                pC->GetParaAttribs().Put( aNewFontItem );
+
+                for ( sal_uInt16 nChar = 0; nChar < pC->GetText().getLength(); nChar++ )
+                {
+                    const ContentInfo::XEditAttributesType& rAttribs = pC->aAttribs;
+                    ContentInfo::XEditAttributesType::const_iterator it =
+                        std::find_if(rAttribs.begin(), rAttribs.end(),
+                                     FindAttribByChar(EE_CHAR_FONTINFO, nChar));
+
+                    if (it == rAttribs.end())
+                    {
+                        sal_Unicode cOld = pC->GetText()[ nChar ];
+                        DBG_ASSERT( cOld >= 0xF000, "cOld not converted?!" );
+                        sal_Unicode cConv = ConvertFontToSubsFontChar( hConv, cOld );
+                        if ( cConv )
+                            pC->SetText(pC->GetText().replaceAt(nChar, 1, OUString(cConv)));
+                    }
+                }
+
+                DestroyFontToSubsFontConverter( hConv );
+            }
+        }
+    }
+
+    // From 400 also the DefMetric:
+    if ( nVersion >= 400 )
+    {
+        sal_uInt16 nTmpMetric;
+        rIStream.ReadUInt16( nTmpMetric );
+        if ( nVersion >= 401 )
+        {
+            // In the 400 there was a bug in text objects with the own Pool,
+            // therefore evaluate only from 401
+            nMetric = nTmpMetric;
+            if ( bOwnerOfPool && pPool && ( nMetric != 0xFFFF ) )
+                pPool->SetDefaultMetric( (SfxMapUnit)nMetric );
+        }
+    }
+
+    if ( nVersion >= 600 )
+    {
+        rIStream.ReadUInt16( nUserType );
+        rIStream.ReadUInt32( nObjSettings );
+    }
+
+    if ( nVersion >= 601 )
+    {
+        bool bTmp(false);
+        rIStream.ReadCharAsBool( bTmp );
+        bVertical = bTmp;
+    }
+    if ( nVersion >= 603 )
+    {
+        bool bTmp(false);
+        rIStream.ReadCharAsBool( bTmp );
+        bVertL2R = bTmp;
+    }
+    if ( nVersion >= 602 )
+    {
+        sal_uInt16 aTmp16;
+        rIStream.ReadUInt16( aTmp16 );
+        nScriptType = static_cast<SvtScriptType>(aTmp16);
+
+        bool bUnicodeStrings(false);
+        rIStream.ReadCharAsBool( bUnicodeStrings );
+        if ( bUnicodeStrings )
+        {
+            for (sal_uInt16 nPara = 0; nPara < nParagraphs; ++nPara)
+            {
+                ContentInfo& rC = aContents[nPara];
+                sal_uInt16 nL(0);
+
+                // Text
+                rIStream.ReadUInt16(nL);
+                if (nL)
+                {
+                    size_t nMaxElementsPossible = rIStream.remainingSize() / sizeof(sal_Unicode);
+                    if (nL > nMaxElementsPossible)
+                    {
+                        SAL_WARN("editeng", "Parsing error: " << nMaxElementsPossible <<
+                                 " max possible entries, but " << nL << " claimed, truncating");
+                        nL = nMaxElementsPossible;
+                    }
+
+                    rtl_uString *pStr = rtl_uString_alloc(nL);
+                    rIStream.Read(pStr->buffer, nL*sizeof(sal_Unicode));
+                    rC.SetText((OUString(pStr, SAL_NO_ACQUIRE)));
+
+                    nL = 0;
+                }
+
+                // StyleSheetName
+                rIStream.ReadUInt16( nL );
+                if ( nL )
+                {
+                    size_t nMaxElementsPossible = rIStream.remainingSize() / sizeof(sal_Unicode);
+                    if (nL > nMaxElementsPossible)
+                    {
+                        SAL_WARN("editeng", "Parsing error: " << nMaxElementsPossible <<
+                                 " max possible entries, but " << nL << " claimed, truncating");
+                        nL = nMaxElementsPossible;
+                    }
+
+                    rtl_uString *pStr = rtl_uString_alloc(nL);
+                    rIStream.Read(pStr->buffer, nL*sizeof(sal_Unicode) );
+                    rC.GetStyle() = OUString(pStr, SAL_NO_ACQUIRE);
+                }
+            }
+        }
+    }
+
+
+    // from 500 the tabs are interpreted differently: TabPos + LI, previously only TabPos.
+    // Works only if tab positions are set, not when DefTab.
+    if ( nVersion < 500 )
+    {
+        for (size_t i = 0, n = aContents.size(); i < n; ++i)
+        {
+            ContentInfo& rC = aContents[i];
+            const SvxLRSpaceItem& rLRSpace = static_cast<const SvxLRSpaceItem&>(rC.GetParaAttribs().Get(EE_PARA_LRSPACE));
+            if ( rLRSpace.GetTextLeft() && ( rC.GetParaAttribs().GetItemState( EE_PARA_TABS ) == SfxItemState::SET ) )
+            {
+                const SvxTabStopItem& rTabs = static_cast<const SvxTabStopItem&>(rC.GetParaAttribs().Get(EE_PARA_TABS));
+                SvxTabStopItem aNewTabs( 0, 0, SVX_TAB_ADJUST_LEFT, EE_PARA_TABS );
+                for ( sal_uInt16 t = 0; t < rTabs.Count(); t++ )
+                {
+                    const SvxTabStop& rT = rTabs[ t ];
+                    aNewTabs.Insert( SvxTabStop( rT.GetTabPos() - rLRSpace.GetTextLeft(),
+                                rT.GetAdjustment(), rT.GetDecimal(), rT.GetFill() ) );
+                }
+                rC.GetParaAttribs().Put( aNewTabs );
+            }
+        }
+    }
+}
+*/
+
 bool EditTextObjectImpl::Equals( const EditTextObjectImpl& rCompare, bool bComparePool ) const
 {
     if( this == &rCompare )
@@ -1058,7 +1567,7 @@ bool EditTextObjectImpl::Equals( const EditTextObjectImpl& rCompare, bool bCompa
             ( nUserType!= rCompare.nUserType ) ||
             ( nScriptType != rCompare.nScriptType ) ||
             ( bVertical != rCompare.bVertical ) ||
-            ( bIsTopToBottomVert != rCompare.bIsTopToBottomVert ) )
+            ( bVertL2R != rCompare.bVertL2R) )
         return false;
 
     for (size_t i = 0, n = aContents.size(); i < n; ++i)

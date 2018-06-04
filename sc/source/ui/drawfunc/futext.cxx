@@ -75,6 +75,7 @@ static void lcl_InvalidateAttribs( SfxBindings& rBindings )
     rBindings.Invalidate( SID_HYPERLINK_GETLINK );
     rBindings.Invalidate( SID_TEXTDIRECTION_LEFT_TO_RIGHT );
     rBindings.Invalidate( SID_TEXTDIRECTION_TOP_TO_BOTTOM );
+    rBindings.Invalidate( SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT );
     rBindings.Invalidate( SID_ATTR_PARA_LEFT_TO_RIGHT );
     rBindings.Invalidate( SID_ATTR_PARA_RIGHT_TO_LEFT );
     rBindings.Invalidate( SID_TABLE_VERT_NONE );
@@ -190,11 +191,12 @@ bool FuText::MouseButtonDown(const MouseEvent& rMEvt)
                 //  vertical flag:
                 //  deduced from slot ids only if text object has no content
                 sal_uInt16 nSlotID = aSfxRequest.GetSlot();
+                //by aron 需要再看看
                 bool bVertical = ( nSlotID == SID_DRAW_TEXT_VERTICAL );
                 OutlinerParaObject* pOPO = pObj->GetOutlinerParaObject();
                 if ( pOPO )
                     bVertical = pOPO->IsVertical();     // content wins
-                pO->SetVertical( bVertical );
+                pO->SetVertical( bVertical, false );
 
                 //!?? the default values are not correct when result is without outliner ???!?
                 auto pUndoManager = &pO->GetUndoManager();
@@ -425,7 +427,8 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
 
             // init object different when vertical writing
             sal_uInt16 nSlotID(aSfxRequest.GetSlot());
-            bool bVertical = (SID_DRAW_TEXT_VERTICAL == nSlotID);
+            bool bVertical = (SID_DRAW_TEXT_VERTICAL == nSlotID || SID_DRAW_TEXT_VERTICAL_LR == nSlotID);
+            bool bVertLR = SID_DRAW_TEXT_VERTICAL_LR == nSlotID;
             if(bVertical)
             {
                 const SdrMarkList& rMarkList = pView->GetMarkedObjectList();
@@ -437,12 +440,12 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
                         SdrTextObj* pText = static_cast<SdrTextObj*>(pObj);
                         SfxItemSet aSet(pDrDoc->GetItemPool());
 
-                        pText->SetVerticalWriting(true);
+                        pText->SetVerticalWriting(bVertical, bVertLR);
 
                         aSet.Put(makeSdrTextAutoGrowWidthItem(true));
                         aSet.Put(makeSdrTextAutoGrowHeightItem(false));
                         aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP));
-                        aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                        aSet.Put(SdrTextHorzAdjustItem(bVertLR ? SDRTEXTHORZADJUST_LEFT : SDRTEXTHORZADJUST_RIGHT));
 
                         pText->SetMergedItemSet(aSet);
                     }
@@ -590,7 +593,8 @@ void FuText::SetInEditMode(SdrObject* pObj, const Point* pMousePixel,
                 OutlinerParaObject* pOPO = pObj->GetOutlinerParaObject();
                 if ( pOPO )
                     bVertical = pOPO->IsVertical();     // content wins
-                pO->SetVertical( bVertical );
+                //这个需要再看看
+                pO->SetVertical( bVertical, false );
 
                 //!??  without returned Outliner the defaults are not correct ???!?
                 auto pUndoManager = &pO->GetUndoManager();
@@ -672,7 +676,7 @@ SdrObject* FuText::CreateDefaultObject(const sal_uInt16 nID, const tools::Rectan
                 aSet.Put(makeSdrTextAutoGrowWidthItem(true));
                 aSet.Put(makeSdrTextAutoGrowHeightItem(false));
                 aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP));
-                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
 
                 pText->SetMergedItemSet(aSet);
             }

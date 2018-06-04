@@ -3607,6 +3607,7 @@ void SvxMSDffManager::ReadObjText( SvStream& rStream, SdrObject* pObj )
 // sj: I just want to set a string for a text object that may contain multiple
 // paragraphs. If I now take a look at the following code I get the impression that
 // our outliner is too complicate to be used properly,
+//你是干啥的函数啦？
 void SvxMSDffManager::ReadObjText( const OUString& rText, SdrObject* pObj )
 {
     SdrTextObj* pText = dynamic_cast<SdrTextObj*>( pObj  );
@@ -3617,7 +3618,7 @@ void SvxMSDffManager::ReadObjText( const OUString& rText, SdrObject* pObj )
 
         bool bOldUpdateMode = rOutliner.GetUpdateMode();
         rOutliner.SetUpdateMode( false );
-        rOutliner.SetVertical( pText->IsVerticalWriting() );
+        rOutliner.SetVertical( pText->IsVerticalWriting(), false );
 
         sal_Int32 nParaIndex = 0;
         sal_Int32 nParaSize;

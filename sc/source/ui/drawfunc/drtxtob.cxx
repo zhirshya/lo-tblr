@@ -332,6 +332,7 @@ void ScDrawTextObjectBar::Execute( SfxRequest &rReq )
         case SID_ENABLE_HYPHENATION:
         case SID_TEXTDIRECTION_LEFT_TO_RIGHT:
         case SID_TEXTDIRECTION_TOP_TO_BOTTOM:
+        case SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT:
             pView->ScEndTextEdit(); // end text edit before switching direction
             ExecuteGlobal( rReq );
             // restore consistent state between shells and functions:
@@ -1127,31 +1128,42 @@ void ScDrawTextObjectBar::GetAttrState( SfxItemSet& rDestSet )
 
     //  horizontal / vertical
 
-    bool bLeftToRight = true;
+    bool bVertical = false;
+    bool bVertLR = false;
 
     SdrOutliner* pOutl = pView->GetTextEditOutliner();
     if( pOutl )
     {
         if( pOutl->IsVertical() )
-            bLeftToRight = false;
+        {
+            bVertical = true;
+            if( pOutl->IsVertLR() )
+                bVertLR = true;
+        }
     }
     else
-        bLeftToRight = aAttrSet.Get( SDRATTR_TEXTDIRECTION ).GetValue() == css::text::WritingMode_LR_TB;
+    {
+        css::text::WritingMode wm = static_cast<css::text::WritingMode>( static_cast<const SvxWritingModeItem&>( aAttrSet.Get( SDRATTR_TEXTDIRECTION ) ).GetValue() );
+        bVertLR = css::text::WritingMode_TB_LR == wm;
+        bVertical = bVertLR || css::text::WritingMode_TB_RL == wm;
+    }
 
     if ( bDisableVerticalText )
     {
         rDestSet.DisableItem( SID_TEXTDIRECTION_LEFT_TO_RIGHT );
         rDestSet.DisableItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM );
+        rDestSet.DisableItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT );
     }
     else
     {
-        rDestSet.Put( SfxBoolItem( SID_TEXTDIRECTION_LEFT_TO_RIGHT, bLeftToRight ) );
-        rDestSet.Put( SfxBoolItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM, !bLeftToRight ) );
+        rDestSet.Put( SfxBoolItem( SID_TEXTDIRECTION_LEFT_TO_RIGHT, !bVertical ) );
+        rDestSet.Put( SfxBoolItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM, bVertical && !bVertLR ) );
+        rDestSet.Put( SfxBoolItem( SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT, bVertical && bVertLR) );
     }
 
     //  left-to-right or right-to-left
 
-    if ( !bLeftToRight || bDisableCTLFont )
+    if ( bVertical || bDisableCTLFont )
     {
         //  disabled if vertical
         rDestSet.DisableItem( SID_ATTR_PARA_LEFT_TO_RIGHT );

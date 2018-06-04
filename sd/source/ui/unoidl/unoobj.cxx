@@ -934,11 +934,11 @@ void SdXShape::SetEmptyPresObj(bool bEmpty)
         {
             OutlinerParaObject* pOutlinerParaObject = pObj->GetOutlinerParaObject();
             const bool bVertical = pOutlinerParaObject && pOutlinerParaObject->IsVertical();
-
+            const bool bVertL2R = pOutlinerParaObject && pOutlinerParaObject->IsVertLR();
             // really delete SdrOutlinerObj at pObj
             pObj->NbcSetOutlinerParaObject(nullptr);
             if( bVertical && dynamic_cast<SdrTextObj*>( pObj )  )
-                static_cast<SdrTextObj*>(pObj)->SetVerticalWriting( true );
+                static_cast<SdrTextObj*>(pObj)->SetVerticalWriting( true, bVertL2R );
 
             SdrGrafObj* pGraphicObj = dynamic_cast<SdrGrafObj*>( pObj  );
             if( pGraphicObj )
@@ -980,9 +980,10 @@ void SdXShape::SetEmptyPresObj(bool bEmpty)
                 OutlinerParaObject* pOutlinerParaObject = pObj->GetOutlinerParaObject();
                 pOutliner->SetText( *pOutlinerParaObject );
                 const bool bVertical = pOutliner->IsVertical();
+                const bool bVertL2R  = pOutliner->IsVertLR();
 
                 pOutliner->Clear();
-                pOutliner->SetVertical( bVertical );
+                pOutliner->SetVertical( bVertical, bVertL2R );
                 pOutliner->SetStyleSheetPool( static_cast<SfxStyleSheetPool*>(pDoc->GetStyleSheetPool()) );
                 pOutliner->SetStyleSheet( 0, pPage->GetTextStyleSheetForObject( pObj ) );
                 pOutliner->Insert( pPage->GetPresObjText( pPage->GetPresObjKind(pObj) ) );

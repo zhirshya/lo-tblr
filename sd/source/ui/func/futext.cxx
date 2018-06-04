@@ -125,6 +125,7 @@ static const sal_uInt16 SidArray[] = {
     SID_HYPERLINK_GETLINK,            //   10361
     SID_CHARMAP,                      //   10503
     SID_TEXTDIRECTION_LEFT_TO_RIGHT,  //   10907
+    SID_TEXTDIRECTION_TOP_TO_BOTTOM_LEFT_TO_RIGHT,  //   10907
     SID_TEXTDIRECTION_TOP_TO_BOTTOM,  //   10908
     SID_ATTR_PARA_LEFT_TO_RIGHT,      //   10950
     SID_ATTR_PARA_RIGHT_TO_LEFT,      //   10951
@@ -519,6 +520,20 @@ void FuText::ImpSetAttributesForNewTextObject(SdrTextObj* pTxtObj)
             aSet.Put(makeSdrTextMaxFrameWidthItem(pTxtObj->GetLogicRect().GetSize().Width()));
             pTxtObj->SetMergedItemSet(aSet);
         }
+        else if (nSlotId == SID_DRAW_TEXT_VERTICAL_LR)
+        {
+            SfxItemSet aSet(mpViewShell->GetPool());
+            aSet.Put(makeSdrTextMinFrameWidthItem(0));
+            aSet.Put(makeSdrTextAutoGrowWidthItem(true));
+            aSet.Put(makeSdrTextAutoGrowHeightItem(false));
+
+            // #91853# Needs to be set since default is SDRTEXTHORZADJUST_BLOCK
+            aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
+            pTxtObj->SetMergedItemSet(aSet);
+            pTxtObj->AdjustTextFrameWidthAndHeight();
+            aSet.Put(makeSdrTextMaxFrameWidthItem(pTxtObj->GetLogicRect().GetSize().Width()));
+            pTxtObj->SetMergedItemSet(aSet);
+        }
     }
     else
     {
@@ -536,6 +551,29 @@ void FuText::ImpSetAttributesForNewTextObject(SdrTextObj* pTxtObj)
             // Analog to that:
             aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_BLOCK));
             aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+
+            pTxtObj->SetMergedItemSet(aSet);
+        }
+        else if (nSlotId == SID_DRAW_TEXT_VERTICAL_LR)
+        {
+            // draw text object, needs to be initialized when vertical text is used
+            SfxItemSet aSet(mpViewShell->GetPool());
+
+            // #91510#
+            aSet.Put(makeSdrTextAutoGrowWidthItem(true));
+            aSet.Put(makeSdrTextAutoGrowHeightItem(false));
+
+            // #91508#
+            //aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_TOP));
+            //aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+
+            // #107235#
+            // Set defaults for vertical klick-n'drag text object, pool defaults are:
+            // SdrTextVertAdjustItem: SDRTEXTVERTADJUST_TOP
+            // SdrTextHorzAdjustItem: SDRTEXTHORZADJUST_BLOCK
+            // Analog to that (thus, #91508# was not completely correct):
+            aSet.Put(SdrTextVertAdjustItem(SDRTEXTVERTADJUST_BLOCK));
+            aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_LEFT));
 
             pTxtObj->SetMergedItemSet(aSet);
         }
@@ -588,7 +626,15 @@ void FuText::ImpSetAttributesFitCommon(SdrTextObj* pTxtObj)
             aSet.Put(makeSdrTextAutoGrowHeightItem(false));
             pTxtObj->SetMergedItemSet(aSet);
         }
-
+        else if (nSlotId == SID_DRAW_TEXT_VERTICAL_LR)
+        {
+            SfxItemSet aSet(mpViewShell->GetPool());
+            aSet.Put(makeSdrTextMinFrameWidthItem(0));
+            aSet.Put(makeSdrTextMaxFrameWidthItem(0));
+            aSet.Put(makeSdrTextAutoGrowWidthItem(true));
+            aSet.Put(makeSdrTextAutoGrowHeightItem(false));
+            pTxtObj->SetMergedItemSet(aSet);
+        }
         pTxtObj->AdjustTextFrameWidthAndHeight();
     }
 }
@@ -684,7 +730,7 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
     {
         // object was created
         mxTextObj.reset( dynamic_cast< SdrTextObj* >( mpView->GetCreateObj() ) );
-
+        //OpenOffice Impress 的文本框相关的代码
         if( mxTextObj.is() )
         {
             //AW outliner needs to be set to vertical when there is no
@@ -692,10 +738,20 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
             // vertical when there was a vertical one used last time.
             OutlinerParaObject* pOPO = GetTextObj()->GetOutlinerParaObject();
             SdrOutliner& rOutl(mxTextObj->getSdrModelFromSdrObject().GetDrawOutliner(GetTextObj()));
-            bool bVertical((pOPO && pOPO->IsVertical())
-                || nSlotId == SID_ATTR_CHAR_VERTICAL
-                || nSlotId == SID_TEXT_FITTOSIZE_VERTICAL);
-            rOutl.SetVertical(bVertical);
+            bool bVertical = false;
+            bool bVertLR = false;
+            if (pOPO && pOPO->IsVertical())
+                bVertical = true;
+            if (nSlotId == SID_ATTR_CHAR_VERTICAL)
+                bVertical = true;
+            if (nSlotId == SID_TEXT_FITTOSIZE_VERTICAL)
+                bVertical = true;
+            if (nSlotId == SID_DRAW_TEXT_VERTICAL_LR)
+            {
+                bVertical = bVertLR = true;
+            }
+
+            rOutl.SetVertical(bVertical, bVertLR);//by aron
 
             // Before ImpSetAttributesForNewTextObject the vertical writing mode
             // needs to be set at the object. This is done here at the OutlinerParaObject
@@ -712,7 +768,7 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
             if(pPara && bVertical != pPara->IsVertical())
             {
                 // set ParaObject orientation accordingly
-                pPara->SetVertical(bVertical);
+                pPara->SetVertical(bVertical, bVertLR);
             }
 
             ImpSetAttributesForNewTextObject(GetTextObj());
@@ -810,7 +866,7 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
                 aSet.Put(makeSdrTextAutoGrowHeightItem(true));
                 aSet.Put(makeSdrTextAutoGrowWidthItem(true));
 
-                if(nSlotId == SID_ATTR_CHAR_VERTICAL)
+                if(nSlotId == SID_ATTR_CHAR_VERTICAL || nSlotId == SID_DRAW_TEXT_VERTICAL_LR)
                 {
                     // Here, all items which need to be different from pool default need to be set
                     // again on the newly created text object.
@@ -830,14 +886,17 @@ bool FuText::MouseButtonUp(const MouseEvent& rMEvt)
                         GetTextObj()->ForceOutlinerParaObject();
                         pPara = GetTextObj()->GetOutlinerParaObject();
                     }
-
-                    if(pPara && !pPara->IsVertical())
+                    else
                     {
+                        bool bNeedSetVertical = !pPara->IsVertical();
+                        bool bVertLR = SID_DRAW_TEXT_VERTICAL_LR;
+                        bool bNeedSetVertLR = (pPara->IsVertLR() != bVertLR);
                         // set ParaObject orientation accordingly
-                        pPara->SetVertical(true);
+                        if (bNeedSetVertical || bNeedSetVertLR)
+                            pPara->SetVertical(true, bVertLR);
                     }
-
-                    aSet.Put(SdrTextHorzAdjustItem(SDRTEXTHORZADJUST_RIGHT));
+                    //end --by aron
+                    aSet.Put(SdrTextHorzAdjustItem(nSlotId == SID_DRAW_TEXT_VERTICAL_LR ? SDRTEXTHORZADJUST_LEFT : SDRTEXTHORZADJUST_RIGHT));
 
                     // Analog to the else case below, for vertical simple click texts
                     // one of the default set items from ImpSetAttributesForNewTextObject
@@ -1064,10 +1123,8 @@ void FuText::SetInEditMode(const MouseEvent& rMEvt, bool bQuickDrag)
                 if( pTextObj )
                 {
                     OutlinerParaObject* pOPO = pTextObj->GetOutlinerParaObject();
-                    if( pOPO && pOPO->IsVertical() )
-                        pOutl->SetVertical( true, pOPO->IsTopToBottom());
-                    else if (nSlotId == SID_ATTR_CHAR_VERTICAL || nSlotId == SID_TEXT_FITTOSIZE_VERTICAL)
-                        pOutl->SetVertical( true );
+                    if( ( pOPO && pOPO->IsVertical() ) || (nSlotId == SID_ATTR_CHAR_VERTICAL) || (nSlotId == SID_TEXT_FITTOSIZE_VERTICAL) )
+                        pOutl->SetVertical( true, false );
 
                     if( pTextObj->getTextCount() > 1 )
                     {

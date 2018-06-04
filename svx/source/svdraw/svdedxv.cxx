@@ -539,13 +539,13 @@ namespace
             // depends on vertical text and top-to-bottom text attributes
             const tools::Rectangle aVisArea(mrOutlinerView.GetVisArea());
             const bool bVerticalWriting(pSdrOutliner->IsVertical());
-            const bool bTopToBottom(pSdrOutliner->IsTopToBottom());
+            const bool bVertL2R(pSdrOutliner->IsVertLR());
             const double fStartInX(
-                bVerticalWriting && bTopToBottom
-                ? aOutArea.Right() - aVisArea.Left()
-                : aOutArea.Left() - aVisArea.Left());
+                bVerticalWriting && bVertL2R
+                ? aOutArea.Left() - aVisArea.Left()
+                : aOutArea.Right() - aVisArea.Left());
             const double fStartInY(
-                bVerticalWriting && !bTopToBottom
+                bVerticalWriting && !bVertL2R
                 ? aOutArea.Bottom() - aVisArea.Top()
                 : aOutArea.Top() - aVisArea.Top());
 

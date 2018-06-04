@@ -186,6 +186,7 @@ void ScTabViewShell::ExecDraw(SfxRequest& rReq)
     if ( nNewId != SID_DRAW_CHART )             // chart not with DrawShell
     {
         if ( nNewId == SID_DRAW_TEXT || nNewId == SID_DRAW_TEXT_VERTICAL ||
+             nNewId == SID_DRAW_TEXT_VERTICAL_LR ||
                 nNewId == SID_DRAW_TEXT_MARQUEE || nNewId == SID_DRAW_NOTEEDIT )
             SetDrawTextShell( true );
         else
@@ -261,6 +262,7 @@ void ScTabViewShell::ExecDraw(SfxRequest& rReq)
 
         case SID_DRAW_TEXT:
         case SID_DRAW_TEXT_VERTICAL:
+        case SID_DRAW_TEXT_VERTICAL_LR:
         case SID_DRAW_TEXT_MARQUEE:
         case SID_DRAW_NOTEEDIT:
             pTabView->SetDrawFuncPtr(new FuText(this, pWin, pView, pDoc, aNewReq));

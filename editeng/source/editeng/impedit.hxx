@@ -315,7 +315,7 @@ public:
     const tools::Rectangle&    GetOutputArea() const   { return aOutArea; }
 
     bool            IsVertical() const;
-    bool            IsTopToBottom() const;
+    bool            IsVertLR() const;
 
     bool            PostKeyEvent( const KeyEvent& rKeyEvent, vcl::Window const * pFrameWin );
 
@@ -743,11 +743,10 @@ public:
     const Size&             GetPaperSize() const                    { return aPaperSize; }
     void                    SetPaperSize( const Size& rSz )         { aPaperSize = rSz; }
 
-    void                    SetVertical( bool bVertical, bool bTopToBottom);
+    void                    SetVertical( bool bVertical, bool bVertL2R );
     bool                    IsVertical() const                      { return GetEditDoc().IsVertical(); }
-    bool                    IsTopToBottom() const                   { return GetEditDoc().IsTopToBottom(); }
-
-    bool IsPageOverflow( ) const;
+    bool                    IsVertLR() const                        { return GetEditDoc().IsVertLR(); }
+    bool                    IsPageOverflow() const;
 
     void                    SetFixedCellHeight( bool bUseFixedCellHeight );
     bool                    IsFixedCellHeight() const { return GetEditDoc().IsFixedCellHeight(); }

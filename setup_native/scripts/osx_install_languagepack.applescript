@@ -19,7 +19,7 @@
 This script is meant to
 	1) Identify installed instances of the product
 	2) check whether the user has write-access (and if not
-	ask for authentication)
+	ask for authentification)
 	3) install the shipped tarball
 *)
 
@@ -126,7 +126,7 @@ end if
 
 -- now only check whether the path is really from [PRODUCTNAME]
 try
-	do shell script "grep '<string>[PRODUCTNAME] [PRODUCTVERSION]'   " & quoted form of (choice as string) & "/Contents/Info.plist"
+	do shell script "grep '<string>@MACOSX_APP_NAME@ 6.1.0.0.alpha1'   " & quoted form of (choice as string) & "/Contents/Info.plist"
 on error
 	display dialog (choice as string) & appInvalid buttons {InstallLabel} default button 1 with icon 0
 	return 3 --wrong target-directory
@@ -143,14 +143,6 @@ end if
 -- touch extensions folder to have LO register bundled dictionaries
 set tarCommand to "/usr/bin/tar -C " & quoted form of (choice as string) & " -xjf " & quoted form of sourcedir & "/tarball.tar.bz2 && touch " & quoted form of (choice as string) & "/Contents/Resources/extensions"
 try
-	(* A start of unchanged LO must take place so Gatekeeper will verify
-	   the signature prior to installing the languagepack
-	*)
-	if application choice is not running then
-		-- this will flash the startcenter once...
-		tell application choice to activate
-		tell application choice to quit
-	end if
 	do shell script tarCommand
 	
 on error errMSG number errNUM

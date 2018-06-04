@@ -129,19 +129,19 @@ bool OutlinerParaObject::IsVertical() const
     return mpImpl->mpEditTextObject->IsVertical();
 }
 
-bool OutlinerParaObject::IsTopToBottom() const
-{
-    return mpImpl->mpEditTextObject->IsTopToBottom();
-}
-
-void OutlinerParaObject::SetVertical(bool bNew, bool bTopToBottom)
+void OutlinerParaObject::SetVertical(bool bNew, bool bVerL2R)
 {
     const ::o3tl::cow_wrapper< OutlinerParaObjData >* pImpl = &mpImpl;
     if ( ( *pImpl )->mpEditTextObject->IsVertical() != bNew ||
-        (*pImpl)->mpEditTextObject->IsTopToBottom() != (bNew && bTopToBottom))
+        (*pImpl)->mpEditTextObject->IsVertLR() != bVerL2R )
     {
-        mpImpl->mpEditTextObject->SetVertical(bNew, bTopToBottom);
+        mpImpl->mpEditTextObject->SetVertical(bNew, bVerL2R);
     }
+}
+
+bool OutlinerParaObject::IsVertLR() const
+{
+    return mpImpl->mpEditTextObject->IsVertLR();
 }
 
 sal_Int32 OutlinerParaObject::Count() const

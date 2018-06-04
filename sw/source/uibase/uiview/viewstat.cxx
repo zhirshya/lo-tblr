@@ -519,7 +519,17 @@ void SwView::GetDrawState(SfxItemSet &rSet)
             if ( bWeb )
                 rSet.DisableItem( nWhich );
             else
+            {
                 rSet.Put( SfxBoolItem( nWhich, m_nDrawSfxId == nWhich ) );
+                // SfxAllEnumItem aEnum(SID_INSERT_DRAW, m_nDrawSfxId);
+                if ( !SvtLanguageOptions().IsVerticalTextEnabled() )
+                {
+                    rSet.DisableItem( SID_DRAW_CAPTION_VERTICAL ); //error: no member named 'DisableItem' in 'SfxAllEnumItem'
+                    rSet.DisableItem( SID_DRAW_TEXT_VERTICAL );
+                    rSet.DisableItem( SID_DRAW_TEXT_VERTICAL_LR );
+                }
+                // rSet.Put(aEnum);
+            }
             break;
 
         case SID_DRAW_TEXT_VERTICAL:

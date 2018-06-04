@@ -29,6 +29,7 @@ class ConstRectangle : public SwDrawBase
     bool bCapVertical;
 
     bool mbVertical;
+    bool mbVertLR;
 
  public:
     ConstRectangle(SwWrtShell* pSh, SwEditWin* pWin, SwView* pView);

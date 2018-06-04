@@ -57,6 +57,7 @@
  <toolbar:toolbaritem xlink:href=".uno:InsertObjectChart"/>
  <toolbar:toolbaritem xlink:href=".uno:InsertObjectStarMath" toolbar:visible="false"/>
  <toolbar:toolbaritem xlink:href=".uno:DrawText"/>
+ <toolbar:toolbaritem xlink:href=".uno:VerticalLeftToRightText"/>
  <toolbar:toolbaritem xlink:href=".uno:VerticalText" toolbar:visible="false"/>
  <toolbar:toolbarseparator/>
  <toolbar:toolbaritem xlink:href=".uno:InsertPagebreak"/>

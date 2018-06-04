@@ -95,6 +95,23 @@ $(eval $(call gb_Module_add_slowcheck_targets,sw,\
     CppunitTest_sw_accessible_relation_set \
     CppunitTest_sw_apitests \
 ))
+#    CppunitTest_sw_ooxmlexport \
+#    CppunitTest_sw_ooxmlexport2 \
+#    CppunitTest_sw_ooxmlexport3 \
+#    CppunitTest_sw_ooxmlexport4 \
+#    CppunitTest_sw_ooxmlexport5 \
+#    CppunitTest_sw_ww8export \
+#    CppunitTest_sw_ww8import \
+#    CppunitTest_sw_ooxmlimport \
+#    CppunitTest_sw_odfimport \
+#    CppunitTest_sw_rtfexport \
+#    CppunitTest_sw_rtfimport \
+#    CppunitTest_sw_uiwriter \
+#    CppunitTest_sw_globalfilter \
+#    CppunitTest_sw_odfexport \
+#    CppunitTest_sw_ooxmlfieldexport \
+#    CppunitTest_sw_ooxmlexport6 \
+#    CppunitTest_sw_ooxmlexport7 \
 
 ifneq ($(ENABLE_HEADLESS),TRUE)
 ifeq ($(OS),LINUX)

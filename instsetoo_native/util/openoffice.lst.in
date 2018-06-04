@@ -8,13 +8,13 @@ Globals
             UREPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             URELAYERVERSION 1
             REFERENCEOOOMAJORMINOR 4.1
-            WINDOWSBASISROOTNAME LibreOffice
-            UNIXBASISROOTNAME libreoffice@LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            WINDOWSBASISROOTNAME DelehiOffice 2018
+            UNIXBASISROOTNAME delehioffice2018
             HIDELICENSEDIALOG 1
             PACKAGEPREFIX
             BASISPACKAGEPREFIX libobasis
-            UREPACKAGEPREFIX libreoffice
-            SOLSUREPACKAGEPREFIX libreoffice
+            UREPACKAGEPREFIX delehioffice
+            SOLSUREPACKAGEPREFIX delehioffice
             PROGRESSBARCOLOR 0,0,0
             PROGRESSSIZE 444,8
             PROGRESSSIZEHIGH 617,12
@@ -39,19 +39,19 @@ Globals
     }
 }
 
-LibreOffice
+DelehiOffice
 {
     Settings
     {
         variables
         {
             PRODUCTNAME @PRODUCTNAME@
-            PRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            PRODUCTEXTENSION .@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
+            PRODUCTVERSION 2018
+            PRODUCTEXTENSION
             POSTVERSIONEXTENSION
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@
-            BRANDPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            USERDIRPRODUCTVERSION 4
+            BRANDPACKAGEVERSION 2015
+            USERDIRPRODUCTVERSION 2015
             ABOUTBOXPRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             ABOUTBOXPRODUCTVERSIONSUFFIX @LIBO_VERSION_SUFFIX_SUFFIX@
             BASEPRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
@@ -77,35 +77,35 @@ LibreOffice
         active          1
         compression     5
         script          setup_osl
-        downloadname    LibreOffice_{productversion}_{os}_install_{languages}
-        langpackdownloadname    LibreOffice_{productversion}_languagepack_{os}_install_{languages}
-        helppackdownloadname    LibreOffice_{productversion}_helppack_{os}_install_{languages}
+        downloadname    DelehiOffice_{productversion}_{os}_install_{languages}
+        langpackdownloadname    DelehiOffice_{productversion}_languagepack_{os}_install_{languages}
+        helppackdownloadname    DelehiOffice_{productversion}_helppack_{os}_install_{languages}
         include         {installscriptdir},{customtargetpath}/readlicense_oo/readme,{customtargetpath}/sysui/{pkgtype},{customtargetpath}/setup_native,{filelistpath}/PackageSet,{filelistpath}/GeneratedPackage,{filelistpath}/Package,{filelistpath}/ExtensionPackage,{filelistpath}/CustomTarget/helpcontent2/help3xsl/filelists,{extensionsdir},{licensepath},{packinfopath}
     }
 }
 
-LibreOfficeDev
+DelehiOfficeDev
 {
     Settings
     {
         variables
         {
-            PRODUCTNAME LibreOfficeDev
-            PRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            PRODUCTEXTENSION .@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
-            WINDOWSBASISROOTNAME LibreOfficeDev @LIBO_VERSION_MAJOR@
-            UNIXBASISROOTNAME libreofficedev@LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            PRODUCTNAME DelehiOfficeDev
+            PRODUCTVERSION 2018
+            PRODUCTEXTENSION
+            WINDOWSBASISROOTNAME DelehiOfficeDev 2018
+            UNIXBASISROOTNAME delehiofficedev2018
             POSTVERSIONEXTENSION
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@
-            BRANDPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            USERDIRPRODUCTVERSION 4
+            BRANDPACKAGEVERSION 2018
+            USERDIRPRODUCTVERSION 2018
             ABOUTBOXPRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             ABOUTBOXPRODUCTVERSIONSUFFIX @LIBO_VERSION_SUFFIX_SUFFIX@
             BASEPRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
             DEVELOPMENTPRODUCT 1
             BASISPACKAGEPREFIX lodevbasis
-            UREPACKAGEPREFIX libreofficedev
-            SOLSUREPACKAGEPREFIX libreofficedev
+            UREPACKAGEPREFIX delehiofficedev
+            SOLSUREPACKAGEPREFIX delehiofficedev
             REGISTRYLAYERNAME LayerDev
             UPDATEURL https://update.libreoffice.org/check.php
             ADD_INCLUDE_FILES cli_ure/version/version.txt,unoil/climaker/version.txt
@@ -126,30 +126,30 @@ LibreOfficeDev
             STARTCENTER_TEMPLREP_URL https://templates.libreoffice.org/
             DICT_REPO_URL https://extensions.libreoffice.org/dictionaries/
             STARTCENTER_HIDE_EXTERNAL_LINKS 0
-        }
+        } 
         active          1
         compression     5
         script          setup_osl
-        downloadname    LibreOfficeDev_{productversion}_{os}_install_{languages}
-        langpackdownloadname    LibreOfficeDev_{productversion}_languagepack_{os}_install_{languages}
-        helppackdownloadname    LibreOfficeDev_{productversion}_helppack_{os}_install_{languages}
+        downloadname    DelehiOfficeDev_{productversion}_{os}_install_{languages}
+        langpackdownloadname    DelehiOfficeDev_{productversion}_languagepack_{os}_install_{languages}
+        helppackdownloadname    DelehiOfficeDev_{productversion}_helppack_{os}_install_{languages}
         include         {installscriptdir},{customtargetpath}/readlicense_oo/readme,{customtargetpath}/sysui/{pkgtype},{customtargetpath}/setup_native,{filelistpath}/PackageSet,{filelistpath}/GeneratedPackage,{filelistpath}/Package,{filelistpath}/ExtensionPackage,{filelistpath}/CustomTarget/helpcontent2/help3xsl/filelists,{extensionsdir},{licensepath},{packinfopath}
     }
 }
 
-LibreOffice_SDK
+DelehiOffice_SDK
 {
     Settings
     {
-        downloadname LibreOffice-SDK_{packageversion}_{os}_install_{languages}
+        downloadname DelehiOffice-SDK_{packageversion}_{os}_install_{languages}
         variables
         {
-            PRODUCTNAME LibreOffice
-            PRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            PRODUCTEXTENSION .@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
+            PRODUCTNAME DelehiOffice
+            PRODUCTVERSION 2015
+            PRODUCTEXTENSION
             POSTVERSIONEXTENSION SDK
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@.SDK
-            BRANDPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            BRANDPACKAGEVERSION 2015
             PACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             PACKAGEREVISION {buildid}
             PACK_INSTALLED 1
@@ -176,26 +176,26 @@ LibreOffice_SDK
     }
 }
 
-LibreOfficeDev_SDK
+DelehiOfficeDev_SDK
 {
     Settings
     {
-        downloadname LibreOfficeDev-SDK_{packageversion}_{os}_install_{languages}
+        downloadname DelehiOfficeDev-SDK_{packageversion}_{os}_install_{languages}
         variables
         {
-            PRODUCTNAME LibreOfficeDev
-            PRODUCTVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
-            PRODUCTEXTENSION .@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
-            WINDOWSBASISROOTNAME LibreOfficeDev @LIBO_VERSION_MAJOR@
-            UNIXBASISROOTNAME libreofficedev@LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            PRODUCTNAME DelehiOfficeDev
+            PRODUCTVERSION 2015
+            PRODUCTEXTENSION
+            WINDOWSBASISROOTNAME DelehiOfficeDev 2015
+            UNIXBASISROOTNAME delehiofficedev2015
             POSTVERSIONEXTENSION SDK
             BUNDLEIDENTIFIER @MACOSX_BUNDLE_IDENTIFIER@.SDK
-            BRANDPACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@
+            BRANDPACKAGEVERSION 2015
             PACKAGEVERSION @LIBO_VERSION_MAJOR@.@LIBO_VERSION_MINOR@.@LIBO_VERSION_MICRO@.@LIBO_VERSION_PATCH@@LIBO_VERSION_SUFFIX@
             PACKAGEREVISION {buildid}
             BASISPACKAGEPREFIX lodevbasis
-            UREPACKAGEPREFIX libreofficedev
-            SOLSUREPACKAGEPREFIX libreofficedev
+            UREPACKAGEPREFIX delehiofficedev
+            SOLSUREPACKAGEPREFIX delehiofficedev
             REGISTRYLAYERNAME LayerDev
             DEVELOPMENTPRODUCT 1
             PACK_INSTALLED 1

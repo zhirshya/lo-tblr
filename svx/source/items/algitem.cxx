@@ -90,6 +90,8 @@ bool SvxOrientationItem::QueryValue( uno::Any& rVal, sal_uInt8 /*nMemberId*/ ) c
         case SvxCellOrientation::TopBottom: eUno = table::CellOrientation_TOPBOTTOM; break;
         case SvxCellOrientation::BottomUp:  eUno = table::CellOrientation_BOTTOMTOP; break;
         case SvxCellOrientation::Stacked:   eUno = table::CellOrientation_STACKED;   break;
+        //by aron
+        case SvxCellOrientation::Stacked_LR:eUno = table::CellOrientation_STACKED_LR; break;
     }
     rVal <<= eUno;
     return true;
@@ -110,8 +112,9 @@ bool SvxOrientationItem::PutValue( const uno::Any& rVal, sal_uInt8 /*nMemberId*/
     {
         case table::CellOrientation_STANDARD:   eSvx = SvxCellOrientation::Standard;  break;
         case table::CellOrientation_TOPBOTTOM:  eSvx = SvxCellOrientation::TopBottom; break;
-        case table::CellOrientation_BOTTOMTOP:  eSvx = SvxCellOrientation::BottomUp; break;
+        case table::CellOrientation_BOTTOMTOP:  eSvx = SvxCellOrientation::BottomUp;  break;
         case table::CellOrientation_STACKED:    eSvx = SvxCellOrientation::Stacked;   break;
+        case table::CellOrientation_STACKED_LR: eSvx = SvxCellOrientation::Stacked_LR;break;
         default: ; //prevent warning
     }
     SetValue( eSvx );
@@ -160,6 +163,21 @@ sal_Int32 SvxOrientationItem::GetRotation( sal_Int32 nStdAngle ) const
         default: ; //prevent warning
     }
     return nAngle;
+}
+
+void SvxOrientationItem::SetFromRotation( sal_Int32 nRotation, bool bStacked )
+{
+    //怎么影响蒙文？
+    if( bStacked )
+    {
+        SetValue( SvxCellOrientation::Stacked );
+    }
+    else switch( nRotation )
+    {
+        case 9000:  SetValue( SvxCellOrientation::BottomUp );  break;
+        case 27000: SetValue( SvxCellOrientation::TopBottom );  break;
+        default:    SetValue( SvxCellOrientation::Standard );
+    }
 }
 
 SvxMarginItem::SvxMarginItem( const sal_uInt16 nId ) :

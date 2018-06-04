@@ -1910,7 +1910,7 @@ void SvxTableController::EditCell(const CellPos& rPos, vcl::Window* pWindow, Tbl
             std::unique_ptr<SdrOutliner> pOutl(SdrMakeOutliner(OutlinerMode::OutlineObject, rModel));
 
             if (pOutl && rTableObj.IsVerticalWriting())
-                pOutl->SetVertical( true );
+                pOutl->SetVertical( true, false );
 
             if (mrView.SdrBeginTextEdit(&rTableObj, pPV, pWindow, true, pOutl.release()))
             {

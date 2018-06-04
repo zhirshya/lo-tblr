@@ -1595,8 +1595,10 @@ void OutlineViewShell::UpdateTitleObject( SdPage* pPage, Paragraph const * pPara
         OutlinerParaObject* pOPO = pTO ? rOutliner.CreateParaObject(rOutliner.GetAbsPos(pPara), 1) : nullptr;
         if (pOPO)
         {
+            bool bVl2r = false;
+
             pOPO->SetOutlinerMode( OutlinerMode::TitleObject );
-            pOPO->SetVertical( pTO->IsVerticalWriting() );
+            pOPO->SetVertical( pTO->IsVerticalWriting(&bVl2r), bVl2r );
             if( pTO->GetOutlinerParaObject() && (pOPO->GetTextObject() == pTO->GetOutlinerParaObject()->GetTextObject()) )
             {
                 // do nothing, same text already set
@@ -1697,7 +1699,10 @@ void OutlineViewShell::UpdateOutlineObject( SdPage* pPage, Paragraph* pPara )
         // apply text
         if( pTO )
         {
-            pOPO->SetVertical( pTO->IsVerticalWriting() );
+            bool bVl2r = false;
+            bool bVert = pTO->IsVerticalWriting(&bVl2r);
+
+            pOPO->SetVertical( bVert, bVl2r );
             pOPO->SetOutlinerMode( eOutlinerMode );
             if( pTO->GetOutlinerParaObject() && (pOPO->GetTextObject() == pTO->GetOutlinerParaObject()->GetTextObject()) )
             {

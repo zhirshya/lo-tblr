@@ -2629,11 +2629,11 @@ void ImpEditEngine::SetTextRanger( std::unique_ptr<TextRanger> pRanger )
         pActiveView->ShowCursor(false, false);
 }
 
-void ImpEditEngine::SetVertical( bool bVertical, bool bTopToBottom)
+void ImpEditEngine::SetVertical( bool bVertical, bool bVertLR )
 {
-    if ( IsVertical() != bVertical || IsTopToBottom() != (bVertical && bTopToBottom))
+    if ( IsVertical() != bVertical || IsVertLR() != bVertLR )
     {
-        GetEditDoc().SetVertical( bVertical, bTopToBottom);
+        GetEditDoc().SetVertical( bVertical, bVertLR);
         bool bUseCharAttribs = bool(aStatus.GetControlWord() & EEControlBits::USECHARATTRIBS);
         GetEditDoc().CreateDefFont( bUseCharAttribs );
         if ( IsFormatted() )
@@ -2996,7 +2996,8 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
 
     // Over all the paragraphs ...
 
-    for ( sal_Int32 n = 0; n < GetParaPortions().Count(); n++ )
+    int nPortCount = GetParaPortions().Count();
+    for (sal_uInt16 n = 0; n < nPortCount; n++)
     {
         const ParaPortion* pPortion = GetParaPortions()[n];
         DBG_ASSERT( pPortion, "NULL-Pointer in TokenList in Paint" );
@@ -3010,11 +3011,10 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
 
         long nParaHeight = pPortion->GetHeight();
         sal_Int32 nIndex = 0;
-        if ( pPortion->IsVisible() && (
+        if ( pPortion->IsVisible() && ((
                 ( !IsVertical() && ( ( aStartPos.Y() + nParaHeight ) > aClipRect.Top() ) ) ||
-                ( IsVertical() && IsTopToBottom() && ( ( aStartPos.X() - nParaHeight ) < aClipRect.Right() ) ) ||
-                ( IsVertical() && !IsTopToBottom() && ( ( aStartPos.X() + nParaHeight ) > aClipRect.Left() ) ) ) )
-
+                ( IsVertical() && !IsVertLR() && ( ( aStartPos.X() - nParaHeight ) < aClipRect.Right() ) ) ) ||
+                ( IsVertical() && IsVertLR() && ( (aStartPos.X() + nParaHeight) > aClipRect.Left()))))
         {
 
             // Over the lines of the paragraph ...
@@ -3027,12 +3027,7 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
             if ( !IsVertical() )
                 aStartPos.AdjustY(pPortion->GetFirstLineOffset() );
             else
-            {
-                if( IsTopToBottom() )
-                    aStartPos.AdjustX( -(pPortion->GetFirstLineOffset()) );
-                else
-                    aStartPos.AdjustX(pPortion->GetFirstLineOffset() );
-            }
+                aStartPos.AdjustX( -(pPortion->GetFirstLineOffset()) );
 
             Point aParaStart( aStartPos );
 
@@ -3055,31 +3050,33 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                     if (nLine != nLastLine)
                         aStartPos.AdjustY(nVertLineSpacing );
                 }
-                else
+                else if (!IsVertLR())
                 {
-                    if ( IsTopToBottom() )
-                    {
-                        aTmpPos.AdjustY(pLine->GetStartPosX() );
-                        aTmpPos.AdjustX( -(pLine->GetMaxAscent()) );
-                        aStartPos.AdjustX( -(pLine->GetHeight()) );
-                        if (nLine != nLastLine)
-                            aStartPos.AdjustX( -nVertLineSpacing );
-                    }
-                    else
-                    {
-                        aTmpPos.AdjustY( -(pLine->GetStartPosX()) );
-                        aTmpPos.AdjustX(pLine->GetMaxAscent() );
-                        aStartPos.AdjustX(pLine->GetHeight() );
-                        if (nLine != nLastLine)
-                            aStartPos.AdjustX(nVertLineSpacing );
-                    }
+                    aTmpPos.AdjustY( pLine->GetStartPosX() );
+                    aTmpPos.AdjustX( pLine->GetMaxAscent() );
+                    aStartPos.AdjustX( pLine->GetHeight() );
                 }
-
-                if ( ( !IsVertical() && ( aStartPos.Y() > aClipRect.Top() ) )
-                    || ( IsVertical() && IsTopToBottom() && aStartPos.X() < aClipRect.Right() )
-                    || ( IsVertical() && !IsTopToBottom() && aStartPos.X() > aClipRect.Left() ) )
+                else //tb-lr
                 {
-                    bPaintBullet = false;
+                    aTmpPos.AdjustY( pLine->GetStartPosX() );
+                    //从左边开始绘制的话，应该加上Decent，可是好像没有GetMaxDescent()方法，
+                    aTmpPos.AdjustX( pLine->GetHeight() - pLine->GetMaxAscent() );
+                    //aTmpPos.X() -= pLine->GetMaxAscent();原来的代码需要剪掉Ascent表示垂直绘制文本的时候坐标原点是，文本矩形的左上方
+                    //aStartPos.X() -= pLine->GetHeight();
+                    aStartPos.AdjustX( pLine->GetHeight() );
+                    if (nLine != nLastLine)
+                        aStartPos.AdjustX( -nVertLineSpacing );
+                }
+                //此处aStartPos已经是下一行的开始位置(当前行的结束位置)
+                //以下条件式，判断，当前行与aClipRec是否有交集。有，则进入if语句，没有的话跳过
+                //这里只考虑开始位置，tb-rl 从右边开始，tb-lr从左边开始 lr-tb……
+                //结束位置越界的话结束整个函数，
+                bool bTmpVert = IsVertical();
+                bool bTmpVeLR = IsVertLR();
+                if ((!bTmpVert && (aStartPos.Y() > aClipRect.Top()))
+                    || (bTmpVert && !bTmpVeLR && aStartPos.X() < aClipRect.Right())//tb-rl从右边开始绘制的，所以X>Right 就是越界
+                    || (bTmpVert && bTmpVeLR && aStartPos.X() > aClipRect.Left()))//tb-lr从左边开始绘制，所以X<=Left就是越界
+                {                    bPaintBullet = false;
 
                     // Why not just also call when stripping portions? This will give the correct values
                     // and needs no position corrections in OutlinerEditEng::DrawingText which tries to call
@@ -3114,18 +3111,9 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                         }
                         else
                         {
-                            if( IsTopToBottom() )
-                            {
-                                aTmpPos.setY( aStartPos.Y() + nPortionXOffset );
-                                if ( aTmpPos.Y() > aClipRect.Bottom() )
-                                    break;  // No further output in line necessary
-                            }
-                            else
-                            {
-                                aTmpPos.setY( aStartPos.Y() - nPortionXOffset );
-                                if (aTmpPos.Y() < aClipRect.Top())
-                                    break;  // No further output in line necessary
-                            }
+                            aTmpPos.setY( aStartPos.Y() + nPortionXOffset );
+                            if ( aTmpPos.Y() > aClipRect.Bottom() )
+                                break;  // No further output in line necessary
                         }
 
                         switch ( rTextPortion.GetKind() )
@@ -3212,41 +3200,25 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                                                 Point aTopLeftRectPos( aTmpPos );
                                                 if ( !IsVertical() )
                                                 {
-                                                    aTopLeftRectPos.AdjustX(nAdvanceX );
-                                                    aTopLeftRectPos.AdjustY(nAdvanceY );
+                                                    aTopLeftRectPos.AdjustX( nAdvanceX );
+                                                    aTopLeftRectPos.AdjustY( nAdvanceY );
                                                 }
                                                 else
                                                 {
-                                                    if( IsTopToBottom() )
-                                                    {
-                                                        aTopLeftRectPos.AdjustY( -nAdvanceX );
-                                                        aTopLeftRectPos.AdjustX(nAdvanceY );
-                                                    }
-                                                    else
-                                                    {
-                                                        aTopLeftRectPos.AdjustY(nAdvanceX );
-                                                        aTopLeftRectPos.AdjustX( -nAdvanceY );
-                                                    }
+                                                    aTopLeftRectPos.AdjustY( nAdvanceX );
+                                                    aTopLeftRectPos.AdjustX( -nAdvanceY );
                                                 }
 
                                                 Point aBottomRightRectPos( aTopLeftRectPos );
                                                 if ( !IsVertical() )
                                                 {
-                                                    aBottomRightRectPos.AdjustX(2 * nHalfBlankWidth );
-                                                    aBottomRightRectPos.AdjustY(pLine->GetHeight() );
+                                                    aBottomRightRectPos.AdjustX( 2 * nHalfBlankWidth );
+                                                    aBottomRightRectPos.AdjustY( pLine->GetHeight() );
                                                 }
                                                 else
                                                 {
-                                                    if (IsTopToBottom())
-                                                    {
-                                                        aBottomRightRectPos.AdjustX(pLine->GetHeight() );
-                                                        aBottomRightRectPos.AdjustY( -(2 * nHalfBlankWidth) );
-                                                    }
-                                                    else
-                                                    {
-                                                        aBottomRightRectPos.AdjustX( -(pLine->GetHeight()) );
-                                                        aBottomRightRectPos.AdjustY(2 * nHalfBlankWidth );
-                                                    }
+                                                    aBottomRightRectPos.AdjustX( -(pLine->GetHeight()) );
+                                                    aBottomRightRectPos.AdjustY( 2 * nHalfBlankWidth );
                                                 }
 
                                                 pOutDev->Push( PushFlags::FILLCOLOR );
@@ -3274,16 +3246,9 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                                                     Point aSlashPos( aTmpPos );
                                                     const long nAddX = nHalfBlankWidth - aSlashSize.Width() / 2;
                                                     if ( !IsVertical() )
-                                                    {
                                                         aSlashPos.setX( aTopLeftRectPos.X() + nAddX );
-                                                    }
                                                     else
-                                                    {
-                                                        if (IsTopToBottom())
-                                                            aSlashPos.setY( aTopLeftRectPos.Y() + nAddX );
-                                                        else
-                                                            aSlashPos.setY( aTopLeftRectPos.Y() - nAddX );
-                                                    }
+                                                        aSlashPos.setY( aTopLeftRectPos.Y() + nAddX );
 
                                                     aTmpFont.QuickDrawText( pOutDev, aSlashPos, aSlash, 0, 1 );
 
@@ -3334,16 +3299,8 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                                             }
                                             else
                                             {
-                                                if (IsTopToBottom())
-                                                {
-                                                    aTmpPos.AdjustX( -nMaxAscent );
-                                                    aStartPos.AdjustX( -nMaxAscent );
-                                                }
-                                                else
-                                                {
-                                                    aTmpPos.AdjustX(nMaxAscent );
-                                                    aStartPos.AdjustX(nMaxAscent );
-                                                }
+                                                aTmpPos.AdjustX( -nMaxAscent );
+                                                aStartPos.AdjustX( -nMaxAscent );
                                             }
                                         }
                                         std::vector< sal_Int32 >::iterator curIt = itSubLines;
@@ -3493,6 +3450,8 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                                         ImplCalcDigitLang(aTmpFont.GetLanguage()));
 
                                     // StripPortions() data callback
+                                    //删除此行，则不可编辑状态下文本不可见
+
                                     GetEditEnginePtr()->DrawingText( aOutPos, aText, nTextStart, nTextLen, pDXArray,
                                         aTmpFont, n, rTextPortion.GetRightToLeftLevel(),
                                         aWrongSpellVector.size() ? &aWrongSpellVector : nullptr,
@@ -3520,12 +3479,7 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                                             if ( !IsVertical() )
                                                 aOutPos.AdjustY( -nDiff );
                                             else
-                                            {
-                                                if (IsTopToBottom())
-                                                    aOutPos.AdjustX(nDiff );
-                                                else
-                                                    aOutPos.AdjustX( -nDiff );
-                                            }
+                                                aOutPos.AdjustX( nDiff );
                                             aRedLineTmpPos = aOutPos;
                                             aTmpFont.SetEscapement( 0 );
                                         }
@@ -3605,6 +3559,7 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                                             --nTextLen;
 
                                         // output directly
+                                        //删除此行，则编辑状态下文本不可见
                                         aTmpFont.QuickDrawText( pOutDev, aRealOutPos, aText, nTextStart, nTextLen, pDXArray );
 
                                         if ( bDrawFrame )
@@ -3655,10 +3610,7 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                                                 if( !IsVertical() )
                                                     aRedLineTmpPos.AdjustY( -nShift );
                                                 else
-                                                    if (IsTopToBottom())
-                                                        aRedLineTmpPos.AdjustX(nShift );
-                                                    else
-                                                        aRedLineTmpPos.AdjustX( -nShift );
+                                                    aRedLineTmpPos.AdjustX( nShift );
                                             }
                                         }
                                         Color aOldColor( pOutDev->GetLineColor() );
@@ -3773,38 +3725,29 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
                 if ( ( nLine != nLastLine ) && !aStatus.IsOutliner() )
                 {
                     if ( !IsVertical() )
-                        aStartPos.AdjustY(nSBL );
+                        aStartPos.AdjustY( nSBL );
                     else
-                    {
-                        if( IsTopToBottom() )
-                            aStartPos.AdjustX( -nSBL );
-                        else
-                            aStartPos.AdjustX(nSBL );
-                    }
+                        aStartPos.AdjustX( -nSBL );
                 }
 
                 // no more visible actions?
+                //结束位置越界了吗？
                 if ( !IsVertical() && ( aStartPos.Y() >= aClipRect.Bottom() ) )
                     break;
-                else if ( IsVertical() && IsTopToBottom() && ( aStartPos.X() <= aClipRect.Left() ) )
+                else if (IsVertical() && IsVertLR() && ( aStartPos.X() >= aClipRect.Right() ) )
                     break;
-                else if (IsVertical() && !IsTopToBottom() && (aStartPos.X() >= aClipRect.Right()))
+                else if (IsVertical() && !IsVertLR() && (aStartPos.X() <= aClipRect.Left() ) )
                     break;
-            }
+            }//循环行
 
             if ( !aStatus.IsOutliner() )
             {
                 const SvxULSpaceItem& rULItem = pPortion->GetNode()->GetContentAttribs().GetItem( EE_PARA_ULSPACE );
                 long nUL = GetYValue( rULItem.GetLower() );
                 if ( !IsVertical() )
-                    aStartPos.AdjustY(nUL );
+                    aStartPos.AdjustY( nUL );
                 else
-                {
-                    if (IsTopToBottom())
-                        aStartPos.AdjustX( -nUL );
-                    else
-                        aStartPos.AdjustX(nUL );
-                }
+                    aStartPos.AdjustX( -nUL );
             }
 
             // #108052# Safer way for #i108052# and #i118881#: If for the current ParaPortion
@@ -3830,28 +3773,27 @@ void ImpEditEngine::Paint( OutputDevice* pOutDev, tools::Rectangle aClipRect, Po
         }
         else
         {
+            //以下代码需要再观察一下
             if ( !IsVertical() )
-                aStartPos.AdjustY(nParaHeight );
+                aStartPos.AdjustY( nParaHeight );
+            else if (!IsVertLR())
+                aStartPos.AdjustX( -nParaHeight );
             else
-            {
-                if (IsTopToBottom())
-                    aStartPos.AdjustX( -nParaHeight );
-                else
-                    aStartPos.AdjustX(nParaHeight );
-            }
+                aStartPos.AdjustX( nParaHeight );
         }
 
         if ( pPDFExtOutDevData )
             pPDFExtOutDevData->EndStructureElement();
 
         // no more visible actions?
+        //结束位置越界了吗？
         if ( !IsVertical() && ( aStartPos.Y() > aClipRect.Bottom() ) )
             break;
-        if ( IsVertical() && IsTopToBottom() && ( aStartPos.X() < aClipRect.Left() ) )
+        if (IsVertical() && IsVertLR() && ( aStartPos.X() > aClipRect.Right()))
             break;
-        if (IsVertical() && !IsTopToBottom() && ( aStartPos.X() > aClipRect.Right() ) )
+        if (IsVertical() && !IsVertLR() && ( aStartPos.X() < aClipRect.Left()))
             break;
-    }
+    }//循环portion
     if ( aStatus.DoRestoreFont() )
         pOutDev->SetFont( aOldFont );
 }
@@ -3864,7 +3806,7 @@ void ImpEditEngine::Paint( ImpEditView* pView, const tools::Rectangle& rRect, Ou
         return;
 
     // Intersection of paint area and output area.
-    tools::Rectangle aClipRect( pView->GetOutputArea() );
+    tools::Rectangle aClipRect(rRect/*pView->GetOutputArea()*/);
     aClipRect.Intersection( rRect );
 
     OutputDevice* pTarget = pTargetDevice ? pTargetDevice : pView->GetWindow();
@@ -3875,23 +3817,174 @@ void ImpEditEngine::Paint( ImpEditView* pView, const tools::Rectangle& rRect, Ou
         aStartPos = pView->GetOutputArea().TopLeft();
         aStartPos.AdjustX( -(pView->GetVisDocLeft()) );
         aStartPos.AdjustY( -(pView->GetVisDocTop()) );
+/*
+        tools::Rectangle aClipRecPixel( pTarget->LogicToPixel( aClipRect ) );
+        if ( !IsVertical() )
+        {
+            // etwas mehr, falls abgerundet!
+            aClipRecPixel.Right() += 1;
+            aClipRecPixel.Bottom() += 1;
+        }
+        else
+        {
+            aClipRecPixel.Left() -= 1;
+            aClipRecPixel.Bottom() += 1;
+        }
+
+        // If aClipRecPixel > XXXX, then invalidate?!
+
+        VirtualDevice* pVDev = GetVirtualDevice( pTarget->GetMapMode(), pTarget->GetDrawMode() );
+        pVDev->SetDigitLanguage( GetRefDevice()->GetDigitLanguage() );
+
+        // Set the appropriate background color according to text criteria
+
+        {
+
+            Color aBackgroundColor( pView->GetBackgroundColor() );
+            // #i47161# Check if text is visible on background
+            SvxFont aTmpFont;
+            ContentNode* pNode = GetEditDoc().GetObject( 0 );
+            SeekCursor( pNode, 1, aTmpFont );
+
+
+            Color aFontColor( aTmpFont.GetColor() );
+            if( (aFontColor == COL_AUTO) || IsForceAutoColor() )
+                aFontColor = GetAutoColor();
+
+            // #i69346# check for reverse color of input method attribute
+            if( mpIMEInfos && (mpIMEInfos->aPos.GetNode() == pNode &&
+                mpIMEInfos->pAttribs))
+            {
+                sal_uInt16 nAttr = mpIMEInfos->pAttribs[ 0 ];
+                if ( nAttr & EXTTEXTINPUT_ATTR_HIGHLIGHT )
+                {
+                    const StyleSettings& rStyleSettings = Application::GetSettings().GetStyleSettings();
+                    aFontColor = rStyleSettings.GetHighlightColor() ;
+                }
+            }
+
+            sal_uInt8 nColorDiff = aFontColor.GetColorError( aBackgroundColor );
+            if( nColorDiff < 8 )
+                aBackgroundColor = aFontColor.IsDark() ? COL_WHITE : COL_BLACK;
+
+            pVDev->SetBackground( aBackgroundColor );
+        }
+
+        bool bVDevValid = true;
+        Size aOutSz( pVDev->GetOutputSizePixel() );
+        if ( (  aOutSz.Width() < aClipRecPixel.GetWidth() ) ||
+             (  aOutSz.Height() < aClipRecPixel.GetHeight() ) )
+        {
+            bVDevValid = pVDev->SetOutputSizePixel( aClipRecPixel.GetSize() );
+        }
+        else
+        {
+            // The VirtDev can become very big during a Resize =>
+            // eventually make it smaller!
+            if ( ( aOutSz.Height() > ( aClipRecPixel.GetHeight() + RESDIFF ) ) ||
+                 ( aOutSz.Width() > ( aClipRecPixel.GetWidth() + RESDIFF ) ) )
+            {
+                bVDevValid = pVDev->SetOutputSizePixel( aClipRecPixel.GetSize() );
+            }
+            else
+            {
+                pVDev->Erase();
+            }
+        }
+        DBG_ASSERT( bVDevValid, "VDef could not be enlarged!" );
+        if ( !bVDevValid )
+        {
+            Paint( pView, rRect, 0, false );
+            return;
+        }
+
+        // PaintRect for VDev not with aligned size,
+        // Otherwise, the line below must also be printed out:
+        tools::Rectangle aTmpRect( Point( 0, 0 ), aClipRect.GetSize() );
+
+        aClipRect = pTarget->PixelToLogic( aClipRecPixel );
+        Point aStartPos;
+        if ( !IsVertical() )
+        {
+            aStartPos = aClipRect.TopLeft();
+            aStartPos = pView->GetDocPos( aStartPos );
+            aStartPos.X() *= (-1);
+            aStartPos.Y() *= (-1);
+        }
+        else if (IsVertLR())
+        {
+            aStartPos = aClipRect.TopLeft();
+            Point aDocPos( pView->GetDocPos( aStartPos ) );
+            aStartPos.X() = -aDocPos.Y();
+            aStartPos.Y() = -aDocPos.X();
+        }
+        else
+        {
+            aStartPos = aClipRect.TopRight();
+            Point aDocPos(pView->GetDocPos(aStartPos));
+            aStartPos.X() = aClipRect.GetSize().Width() + aDocPos.Y();
+            aStartPos.Y() = -aDocPos.X();
+        }
+        //aStartPos以aTmpRec的左上角为坐标原点
+
+        Paint( pVDev, aTmpRect, aStartPos );
+
+        bool bClipRegion = false;
+        vcl::Region aOldRegion;
+        MapMode aOldMapMode;
+        if ( GetTextRanger() )
+        {
+            // Some problems here with push/pop, why?!
+//          pTarget->Push( PushFlags::CLIPREGION|PushFlags::MAPMODE );
+            bClipRegion = pTarget->IsClipRegion();
+            aOldRegion = pTarget->GetClipRegion();
+            // How do I get the polygon to the right place??
+            // The polygon is based on the view, not the Window
+            // => reset origin...
+            aOldMapMode = pTarget->GetMapMode();
+            Point aOrigin = aOldMapMode.GetOrigin();
+            Point aViewPos = pView->GetOutputArea().TopLeft();
+            aOrigin.Move( aViewPos.X(), aViewPos.Y() );
+            aClipRect.Move( -aViewPos.X(), -aViewPos.Y() );
+            MapMode aNewMapMode( aOldMapMode );
+            aNewMapMode.SetOrigin( aOrigin );
+            pTarget->SetMapMode( aNewMapMode );
+            pTarget->SetClipRegion( vcl::Region( GetTextRanger()->GetPolyPolygon() ) );
+        }
+
+        pTarget->DrawOutDev( aClipRect.TopLeft(), aClipRect.GetSize(),
+                            Point(0,0), aClipRect.GetSize(), *pVDev );
+
+        if ( GetTextRanger() )
+        {
+//          pTarget->Pop();
+            if ( bClipRegion )
+                pTarget->SetClipRegion( aOldRegion );
+            else
+                pTarget->SetClipRegion();
+            pTarget->SetMapMode( aOldMapMode );
+        }
+        pView->DrawSelection(pView->GetEditSelection(), 0, pTarget);
+*/
     }
     else
     {
-        if( IsTopToBottom() )
+        //by aron 横向与tb-lr向的起始位置应该一样
+        if (IsVertical() && !IsVertLR())
         {
+            //tb-rl
             aStartPos = pView->GetOutputArea().TopRight();
-            aStartPos.AdjustX(pView->GetVisDocTop() );
+            aStartPos.AdjustX( pView->GetVisDocTop() );
             aStartPos.AdjustY( -(pView->GetVisDocLeft()) );
         }
         else
         {
-            aStartPos = pView->GetOutputArea().BottomLeft();
-            aStartPos.AdjustX( -(pView->GetVisDocTop()) );
-            aStartPos.AdjustY(pView->GetVisDocLeft() );
+            //lr-tb tb-lr
+            aStartPos = pView->GetOutputArea().TopLeft();
+            aStartPos.AdjustX( -(pView->GetVisDocLeft()) );
+            aStartPos.AdjustY( -(pView->GetVisDocTop()) );
         }
     }
-
     // If Doc-width < Output Area,Width and not wrapped fields,
     // the fields usually protrude if > line.
     // (Not at the top, since there the Doc-width from formatting is already
@@ -4183,13 +4276,8 @@ long ImpEditEngine::CalcVertLineSpacing(Point& rStartPos) const
         return 0;
 
     if (IsVertical())
-    {
-        if( IsTopToBottom() )
-            // Shift the text to the right for the asian layout mode.
-            rStartPos.AdjustX(nTotalSpace );
-        else
-            rStartPos.AdjustX( -nTotalSpace );
-    }
+        // Shift the text to the right for the asian layout mode.
+        rStartPos.AdjustX(nTotalSpace );
 
     return nTotalSpace / (nTotalLineCount-1);
 }

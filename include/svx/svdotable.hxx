@@ -244,8 +244,12 @@ public:
     virtual void NbcReformatText() override;
     virtual void ReformatText() override;
 
+/*
     virtual bool IsVerticalWriting() const override;
     virtual void SetVerticalWriting(bool bVertical) override;
+*/
+    virtual bool IsVerticalWriting(bool *bVertLR = 0) const override;
+    virtual void SetVerticalWriting(bool bVertical, bool bVertLR = false) override;
 
     css::text::WritingMode GetWritingMode() const;
 

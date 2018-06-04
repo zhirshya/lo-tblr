@@ -808,7 +808,6 @@ void SfxTabDialog::SavePosAndId()
     aDlgOpt.SetPageID(m_pTabCtrl->GetPageName(m_pTabCtrl->GetCurPageId()));
 }
 
-
 short SfxTabDialog::Ok()
 
 /*  [Description]
