@@ -86,7 +86,6 @@ $(eval $(call gb_Module_add_slowcheck_targets,sc, \
 	CppunitTest_sc_spreadsheet_functions_test \
 	CppunitTest_sc_statistical_functions_test \
 	CppunitTest_sc_text_functions_test \
-	CppunitTest_sc_condformats \
 ))
 endif
 
@@ -186,6 +185,12 @@ $(eval $(call gb_Module_add_uicheck_targets,sc,\
 	UITest_autofilter \
 	UITest_search_replace \
 	UITest_calc_tests \
+	UITest_calc_tests2 \
+	UITest_calc_tests3 \
+	UITest_calc_tests4 \
+	UITest_statistics \
+	UITest_solver \
+	UITest_goalSeek \
 ))
 endif
 
