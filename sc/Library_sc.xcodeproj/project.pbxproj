@@ -1,0 +1,5398 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0001141 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00015eb;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0001142;
+   productRefGroup = X0001145;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0001147;
+  };
+  X0001142 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0001143 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0001146 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0001147 = {
+   buildConfigurationList = X00015ec;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0001144;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0001148 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/attarray.cxx";
+  };
+  X0001149 = {
+   fileRef = X0001148;
+   isa = PBXBuildFile;
+  };
+  X000114a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/attrib.cxx";
+  };
+  X000114b = {
+   fileRef = X000114a;
+   isa = PBXBuildFile;
+  };
+  X000114c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/autonamecache.cxx";
+  };
+  X000114d = {
+   fileRef = X000114c;
+   isa = PBXBuildFile;
+  };
+  X000114e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/bcaslot.cxx";
+  };
+  X000114f = {
+   fileRef = X000114e;
+   isa = PBXBuildFile;
+  };
+  X0001150 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/bigrange.cxx";
+  };
+  X0001151 = {
+   fileRef = X0001150;
+   isa = PBXBuildFile;
+  };
+  X0001152 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/celltextattr.cxx";
+  };
+  X0001153 = {
+   fileRef = X0001152;
+   isa = PBXBuildFile;
+  };
+  X0001154 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/cellvalue.cxx";
+  };
+  X0001155 = {
+   fileRef = X0001154;
+   isa = PBXBuildFile;
+  };
+  X0001156 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/cellvalues.cxx";
+  };
+  X0001157 = {
+   fileRef = X0001156;
+   isa = PBXBuildFile;
+  };
+  X0001158 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/clipcontext.cxx";
+  };
+  X0001159 = {
+   fileRef = X0001158;
+   isa = PBXBuildFile;
+  };
+  X000115a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/clipparam.cxx";
+  };
+  X000115b = {
+   fileRef = X000115a;
+   isa = PBXBuildFile;
+  };
+  X000115c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/colcontainer.cxx";
+  };
+  X000115d = {
+   fileRef = X000115c;
+   isa = PBXBuildFile;
+  };
+  X000115e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/column.cxx";
+  };
+  X000115f = {
+   fileRef = X000115e;
+   isa = PBXBuildFile;
+  };
+  X0001160 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/column2.cxx";
+  };
+  X0001161 = {
+   fileRef = X0001160;
+   isa = PBXBuildFile;
+  };
+  X0001162 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/column3.cxx";
+  };
+  X0001163 = {
+   fileRef = X0001162;
+   isa = PBXBuildFile;
+  };
+  X0001164 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/column4.cxx";
+  };
+  X0001165 = {
+   fileRef = X0001164;
+   isa = PBXBuildFile;
+  };
+  X0001166 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/columniterator.cxx";
+  };
+  X0001167 = {
+   fileRef = X0001166;
+   isa = PBXBuildFile;
+  };
+  X0001168 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/columnset.cxx";
+  };
+  X0001169 = {
+   fileRef = X0001168;
+   isa = PBXBuildFile;
+  };
+  X000116a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/columnspanset.cxx";
+  };
+  X000116b = {
+   fileRef = X000116a;
+   isa = PBXBuildFile;
+  };
+  X000116c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/compressedarray.cxx";
+  };
+  X000116d = {
+   fileRef = X000116c;
+   isa = PBXBuildFile;
+  };
+  X000116e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/colorscale.cxx";
+  };
+  X000116f = {
+   fileRef = X000116e;
+   isa = PBXBuildFile;
+  };
+  X0001170 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/conditio.cxx";
+  };
+  X0001171 = {
+   fileRef = X0001170;
+   isa = PBXBuildFile;
+  };
+  X0001172 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dbdocutl.cxx";
+  };
+  X0001173 = {
+   fileRef = X0001172;
+   isa = PBXBuildFile;
+  };
+  X0001174 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dociter.cxx";
+  };
+  X0001175 = {
+   fileRef = X0001174;
+   isa = PBXBuildFile;
+  };
+  X0001176 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/docparam.cxx";
+  };
+  X0001177 = {
+   fileRef = X0001176;
+   isa = PBXBuildFile;
+  };
+  X0001178 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/docpool.cxx";
+  };
+  X0001179 = {
+   fileRef = X0001178;
+   isa = PBXBuildFile;
+  };
+  X000117a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documen2.cxx";
+  };
+  X000117b = {
+   fileRef = X000117a;
+   isa = PBXBuildFile;
+  };
+  X000117c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documen3.cxx";
+  };
+  X000117d = {
+   fileRef = X000117c;
+   isa = PBXBuildFile;
+  };
+  X000117e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documen4.cxx";
+  };
+  X000117f = {
+   fileRef = X000117e;
+   isa = PBXBuildFile;
+  };
+  X0001180 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documen5.cxx";
+  };
+  X0001181 = {
+   fileRef = X0001180;
+   isa = PBXBuildFile;
+  };
+  X0001182 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documen6.cxx";
+  };
+  X0001183 = {
+   fileRef = X0001182;
+   isa = PBXBuildFile;
+  };
+  X0001184 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documen7.cxx";
+  };
+  X0001185 = {
+   fileRef = X0001184;
+   isa = PBXBuildFile;
+  };
+  X0001186 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documen8.cxx";
+  };
+  X0001187 = {
+   fileRef = X0001186;
+   isa = PBXBuildFile;
+  };
+  X0001188 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documen9.cxx";
+  };
+  X0001189 = {
+   fileRef = X0001188;
+   isa = PBXBuildFile;
+  };
+  X000118a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/document.cxx";
+  };
+  X000118b = {
+   fileRef = X000118a;
+   isa = PBXBuildFile;
+  };
+  X000118c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/document10.cxx";
+  };
+  X000118d = {
+   fileRef = X000118c;
+   isa = PBXBuildFile;
+  };
+  X000118e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documentimport.cxx";
+  };
+  X000118f = {
+   fileRef = X000118e;
+   isa = PBXBuildFile;
+  };
+  X0001190 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/documentstreamaccess.cxx";
+  };
+  X0001191 = {
+   fileRef = X0001190;
+   isa = PBXBuildFile;
+  };
+  X0001192 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpdimsave.cxx";
+  };
+  X0001193 = {
+   fileRef = X0001192;
+   isa = PBXBuildFile;
+  };
+  X0001194 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpfilteredcache.cxx";
+  };
+  X0001195 = {
+   fileRef = X0001194;
+   isa = PBXBuildFile;
+  };
+  X0001196 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpglobal.cxx";
+  };
+  X0001197 = {
+   fileRef = X0001196;
+   isa = PBXBuildFile;
+  };
+  X0001198 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpgroup.cxx";
+  };
+  X0001199 = {
+   fileRef = X0001198;
+   isa = PBXBuildFile;
+  };
+  X000119a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpitemdata.cxx";
+  };
+  X000119b = {
+   fileRef = X000119a;
+   isa = PBXBuildFile;
+  };
+  X000119c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpnumgroupinfo.cxx";
+  };
+  X000119d = {
+   fileRef = X000119c;
+   isa = PBXBuildFile;
+  };
+  X000119e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpobject.cxx";
+  };
+  X000119f = {
+   fileRef = X000119e;
+   isa = PBXBuildFile;
+  };
+  X00011a0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpoutput.cxx";
+  };
+  X00011a1 = {
+   fileRef = X00011a0;
+   isa = PBXBuildFile;
+  };
+  X00011a2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpoutputgeometry.cxx";
+  };
+  X00011a3 = {
+   fileRef = X00011a2;
+   isa = PBXBuildFile;
+  };
+  X00011a4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpresfilter.cxx";
+  };
+  X00011a5 = {
+   fileRef = X00011a4;
+   isa = PBXBuildFile;
+  };
+  X00011a6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpsave.cxx";
+  };
+  X00011a7 = {
+   fileRef = X00011a6;
+   isa = PBXBuildFile;
+  };
+  X00011a8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpsdbtab.cxx";
+  };
+  X00011a9 = {
+   fileRef = X00011a8;
+   isa = PBXBuildFile;
+  };
+  X00011aa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpshttab.cxx";
+  };
+  X00011ab = {
+   fileRef = X00011aa;
+   isa = PBXBuildFile;
+  };
+  X00011ac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dptabdat.cxx";
+  };
+  X00011ad = {
+   fileRef = X00011ac;
+   isa = PBXBuildFile;
+  };
+  X00011ae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dpcache.cxx";
+  };
+  X00011af = {
+   fileRef = X00011ae;
+   isa = PBXBuildFile;
+  };
+  X00011b0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dptabres.cxx";
+  };
+  X00011b1 = {
+   fileRef = X00011b0;
+   isa = PBXBuildFile;
+  };
+  X00011b2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dptabsrc.cxx";
+  };
+  X00011b3 = {
+   fileRef = X00011b2;
+   isa = PBXBuildFile;
+  };
+  X00011b4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/dputil.cxx";
+  };
+  X00011b5 = {
+   fileRef = X00011b4;
+   isa = PBXBuildFile;
+  };
+  X00011b6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/drawpage.cxx";
+  };
+  X00011b7 = {
+   fileRef = X00011b6;
+   isa = PBXBuildFile;
+  };
+  X00011b8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/drwlayer.cxx";
+  };
+  X00011b9 = {
+   fileRef = X00011b8;
+   isa = PBXBuildFile;
+  };
+  X00011ba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/edittextiterator.cxx";
+  };
+  X00011bb = {
+   fileRef = X00011ba;
+   isa = PBXBuildFile;
+  };
+  X00011bc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/fillinfo.cxx";
+  };
+  X00011bd = {
+   fileRef = X00011bc;
+   isa = PBXBuildFile;
+  };
+  X00011be = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/formulacell.cxx";
+  };
+  X00011bf = {
+   fileRef = X00011be;
+   isa = PBXBuildFile;
+  };
+  X00011c0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/formulaiter.cxx";
+  };
+  X00011c1 = {
+   fileRef = X00011c0;
+   isa = PBXBuildFile;
+  };
+  X00011c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/funcdesc.cxx";
+  };
+  X00011c3 = {
+   fileRef = X00011c2;
+   isa = PBXBuildFile;
+  };
+  X00011c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/global.cxx";
+  };
+  X00011c5 = {
+   fileRef = X00011c4;
+   isa = PBXBuildFile;
+  };
+  X00011c6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/global2.cxx";
+  };
+  X00011c7 = {
+   fileRef = X00011c6;
+   isa = PBXBuildFile;
+  };
+  X00011c8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/globalx.cxx";
+  };
+  X00011c9 = {
+   fileRef = X00011c8;
+   isa = PBXBuildFile;
+  };
+  X00011ca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/grouptokenconverter.cxx";
+  };
+  X00011cb = {
+   fileRef = X00011ca;
+   isa = PBXBuildFile;
+  };
+  X00011cc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/listenercontext.cxx";
+  };
+  X00011cd = {
+   fileRef = X00011cc;
+   isa = PBXBuildFile;
+  };
+  X00011ce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/markarr.cxx";
+  };
+  X00011cf = {
+   fileRef = X00011ce;
+   isa = PBXBuildFile;
+  };
+  X00011d0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/markdata.cxx";
+  };
+  X00011d1 = {
+   fileRef = X00011d0;
+   isa = PBXBuildFile;
+  };
+  X00011d2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/markmulti.cxx";
+  };
+  X00011d3 = {
+   fileRef = X00011d2;
+   isa = PBXBuildFile;
+  };
+  X00011d4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/mtvcellfunc.cxx";
+  };
+  X00011d5 = {
+   fileRef = X00011d4;
+   isa = PBXBuildFile;
+  };
+  X00011d6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/mtvelements.cxx";
+  };
+  X00011d7 = {
+   fileRef = X00011d6;
+   isa = PBXBuildFile;
+  };
+  X00011d8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/olinetab.cxx";
+  };
+  X00011d9 = {
+   fileRef = X00011d8;
+   isa = PBXBuildFile;
+  };
+  X00011da = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/pagepar.cxx";
+  };
+  X00011db = {
+   fileRef = X00011da;
+   isa = PBXBuildFile;
+  };
+  X00011dc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/patattr.cxx";
+  };
+  X00011dd = {
+   fileRef = X00011dc;
+   isa = PBXBuildFile;
+  };
+  X00011de = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/pivot2.cxx";
+  };
+  X00011df = {
+   fileRef = X00011de;
+   isa = PBXBuildFile;
+  };
+  X00011e0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/poolhelp.cxx";
+  };
+  X00011e1 = {
+   fileRef = X00011e0;
+   isa = PBXBuildFile;
+  };
+  X00011e2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/postit.cxx";
+  };
+  X00011e3 = {
+   fileRef = X00011e2;
+   isa = PBXBuildFile;
+  };
+  X00011e4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/refupdatecontext.cxx";
+  };
+  X00011e5 = {
+   fileRef = X00011e4;
+   isa = PBXBuildFile;
+  };
+  X00011e6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/rowheightcontext.cxx";
+  };
+  X00011e7 = {
+   fileRef = X00011e6;
+   isa = PBXBuildFile;
+  };
+  X00011e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/segmenttree.cxx";
+  };
+  X00011e9 = {
+   fileRef = X00011e8;
+   isa = PBXBuildFile;
+  };
+  X00011ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/sheetevents.cxx";
+  };
+  X00011eb = {
+   fileRef = X00011ea;
+   isa = PBXBuildFile;
+  };
+  X00011ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/simpleformulacalc.cxx";
+  };
+  X00011ed = {
+   fileRef = X00011ec;
+   isa = PBXBuildFile;
+  };
+  X00011ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/sortparam.cxx";
+  };
+  X00011ef = {
+   fileRef = X00011ee;
+   isa = PBXBuildFile;
+  };
+  X00011f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/stlpool.cxx";
+  };
+  X00011f1 = {
+   fileRef = X00011f0;
+   isa = PBXBuildFile;
+  };
+  X00011f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/stlsheet.cxx";
+  };
+  X00011f3 = {
+   fileRef = X00011f2;
+   isa = PBXBuildFile;
+  };
+  X00011f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/subtotalparam.cxx";
+  };
+  X00011f5 = {
+   fileRef = X00011f4;
+   isa = PBXBuildFile;
+  };
+  X00011f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/tabbgcolor.cxx";
+  };
+  X00011f7 = {
+   fileRef = X00011f6;
+   isa = PBXBuildFile;
+  };
+  X00011f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/table1.cxx";
+  };
+  X00011f9 = {
+   fileRef = X00011f8;
+   isa = PBXBuildFile;
+  };
+  X00011fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/table2.cxx";
+  };
+  X00011fb = {
+   fileRef = X00011fa;
+   isa = PBXBuildFile;
+  };
+  X00011fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/table3.cxx";
+  };
+  X00011fd = {
+   fileRef = X00011fc;
+   isa = PBXBuildFile;
+  };
+  X00011fe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/table4.cxx";
+  };
+  X00011ff = {
+   fileRef = X00011fe;
+   isa = PBXBuildFile;
+  };
+  X0001200 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/table5.cxx";
+  };
+  X0001201 = {
+   fileRef = X0001200;
+   isa = PBXBuildFile;
+  };
+  X0001202 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/table6.cxx";
+  };
+  X0001203 = {
+   fileRef = X0001202;
+   isa = PBXBuildFile;
+  };
+  X0001204 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/table7.cxx";
+  };
+  X0001205 = {
+   fileRef = X0001204;
+   isa = PBXBuildFile;
+  };
+  X0001206 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/tabprotection.cxx";
+  };
+  X0001207 = {
+   fileRef = X0001206;
+   isa = PBXBuildFile;
+  };
+  X0001208 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/types.cxx";
+  };
+  X0001209 = {
+   fileRef = X0001208;
+   isa = PBXBuildFile;
+  };
+  X000120a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/userdat.cxx";
+  };
+  X000120b = {
+   fileRef = X000120a;
+   isa = PBXBuildFile;
+  };
+  X000120c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/data/validat.cxx";
+  };
+  X000120d = {
+   fileRef = X000120c;
+   isa = PBXBuildFile;
+  };
+  X000120e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/addincfg.cxx";
+  };
+  X000120f = {
+   fileRef = X000120e;
+   isa = PBXBuildFile;
+  };
+  X0001210 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/addincol.cxx";
+  };
+  X0001211 = {
+   fileRef = X0001210;
+   isa = PBXBuildFile;
+  };
+  X0001212 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/addinhelpid.cxx";
+  };
+  X0001213 = {
+   fileRef = X0001212;
+   isa = PBXBuildFile;
+  };
+  X0001214 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/addinlis.cxx";
+  };
+  X0001215 = {
+   fileRef = X0001214;
+   isa = PBXBuildFile;
+  };
+  X0001216 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/address.cxx";
+  };
+  X0001217 = {
+   fileRef = X0001216;
+   isa = PBXBuildFile;
+  };
+  X0001218 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/adiasync.cxx";
+  };
+  X0001219 = {
+   fileRef = X0001218;
+   isa = PBXBuildFile;
+  };
+  X000121a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/appoptio.cxx";
+  };
+  X000121b = {
+   fileRef = X000121a;
+   isa = PBXBuildFile;
+  };
+  X000121c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/autoform.cxx";
+  };
+  X000121d = {
+   fileRef = X000121c;
+   isa = PBXBuildFile;
+  };
+  X000121e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/bulkdatahint.cxx";
+  };
+  X000121f = {
+   fileRef = X000121e;
+   isa = PBXBuildFile;
+  };
+  X0001220 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/brdcst.cxx";
+  };
+  X0001221 = {
+   fileRef = X0001220;
+   isa = PBXBuildFile;
+  };
+  X0001222 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/calcconfig.cxx";
+  };
+  X0001223 = {
+   fileRef = X0001222;
+   isa = PBXBuildFile;
+  };
+  X0001224 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/callform.cxx";
+  };
+  X0001225 = {
+   fileRef = X0001224;
+   isa = PBXBuildFile;
+  };
+  X0001226 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/cellform.cxx";
+  };
+  X0001227 = {
+   fileRef = X0001226;
+   isa = PBXBuildFile;
+  };
+  X0001228 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/cellkeytranslator.cxx";
+  };
+  X0001229 = {
+   fileRef = X0001228;
+   isa = PBXBuildFile;
+  };
+  X000122a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/chartarr.cxx";
+  };
+  X000122b = {
+   fileRef = X000122a;
+   isa = PBXBuildFile;
+  };
+  X000122c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/charthelper.cxx";
+  };
+  X000122d = {
+   fileRef = X000122c;
+   isa = PBXBuildFile;
+  };
+  X000122e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/chartlis.cxx";
+  };
+  X000122f = {
+   fileRef = X000122e;
+   isa = PBXBuildFile;
+  };
+  X0001230 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/chartlock.cxx";
+  };
+  X0001231 = {
+   fileRef = X0001230;
+   isa = PBXBuildFile;
+  };
+  X0001232 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/chartpos.cxx";
+  };
+  X0001233 = {
+   fileRef = X0001232;
+   isa = PBXBuildFile;
+  };
+  X0001234 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/chgtrack.cxx";
+  };
+  X0001235 = {
+   fileRef = X0001234;
+   isa = PBXBuildFile;
+  };
+  X0001236 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/chgviset.cxx";
+  };
+  X0001237 = {
+   fileRef = X0001236;
+   isa = PBXBuildFile;
+  };
+  X0001238 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/compare.cxx";
+  };
+  X0001239 = {
+   fileRef = X0001238;
+   isa = PBXBuildFile;
+  };
+  X000123a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/compiler.cxx";
+  };
+  X000123b = {
+   fileRef = X000123a;
+   isa = PBXBuildFile;
+  };
+  X000123c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/consoli.cxx";
+  };
+  X000123d = {
+   fileRef = X000123c;
+   isa = PBXBuildFile;
+  };
+  X000123e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/dbdata.cxx";
+  };
+  X000123f = {
+   fileRef = X000123e;
+   isa = PBXBuildFile;
+  };
+  X0001240 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/ddelink.cxx";
+  };
+  X0001241 = {
+   fileRef = X0001240;
+   isa = PBXBuildFile;
+  };
+  X0001242 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/defaultsoptions.cxx";
+  };
+  X0001243 = {
+   fileRef = X0001242;
+   isa = PBXBuildFile;
+  };
+  X0001244 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/detdata.cxx";
+  };
+  X0001245 = {
+   fileRef = X0001244;
+   isa = PBXBuildFile;
+  };
+  X0001246 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/detfunc.cxx";
+  };
+  X0001247 = {
+   fileRef = X0001246;
+   isa = PBXBuildFile;
+  };
+  X0001248 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/docoptio.cxx";
+  };
+  X0001249 = {
+   fileRef = X0001248;
+   isa = PBXBuildFile;
+  };
+  X000124a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/doubleref.cxx";
+  };
+  X000124b = {
+   fileRef = X000124a;
+   isa = PBXBuildFile;
+  };
+  X000124c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/editdataarray.cxx";
+  };
+  X000124d = {
+   fileRef = X000124c;
+   isa = PBXBuildFile;
+  };
+  X000124e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/editutil.cxx";
+  };
+  X000124f = {
+   fileRef = X000124e;
+   isa = PBXBuildFile;
+  };
+  X0001250 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/filtopt.cxx";
+  };
+  X0001251 = {
+   fileRef = X0001250;
+   isa = PBXBuildFile;
+  };
+  X0001252 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/formulagroup.cxx";
+  };
+  X0001253 = {
+   fileRef = X0001252;
+   isa = PBXBuildFile;
+  };
+  X0001254 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/formulaopt.cxx";
+  };
+  X0001255 = {
+   fileRef = X0001254;
+   isa = PBXBuildFile;
+  };
+  X0001256 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/formulaparserpool.cxx";
+  };
+  X0001257 = {
+   fileRef = X0001256;
+   isa = PBXBuildFile;
+  };
+  X0001258 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/formularesult.cxx";
+  };
+  X0001259 = {
+   fileRef = X0001258;
+   isa = PBXBuildFile;
+  };
+  X000125a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/grouparealistener.cxx";
+  };
+  X000125b = {
+   fileRef = X000125a;
+   isa = PBXBuildFile;
+  };
+  X000125c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/hints.cxx";
+  };
+  X000125d = {
+   fileRef = X000125c;
+   isa = PBXBuildFile;
+  };
+  X000125e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/inputopt.cxx";
+  };
+  X000125f = {
+   fileRef = X000125e;
+   isa = PBXBuildFile;
+  };
+  X0001260 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/interpr1.cxx";
+  };
+  X0001261 = {
+   fileRef = X0001260;
+   isa = PBXBuildFile;
+  };
+  X0001262 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/interpr2.cxx";
+  };
+  X0001263 = {
+   fileRef = X0001262;
+   isa = PBXBuildFile;
+  };
+  X0001264 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/interpr3.cxx";
+  };
+  X0001265 = {
+   fileRef = X0001264;
+   isa = PBXBuildFile;
+  };
+  X0001266 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/interpr4.cxx";
+  };
+  X0001267 = {
+   fileRef = X0001266;
+   isa = PBXBuildFile;
+  };
+  X0001268 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/interpr5.cxx";
+  };
+  X0001269 = {
+   fileRef = X0001268;
+   isa = PBXBuildFile;
+  };
+  X000126a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/interpr6.cxx";
+  };
+  X000126b = {
+   fileRef = X000126a;
+   isa = PBXBuildFile;
+  };
+  X000126c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/interpr7.cxx";
+  };
+  X000126d = {
+   fileRef = X000126c;
+   isa = PBXBuildFile;
+  };
+  X000126e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/interpr8.cxx";
+  };
+  X000126f = {
+   fileRef = X000126e;
+   isa = PBXBuildFile;
+  };
+  X0001270 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/jumpmatrix.cxx";
+  };
+  X0001271 = {
+   fileRef = X0001270;
+   isa = PBXBuildFile;
+  };
+  X0001272 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/listenerquery.cxx";
+  };
+  X0001273 = {
+   fileRef = X0001272;
+   isa = PBXBuildFile;
+  };
+  X0001274 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/lookupcache.cxx";
+  };
+  X0001275 = {
+   fileRef = X0001274;
+   isa = PBXBuildFile;
+  };
+  X0001276 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/matrixoperators.cxx";
+  };
+  X0001277 = {
+   fileRef = X0001276;
+   isa = PBXBuildFile;
+  };
+  X0001278 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/navicfg.cxx";
+  };
+  X0001279 = {
+   fileRef = X0001278;
+   isa = PBXBuildFile;
+  };
+  X000127a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/numformat.cxx";
+  };
+  X000127b = {
+   fileRef = X000127a;
+   isa = PBXBuildFile;
+  };
+  X000127c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/odffmap.cxx";
+  };
+  X000127d = {
+   fileRef = X000127c;
+   isa = PBXBuildFile;
+  };
+  X000127e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/optutil.cxx";
+  };
+  X000127f = {
+   fileRef = X000127e;
+   isa = PBXBuildFile;
+  };
+  X0001280 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/orcusxml.cxx";
+  };
+  X0001281 = {
+   fileRef = X0001280;
+   isa = PBXBuildFile;
+  };
+  X0001282 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/parclass.cxx";
+  };
+  X0001283 = {
+   fileRef = X0001282;
+   isa = PBXBuildFile;
+  };
+  X0001284 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/printopt.cxx";
+  };
+  X0001285 = {
+   fileRef = X0001284;
+   isa = PBXBuildFile;
+  };
+  X0001286 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/prnsave.cxx";
+  };
+  X0001287 = {
+   fileRef = X0001286;
+   isa = PBXBuildFile;
+  };
+  X0001288 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/progress.cxx";
+  };
+  X0001289 = {
+   fileRef = X0001288;
+   isa = PBXBuildFile;
+  };
+  X000128a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/queryentry.cxx";
+  };
+  X000128b = {
+   fileRef = X000128a;
+   isa = PBXBuildFile;
+  };
+  X000128c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/queryparam.cxx";
+  };
+  X000128d = {
+   fileRef = X000128c;
+   isa = PBXBuildFile;
+  };
+  X000128e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/rangelst.cxx";
+  };
+  X000128f = {
+   fileRef = X000128e;
+   isa = PBXBuildFile;
+  };
+  X0001290 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/rangenam.cxx";
+  };
+  X0001291 = {
+   fileRef = X0001290;
+   isa = PBXBuildFile;
+  };
+  X0001292 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/rangeseq.cxx";
+  };
+  X0001293 = {
+   fileRef = X0001292;
+   isa = PBXBuildFile;
+  };
+  X0001294 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/rangeutl.cxx";
+  };
+  X0001295 = {
+   fileRef = X0001294;
+   isa = PBXBuildFile;
+  };
+  X0001296 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/rechead.cxx";
+  };
+  X0001297 = {
+   fileRef = X0001296;
+   isa = PBXBuildFile;
+  };
+  X0001298 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/recursionhelper.cxx";
+  };
+  X0001299 = {
+   fileRef = X0001298;
+   isa = PBXBuildFile;
+  };
+  X000129a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/refdata.cxx";
+  };
+  X000129b = {
+   fileRef = X000129a;
+   isa = PBXBuildFile;
+  };
+  X000129c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/reffind.cxx";
+  };
+  X000129d = {
+   fileRef = X000129c;
+   isa = PBXBuildFile;
+  };
+  X000129e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/refhint.cxx";
+  };
+  X000129f = {
+   fileRef = X000129e;
+   isa = PBXBuildFile;
+  };
+  X00012a0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/refreshtimer.cxx";
+  };
+  X00012a1 = {
+   fileRef = X00012a0;
+   isa = PBXBuildFile;
+  };
+  X00012a2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/reftokenhelper.cxx";
+  };
+  X00012a3 = {
+   fileRef = X00012a2;
+   isa = PBXBuildFile;
+  };
+  X00012a4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/refupdat.cxx";
+  };
+  X00012a5 = {
+   fileRef = X00012a4;
+   isa = PBXBuildFile;
+  };
+  X00012a6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/reordermap.cxx";
+  };
+  X00012a7 = {
+   fileRef = X00012a6;
+   isa = PBXBuildFile;
+  };
+  X00012a8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/scmatrix.cxx";
+  };
+  X00012a9 = {
+   fileRef = X00012a8;
+   isa = PBXBuildFile;
+  };
+  X00012aa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/scopetools.cxx";
+  };
+  X00012ab = {
+   fileRef = X00012aa;
+   isa = PBXBuildFile;
+  };
+  X00012ac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/sharedformula.cxx";
+  };
+  X00012ad = {
+   fileRef = X00012ac;
+   isa = PBXBuildFile;
+  };
+  X00012ae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/simplerangelist.cxx";
+  };
+  X00012af = {
+   fileRef = X00012ae;
+   isa = PBXBuildFile;
+  };
+  X00012b0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/stringutil.cxx";
+  };
+  X00012b1 = {
+   fileRef = X00012b0;
+   isa = PBXBuildFile;
+  };
+  X00012b2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/stylehelper.cxx";
+  };
+  X00012b3 = {
+   fileRef = X00012b2;
+   isa = PBXBuildFile;
+  };
+  X00012b4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/subtotal.cxx";
+  };
+  X00012b5 = {
+   fileRef = X00012b4;
+   isa = PBXBuildFile;
+  };
+  X00012b6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/token.cxx";
+  };
+  X00012b7 = {
+   fileRef = X00012b6;
+   isa = PBXBuildFile;
+  };
+  X00012b8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/tokenstringcontext.cxx";
+  };
+  X00012b9 = {
+   fileRef = X00012b8;
+   isa = PBXBuildFile;
+  };
+  X00012ba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/typedstrdata.cxx";
+  };
+  X00012bb = {
+   fileRef = X00012ba;
+   isa = PBXBuildFile;
+  };
+  X00012bc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/unitconv.cxx";
+  };
+  X00012bd = {
+   fileRef = X00012bc;
+   isa = PBXBuildFile;
+  };
+  X00012be = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/userlist.cxx";
+  };
+  X00012bf = {
+   fileRef = X00012be;
+   isa = PBXBuildFile;
+  };
+  X00012c0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/viewopti.cxx";
+  };
+  X00012c1 = {
+   fileRef = X00012c0;
+   isa = PBXBuildFile;
+  };
+  X00012c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/webservicelink.cxx";
+  };
+  X00012c3 = {
+   fileRef = X00012c2;
+   isa = PBXBuildFile;
+  };
+  X00012c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/zforauto.cxx";
+  };
+  X00012c5 = {
+   fileRef = X00012c4;
+   isa = PBXBuildFile;
+  };
+  X00012c6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/datastreamimport.cxx";
+  };
+  X00012c7 = {
+   fileRef = X00012c6;
+   isa = PBXBuildFile;
+  };
+  X00012c8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLCalculationSettingsContext.cxx";
+  };
+  X00012c9 = {
+   fileRef = X00012c8;
+   isa = PBXBuildFile;
+  };
+  X00012ca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLCellRangeSourceContext.cxx";
+  };
+  X00012cb = {
+   fileRef = X00012ca;
+   isa = PBXBuildFile;
+  };
+  X00012cc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLChangeTrackingExportHelper.cxx";
+  };
+  X00012cd = {
+   fileRef = X00012cc;
+   isa = PBXBuildFile;
+  };
+  X00012ce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLChangeTrackingImportHelper.cxx";
+  };
+  X00012cf = {
+   fileRef = X00012ce;
+   isa = PBXBuildFile;
+  };
+  X00012d0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLCodeNameProvider.cxx";
+  };
+  X00012d1 = {
+   fileRef = X00012d0;
+   isa = PBXBuildFile;
+  };
+  X00012d2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLColumnRowGroupExport.cxx";
+  };
+  X00012d3 = {
+   fileRef = X00012d2;
+   isa = PBXBuildFile;
+  };
+  X00012d4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLConsolidationContext.cxx";
+  };
+  X00012d5 = {
+   fileRef = X00012d4;
+   isa = PBXBuildFile;
+  };
+  X00012d6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLConverter.cxx";
+  };
+  X00012d7 = {
+   fileRef = X00012d6;
+   isa = PBXBuildFile;
+  };
+  X00012d8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLDDELinksContext.cxx";
+  };
+  X00012d9 = {
+   fileRef = X00012d8;
+   isa = PBXBuildFile;
+  };
+  X00012da = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLDetectiveContext.cxx";
+  };
+  X00012db = {
+   fileRef = X00012da;
+   isa = PBXBuildFile;
+  };
+  X00012dc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLEmptyContext.cxx";
+  };
+  X00012dd = {
+   fileRef = X00012dc;
+   isa = PBXBuildFile;
+  };
+  X00012de = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLExportDDELinks.cxx";
+  };
+  X00012df = {
+   fileRef = X00012de;
+   isa = PBXBuildFile;
+  };
+  X00012e0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLExportDataPilot.cxx";
+  };
+  X00012e1 = {
+   fileRef = X00012e0;
+   isa = PBXBuildFile;
+  };
+  X00012e2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLExportDatabaseRanges.cxx";
+  };
+  X00012e3 = {
+   fileRef = X00012e2;
+   isa = PBXBuildFile;
+  };
+  X00012e4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLExportIterator.cxx";
+  };
+  X00012e5 = {
+   fileRef = X00012e4;
+   isa = PBXBuildFile;
+  };
+  X00012e6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLExportSharedData.cxx";
+  };
+  X00012e7 = {
+   fileRef = X00012e6;
+   isa = PBXBuildFile;
+  };
+  X00012e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLStylesExportHelper.cxx";
+  };
+  X00012e9 = {
+   fileRef = X00012e8;
+   isa = PBXBuildFile;
+  };
+  X00012ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLStylesImportHelper.cxx";
+  };
+  X00012eb = {
+   fileRef = X00012ea;
+   isa = PBXBuildFile;
+  };
+  X00012ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLTableHeaderFooterContext.cxx";
+  };
+  X00012ed = {
+   fileRef = X00012ec;
+   isa = PBXBuildFile;
+  };
+  X00012ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLTableMasterPageExport.cxx";
+  };
+  X00012ef = {
+   fileRef = X00012ee;
+   isa = PBXBuildFile;
+  };
+  X00012f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLTableShapeImportHelper.cxx";
+  };
+  X00012f1 = {
+   fileRef = X00012f0;
+   isa = PBXBuildFile;
+  };
+  X00012f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLTableShapeResizer.cxx";
+  };
+  X00012f3 = {
+   fileRef = X00012f2;
+   isa = PBXBuildFile;
+  };
+  X00012f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLTableShapesContext.cxx";
+  };
+  X00012f5 = {
+   fileRef = X00012f4;
+   isa = PBXBuildFile;
+  };
+  X00012f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLTableSourceContext.cxx";
+  };
+  X00012f7 = {
+   fileRef = X00012f6;
+   isa = PBXBuildFile;
+  };
+  X00012f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/XMLTrackedChangesContext.cxx";
+  };
+  X00012f9 = {
+   fileRef = X00012f8;
+   isa = PBXBuildFile;
+  };
+  X00012fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/cachedattraccess.cxx";
+  };
+  X00012fb = {
+   fileRef = X00012fa;
+   isa = PBXBuildFile;
+  };
+  X00012fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/celltextparacontext.cxx";
+  };
+  X00012fd = {
+   fileRef = X00012fc;
+   isa = PBXBuildFile;
+  };
+  X00012fe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/editattributemap.cxx";
+  };
+  X00012ff = {
+   fileRef = X00012fe;
+   isa = PBXBuildFile;
+  };
+  X0001300 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/importcontext.cxx";
+  };
+  X0001301 = {
+   fileRef = X0001300;
+   isa = PBXBuildFile;
+  };
+  X0001302 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/pivotsource.cxx";
+  };
+  X0001303 = {
+   fileRef = X0001302;
+   isa = PBXBuildFile;
+  };
+  X0001304 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/sheetdata.cxx";
+  };
+  X0001305 = {
+   fileRef = X0001304;
+   isa = PBXBuildFile;
+  };
+  X0001306 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlannoi.cxx";
+  };
+  X0001307 = {
+   fileRef = X0001306;
+   isa = PBXBuildFile;
+  };
+  X0001308 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlbodyi.cxx";
+  };
+  X0001309 = {
+   fileRef = X0001308;
+   isa = PBXBuildFile;
+  };
+  X000130a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlcelli.cxx";
+  };
+  X000130b = {
+   fileRef = X000130a;
+   isa = PBXBuildFile;
+  };
+  X000130c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlcoli.cxx";
+  };
+  X000130d = {
+   fileRef = X000130c;
+   isa = PBXBuildFile;
+  };
+  X000130e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlcondformat.cxx";
+  };
+  X000130f = {
+   fileRef = X000130e;
+   isa = PBXBuildFile;
+  };
+  X0001310 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlconti.cxx";
+  };
+  X0001311 = {
+   fileRef = X0001310;
+   isa = PBXBuildFile;
+  };
+  X0001312 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlcvali.cxx";
+  };
+  X0001313 = {
+   fileRef = X0001312;
+   isa = PBXBuildFile;
+  };
+  X0001314 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmldpimp.cxx";
+  };
+  X0001315 = {
+   fileRef = X0001314;
+   isa = PBXBuildFile;
+  };
+  X0001316 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmldrani.cxx";
+  };
+  X0001317 = {
+   fileRef = X0001316;
+   isa = PBXBuildFile;
+  };
+  X0001318 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlexprt.cxx";
+  };
+  X0001319 = {
+   fileRef = X0001318;
+   isa = PBXBuildFile;
+  };
+  X000131a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlexternaltabi.cxx";
+  };
+  X000131b = {
+   fileRef = X000131a;
+   isa = PBXBuildFile;
+  };
+  X000131c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlfilti.cxx";
+  };
+  X000131d = {
+   fileRef = X000131c;
+   isa = PBXBuildFile;
+  };
+  X000131e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlfonte.cxx";
+  };
+  X000131f = {
+   fileRef = X000131e;
+   isa = PBXBuildFile;
+  };
+  X0001320 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlimprt.cxx";
+  };
+  X0001321 = {
+   fileRef = X0001320;
+   isa = PBXBuildFile;
+  };
+  X0001322 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmllabri.cxx";
+  };
+  X0001323 = {
+   fileRef = X0001322;
+   isa = PBXBuildFile;
+  };
+  X0001324 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlmappingi.cxx";
+  };
+  X0001325 = {
+   fileRef = X0001324;
+   isa = PBXBuildFile;
+  };
+  X0001326 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlnexpi.cxx";
+  };
+  X0001327 = {
+   fileRef = X0001326;
+   isa = PBXBuildFile;
+  };
+  X0001328 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlrowi.cxx";
+  };
+  X0001329 = {
+   fileRef = X0001328;
+   isa = PBXBuildFile;
+  };
+  X000132a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlsceni.cxx";
+  };
+  X000132b = {
+   fileRef = X000132a;
+   isa = PBXBuildFile;
+  };
+  X000132c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlsorti.cxx";
+  };
+  X000132d = {
+   fileRef = X000132c;
+   isa = PBXBuildFile;
+  };
+  X000132e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlstyle.cxx";
+  };
+  X000132f = {
+   fileRef = X000132e;
+   isa = PBXBuildFile;
+  };
+  X0001330 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlstyli.cxx";
+  };
+  X0001331 = {
+   fileRef = X0001330;
+   isa = PBXBuildFile;
+  };
+  X0001332 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlsubti.cxx";
+  };
+  X0001333 = {
+   fileRef = X0001332;
+   isa = PBXBuildFile;
+  };
+  X0001334 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmltabi.cxx";
+  };
+  X0001335 = {
+   fileRef = X0001334;
+   isa = PBXBuildFile;
+  };
+  X0001336 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/xml/xmlwrap.cxx";
+  };
+  X0001337 = {
+   fileRef = X0001336;
+   isa = PBXBuildFile;
+  };
+  X0001338 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/chart/chart_imp.cxx";
+  };
+  X0001339 = {
+   fileRef = X0001338;
+   isa = PBXBuildFile;
+  };
+  X000133a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/filter/importfilterdata.cxx";
+  };
+  X000133b = {
+   fileRef = X000133a;
+   isa = PBXBuildFile;
+  };
+  X000133c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibilityHints.cxx";
+  };
+  X000133d = {
+   fileRef = X000133c;
+   isa = PBXBuildFile;
+  };
+  X000133e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleCell.cxx";
+  };
+  X000133f = {
+   fileRef = X000133e;
+   isa = PBXBuildFile;
+  };
+  X0001340 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleCellBase.cxx";
+  };
+  X0001341 = {
+   fileRef = X0001340;
+   isa = PBXBuildFile;
+  };
+  X0001342 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleContextBase.cxx";
+  };
+  X0001343 = {
+   fileRef = X0001342;
+   isa = PBXBuildFile;
+  };
+  X0001344 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleCsvControl.cxx";
+  };
+  X0001345 = {
+   fileRef = X0001344;
+   isa = PBXBuildFile;
+  };
+  X0001346 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleDocument.cxx";
+  };
+  X0001347 = {
+   fileRef = X0001346;
+   isa = PBXBuildFile;
+  };
+  X0001348 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleDocumentBase.cxx";
+  };
+  X0001349 = {
+   fileRef = X0001348;
+   isa = PBXBuildFile;
+  };
+  X000134a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleDocumentPagePreview.cxx";
+  };
+  X000134b = {
+   fileRef = X000134a;
+   isa = PBXBuildFile;
+  };
+  X000134c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleEditObject.cxx";
+  };
+  X000134d = {
+   fileRef = X000134c;
+   isa = PBXBuildFile;
+  };
+  X000134e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleFilterMenu.cxx";
+  };
+  X000134f = {
+   fileRef = X000134e;
+   isa = PBXBuildFile;
+  };
+  X0001350 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleFilterMenuItem.cxx";
+  };
+  X0001351 = {
+   fileRef = X0001350;
+   isa = PBXBuildFile;
+  };
+  X0001352 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleFilterTopWindow.cxx";
+  };
+  X0001353 = {
+   fileRef = X0001352;
+   isa = PBXBuildFile;
+  };
+  X0001354 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleGlobal.cxx";
+  };
+  X0001355 = {
+   fileRef = X0001354;
+   isa = PBXBuildFile;
+  };
+  X0001356 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessiblePageHeader.cxx";
+  };
+  X0001357 = {
+   fileRef = X0001356;
+   isa = PBXBuildFile;
+  };
+  X0001358 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessiblePageHeaderArea.cxx";
+  };
+  X0001359 = {
+   fileRef = X0001358;
+   isa = PBXBuildFile;
+  };
+  X000135a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessiblePreviewCell.cxx";
+  };
+  X000135b = {
+   fileRef = X000135a;
+   isa = PBXBuildFile;
+  };
+  X000135c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessiblePreviewHeaderCell.cxx";
+  };
+  X000135d = {
+   fileRef = X000135c;
+   isa = PBXBuildFile;
+  };
+  X000135e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessiblePreviewTable.cxx";
+  };
+  X000135f = {
+   fileRef = X000135e;
+   isa = PBXBuildFile;
+  };
+  X0001360 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleSpreadsheet.cxx";
+  };
+  X0001361 = {
+   fileRef = X0001360;
+   isa = PBXBuildFile;
+  };
+  X0001362 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleTableBase.cxx";
+  };
+  X0001363 = {
+   fileRef = X0001362;
+   isa = PBXBuildFile;
+  };
+  X0001364 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/AccessibleText.cxx";
+  };
+  X0001365 = {
+   fileRef = X0001364;
+   isa = PBXBuildFile;
+  };
+  X0001366 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/Accessibility/DrawModelBroadcaster.cxx";
+  };
+  X0001367 = {
+   fileRef = X0001366;
+   isa = PBXBuildFile;
+  };
+  X0001368 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/client.cxx";
+  };
+  X0001369 = {
+   fileRef = X0001368;
+   isa = PBXBuildFile;
+  };
+  X000136a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/drwtrans.cxx";
+  };
+  X000136b = {
+   fileRef = X000136a;
+   isa = PBXBuildFile;
+  };
+  X000136c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/inputhdl.cxx";
+  };
+  X000136d = {
+   fileRef = X000136c;
+   isa = PBXBuildFile;
+  };
+  X000136e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/inputwin.cxx";
+  };
+  X000136f = {
+   fileRef = X000136e;
+   isa = PBXBuildFile;
+  };
+  X0001370 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/lnktrans.cxx";
+  };
+  X0001371 = {
+   fileRef = X0001370;
+   isa = PBXBuildFile;
+  };
+  X0001372 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/msgpool.cxx";
+  };
+  X0001373 = {
+   fileRef = X0001372;
+   isa = PBXBuildFile;
+  };
+  X0001374 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/rfindlst.cxx";
+  };
+  X0001375 = {
+   fileRef = X0001374;
+   isa = PBXBuildFile;
+  };
+  X0001376 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/scdll.cxx";
+  };
+  X0001377 = {
+   fileRef = X0001376;
+   isa = PBXBuildFile;
+  };
+  X0001378 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/scmod.cxx";
+  };
+  X0001379 = {
+   fileRef = X0001378;
+   isa = PBXBuildFile;
+  };
+  X000137a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/seltrans.cxx";
+  };
+  X000137b = {
+   fileRef = X000137a;
+   isa = PBXBuildFile;
+  };
+  X000137c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/transobj.cxx";
+  };
+  X000137d = {
+   fileRef = X000137c;
+   isa = PBXBuildFile;
+  };
+  X000137e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/typemap.cxx";
+  };
+  X000137f = {
+   fileRef = X000137e;
+   isa = PBXBuildFile;
+  };
+  X0001380 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/app/uiitems.cxx";
+  };
+  X0001381 = {
+   fileRef = X0001380;
+   isa = PBXBuildFile;
+  };
+  X0001382 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/attrdlg/scabstdlg.cxx";
+  };
+  X0001383 = {
+   fileRef = X0001382;
+   isa = PBXBuildFile;
+  };
+  X0001384 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/cctrl/cbnumberformat.cxx";
+  };
+  X0001385 = {
+   fileRef = X0001384;
+   isa = PBXBuildFile;
+  };
+  X0001386 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/cctrl/cbuttonw.cxx";
+  };
+  X0001387 = {
+   fileRef = X0001386;
+   isa = PBXBuildFile;
+  };
+  X0001388 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/cctrl/checklistmenu.cxx";
+  };
+  X0001389 = {
+   fileRef = X0001388;
+   isa = PBXBuildFile;
+  };
+  X000138a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/cctrl/dpcontrol.cxx";
+  };
+  X000138b = {
+   fileRef = X000138a;
+   isa = PBXBuildFile;
+  };
+  X000138c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/cctrl/tbzoomsliderctrl.cxx";
+  };
+  X000138d = {
+   fileRef = X000138c;
+   isa = PBXBuildFile;
+  };
+  X000138e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/condformat/condformatdlg.cxx";
+  };
+  X000138f = {
+   fileRef = X000138e;
+   isa = PBXBuildFile;
+  };
+  X0001390 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/condformat/condformatdlgentry.cxx";
+  };
+  X0001391 = {
+   fileRef = X0001390;
+   isa = PBXBuildFile;
+  };
+  X0001392 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/condformat/condformatdlgitem.cxx";
+  };
+  X0001393 = {
+   fileRef = X0001392;
+   isa = PBXBuildFile;
+  };
+  X0001394 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/condformat/condformathelper.cxx";
+  };
+  X0001395 = {
+   fileRef = X0001394;
+   isa = PBXBuildFile;
+  };
+  X0001396 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/condformat/colorformat.cxx";
+  };
+  X0001397 = {
+   fileRef = X0001396;
+   isa = PBXBuildFile;
+  };
+  X0001398 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dataprovider/csvdataprovider.cxx";
+  };
+  X0001399 = {
+   fileRef = X0001398;
+   isa = PBXBuildFile;
+  };
+  X000139a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dataprovider/dataprovider.cxx";
+  };
+  X000139b = {
+   fileRef = X000139a;
+   isa = PBXBuildFile;
+  };
+  X000139c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dataprovider/datatransformation.cxx";
+  };
+  X000139d = {
+   fileRef = X000139c;
+   isa = PBXBuildFile;
+  };
+  X000139e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dataprovider/htmldataprovider.cxx";
+  };
+  X000139f = {
+   fileRef = X000139e;
+   isa = PBXBuildFile;
+  };
+  X00013a0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/asciiopt.cxx";
+  };
+  X00013a1 = {
+   fileRef = X00013a0;
+   isa = PBXBuildFile;
+  };
+  X00013a2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/consdlg.cxx";
+  };
+  X00013a3 = {
+   fileRef = X00013a2;
+   isa = PBXBuildFile;
+  };
+  X00013a4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/csvcontrol.cxx";
+  };
+  X00013a5 = {
+   fileRef = X00013a4;
+   isa = PBXBuildFile;
+  };
+  X00013a6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/csvgrid.cxx";
+  };
+  X00013a7 = {
+   fileRef = X00013a6;
+   isa = PBXBuildFile;
+  };
+  X00013a8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/csvruler.cxx";
+  };
+  X00013a9 = {
+   fileRef = X00013a8;
+   isa = PBXBuildFile;
+  };
+  X00013aa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/csvsplits.cxx";
+  };
+  X00013ab = {
+   fileRef = X00013aa;
+   isa = PBXBuildFile;
+  };
+  X00013ac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/csvtablebox.cxx";
+  };
+  X00013ad = {
+   fileRef = X00013ac;
+   isa = PBXBuildFile;
+  };
+  X00013ae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/dbnamdlg.cxx";
+  };
+  X00013af = {
+   fileRef = X00013ae;
+   isa = PBXBuildFile;
+  };
+  X00013b0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/filtdlg.cxx";
+  };
+  X00013b1 = {
+   fileRef = X00013b0;
+   isa = PBXBuildFile;
+  };
+  X00013b2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/foptmgr.cxx";
+  };
+  X00013b3 = {
+   fileRef = X00013b2;
+   isa = PBXBuildFile;
+  };
+  X00013b4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/imoptdlg.cxx";
+  };
+  X00013b5 = {
+   fileRef = X00013b4;
+   isa = PBXBuildFile;
+  };
+  X00013b6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/PivotLayoutDialog.cxx";
+  };
+  X00013b7 = {
+   fileRef = X00013b6;
+   isa = PBXBuildFile;
+  };
+  X00013b8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/PivotLayoutTreeListBase.cxx";
+  };
+  X00013b9 = {
+   fileRef = X00013b8;
+   isa = PBXBuildFile;
+  };
+  X00013ba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/PivotLayoutTreeListData.cxx";
+  };
+  X00013bb = {
+   fileRef = X00013ba;
+   isa = PBXBuildFile;
+  };
+  X00013bc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/PivotLayoutTreeListLabel.cxx";
+  };
+  X00013bd = {
+   fileRef = X00013bc;
+   isa = PBXBuildFile;
+  };
+  X00013be = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/PivotLayoutTreeList.cxx";
+  };
+  X00013bf = {
+   fileRef = X00013be;
+   isa = PBXBuildFile;
+  };
+  X00013c0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/sfiltdlg.cxx";
+  };
+  X00013c1 = {
+   fileRef = X00013c0;
+   isa = PBXBuildFile;
+  };
+  X00013c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dbgui/validate.cxx";
+  };
+  X00013c3 = {
+   fileRef = X00013c2;
+   isa = PBXBuildFile;
+  };
+  X00013c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/dialogs/searchresults.cxx";
+  };
+  X00013c5 = {
+   fileRef = X00013c4;
+   isa = PBXBuildFile;
+  };
+  X00013c6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/arealink.cxx";
+  };
+  X00013c7 = {
+   fileRef = X00013c6;
+   isa = PBXBuildFile;
+  };
+  X00013c8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/autostyl.cxx";
+  };
+  X00013c9 = {
+   fileRef = X00013c8;
+   isa = PBXBuildFile;
+  };
+  X00013ca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/datastream.cxx";
+  };
+  X00013cb = {
+   fileRef = X00013ca;
+   isa = PBXBuildFile;
+  };
+  X00013cc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/dbdocfun.cxx";
+  };
+  X00013cd = {
+   fileRef = X00013cc;
+   isa = PBXBuildFile;
+  };
+  X00013ce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/dbdocimp.cxx";
+  };
+  X00013cf = {
+   fileRef = X00013ce;
+   isa = PBXBuildFile;
+  };
+  X00013d0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/docfunc.cxx";
+  };
+  X00013d1 = {
+   fileRef = X00013d0;
+   isa = PBXBuildFile;
+  };
+  X00013d2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/docfuncutil.cxx";
+  };
+  X00013d3 = {
+   fileRef = X00013d2;
+   isa = PBXBuildFile;
+  };
+  X00013d4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/docsh.cxx";
+  };
+  X00013d5 = {
+   fileRef = X00013d4;
+   isa = PBXBuildFile;
+  };
+  X00013d6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/docsh2.cxx";
+  };
+  X00013d7 = {
+   fileRef = X00013d6;
+   isa = PBXBuildFile;
+  };
+  X00013d8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/docsh3.cxx";
+  };
+  X00013d9 = {
+   fileRef = X00013d8;
+   isa = PBXBuildFile;
+  };
+  X00013da = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/docsh4.cxx";
+  };
+  X00013db = {
+   fileRef = X00013da;
+   isa = PBXBuildFile;
+  };
+  X00013dc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/docsh5.cxx";
+  };
+  X00013dd = {
+   fileRef = X00013dc;
+   isa = PBXBuildFile;
+  };
+  X00013de = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/docsh6.cxx";
+  };
+  X00013df = {
+   fileRef = X00013de;
+   isa = PBXBuildFile;
+  };
+  X00013e0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/docsh8.cxx";
+  };
+  X00013e1 = {
+   fileRef = X00013e0;
+   isa = PBXBuildFile;
+  };
+  X00013e2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/documentlinkmgr.cxx";
+  };
+  X00013e3 = {
+   fileRef = X00013e2;
+   isa = PBXBuildFile;
+  };
+  X00013e4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/editable.cxx";
+  };
+  X00013e5 = {
+   fileRef = X00013e4;
+   isa = PBXBuildFile;
+  };
+  X00013e6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/externalrefmgr.cxx";
+  };
+  X00013e7 = {
+   fileRef = X00013e6;
+   isa = PBXBuildFile;
+  };
+  X00013e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/impex.cxx";
+  };
+  X00013e9 = {
+   fileRef = X00013e8;
+   isa = PBXBuildFile;
+  };
+  X00013ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/macromgr.cxx";
+  };
+  X00013eb = {
+   fileRef = X00013ea;
+   isa = PBXBuildFile;
+  };
+  X00013ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/olinefun.cxx";
+  };
+  X00013ed = {
+   fileRef = X00013ec;
+   isa = PBXBuildFile;
+  };
+  X00013ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/pagedata.cxx";
+  };
+  X00013ef = {
+   fileRef = X00013ee;
+   isa = PBXBuildFile;
+  };
+  X00013f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/pntlock.cxx";
+  };
+  X00013f1 = {
+   fileRef = X00013f0;
+   isa = PBXBuildFile;
+  };
+  X00013f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/servobj.cxx";
+  };
+  X00013f3 = {
+   fileRef = X00013f2;
+   isa = PBXBuildFile;
+  };
+  X00013f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/sizedev.cxx";
+  };
+  X00013f5 = {
+   fileRef = X00013f4;
+   isa = PBXBuildFile;
+  };
+  X00013f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/docshell/tablink.cxx";
+  };
+  X00013f7 = {
+   fileRef = X00013f6;
+   isa = PBXBuildFile;
+  };
+  X00013f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/chartsh.cxx";
+  };
+  X00013f9 = {
+   fileRef = X00013f8;
+   isa = PBXBuildFile;
+  };
+  X00013fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/drawsh.cxx";
+  };
+  X00013fb = {
+   fileRef = X00013fa;
+   isa = PBXBuildFile;
+  };
+  X00013fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/drawsh2.cxx";
+  };
+  X00013fd = {
+   fileRef = X00013fc;
+   isa = PBXBuildFile;
+  };
+  X00013fe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/drawsh4.cxx";
+  };
+  X00013ff = {
+   fileRef = X00013fe;
+   isa = PBXBuildFile;
+  };
+  X0001400 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/drawsh5.cxx";
+  };
+  X0001401 = {
+   fileRef = X0001400;
+   isa = PBXBuildFile;
+  };
+  X0001402 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/drformsh.cxx";
+  };
+  X0001403 = {
+   fileRef = X0001402;
+   isa = PBXBuildFile;
+  };
+  X0001404 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/drtxtob.cxx";
+  };
+  X0001405 = {
+   fileRef = X0001404;
+   isa = PBXBuildFile;
+  };
+  X0001406 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/drtxtob1.cxx";
+  };
+  X0001407 = {
+   fileRef = X0001406;
+   isa = PBXBuildFile;
+  };
+  X0001408 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/drtxtob2.cxx";
+  };
+  X0001409 = {
+   fileRef = X0001408;
+   isa = PBXBuildFile;
+  };
+  X000140a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fuconarc.cxx";
+  };
+  X000140b = {
+   fileRef = X000140a;
+   isa = PBXBuildFile;
+  };
+  X000140c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fuconcustomshape.cxx";
+  };
+  X000140d = {
+   fileRef = X000140c;
+   isa = PBXBuildFile;
+  };
+  X000140e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fuconpol.cxx";
+  };
+  X000140f = {
+   fileRef = X000140e;
+   isa = PBXBuildFile;
+  };
+  X0001410 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fuconrec.cxx";
+  };
+  X0001411 = {
+   fileRef = X0001410;
+   isa = PBXBuildFile;
+  };
+  X0001412 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fuconstr.cxx";
+  };
+  X0001413 = {
+   fileRef = X0001412;
+   isa = PBXBuildFile;
+  };
+  X0001414 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fuconuno.cxx";
+  };
+  X0001415 = {
+   fileRef = X0001414;
+   isa = PBXBuildFile;
+  };
+  X0001416 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fudraw.cxx";
+  };
+  X0001417 = {
+   fileRef = X0001416;
+   isa = PBXBuildFile;
+  };
+  X0001418 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fuins1.cxx";
+  };
+  X0001419 = {
+   fileRef = X0001418;
+   isa = PBXBuildFile;
+  };
+  X000141a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fuins2.cxx";
+  };
+  X000141b = {
+   fileRef = X000141a;
+   isa = PBXBuildFile;
+  };
+  X000141c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fupoor.cxx";
+  };
+  X000141d = {
+   fileRef = X000141c;
+   isa = PBXBuildFile;
+  };
+  X000141e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fusel.cxx";
+  };
+  X000141f = {
+   fileRef = X000141e;
+   isa = PBXBuildFile;
+  };
+  X0001420 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/fusel2.cxx";
+  };
+  X0001421 = {
+   fileRef = X0001420;
+   isa = PBXBuildFile;
+  };
+  X0001422 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/futext.cxx";
+  };
+  X0001423 = {
+   fileRef = X0001422;
+   isa = PBXBuildFile;
+  };
+  X0001424 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/futext2.cxx";
+  };
+  X0001425 = {
+   fileRef = X0001424;
+   isa = PBXBuildFile;
+  };
+  X0001426 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/futext3.cxx";
+  };
+  X0001427 = {
+   fileRef = X0001426;
+   isa = PBXBuildFile;
+  };
+  X0001428 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/graphsh.cxx";
+  };
+  X0001429 = {
+   fileRef = X0001428;
+   isa = PBXBuildFile;
+  };
+  X000142a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/mediash.cxx";
+  };
+  X000142b = {
+   fileRef = X000142a;
+   isa = PBXBuildFile;
+  };
+  X000142c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/drawfunc/oleobjsh.cxx";
+  };
+  X000142d = {
+   fileRef = X000142c;
+   isa = PBXBuildFile;
+  };
+  X000142e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/formdlg/dwfunctr.cxx";
+  };
+  X000142f = {
+   fileRef = X000142e;
+   isa = PBXBuildFile;
+  };
+  X0001430 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/formdlg/formdata.cxx";
+  };
+  X0001431 = {
+   fileRef = X0001430;
+   isa = PBXBuildFile;
+  };
+  X0001432 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/formdlg/formula.cxx";
+  };
+  X0001433 = {
+   fileRef = X0001432;
+   isa = PBXBuildFile;
+  };
+  X0001434 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/acredlin.cxx";
+  };
+  X0001435 = {
+   fileRef = X0001434;
+   isa = PBXBuildFile;
+  };
+  X0001436 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/anyrefdg.cxx";
+  };
+  X0001437 = {
+   fileRef = X0001436;
+   isa = PBXBuildFile;
+  };
+  X0001438 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/autofmt.cxx";
+  };
+  X0001439 = {
+   fileRef = X0001438;
+   isa = PBXBuildFile;
+  };
+  X000143a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/conflictsdlg.cxx";
+  };
+  X000143b = {
+   fileRef = X000143a;
+   isa = PBXBuildFile;
+  };
+  X000143c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/crnrdlg.cxx";
+  };
+  X000143d = {
+   fileRef = X000143c;
+   isa = PBXBuildFile;
+  };
+  X000143e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/datastreamdlg.cxx";
+  };
+  X000143f = {
+   fileRef = X000143e;
+   isa = PBXBuildFile;
+  };
+  X0001440 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/dataproviderdlg.cxx";
+  };
+  X0001441 = {
+   fileRef = X0001440;
+   isa = PBXBuildFile;
+  };
+  X0001442 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/datatableview.cxx";
+  };
+  X0001443 = {
+   fileRef = X0001442;
+   isa = PBXBuildFile;
+  };
+  X0001444 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/highred.cxx";
+  };
+  X0001445 = {
+   fileRef = X0001444;
+   isa = PBXBuildFile;
+  };
+  X0001446 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/mergecellsdialog.cxx";
+  };
+  X0001447 = {
+   fileRef = X0001446;
+   isa = PBXBuildFile;
+  };
+  X0001448 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/optsolver.cxx";
+  };
+  X0001449 = {
+   fileRef = X0001448;
+   isa = PBXBuildFile;
+  };
+  X000144a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/protectiondlg.cxx";
+  };
+  X000144b = {
+   fileRef = X000144a;
+   isa = PBXBuildFile;
+  };
+  X000144c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/redcom.cxx";
+  };
+  X000144d = {
+   fileRef = X000144c;
+   isa = PBXBuildFile;
+  };
+  X000144e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/retypepassdlg.cxx";
+  };
+  X000144f = {
+   fileRef = X000144e;
+   isa = PBXBuildFile;
+  };
+  X0001450 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/sharedocdlg.cxx";
+  };
+  X0001451 = {
+   fileRef = X0001450;
+   isa = PBXBuildFile;
+  };
+  X0001452 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/simpref.cxx";
+  };
+  X0001453 = {
+   fileRef = X0001452;
+   isa = PBXBuildFile;
+  };
+  X0001454 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/solveroptions.cxx";
+  };
+  X0001455 = {
+   fileRef = X0001454;
+   isa = PBXBuildFile;
+  };
+  X0001456 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/solverutil.cxx";
+  };
+  X0001457 = {
+   fileRef = X0001456;
+   isa = PBXBuildFile;
+  };
+  X0001458 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/solvrdlg.cxx";
+  };
+  X0001459 = {
+   fileRef = X0001458;
+   isa = PBXBuildFile;
+  };
+  X000145a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/tabopdlg.cxx";
+  };
+  X000145b = {
+   fileRef = X000145a;
+   isa = PBXBuildFile;
+  };
+  X000145c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/miscdlgs/warnbox.cxx";
+  };
+  X000145d = {
+   fileRef = X000145c;
+   isa = PBXBuildFile;
+  };
+  X000145e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/namedlg/namedefdlg.cxx";
+  };
+  X000145f = {
+   fileRef = X000145e;
+   isa = PBXBuildFile;
+  };
+  X0001460 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/namedlg/namedlg.cxx";
+  };
+  X0001461 = {
+   fileRef = X0001460;
+   isa = PBXBuildFile;
+  };
+  X0001462 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/namedlg/namemgrtable.cxx";
+  };
+  X0001463 = {
+   fileRef = X0001462;
+   isa = PBXBuildFile;
+  };
+  X0001464 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/navipi/content.cxx";
+  };
+  X0001465 = {
+   fileRef = X0001464;
+   isa = PBXBuildFile;
+  };
+  X0001466 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/navipi/navcitem.cxx";
+  };
+  X0001467 = {
+   fileRef = X0001466;
+   isa = PBXBuildFile;
+  };
+  X0001468 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/navipi/navipi.cxx";
+  };
+  X0001469 = {
+   fileRef = X0001468;
+   isa = PBXBuildFile;
+  };
+  X000146a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/navipi/scenwnd.cxx";
+  };
+  X000146b = {
+   fileRef = X000146a;
+   isa = PBXBuildFile;
+  };
+  X000146c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/pagedlg/areasdlg.cxx";
+  };
+  X000146d = {
+   fileRef = X000146c;
+   isa = PBXBuildFile;
+  };
+  X000146e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/pagedlg/tphfedit.cxx";
+  };
+  X000146f = {
+   fileRef = X000146e;
+   isa = PBXBuildFile;
+  };
+  X0001470 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/sidebar/AlignmentPropertyPanel.cxx";
+  };
+  X0001471 = {
+   fileRef = X0001470;
+   isa = PBXBuildFile;
+  };
+  X0001472 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/sidebar/CellLineStyleControl.cxx";
+  };
+  X0001473 = {
+   fileRef = X0001472;
+   isa = PBXBuildFile;
+  };
+  X0001474 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/sidebar/CellLineStyleValueSet.cxx";
+  };
+  X0001475 = {
+   fileRef = X0001474;
+   isa = PBXBuildFile;
+  };
+  X0001476 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/sidebar/CellAppearancePropertyPanel.cxx";
+  };
+  X0001477 = {
+   fileRef = X0001476;
+   isa = PBXBuildFile;
+  };
+  X0001478 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/sidebar/CellBorderStyleControl.cxx";
+  };
+  X0001479 = {
+   fileRef = X0001478;
+   isa = PBXBuildFile;
+  };
+  X000147a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/sidebar/NumberFormatControl.cxx";
+  };
+  X000147b = {
+   fileRef = X000147a;
+   isa = PBXBuildFile;
+  };
+  X000147c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/sidebar/NumberFormatPropertyPanel.cxx";
+  };
+  X000147d = {
+   fileRef = X000147c;
+   isa = PBXBuildFile;
+  };
+  X000147e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/sidebar/ScPanelFactory.cxx";
+  };
+  X000147f = {
+   fileRef = X000147e;
+   isa = PBXBuildFile;
+  };
+  X0001480 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/AnalysisOfVarianceDialog.cxx";
+  };
+  X0001481 = {
+   fileRef = X0001480;
+   isa = PBXBuildFile;
+  };
+  X0001482 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/CorrelationDialog.cxx";
+  };
+  X0001483 = {
+   fileRef = X0001482;
+   isa = PBXBuildFile;
+  };
+  X0001484 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/CovarianceDialog.cxx";
+  };
+  X0001485 = {
+   fileRef = X0001484;
+   isa = PBXBuildFile;
+  };
+  X0001486 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/ChiSquareTestDialog.cxx";
+  };
+  X0001487 = {
+   fileRef = X0001486;
+   isa = PBXBuildFile;
+  };
+  X0001488 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/DescriptiveStatisticsDialog.cxx";
+  };
+  X0001489 = {
+   fileRef = X0001488;
+   isa = PBXBuildFile;
+  };
+  X000148a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/ExponentialSmoothingDialog.cxx";
+  };
+  X000148b = {
+   fileRef = X000148a;
+   isa = PBXBuildFile;
+  };
+  X000148c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/FTestDialog.cxx";
+  };
+  X000148d = {
+   fileRef = X000148c;
+   isa = PBXBuildFile;
+  };
+  X000148e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/MatrixComparisonGenerator.cxx";
+  };
+  X000148f = {
+   fileRef = X000148e;
+   isa = PBXBuildFile;
+  };
+  X0001490 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/MovingAverageDialog.cxx";
+  };
+  X0001491 = {
+   fileRef = X0001490;
+   isa = PBXBuildFile;
+  };
+  X0001492 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/RandomNumberGeneratorDialog.cxx";
+  };
+  X0001493 = {
+   fileRef = X0001492;
+   isa = PBXBuildFile;
+  };
+  X0001494 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/RegressionDialog.cxx";
+  };
+  X0001495 = {
+   fileRef = X0001494;
+   isa = PBXBuildFile;
+  };
+  X0001496 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/SamplingDialog.cxx";
+  };
+  X0001497 = {
+   fileRef = X0001496;
+   isa = PBXBuildFile;
+  };
+  X0001498 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/StatisticsInputOutputDialog.cxx";
+  };
+  X0001499 = {
+   fileRef = X0001498;
+   isa = PBXBuildFile;
+  };
+  X000149a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/StatisticsTwoVariableDialog.cxx";
+  };
+  X000149b = {
+   fileRef = X000149a;
+   isa = PBXBuildFile;
+  };
+  X000149c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/TableFillingAndNavigationTools.cxx";
+  };
+  X000149d = {
+   fileRef = X000149c;
+   isa = PBXBuildFile;
+  };
+  X000149e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/TTestDialog.cxx";
+  };
+  X000149f = {
+   fileRef = X000149e;
+   isa = PBXBuildFile;
+  };
+  X00014a0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/StatisticsDialogs/ZTestDialog.cxx";
+  };
+  X00014a1 = {
+   fileRef = X00014a0;
+   isa = PBXBuildFile;
+  };
+  X00014a2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/uitest/uiobject.cxx";
+  };
+  X00014a3 = {
+   fileRef = X00014a2;
+   isa = PBXBuildFile;
+  };
+  X00014a4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/areasave.cxx";
+  };
+  X00014a5 = {
+   fileRef = X00014a4;
+   isa = PBXBuildFile;
+  };
+  X00014a6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/refundo.cxx";
+  };
+  X00014a7 = {
+   fileRef = X00014a6;
+   isa = PBXBuildFile;
+  };
+  X00014a8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/target.cxx";
+  };
+  X00014a9 = {
+   fileRef = X00014a8;
+   isa = PBXBuildFile;
+  };
+  X00014aa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undobase.cxx";
+  };
+  X00014ab = {
+   fileRef = X00014aa;
+   isa = PBXBuildFile;
+  };
+  X00014ac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undoblk.cxx";
+  };
+  X00014ad = {
+   fileRef = X00014ac;
+   isa = PBXBuildFile;
+  };
+  X00014ae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undoblk2.cxx";
+  };
+  X00014af = {
+   fileRef = X00014ae;
+   isa = PBXBuildFile;
+  };
+  X00014b0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undoblk3.cxx";
+  };
+  X00014b1 = {
+   fileRef = X00014b0;
+   isa = PBXBuildFile;
+  };
+  X00014b2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undocell.cxx";
+  };
+  X00014b3 = {
+   fileRef = X00014b2;
+   isa = PBXBuildFile;
+  };
+  X00014b4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undocell2.cxx";
+  };
+  X00014b5 = {
+   fileRef = X00014b4;
+   isa = PBXBuildFile;
+  };
+  X00014b6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undoconvert.cxx";
+  };
+  X00014b7 = {
+   fileRef = X00014b6;
+   isa = PBXBuildFile;
+  };
+  X00014b8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undodat.cxx";
+  };
+  X00014b9 = {
+   fileRef = X00014b8;
+   isa = PBXBuildFile;
+  };
+  X00014ba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undodraw.cxx";
+  };
+  X00014bb = {
+   fileRef = X00014ba;
+   isa = PBXBuildFile;
+  };
+  X00014bc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undoolk.cxx";
+  };
+  X00014bd = {
+   fileRef = X00014bc;
+   isa = PBXBuildFile;
+  };
+  X00014be = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undorangename.cxx";
+  };
+  X00014bf = {
+   fileRef = X00014be;
+   isa = PBXBuildFile;
+  };
+  X00014c0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undosort.cxx";
+  };
+  X00014c1 = {
+   fileRef = X00014c0;
+   isa = PBXBuildFile;
+  };
+  X00014c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undostyl.cxx";
+  };
+  X00014c3 = {
+   fileRef = X00014c2;
+   isa = PBXBuildFile;
+  };
+  X00014c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undotab.cxx";
+  };
+  X00014c5 = {
+   fileRef = X00014c4;
+   isa = PBXBuildFile;
+  };
+  X00014c6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/undo/undoutil.cxx";
+  };
+  X00014c7 = {
+   fileRef = X00014c6;
+   isa = PBXBuildFile;
+  };
+  X00014c8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/ChartRangeSelectionListener.cxx";
+  };
+  X00014c9 = {
+   fileRef = X00014c8;
+   isa = PBXBuildFile;
+  };
+  X00014ca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/addruno.cxx";
+  };
+  X00014cb = {
+   fileRef = X00014ca;
+   isa = PBXBuildFile;
+  };
+  X00014cc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/afmtuno.cxx";
+  };
+  X00014cd = {
+   fileRef = X00014cc;
+   isa = PBXBuildFile;
+  };
+  X00014ce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/appluno.cxx";
+  };
+  X00014cf = {
+   fileRef = X00014ce;
+   isa = PBXBuildFile;
+  };
+  X00014d0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/celllistsource.cxx";
+  };
+  X00014d1 = {
+   fileRef = X00014d0;
+   isa = PBXBuildFile;
+  };
+  X00014d2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/cellsuno.cxx";
+  };
+  X00014d3 = {
+   fileRef = X00014d2;
+   isa = PBXBuildFile;
+  };
+  X00014d4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/cellvaluebinding.cxx";
+  };
+  X00014d5 = {
+   fileRef = X00014d4;
+   isa = PBXBuildFile;
+  };
+  X00014d6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/chart2uno.cxx";
+  };
+  X00014d7 = {
+   fileRef = X00014d6;
+   isa = PBXBuildFile;
+  };
+  X00014d8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/chartuno.cxx";
+  };
+  X00014d9 = {
+   fileRef = X00014d8;
+   isa = PBXBuildFile;
+  };
+  X00014da = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/condformatuno.cxx";
+  };
+  X00014db = {
+   fileRef = X00014da;
+   isa = PBXBuildFile;
+  };
+  X00014dc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/confuno.cxx";
+  };
+  X00014dd = {
+   fileRef = X00014dc;
+   isa = PBXBuildFile;
+  };
+  X00014de = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/convuno.cxx";
+  };
+  X00014df = {
+   fileRef = X00014de;
+   isa = PBXBuildFile;
+  };
+  X00014e0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/cursuno.cxx";
+  };
+  X00014e1 = {
+   fileRef = X00014e0;
+   isa = PBXBuildFile;
+  };
+  X00014e2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/dapiuno.cxx";
+  };
+  X00014e3 = {
+   fileRef = X00014e2;
+   isa = PBXBuildFile;
+  };
+  X00014e4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/datauno.cxx";
+  };
+  X00014e5 = {
+   fileRef = X00014e4;
+   isa = PBXBuildFile;
+  };
+  X00014e6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/defltuno.cxx";
+  };
+  X00014e7 = {
+   fileRef = X00014e6;
+   isa = PBXBuildFile;
+  };
+  X00014e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/dispuno.cxx";
+  };
+  X00014e9 = {
+   fileRef = X00014e8;
+   isa = PBXBuildFile;
+  };
+  X00014ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/docuno.cxx";
+  };
+  X00014eb = {
+   fileRef = X00014ea;
+   isa = PBXBuildFile;
+  };
+  X00014ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/drdefuno.cxx";
+  };
+  X00014ed = {
+   fileRef = X00014ec;
+   isa = PBXBuildFile;
+  };
+  X00014ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/editsrc.cxx";
+  };
+  X00014ef = {
+   fileRef = X00014ee;
+   isa = PBXBuildFile;
+  };
+  X00014f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/eventuno.cxx";
+  };
+  X00014f1 = {
+   fileRef = X00014f0;
+   isa = PBXBuildFile;
+  };
+  X00014f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/fielduno.cxx";
+  };
+  X00014f3 = {
+   fileRef = X00014f2;
+   isa = PBXBuildFile;
+  };
+  X00014f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/filtuno.cxx";
+  };
+  X00014f5 = {
+   fileRef = X00014f4;
+   isa = PBXBuildFile;
+  };
+  X00014f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/fmtuno.cxx";
+  };
+  X00014f7 = {
+   fileRef = X00014f6;
+   isa = PBXBuildFile;
+  };
+  X00014f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/forbiuno.cxx";
+  };
+  X00014f9 = {
+   fileRef = X00014f8;
+   isa = PBXBuildFile;
+  };
+  X00014fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/funcuno.cxx";
+  };
+  X00014fb = {
+   fileRef = X00014fa;
+   isa = PBXBuildFile;
+  };
+  X00014fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/linkuno.cxx";
+  };
+  X00014fd = {
+   fileRef = X00014fc;
+   isa = PBXBuildFile;
+  };
+  X00014fe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/listenercalls.cxx";
+  };
+  X00014ff = {
+   fileRef = X00014fe;
+   isa = PBXBuildFile;
+  };
+  X0001500 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/miscuno.cxx";
+  };
+  X0001501 = {
+   fileRef = X0001500;
+   isa = PBXBuildFile;
+  };
+  X0001502 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/nameuno.cxx";
+  };
+  X0001503 = {
+   fileRef = X0001502;
+   isa = PBXBuildFile;
+  };
+  X0001504 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/notesuno.cxx";
+  };
+  X0001505 = {
+   fileRef = X0001504;
+   isa = PBXBuildFile;
+  };
+  X0001506 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/optuno.cxx";
+  };
+  X0001507 = {
+   fileRef = X0001506;
+   isa = PBXBuildFile;
+  };
+  X0001508 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/pageuno.cxx";
+  };
+  X0001509 = {
+   fileRef = X0001508;
+   isa = PBXBuildFile;
+  };
+  X000150a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/PivotTableDataProvider.cxx";
+  };
+  X000150b = {
+   fileRef = X000150a;
+   isa = PBXBuildFile;
+  };
+  X000150c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/PivotTableDataSource.cxx";
+  };
+  X000150d = {
+   fileRef = X000150c;
+   isa = PBXBuildFile;
+  };
+  X000150e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/PivotTableDataSequence.cxx";
+  };
+  X000150f = {
+   fileRef = X000150e;
+   isa = PBXBuildFile;
+  };
+  X0001510 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/TablePivotCharts.cxx";
+  };
+  X0001511 = {
+   fileRef = X0001510;
+   isa = PBXBuildFile;
+  };
+  X0001512 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/TablePivotChart.cxx";
+  };
+  X0001513 = {
+   fileRef = X0001512;
+   isa = PBXBuildFile;
+  };
+  X0001514 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/ChartTools.cxx";
+  };
+  X0001515 = {
+   fileRef = X0001514;
+   isa = PBXBuildFile;
+  };
+  X0001516 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/servuno.cxx";
+  };
+  X0001517 = {
+   fileRef = X0001516;
+   isa = PBXBuildFile;
+  };
+  X0001518 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/shapeuno.cxx";
+  };
+  X0001519 = {
+   fileRef = X0001518;
+   isa = PBXBuildFile;
+  };
+  X000151a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/srchuno.cxx";
+  };
+  X000151b = {
+   fileRef = X000151a;
+   isa = PBXBuildFile;
+  };
+  X000151c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/styleuno.cxx";
+  };
+  X000151d = {
+   fileRef = X000151c;
+   isa = PBXBuildFile;
+  };
+  X000151e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/targuno.cxx";
+  };
+  X000151f = {
+   fileRef = X000151e;
+   isa = PBXBuildFile;
+  };
+  X0001520 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/textuno.cxx";
+  };
+  X0001521 = {
+   fileRef = X0001520;
+   isa = PBXBuildFile;
+  };
+  X0001522 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/tokenuno.cxx";
+  };
+  X0001523 = {
+   fileRef = X0001522;
+   isa = PBXBuildFile;
+  };
+  X0001524 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/unodoc.cxx";
+  };
+  X0001525 = {
+   fileRef = X0001524;
+   isa = PBXBuildFile;
+  };
+  X0001526 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/unoreflist.cxx";
+  };
+  X0001527 = {
+   fileRef = X0001526;
+   isa = PBXBuildFile;
+  };
+  X0001528 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/viewuno.cxx";
+  };
+  X0001529 = {
+   fileRef = X0001528;
+   isa = PBXBuildFile;
+  };
+  X000152a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/unoobj/warnpassword.cxx";
+  };
+  X000152b = {
+   fileRef = X000152a;
+   isa = PBXBuildFile;
+  };
+  X000152c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/auditsh.cxx";
+  };
+  X000152d = {
+   fileRef = X000152c;
+   isa = PBXBuildFile;
+  };
+  X000152e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/cellmergeoption.cxx";
+  };
+  X000152f = {
+   fileRef = X000152e;
+   isa = PBXBuildFile;
+  };
+  X0001530 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/cellsh.cxx";
+  };
+  X0001531 = {
+   fileRef = X0001530;
+   isa = PBXBuildFile;
+  };
+  X0001532 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/cellsh1.cxx";
+  };
+  X0001533 = {
+   fileRef = X0001532;
+   isa = PBXBuildFile;
+  };
+  X0001534 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/cellsh2.cxx";
+  };
+  X0001535 = {
+   fileRef = X0001534;
+   isa = PBXBuildFile;
+  };
+  X0001536 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/cellsh3.cxx";
+  };
+  X0001537 = {
+   fileRef = X0001536;
+   isa = PBXBuildFile;
+  };
+  X0001538 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/cellsh4.cxx";
+  };
+  X0001539 = {
+   fileRef = X0001538;
+   isa = PBXBuildFile;
+  };
+  X000153a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/colrowba.cxx";
+  };
+  X000153b = {
+   fileRef = X000153a;
+   isa = PBXBuildFile;
+  };
+  X000153c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/cliputil.cxx";
+  };
+  X000153d = {
+   fileRef = X000153c;
+   isa = PBXBuildFile;
+  };
+  X000153e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/dbfunc.cxx";
+  };
+  X000153f = {
+   fileRef = X000153e;
+   isa = PBXBuildFile;
+  };
+  X0001540 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/dbfunc2.cxx";
+  };
+  X0001541 = {
+   fileRef = X0001540;
+   isa = PBXBuildFile;
+  };
+  X0001542 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/dbfunc3.cxx";
+  };
+  X0001543 = {
+   fileRef = X0001542;
+   isa = PBXBuildFile;
+  };
+  X0001544 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/dbfunc4.cxx";
+  };
+  X0001545 = {
+   fileRef = X0001544;
+   isa = PBXBuildFile;
+  };
+  X0001546 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/drawutil.cxx";
+  };
+  X0001547 = {
+   fileRef = X0001546;
+   isa = PBXBuildFile;
+  };
+  X0001548 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/drawvie3.cxx";
+  };
+  X0001549 = {
+   fileRef = X0001548;
+   isa = PBXBuildFile;
+  };
+  X000154a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/drawvie4.cxx";
+  };
+  X000154b = {
+   fileRef = X000154a;
+   isa = PBXBuildFile;
+  };
+  X000154c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/drawview.cxx";
+  };
+  X000154d = {
+   fileRef = X000154c;
+   isa = PBXBuildFile;
+  };
+  X000154e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/editsh.cxx";
+  };
+  X000154f = {
+   fileRef = X000154e;
+   isa = PBXBuildFile;
+  };
+  X0001550 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/formatsh.cxx";
+  };
+  X0001551 = {
+   fileRef = X0001550;
+   isa = PBXBuildFile;
+  };
+  X0001552 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/gridmerg.cxx";
+  };
+  X0001553 = {
+   fileRef = X0001552;
+   isa = PBXBuildFile;
+  };
+  X0001554 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/gridwin.cxx";
+  };
+  X0001555 = {
+   fileRef = X0001554;
+   isa = PBXBuildFile;
+  };
+  X0001556 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/gridwin2.cxx";
+  };
+  X0001557 = {
+   fileRef = X0001556;
+   isa = PBXBuildFile;
+  };
+  X0001558 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/gridwin3.cxx";
+  };
+  X0001559 = {
+   fileRef = X0001558;
+   isa = PBXBuildFile;
+  };
+  X000155a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/gridwin4.cxx";
+  };
+  X000155b = {
+   fileRef = X000155a;
+   isa = PBXBuildFile;
+  };
+  X000155c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/gridwin5.cxx";
+  };
+  X000155d = {
+   fileRef = X000155c;
+   isa = PBXBuildFile;
+  };
+  X000155e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/hdrcont.cxx";
+  };
+  X000155f = {
+   fileRef = X000155e;
+   isa = PBXBuildFile;
+  };
+  X0001560 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/hintwin.cxx";
+  };
+  X0001561 = {
+   fileRef = X0001560;
+   isa = PBXBuildFile;
+  };
+  X0001562 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/imapwrap.cxx";
+  };
+  X0001563 = {
+   fileRef = X0001562;
+   isa = PBXBuildFile;
+  };
+  X0001564 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/invmerge.cxx";
+  };
+  X0001565 = {
+   fileRef = X0001564;
+   isa = PBXBuildFile;
+  };
+  X0001566 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/notemark.cxx";
+  };
+  X0001567 = {
+   fileRef = X0001566;
+   isa = PBXBuildFile;
+  };
+  X0001568 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/olinewin.cxx";
+  };
+  X0001569 = {
+   fileRef = X0001568;
+   isa = PBXBuildFile;
+  };
+  X000156a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/output.cxx";
+  };
+  X000156b = {
+   fileRef = X000156a;
+   isa = PBXBuildFile;
+  };
+  X000156c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/output2.cxx";
+  };
+  X000156d = {
+   fileRef = X000156c;
+   isa = PBXBuildFile;
+  };
+  X000156e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/output3.cxx";
+  };
+  X000156f = {
+   fileRef = X000156e;
+   isa = PBXBuildFile;
+  };
+  X0001570 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/overlayobject.cxx";
+  };
+  X0001571 = {
+   fileRef = X0001570;
+   isa = PBXBuildFile;
+  };
+  X0001572 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/pfuncache.cxx";
+  };
+  X0001573 = {
+   fileRef = X0001572;
+   isa = PBXBuildFile;
+  };
+  X0001574 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/pgbrksh.cxx";
+  };
+  X0001575 = {
+   fileRef = X0001574;
+   isa = PBXBuildFile;
+  };
+  X0001576 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/pivotsh.cxx";
+  };
+  X0001577 = {
+   fileRef = X0001576;
+   isa = PBXBuildFile;
+  };
+  X0001578 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/preview.cxx";
+  };
+  X0001579 = {
+   fileRef = X0001578;
+   isa = PBXBuildFile;
+  };
+  X000157a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/prevloc.cxx";
+  };
+  X000157b = {
+   fileRef = X000157a;
+   isa = PBXBuildFile;
+  };
+  X000157c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/prevwsh.cxx";
+  };
+  X000157d = {
+   fileRef = X000157c;
+   isa = PBXBuildFile;
+  };
+  X000157e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/prevwsh2.cxx";
+  };
+  X000157f = {
+   fileRef = X000157e;
+   isa = PBXBuildFile;
+  };
+  X0001580 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/printfun.cxx";
+  };
+  X0001581 = {
+   fileRef = X0001580;
+   isa = PBXBuildFile;
+  };
+  X0001582 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/reffact.cxx";
+  };
+  X0001583 = {
+   fileRef = X0001582;
+   isa = PBXBuildFile;
+  };
+  X0001584 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/scextopt.cxx";
+  };
+  X0001585 = {
+   fileRef = X0001584;
+   isa = PBXBuildFile;
+  };
+  X0001586 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/select.cxx";
+  };
+  X0001587 = {
+   fileRef = X0001586;
+   isa = PBXBuildFile;
+  };
+  X0001588 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/selectionstate.cxx";
+  };
+  X0001589 = {
+   fileRef = X0001588;
+   isa = PBXBuildFile;
+  };
+  X000158a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/spelldialog.cxx";
+  };
+  X000158b = {
+   fileRef = X000158a;
+   isa = PBXBuildFile;
+  };
+  X000158c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/spelleng.cxx";
+  };
+  X000158d = {
+   fileRef = X000158c;
+   isa = PBXBuildFile;
+  };
+  X000158e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/spellcheckcontext.cxx";
+  };
+  X000158f = {
+   fileRef = X000158e;
+   isa = PBXBuildFile;
+  };
+  X0001590 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabcont.cxx";
+  };
+  X0001591 = {
+   fileRef = X0001590;
+   isa = PBXBuildFile;
+  };
+  X0001592 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabsplit.cxx";
+  };
+  X0001593 = {
+   fileRef = X0001592;
+   isa = PBXBuildFile;
+  };
+  X0001594 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabview.cxx";
+  };
+  X0001595 = {
+   fileRef = X0001594;
+   isa = PBXBuildFile;
+  };
+  X0001596 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabview2.cxx";
+  };
+  X0001597 = {
+   fileRef = X0001596;
+   isa = PBXBuildFile;
+  };
+  X0001598 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabview3.cxx";
+  };
+  X0001599 = {
+   fileRef = X0001598;
+   isa = PBXBuildFile;
+  };
+  X000159a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabview4.cxx";
+  };
+  X000159b = {
+   fileRef = X000159a;
+   isa = PBXBuildFile;
+  };
+  X000159c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabview5.cxx";
+  };
+  X000159d = {
+   fileRef = X000159c;
+   isa = PBXBuildFile;
+  };
+  X000159e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwsh.cxx";
+  };
+  X000159f = {
+   fileRef = X000159e;
+   isa = PBXBuildFile;
+  };
+  X00015a0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwsh2.cxx";
+  };
+  X00015a1 = {
+   fileRef = X00015a0;
+   isa = PBXBuildFile;
+  };
+  X00015a2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwsh3.cxx";
+  };
+  X00015a3 = {
+   fileRef = X00015a2;
+   isa = PBXBuildFile;
+  };
+  X00015a4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwsh4.cxx";
+  };
+  X00015a5 = {
+   fileRef = X00015a4;
+   isa = PBXBuildFile;
+  };
+  X00015a6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwsh5.cxx";
+  };
+  X00015a7 = {
+   fileRef = X00015a6;
+   isa = PBXBuildFile;
+  };
+  X00015a8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwsh8.cxx";
+  };
+  X00015a9 = {
+   fileRef = X00015a8;
+   isa = PBXBuildFile;
+  };
+  X00015aa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwsh9.cxx";
+  };
+  X00015ab = {
+   fileRef = X00015aa;
+   isa = PBXBuildFile;
+  };
+  X00015ac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwsha.cxx";
+  };
+  X00015ad = {
+   fileRef = X00015ac;
+   isa = PBXBuildFile;
+  };
+  X00015ae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwshb.cxx";
+  };
+  X00015af = {
+   fileRef = X00015ae;
+   isa = PBXBuildFile;
+  };
+  X00015b0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwshc.cxx";
+  };
+  X00015b1 = {
+   fileRef = X00015b0;
+   isa = PBXBuildFile;
+  };
+  X00015b2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwshd.cxx";
+  };
+  X00015b3 = {
+   fileRef = X00015b2;
+   isa = PBXBuildFile;
+  };
+  X00015b4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwshe.cxx";
+  };
+  X00015b5 = {
+   fileRef = X00015b4;
+   isa = PBXBuildFile;
+  };
+  X00015b6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwshf.cxx";
+  };
+  X00015b7 = {
+   fileRef = X00015b6;
+   isa = PBXBuildFile;
+  };
+  X00015b8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwshg.cxx";
+  };
+  X00015b9 = {
+   fileRef = X00015b8;
+   isa = PBXBuildFile;
+  };
+  X00015ba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/tabvwshh.cxx";
+  };
+  X00015bb = {
+   fileRef = X00015ba;
+   isa = PBXBuildFile;
+  };
+  X00015bc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/viewdata.cxx";
+  };
+  X00015bd = {
+   fileRef = X00015bc;
+   isa = PBXBuildFile;
+  };
+  X00015be = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/viewfun2.cxx";
+  };
+  X00015bf = {
+   fileRef = X00015be;
+   isa = PBXBuildFile;
+  };
+  X00015c0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/viewfun3.cxx";
+  };
+  X00015c1 = {
+   fileRef = X00015c0;
+   isa = PBXBuildFile;
+  };
+  X00015c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/viewfun4.cxx";
+  };
+  X00015c3 = {
+   fileRef = X00015c2;
+   isa = PBXBuildFile;
+  };
+  X00015c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/viewfun5.cxx";
+  };
+  X00015c5 = {
+   fileRef = X00015c4;
+   isa = PBXBuildFile;
+  };
+  X00015c6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/viewfun6.cxx";
+  };
+  X00015c7 = {
+   fileRef = X00015c6;
+   isa = PBXBuildFile;
+  };
+  X00015c8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/viewfun7.cxx";
+  };
+  X00015c9 = {
+   fileRef = X00015c8;
+   isa = PBXBuildFile;
+  };
+  X00015ca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/viewfunc.cxx";
+  };
+  X00015cb = {
+   fileRef = X00015ca;
+   isa = PBXBuildFile;
+  };
+  X00015cc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/viewutil.cxx";
+  };
+  X00015cd = {
+   fileRef = X00015cc;
+   isa = PBXBuildFile;
+  };
+  X00015ce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/waitoff.cxx";
+  };
+  X00015cf = {
+   fileRef = X00015ce;
+   isa = PBXBuildFile;
+  };
+  X00015d0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/xmlsource/xmlsourcedlg.cxx";
+  };
+  X00015d1 = {
+   fileRef = X00015d0;
+   isa = PBXBuildFile;
+  };
+  X00015d2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/tool/formulalogger.cxx";
+  };
+  X00015d3 = {
+   fileRef = X00015d2;
+   isa = PBXBuildFile;
+  };
+  X00015d4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/ui/view/gridwin_dbgutil.cxx";
+  };
+  X00015d5 = {
+   fileRef = X00015d4;
+   isa = PBXBuildFile;
+  };
+  X00015d6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/formulagroupcl.cxx";
+  };
+  X00015d7 = {
+   fileRef = X00015d6;
+   isa = PBXBuildFile;
+  };
+  X00015d8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/opbase.cxx";
+  };
+  X00015d9 = {
+   fileRef = X00015d8;
+   isa = PBXBuildFile;
+  };
+  X00015da = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/op_financial.cxx";
+  };
+  X00015db = {
+   fileRef = X00015da;
+   isa = PBXBuildFile;
+  };
+  X00015dc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/op_database.cxx";
+  };
+  X00015dd = {
+   fileRef = X00015dc;
+   isa = PBXBuildFile;
+  };
+  X00015de = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/op_math.cxx";
+  };
+  X00015df = {
+   fileRef = X00015de;
+   isa = PBXBuildFile;
+  };
+  X00015e0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/op_addin.cxx";
+  };
+  X00015e1 = {
+   fileRef = X00015e0;
+   isa = PBXBuildFile;
+  };
+  X00015e2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/op_statistical.cxx";
+  };
+  X00015e3 = {
+   fileRef = X00015e2;
+   isa = PBXBuildFile;
+  };
+  X00015e4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/op_array.cxx";
+  };
+  X00015e5 = {
+   fileRef = X00015e4;
+   isa = PBXBuildFile;
+  };
+  X00015e6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/op_logical.cxx";
+  };
+  X00015e7 = {
+   fileRef = X00015e6;
+   isa = PBXBuildFile;
+  };
+  X00015e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/source/core/opencl/op_spreadsheet.cxx";
+  };
+  X00015e9 = {
+   fileRef = X00015e8;
+   isa = PBXBuildFile;
+  };
+  X00015ea = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0001141;
+}

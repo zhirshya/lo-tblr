@@ -1,0 +1,79 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00027ff = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000280b;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002800;
+   productRefGroup = X0002803;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002805;
+  };
+  X0002800 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002801 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002804 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002805 = {
+   buildConfigurationList = X000280c;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002802;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0002806 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/migration/services/cexportsoo3.cxx";
+  };
+  X0002807 = {
+   fileRef = X0002806;
+   isa = PBXBuildFile;
+  };
+  X0002808 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/migration/services/oo3extensionmigration.cxx";
+  };
+  X0002809 = {
+   fileRef = X0002808;
+   isa = PBXBuildFile;
+  };
+  X000280a = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00027ff;
+}

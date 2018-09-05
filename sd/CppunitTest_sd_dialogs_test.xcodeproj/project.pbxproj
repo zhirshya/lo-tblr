@@ -1,0 +1,70 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00019ab = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00019b5;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00019ac;
+   productRefGroup = X00019af;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00019b1;
+  };
+  X00019ac = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00019ad = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00019b0 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00019b1 = {
+   buildConfigurationList = X00019b6;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00019ae;
+   productType = ;
+  };
+  X00019b2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sd/qa/unit/dialogs-test.cxx";
+  };
+  X00019b3 = {
+   fileRef = X00019b2;
+   isa = PBXBuildFile;
+  };
+  X00019b4 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00019ab;
+}

@@ -1,0 +1,88 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00027ef = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00027fd;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00027f0;
+   productRefGroup = X00027f3;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00027f5;
+  };
+  X00027f0 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00027f1 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00027f4 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00027f5 = {
+   buildConfigurationList = X00027fe;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00027f2;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00027f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/splash/services_spl.cxx";
+  };
+  X00027f7 = {
+   fileRef = X00027f6;
+   isa = PBXBuildFile;
+  };
+  X00027f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/splash/splash.cxx";
+  };
+  X00027f9 = {
+   fileRef = X00027f8;
+   isa = PBXBuildFile;
+  };
+  X00027fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/splash/unxsplash.cxx";
+  };
+  X00027fb = {
+   fileRef = X00027fa;
+   isa = PBXBuildFile;
+  };
+  X00027fc = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00027ef;
+}

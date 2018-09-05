@@ -1,0 +1,223 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00018e1 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000190d;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00018e2;
+   productRefGroup = X00018e5;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00018e7;
+  };
+  X00018e2 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00018e3 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00018e6 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00018e7 = {
+   buildConfigurationList = X000190e;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00018e4;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00018e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/filterdet.cxx";
+  };
+  X00018e9 = {
+   fileRef = X00018e8;
+   isa = PBXBuildFile;
+  };
+  X00018ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/misc/pdfihelper.cxx";
+  };
+  X00018eb = {
+   fileRef = X00018ea;
+   isa = PBXBuildFile;
+  };
+  X00018ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/misc/pwdinteract.cxx";
+  };
+  X00018ed = {
+   fileRef = X00018ec;
+   isa = PBXBuildFile;
+  };
+  X00018ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/odf/odfemitter.cxx";
+  };
+  X00018ef = {
+   fileRef = X00018ee;
+   isa = PBXBuildFile;
+  };
+  X00018f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/pdfiadaptor.cxx";
+  };
+  X00018f1 = {
+   fileRef = X00018f0;
+   isa = PBXBuildFile;
+  };
+  X00018f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/pdfparse/pdfentries.cxx";
+  };
+  X00018f3 = {
+   fileRef = X00018f2;
+   isa = PBXBuildFile;
+  };
+  X00018f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/pdfparse/pdfparse.cxx";
+  };
+  X00018f5 = {
+   fileRef = X00018f4;
+   isa = PBXBuildFile;
+  };
+  X00018f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/sax/emitcontext.cxx";
+  };
+  X00018f7 = {
+   fileRef = X00018f6;
+   isa = PBXBuildFile;
+  };
+  X00018f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/sax/saxattrlist.cxx";
+  };
+  X00018f9 = {
+   fileRef = X00018f8;
+   isa = PBXBuildFile;
+  };
+  X00018fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/services.cxx";
+  };
+  X00018fb = {
+   fileRef = X00018fa;
+   isa = PBXBuildFile;
+  };
+  X00018fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/tree/drawtreevisiting.cxx";
+  };
+  X00018fd = {
+   fileRef = X00018fc;
+   isa = PBXBuildFile;
+  };
+  X00018fe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/tree/genericelements.cxx";
+  };
+  X00018ff = {
+   fileRef = X00018fe;
+   isa = PBXBuildFile;
+  };
+  X0001900 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/tree/imagecontainer.cxx";
+  };
+  X0001901 = {
+   fileRef = X0001900;
+   isa = PBXBuildFile;
+  };
+  X0001902 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/tree/pdfiprocessor.cxx";
+  };
+  X0001903 = {
+   fileRef = X0001902;
+   isa = PBXBuildFile;
+  };
+  X0001904 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/tree/style.cxx";
+  };
+  X0001905 = {
+   fileRef = X0001904;
+   isa = PBXBuildFile;
+  };
+  X0001906 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/tree/treevisitorfactory.cxx";
+  };
+  X0001907 = {
+   fileRef = X0001906;
+   isa = PBXBuildFile;
+  };
+  X0001908 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/tree/writertreevisiting.cxx";
+  };
+  X0001909 = {
+   fileRef = X0001908;
+   isa = PBXBuildFile;
+  };
+  X000190a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/pdfimport/wrapper/wrapper.cxx";
+  };
+  X000190b = {
+   fileRef = X000190a;
+   isa = PBXBuildFile;
+  };
+  X000190c = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00018e1;
+}

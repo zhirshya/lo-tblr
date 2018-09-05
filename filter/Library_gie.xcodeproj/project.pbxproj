@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X000294f = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002989;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002950;
+   productRefGroup = X0002953;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002955;
+  };
+  X0002950 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002951 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002954 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002955 = {
+   buildConfigurationList = X000298a;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002952;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0002956 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/egif/egif.cxx";
+  };
+  X0002957 = {
+   fileRef = X0002956;
+   isa = PBXBuildFile;
+  };
+  X0002958 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/etiff/etiff.cxx";
+  };
+  X0002959 = {
+   fileRef = X0002958;
+   isa = PBXBuildFile;
+  };
+  X000295a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/eps/eps.cxx";
+  };
+  X000295b = {
+   fileRef = X000295a;
+   isa = PBXBuildFile;
+  };
+  X000295c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/egif/giflzwc.cxx";
+  };
+  X000295d = {
+   fileRef = X000295c;
+   isa = PBXBuildFile;
+  };
+  X000295e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/itiff/ccidecom.cxx";
+  };
+  X000295f = {
+   fileRef = X000295e;
+   isa = PBXBuildFile;
+  };
+  X0002960 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/itiff/itiff.cxx";
+  };
+  X0002961 = {
+   fileRef = X0002960;
+   isa = PBXBuildFile;
+  };
+  X0002962 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/itiff/lzwdecom.cxx";
+  };
+  X0002963 = {
+   fileRef = X0002962;
+   isa = PBXBuildFile;
+  };
+  X0002964 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/ipict/ipict.cxx";
+  };
+  X0002965 = {
+   fileRef = X0002964;
+   isa = PBXBuildFile;
+  };
+  X0002966 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/ipict/shape.cxx";
+  };
+  X0002967 = {
+   fileRef = X0002966;
+   isa = PBXBuildFile;
+  };
+  X0002968 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/ipcx/ipcx.cxx";
+  };
+  X0002969 = {
+   fileRef = X0002968;
+   isa = PBXBuildFile;
+  };
+  X000296a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/iras/iras.cxx";
+  };
+  X000296b = {
+   fileRef = X000296a;
+   isa = PBXBuildFile;
+  };
+  X000296c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/itga/itga.cxx";
+  };
+  X000296d = {
+   fileRef = X000296c;
+   isa = PBXBuildFile;
+  };
+  X000296e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/ieps/ieps.cxx";
+  };
+  X000296f = {
+   fileRef = X000296e;
+   isa = PBXBuildFile;
+  };
+  X0002970 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/ipsd/ipsd.cxx";
+  };
+  X0002971 = {
+   fileRef = X0002970;
+   isa = PBXBuildFile;
+  };
+  X0002972 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/ipbm/ipbm.cxx";
+  };
+  X0002973 = {
+   fileRef = X0002972;
+   isa = PBXBuildFile;
+  };
+  X0002974 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/ios2met/ios2met.cxx";
+  };
+  X0002975 = {
+   fileRef = X0002974;
+   isa = PBXBuildFile;
+  };
+  X0002976 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/idxf/dxf2mtf.cxx";
+  };
+  X0002977 = {
+   fileRef = X0002976;
+   isa = PBXBuildFile;
+  };
+  X0002978 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/idxf/dxfblkrd.cxx";
+  };
+  X0002979 = {
+   fileRef = X0002978;
+   isa = PBXBuildFile;
+  };
+  X000297a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/idxf/dxfentrd.cxx";
+  };
+  X000297b = {
+   fileRef = X000297a;
+   isa = PBXBuildFile;
+  };
+  X000297c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/idxf/dxfgrprd.cxx";
+  };
+  X000297d = {
+   fileRef = X000297c;
+   isa = PBXBuildFile;
+  };
+  X000297e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/idxf/dxfreprd.cxx";
+  };
+  X000297f = {
+   fileRef = X000297e;
+   isa = PBXBuildFile;
+  };
+  X0002980 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/idxf/dxftblrd.cxx";
+  };
+  X0002981 = {
+   fileRef = X0002980;
+   isa = PBXBuildFile;
+  };
+  X0002982 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/idxf/dxfvec.cxx";
+  };
+  X0002983 = {
+   fileRef = X0002982;
+   isa = PBXBuildFile;
+  };
+  X0002984 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/idxf/idxf.cxx";
+  };
+  X0002985 = {
+   fileRef = X0002984;
+   isa = PBXBuildFile;
+  };
+  X0002986 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/graphicfilter/ipcd/ipcd.cxx";
+  };
+  X0002987 = {
+   fileRef = X0002986;
+   isa = PBXBuildFile;
+  };
+  X0002988 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X000294f;
+}

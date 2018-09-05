@@ -1,0 +1,88 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X000405f = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000406d;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004060;
+   productRefGroup = X0004063;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004065;
+  };
+  X0004060 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004061 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004064 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004065 = {
+   buildConfigurationList = X000406e;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004062;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004066 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/config/ldap/componentdef.cxx";
+  };
+  X0004067 = {
+   fileRef = X0004066;
+   isa = PBXBuildFile;
+  };
+  X0004068 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/config/ldap/ldapaccess.cxx";
+  };
+  X0004069 = {
+   fileRef = X0004068;
+   isa = PBXBuildFile;
+  };
+  X000406a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/config/ldap/ldapuserprofilebe.cxx";
+  };
+  X000406b = {
+   fileRef = X000406a;
+   isa = PBXBuildFile;
+  };
+  X000406c = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X000405f;
+}

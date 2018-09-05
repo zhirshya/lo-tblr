@@ -1,0 +1,79 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0000d2b = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0000d37;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0000d2c;
+   productRefGroup = X0000d2f;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0000d31;
+  };
+  X0000d2c = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0000d2d = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0000d30 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0000d31 = {
+   buildConfigurationList = X0000d38;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0000d2e;
+   productType = ;
+  };
+  X0000d32 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vcl/qa/cppunit/canvasbitmaptest.cxx";
+  };
+  X0000d33 = {
+   fileRef = X0000d32;
+   isa = PBXBuildFile;
+  };
+  X0000d34 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vcl/qa/cppunit/complextext.cxx";
+  };
+  X0000d35 = {
+   fileRef = X0000d34;
+   isa = PBXBuildFile;
+  };
+  X0000d36 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0000d2b;
+}

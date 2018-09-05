@@ -1,0 +1,925 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00039fd = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0003ac5;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00039fe;
+   productRefGroup = X0003a01;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0003a03;
+  };
+  X00039fe = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00039ff = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0003a02 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0003a03 = {
+   buildConfigurationList = X0003ac6;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0003a00;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0003a04 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/activities/activitiesfactory.cxx";
+  };
+  X0003a05 = {
+   fileRef = X0003a04;
+   isa = PBXBuildFile;
+  };
+  X0003a06 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/activities/activitybase.cxx";
+  };
+  X0003a07 = {
+   fileRef = X0003a06;
+   isa = PBXBuildFile;
+  };
+  X0003a08 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/activities/continuousactivitybase.cxx";
+  };
+  X0003a09 = {
+   fileRef = X0003a08;
+   isa = PBXBuildFile;
+  };
+  X0003a0a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/activities/continuouskeytimeactivitybase.cxx";
+  };
+  X0003a0b = {
+   fileRef = X0003a0a;
+   isa = PBXBuildFile;
+  };
+  X0003a0c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/activities/discreteactivitybase.cxx";
+  };
+  X0003a0d = {
+   fileRef = X0003a0c;
+   isa = PBXBuildFile;
+  };
+  X0003a0e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/activitiesqueue.cxx";
+  };
+  X0003a0f = {
+   fileRef = X0003a0e;
+   isa = PBXBuildFile;
+  };
+  X0003a10 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/activities/simplecontinuousactivitybase.cxx";
+  };
+  X0003a11 = {
+   fileRef = X0003a10;
+   isa = PBXBuildFile;
+  };
+  X0003a12 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animatedsprite.cxx";
+  };
+  X0003a13 = {
+   fileRef = X0003a12;
+   isa = PBXBuildFile;
+  };
+  X0003a14 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationfactory.cxx";
+  };
+  X0003a15 = {
+   fileRef = X0003a14;
+   isa = PBXBuildFile;
+  };
+  X0003a16 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/animationaudionode.cxx";
+  };
+  X0003a17 = {
+   fileRef = X0003a16;
+   isa = PBXBuildFile;
+  };
+  X0003a18 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/animationbasenode.cxx";
+  };
+  X0003a19 = {
+   fileRef = X0003a18;
+   isa = PBXBuildFile;
+  };
+  X0003a1a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/animationcolornode.cxx";
+  };
+  X0003a1b = {
+   fileRef = X0003a1a;
+   isa = PBXBuildFile;
+  };
+  X0003a1c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/animationcommandnode.cxx";
+  };
+  X0003a1d = {
+   fileRef = X0003a1c;
+   isa = PBXBuildFile;
+  };
+  X0003a1e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/animationnodefactory.cxx";
+  };
+  X0003a1f = {
+   fileRef = X0003a1e;
+   isa = PBXBuildFile;
+  };
+  X0003a20 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/animationpathmotionnode.cxx";
+  };
+  X0003a21 = {
+   fileRef = X0003a20;
+   isa = PBXBuildFile;
+  };
+  X0003a22 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/animationsetnode.cxx";
+  };
+  X0003a23 = {
+   fileRef = X0003a22;
+   isa = PBXBuildFile;
+  };
+  X0003a24 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/animationtransformnode.cxx";
+  };
+  X0003a25 = {
+   fileRef = X0003a24;
+   isa = PBXBuildFile;
+  };
+  X0003a26 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/animationtransitionfilternode.cxx";
+  };
+  X0003a27 = {
+   fileRef = X0003a26;
+   isa = PBXBuildFile;
+  };
+  X0003a28 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/basecontainernode.cxx";
+  };
+  X0003a29 = {
+   fileRef = X0003a28;
+   isa = PBXBuildFile;
+  };
+  X0003a2a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/basenode.cxx";
+  };
+  X0003a2b = {
+   fileRef = X0003a2a;
+   isa = PBXBuildFile;
+  };
+  X0003a2c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/generateevent.cxx";
+  };
+  X0003a2d = {
+   fileRef = X0003a2c;
+   isa = PBXBuildFile;
+  };
+  X0003a2e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/nodetools.cxx";
+  };
+  X0003a2f = {
+   fileRef = X0003a2e;
+   isa = PBXBuildFile;
+  };
+  X0003a30 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/paralleltimecontainer.cxx";
+  };
+  X0003a31 = {
+   fileRef = X0003a30;
+   isa = PBXBuildFile;
+  };
+  X0003a32 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/propertyanimationnode.cxx";
+  };
+  X0003a33 = {
+   fileRef = X0003a32;
+   isa = PBXBuildFile;
+  };
+  X0003a34 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/animationnodes/sequentialtimecontainer.cxx";
+  };
+  X0003a35 = {
+   fileRef = X0003a34;
+   isa = PBXBuildFile;
+  };
+  X0003a36 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/attributemap.cxx";
+  };
+  X0003a37 = {
+   fileRef = X0003a36;
+   isa = PBXBuildFile;
+  };
+  X0003a38 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/color.cxx";
+  };
+  X0003a39 = {
+   fileRef = X0003a38;
+   isa = PBXBuildFile;
+  };
+  X0003a3a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/delayevent.cxx";
+  };
+  X0003a3b = {
+   fileRef = X0003a3a;
+   isa = PBXBuildFile;
+  };
+  X0003a3c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/effectrewinder.cxx";
+  };
+  X0003a3d = {
+   fileRef = X0003a3c;
+   isa = PBXBuildFile;
+  };
+  X0003a3e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/eventmultiplexer.cxx";
+  };
+  X0003a3f = {
+   fileRef = X0003a3e;
+   isa = PBXBuildFile;
+  };
+  X0003a40 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/eventqueue.cxx";
+  };
+  X0003a41 = {
+   fileRef = X0003a40;
+   isa = PBXBuildFile;
+  };
+  X0003a42 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/expressionnodefactory.cxx";
+  };
+  X0003a43 = {
+   fileRef = X0003a42;
+   isa = PBXBuildFile;
+  };
+  X0003a44 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/rehearsetimingsactivity.cxx";
+  };
+  X0003a45 = {
+   fileRef = X0003a44;
+   isa = PBXBuildFile;
+  };
+  X0003a46 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/screenupdater.cxx";
+  };
+  X0003a47 = {
+   fileRef = X0003a46;
+   isa = PBXBuildFile;
+  };
+  X0003a48 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapeattributelayer.cxx";
+  };
+  X0003a49 = {
+   fileRef = X0003a48;
+   isa = PBXBuildFile;
+  };
+  X0003a4a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/appletshape.cxx";
+  };
+  X0003a4b = {
+   fileRef = X0003a4a;
+   isa = PBXBuildFile;
+  };
+  X0003a4c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/backgroundshape.cxx";
+  };
+  X0003a4d = {
+   fileRef = X0003a4c;
+   isa = PBXBuildFile;
+  };
+  X0003a4e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/drawinglayeranimation.cxx";
+  };
+  X0003a4f = {
+   fileRef = X0003a4e;
+   isa = PBXBuildFile;
+  };
+  X0003a50 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/drawshape.cxx";
+  };
+  X0003a51 = {
+   fileRef = X0003a50;
+   isa = PBXBuildFile;
+  };
+  X0003a52 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/drawshapesubsetting.cxx";
+  };
+  X0003a53 = {
+   fileRef = X0003a52;
+   isa = PBXBuildFile;
+  };
+  X0003a54 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/externalshapebase.cxx";
+  };
+  X0003a55 = {
+   fileRef = X0003a54;
+   isa = PBXBuildFile;
+  };
+  X0003a56 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/gdimtftools.cxx";
+  };
+  X0003a57 = {
+   fileRef = X0003a56;
+   isa = PBXBuildFile;
+  };
+  X0003a58 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/intrinsicanimationactivity.cxx";
+  };
+  X0003a59 = {
+   fileRef = X0003a58;
+   isa = PBXBuildFile;
+  };
+  X0003a5a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/mediashape.cxx";
+  };
+  X0003a5b = {
+   fileRef = X0003a5a;
+   isa = PBXBuildFile;
+  };
+  X0003a5c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/shapeimporter.cxx";
+  };
+  X0003a5d = {
+   fileRef = X0003a5c;
+   isa = PBXBuildFile;
+  };
+  X0003a5e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapesubset.cxx";
+  };
+  X0003a5f = {
+   fileRef = X0003a5e;
+   isa = PBXBuildFile;
+  };
+  X0003a60 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/viewappletshape.cxx";
+  };
+  X0003a61 = {
+   fileRef = X0003a60;
+   isa = PBXBuildFile;
+  };
+  X0003a62 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/viewbackgroundshape.cxx";
+  };
+  X0003a63 = {
+   fileRef = X0003a62;
+   isa = PBXBuildFile;
+  };
+  X0003a64 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/viewmediashape.cxx";
+  };
+  X0003a65 = {
+   fileRef = X0003a64;
+   isa = PBXBuildFile;
+  };
+  X0003a66 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/shapes/viewshape.cxx";
+  };
+  X0003a67 = {
+   fileRef = X0003a66;
+   isa = PBXBuildFile;
+  };
+  X0003a68 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slidebitmap.cxx";
+  };
+  X0003a69 = {
+   fileRef = X0003a68;
+   isa = PBXBuildFile;
+  };
+  X0003a6a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slide/layer.cxx";
+  };
+  X0003a6b = {
+   fileRef = X0003a6a;
+   isa = PBXBuildFile;
+  };
+  X0003a6c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slide/layermanager.cxx";
+  };
+  X0003a6d = {
+   fileRef = X0003a6c;
+   isa = PBXBuildFile;
+  };
+  X0003a6e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slide/shapemanagerimpl.cxx";
+  };
+  X0003a6f = {
+   fileRef = X0003a6e;
+   isa = PBXBuildFile;
+  };
+  X0003a70 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slideshowcontext.cxx";
+  };
+  X0003a71 = {
+   fileRef = X0003a70;
+   isa = PBXBuildFile;
+  };
+  X0003a72 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slideshowimpl.cxx";
+  };
+  X0003a73 = {
+   fileRef = X0003a72;
+   isa = PBXBuildFile;
+  };
+  X0003a74 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slide/slideanimations.cxx";
+  };
+  X0003a75 = {
+   fileRef = X0003a74;
+   isa = PBXBuildFile;
+  };
+  X0003a76 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slide/slideimpl.cxx";
+  };
+  X0003a77 = {
+   fileRef = X0003a76;
+   isa = PBXBuildFile;
+  };
+  X0003a78 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slide/targetpropertiescreator.cxx";
+  };
+  X0003a79 = {
+   fileRef = X0003a78;
+   isa = PBXBuildFile;
+  };
+  X0003a7a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slide/userpaintoverlay.cxx";
+  };
+  X0003a7b = {
+   fileRef = X0003a7a;
+   isa = PBXBuildFile;
+  };
+  X0003a7c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/slideview.cxx";
+  };
+  X0003a7d = {
+   fileRef = X0003a7c;
+   isa = PBXBuildFile;
+  };
+  X0003a7e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/smilfunctionparser.cxx";
+  };
+  X0003a7f = {
+   fileRef = X0003a7e;
+   isa = PBXBuildFile;
+  };
+  X0003a80 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/soundplayer.cxx";
+  };
+  X0003a81 = {
+   fileRef = X0003a80;
+   isa = PBXBuildFile;
+  };
+  X0003a82 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/tools.cxx";
+  };
+  X0003a83 = {
+   fileRef = X0003a82;
+   isa = PBXBuildFile;
+  };
+  X0003a84 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/barndoorwipe.cxx";
+  };
+  X0003a85 = {
+   fileRef = X0003a84;
+   isa = PBXBuildFile;
+  };
+  X0003a86 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/barwipepolypolygon.cxx";
+  };
+  X0003a87 = {
+   fileRef = X0003a86;
+   isa = PBXBuildFile;
+  };
+  X0003a88 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/boxwipe.cxx";
+  };
+  X0003a89 = {
+   fileRef = X0003a88;
+   isa = PBXBuildFile;
+  };
+  X0003a8a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/checkerboardwipe.cxx";
+  };
+  X0003a8b = {
+   fileRef = X0003a8a;
+   isa = PBXBuildFile;
+  };
+  X0003a8c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/clippingfunctor.cxx";
+  };
+  X0003a8d = {
+   fileRef = X0003a8c;
+   isa = PBXBuildFile;
+  };
+  X0003a8e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/clockwipe.cxx";
+  };
+  X0003a8f = {
+   fileRef = X0003a8e;
+   isa = PBXBuildFile;
+  };
+  X0003a90 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/combtransition.cxx";
+  };
+  X0003a91 = {
+   fileRef = X0003a90;
+   isa = PBXBuildFile;
+  };
+  X0003a92 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/doublediamondwipe.cxx";
+  };
+  X0003a93 = {
+   fileRef = X0003a92;
+   isa = PBXBuildFile;
+  };
+  X0003a94 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/ellipsewipe.cxx";
+  };
+  X0003a95 = {
+   fileRef = X0003a94;
+   isa = PBXBuildFile;
+  };
+  X0003a96 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/fanwipe.cxx";
+  };
+  X0003a97 = {
+   fileRef = X0003a96;
+   isa = PBXBuildFile;
+  };
+  X0003a98 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/figurewipe.cxx";
+  };
+  X0003a99 = {
+   fileRef = X0003a98;
+   isa = PBXBuildFile;
+  };
+  X0003a9a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/fourboxwipe.cxx";
+  };
+  X0003a9b = {
+   fileRef = X0003a9a;
+   isa = PBXBuildFile;
+  };
+  X0003a9c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/iriswipe.cxx";
+  };
+  X0003a9d = {
+   fileRef = X0003a9c;
+   isa = PBXBuildFile;
+  };
+  X0003a9e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/parametricpolypolygonfactory.cxx";
+  };
+  X0003a9f = {
+   fileRef = X0003a9e;
+   isa = PBXBuildFile;
+  };
+  X0003aa0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/pinwheelwipe.cxx";
+  };
+  X0003aa1 = {
+   fileRef = X0003aa0;
+   isa = PBXBuildFile;
+  };
+  X0003aa2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/randomwipe.cxx";
+  };
+  X0003aa3 = {
+   fileRef = X0003aa2;
+   isa = PBXBuildFile;
+  };
+  X0003aa4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/shapetransitionfactory.cxx";
+  };
+  X0003aa5 = {
+   fileRef = X0003aa4;
+   isa = PBXBuildFile;
+  };
+  X0003aa6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/slidechangebase.cxx";
+  };
+  X0003aa7 = {
+   fileRef = X0003aa6;
+   isa = PBXBuildFile;
+  };
+  X0003aa8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/slidetransitionfactory.cxx";
+  };
+  X0003aa9 = {
+   fileRef = X0003aa8;
+   isa = PBXBuildFile;
+  };
+  X0003aaa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/snakewipe.cxx";
+  };
+  X0003aab = {
+   fileRef = X0003aaa;
+   isa = PBXBuildFile;
+  };
+  X0003aac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/spiralwipe.cxx";
+  };
+  X0003aad = {
+   fileRef = X0003aac;
+   isa = PBXBuildFile;
+  };
+  X0003aae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/sweepwipe.cxx";
+  };
+  X0003aaf = {
+   fileRef = X0003aae;
+   isa = PBXBuildFile;
+  };
+  X0003ab0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/transitionfactorytab.cxx";
+  };
+  X0003ab1 = {
+   fileRef = X0003ab0;
+   isa = PBXBuildFile;
+  };
+  X0003ab2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/transitiontools.cxx";
+  };
+  X0003ab3 = {
+   fileRef = X0003ab2;
+   isa = PBXBuildFile;
+  };
+  X0003ab4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/veewipe.cxx";
+  };
+  X0003ab5 = {
+   fileRef = X0003ab4;
+   isa = PBXBuildFile;
+  };
+  X0003ab6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/waterfallwipe.cxx";
+  };
+  X0003ab7 = {
+   fileRef = X0003ab6;
+   isa = PBXBuildFile;
+  };
+  X0003ab8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/transitions/zigzagwipe.cxx";
+  };
+  X0003ab9 = {
+   fileRef = X0003ab8;
+   isa = PBXBuildFile;
+  };
+  X0003aba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/unoviewcontainer.cxx";
+  };
+  X0003abb = {
+   fileRef = X0003aba;
+   isa = PBXBuildFile;
+  };
+  X0003abc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/usereventqueue.cxx";
+  };
+  X0003abd = {
+   fileRef = X0003abc;
+   isa = PBXBuildFile;
+  };
+  X0003abe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/waitsymbol.cxx";
+  };
+  X0003abf = {
+   fileRef = X0003abe;
+   isa = PBXBuildFile;
+  };
+  X0003ac0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/pointersymbol.cxx";
+  };
+  X0003ac1 = {
+   fileRef = X0003ac0;
+   isa = PBXBuildFile;
+  };
+  X0003ac2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/wakeupevent.cxx";
+  };
+  X0003ac3 = {
+   fileRef = X0003ac2;
+   isa = PBXBuildFile;
+  };
+  X0003ac4 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00039fd;
+}

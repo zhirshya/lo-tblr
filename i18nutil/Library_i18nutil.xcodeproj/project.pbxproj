@@ -1,0 +1,115 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0005147 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000515b;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0005148;
+   productRefGroup = X000514b;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000514d;
+  };
+  X0005148 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0005149 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000514c = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000514d = {
+   buildConfigurationList = X000515c;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X000514a;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000514e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nutil/source/utility/casefolding.cxx";
+  };
+  X000514f = {
+   fileRef = X000514e;
+   isa = PBXBuildFile;
+  };
+  X0005150 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nutil/source/utility/oneToOneMapping.cxx";
+  };
+  X0005151 = {
+   fileRef = X0005150;
+   isa = PBXBuildFile;
+  };
+  X0005152 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nutil/source/utility/paper.cxx";
+  };
+  X0005153 = {
+   fileRef = X0005152;
+   isa = PBXBuildFile;
+  };
+  X0005154 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nutil/source/utility/scripttypedetector.cxx";
+  };
+  X0005155 = {
+   fileRef = X0005154;
+   isa = PBXBuildFile;
+  };
+  X0005156 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nutil/source/utility/unicode.cxx";
+  };
+  X0005157 = {
+   fileRef = X0005156;
+   isa = PBXBuildFile;
+  };
+  X0005158 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nutil/source/utility/widthfolding.cxx";
+  };
+  X0005159 = {
+   fileRef = X0005158;
+   isa = PBXBuildFile;
+  };
+  X000515a = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0005147;
+}

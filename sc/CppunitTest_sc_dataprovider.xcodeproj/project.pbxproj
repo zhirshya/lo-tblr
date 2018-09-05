@@ -1,0 +1,70 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X000177b = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0001785;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X000177c;
+   productRefGroup = X000177f;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0001781;
+  };
+  X000177c = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X000177d = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0001780 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0001781 = {
+   buildConfigurationList = X0001786;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X000177e;
+   productType = ;
+  };
+  X0001782 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/qa/unit/dataproviders_test.cxx";
+  };
+  X0001783 = {
+   fileRef = X0001782;
+   isa = PBXBuildFile;
+  };
+  X0001784 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X000177b;
+}

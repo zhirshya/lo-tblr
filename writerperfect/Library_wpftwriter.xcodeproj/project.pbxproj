@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00022e1 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000231b;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00022e2;
+   productRefGroup = X00022e5;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00022e7;
+  };
+  X00022e2 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00022e3 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00022e6 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00022e7 = {
+   buildConfigurationList = X000231c;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00022e4;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00022e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/AbiWordImportFilter.cxx";
+  };
+  X00022e9 = {
+   fileRef = X00022e8;
+   isa = PBXBuildFile;
+  };
+  X00022ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/EBookImportFilter.cxx";
+  };
+  X00022eb = {
+   fileRef = X00022ea;
+   isa = PBXBuildFile;
+  };
+  X00022ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/EPUBExportDialog.cxx";
+  };
+  X00022ed = {
+   fileRef = X00022ec;
+   isa = PBXBuildFile;
+  };
+  X00022ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/EPUBExportFilter.cxx";
+  };
+  X00022ef = {
+   fileRef = X00022ee;
+   isa = PBXBuildFile;
+  };
+  X00022f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/EPUBExportUIComponent.cxx";
+  };
+  X00022f1 = {
+   fileRef = X00022f0;
+   isa = PBXBuildFile;
+  };
+  X00022f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/EPUBPackage.cxx";
+  };
+  X00022f3 = {
+   fileRef = X00022f2;
+   isa = PBXBuildFile;
+  };
+  X00022f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/MSWorksImportFilter.cxx";
+  };
+  X00022f5 = {
+   fileRef = X00022f4;
+   isa = PBXBuildFile;
+  };
+  X00022f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/MWAWImportFilter.cxx";
+  };
+  X00022f7 = {
+   fileRef = X00022f6;
+   isa = PBXBuildFile;
+  };
+  X00022f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/PagesImportFilter.cxx";
+  };
+  X00022f9 = {
+   fileRef = X00022f8;
+   isa = PBXBuildFile;
+  };
+  X00022fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/StarOfficeWriterImportFilter.cxx";
+  };
+  X00022fb = {
+   fileRef = X00022fa;
+   isa = PBXBuildFile;
+  };
+  X00022fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/WordPerfectImportFilter.cxx";
+  };
+  X00022fd = {
+   fileRef = X00022fc;
+   isa = PBXBuildFile;
+  };
+  X00022fe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/XMLBase64ImportContext.cxx";
+  };
+  X00022ff = {
+   fileRef = X00022fe;
+   isa = PBXBuildFile;
+  };
+  X0002300 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/XMLFootnoteImportContext.cxx";
+  };
+  X0002301 = {
+   fileRef = X0002300;
+   isa = PBXBuildFile;
+  };
+  X0002302 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/XMLSectionContext.cxx";
+  };
+  X0002303 = {
+   fileRef = X0002302;
+   isa = PBXBuildFile;
+  };
+  X0002304 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/XMLTextFrameContext.cxx";
+  };
+  X0002305 = {
+   fileRef = X0002304;
+   isa = PBXBuildFile;
+  };
+  X0002306 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/XMLTextListContext.cxx";
+  };
+  X0002307 = {
+   fileRef = X0002306;
+   isa = PBXBuildFile;
+  };
+  X0002308 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/XMLTextListItemContext.cxx";
+  };
+  X0002309 = {
+   fileRef = X0002308;
+   isa = PBXBuildFile;
+  };
+  X000230a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/txtparai.cxx";
+  };
+  X000230b = {
+   fileRef = X000230a;
+   isa = PBXBuildFile;
+  };
+  X000230c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/txtstyli.cxx";
+  };
+  X000230d = {
+   fileRef = X000230c;
+   isa = PBXBuildFile;
+  };
+  X000230e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/xmlfmt.cxx";
+  };
+  X000230f = {
+   fileRef = X000230e;
+   isa = PBXBuildFile;
+  };
+  X0002310 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/xmlictxt.cxx";
+  };
+  X0002311 = {
+   fileRef = X0002310;
+   isa = PBXBuildFile;
+  };
+  X0002312 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/xmlimp.cxx";
+  };
+  X0002313 = {
+   fileRef = X0002312;
+   isa = PBXBuildFile;
+  };
+  X0002314 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/xmlmetai.cxx";
+  };
+  X0002315 = {
+   fileRef = X0002314;
+   isa = PBXBuildFile;
+  };
+  X0002316 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/xmltbli.cxx";
+  };
+  X0002317 = {
+   fileRef = X0002316;
+   isa = PBXBuildFile;
+  };
+  X0002318 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/writer/exp/xmltext.cxx";
+  };
+  X0002319 = {
+   fileRef = X0002318;
+   isa = PBXBuildFile;
+  };
+  X000231a = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00022e1;
+}

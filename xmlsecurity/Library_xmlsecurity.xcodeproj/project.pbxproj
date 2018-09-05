@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004a55 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004a95;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004a56;
+   productRefGroup = X0004a59;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004a5b;
+  };
+  X0004a56 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004a57 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004a5a = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004a5b = {
+   buildConfigurationList = X0004a96;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004a58;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004a5c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/component/certificatecontainer.cxx";
+  };
+  X0004a5d = {
+   fileRef = X0004a5c;
+   isa = PBXBuildFile;
+  };
+  X0004a5e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/component/documentdigitalsignatures.cxx";
+  };
+  X0004a5f = {
+   fileRef = X0004a5e;
+   isa = PBXBuildFile;
+  };
+  X0004a60 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/dialogs/certificatechooser.cxx";
+  };
+  X0004a61 = {
+   fileRef = X0004a60;
+   isa = PBXBuildFile;
+  };
+  X0004a62 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/dialogs/certificateviewer.cxx";
+  };
+  X0004a63 = {
+   fileRef = X0004a62;
+   isa = PBXBuildFile;
+  };
+  X0004a64 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/dialogs/digitalsignaturesdialog.cxx";
+  };
+  X0004a65 = {
+   fileRef = X0004a64;
+   isa = PBXBuildFile;
+  };
+  X0004a66 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/dialogs/macrosecurity.cxx";
+  };
+  X0004a67 = {
+   fileRef = X0004a66;
+   isa = PBXBuildFile;
+  };
+  X0004a68 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/dialogs/resourcemanager.cxx";
+  };
+  X0004a69 = {
+   fileRef = X0004a68;
+   isa = PBXBuildFile;
+  };
+  X0004a6a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/framework/buffernode.cxx";
+  };
+  X0004a6b = {
+   fileRef = X0004a6a;
+   isa = PBXBuildFile;
+  };
+  X0004a6c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/framework/elementcollector.cxx";
+  };
+  X0004a6d = {
+   fileRef = X0004a6c;
+   isa = PBXBuildFile;
+  };
+  X0004a6e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/framework/elementmark.cxx";
+  };
+  X0004a6f = {
+   fileRef = X0004a6e;
+   isa = PBXBuildFile;
+  };
+  X0004a70 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/framework/saxeventkeeperimpl.cxx";
+  };
+  X0004a71 = {
+   fileRef = X0004a70;
+   isa = PBXBuildFile;
+  };
+  X0004a72 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/framework/securityengine.cxx";
+  };
+  X0004a73 = {
+   fileRef = X0004a72;
+   isa = PBXBuildFile;
+  };
+  X0004a74 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/framework/signaturecreatorimpl.cxx";
+  };
+  X0004a75 = {
+   fileRef = X0004a74;
+   isa = PBXBuildFile;
+  };
+  X0004a76 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/framework/signatureengine.cxx";
+  };
+  X0004a77 = {
+   fileRef = X0004a76;
+   isa = PBXBuildFile;
+  };
+  X0004a78 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/framework/signatureverifierimpl.cxx";
+  };
+  X0004a79 = {
+   fileRef = X0004a78;
+   isa = PBXBuildFile;
+  };
+  X0004a7a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/framework/xmlsignaturetemplateimpl.cxx";
+  };
+  X0004a7b = {
+   fileRef = X0004a7a;
+   isa = PBXBuildFile;
+  };
+  X0004a7c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/documentsignaturehelper.cxx";
+  };
+  X0004a7d = {
+   fileRef = X0004a7c;
+   isa = PBXBuildFile;
+  };
+  X0004a7e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/documentsignaturemanager.cxx";
+  };
+  X0004a7f = {
+   fileRef = X0004a7e;
+   isa = PBXBuildFile;
+  };
+  X0004a80 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/ooxmlsecparser.cxx";
+  };
+  X0004a81 = {
+   fileRef = X0004a80;
+   isa = PBXBuildFile;
+  };
+  X0004a82 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/ooxmlsecexporter.cxx";
+  };
+  X0004a83 = {
+   fileRef = X0004a82;
+   isa = PBXBuildFile;
+  };
+  X0004a84 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/pdfsignaturehelper.cxx";
+  };
+  X0004a85 = {
+   fileRef = X0004a84;
+   isa = PBXBuildFile;
+  };
+  X0004a86 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/xmlsignaturehelper2.cxx";
+  };
+  X0004a87 = {
+   fileRef = X0004a86;
+   isa = PBXBuildFile;
+  };
+  X0004a88 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/xmlsignaturehelper.cxx";
+  };
+  X0004a89 = {
+   fileRef = X0004a88;
+   isa = PBXBuildFile;
+  };
+  X0004a8a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/xsecctl.cxx";
+  };
+  X0004a8b = {
+   fileRef = X0004a8a;
+   isa = PBXBuildFile;
+  };
+  X0004a8c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/xsecparser.cxx";
+  };
+  X0004a8d = {
+   fileRef = X0004a8c;
+   isa = PBXBuildFile;
+  };
+  X0004a8e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/xsecsign.cxx";
+  };
+  X0004a8f = {
+   fileRef = X0004a8e;
+   isa = PBXBuildFile;
+  };
+  X0004a90 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/helper/xsecverify.cxx";
+  };
+  X0004a91 = {
+   fileRef = X0004a90;
+   isa = PBXBuildFile;
+  };
+  X0004a92 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmlsecurity/source/pdfio/pdfdocument.cxx";
+  };
+  X0004a93 = {
+   fileRef = X0004a92;
+   isa = PBXBuildFile;
+  };
+  X0004a94 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004a55;
+}

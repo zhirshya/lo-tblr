@@ -1,0 +1,88 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00032c1 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00032cf;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00032c2;
+   productRefGroup = X00032c5;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00032c7;
+  };
+  X00032c2 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00032c3 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00032c6 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00032c7 = {
+   buildConfigurationList = X00032d0;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00032c4;
+   productType = ;
+  };
+  X00032c8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "svx/qa/unit/svdraw/test_SdrTextObject.cxx";
+  };
+  X00032c9 = {
+   fileRef = X00032c8;
+   isa = PBXBuildFile;
+  };
+  X00032ca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "svx/qa/unit/xoutdev.cxx";
+  };
+  X00032cb = {
+   fileRef = X00032ca;
+   isa = PBXBuildFile;
+  };
+  X00032cc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "svx/qa/unit/XTableImportExportTest.cxx";
+  };
+  X00032cd = {
+   fileRef = X00032cc;
+   isa = PBXBuildFile;
+  };
+  X00032ce = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00032c1;
+}

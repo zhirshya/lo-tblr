@@ -1,0 +1,124 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X000101d = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0001033;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X000101e;
+   productRefGroup = X0001021;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0001023;
+  };
+  X000101e = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X000101f = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0001022 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0001023 = {
+   buildConfigurationList = X0001034;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0001020;
+   productType = ;
+  };
+  X0001024 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/qa/unit/ucalc.cxx";
+  };
+  X0001025 = {
+   fileRef = X0001024;
+   isa = PBXBuildFile;
+  };
+  X0001026 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/qa/unit/ucalc_column.cxx";
+  };
+  X0001027 = {
+   fileRef = X0001026;
+   isa = PBXBuildFile;
+  };
+  X0001028 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/qa/unit/ucalc_condformat.cxx";
+  };
+  X0001029 = {
+   fileRef = X0001028;
+   isa = PBXBuildFile;
+  };
+  X000102a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/qa/unit/ucalc_formula.cxx";
+  };
+  X000102b = {
+   fileRef = X000102a;
+   isa = PBXBuildFile;
+  };
+  X000102c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/qa/unit/ucalc_pivottable.cxx";
+  };
+  X000102d = {
+   fileRef = X000102c;
+   isa = PBXBuildFile;
+  };
+  X000102e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/qa/unit/ucalc_sharedformula.cxx";
+  };
+  X000102f = {
+   fileRef = X000102e;
+   isa = PBXBuildFile;
+  };
+  X0001030 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sc/qa/unit/ucalc_sort.cxx";
+  };
+  X0001031 = {
+   fileRef = X0001030;
+   isa = PBXBuildFile;
+  };
+  X0001032 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X000101d;
+}

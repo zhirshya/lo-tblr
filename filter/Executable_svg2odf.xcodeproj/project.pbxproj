@@ -1,0 +1,79 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00028bb = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00028c7;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00028bc;
+   productRefGroup = X00028bf;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00028c1;
+  };
+  X00028bc = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00028bd = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00028c0 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00028c1 = {
+   buildConfigurationList = X00028c8;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00028be;
+   productType = "com.apple.product-type.something";
+  };
+  X00028c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/svg/test/svg2odf.cxx";
+  };
+  X00028c3 = {
+   fileRef = X00028c2;
+   isa = PBXBuildFile;
+  };
+  X00028c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/svg/test/odfserializer.cxx";
+  };
+  X00028c5 = {
+   fileRef = X00028c4;
+   isa = PBXBuildFile;
+  };
+  X00028c6 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00028bb;
+}

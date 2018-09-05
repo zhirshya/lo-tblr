@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0005201 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000528d;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0005202;
+   productRefGroup = X0005205;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0005207;
+  };
+  X0005202 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0005203 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0005206 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0005207 = {
+   buildConfigurationList = X000528e;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0005204;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0005208 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/accessibility/accessiblerelationsethelper.cxx";
+  };
+  X0005209 = {
+   fileRef = X0005208;
+   isa = PBXBuildFile;
+  };
+  X000520a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/accessibility/accessiblestatesethelper.cxx";
+  };
+  X000520b = {
+   fileRef = X000520a;
+   isa = PBXBuildFile;
+  };
+  X000520c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/bootstrap.cxx";
+  };
+  X000520d = {
+   fileRef = X000520c;
+   isa = PBXBuildFile;
+  };
+  X000520e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/cmdoptions.cxx";
+  };
+  X000520f = {
+   fileRef = X000520e;
+   isa = PBXBuildFile;
+  };
+  X0005210 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/compatibility.cxx";
+  };
+  X0005211 = {
+   fileRef = X0005210;
+   isa = PBXBuildFile;
+  };
+  X0005212 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/configitem.cxx";
+  };
+  X0005213 = {
+   fileRef = X0005212;
+   isa = PBXBuildFile;
+  };
+  X0005214 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/configmgr.cxx";
+  };
+  X0005215 = {
+   fileRef = X0005214;
+   isa = PBXBuildFile;
+  };
+  X0005216 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/confignode.cxx";
+  };
+  X0005217 = {
+   fileRef = X0005216;
+   isa = PBXBuildFile;
+  };
+  X0005218 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/configpaths.cxx";
+  };
+  X0005219 = {
+   fileRef = X0005218;
+   isa = PBXBuildFile;
+  };
+  X000521a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/configvaluecontainer.cxx";
+  };
+  X000521b = {
+   fileRef = X000521a;
+   isa = PBXBuildFile;
+  };
+  X000521c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/defaultoptions.cxx";
+  };
+  X000521d = {
+   fileRef = X000521c;
+   isa = PBXBuildFile;
+  };
+  X000521e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/docinfohelper.cxx";
+  };
+  X000521f = {
+   fileRef = X000521e;
+   isa = PBXBuildFile;
+  };
+  X0005220 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/dynamicmenuoptions.cxx";
+  };
+  X0005221 = {
+   fileRef = X0005220;
+   isa = PBXBuildFile;
+  };
+  X0005222 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/eventcfg.cxx";
+  };
+  X0005223 = {
+   fileRef = X0005222;
+   isa = PBXBuildFile;
+  };
+  X0005224 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/extendedsecurityoptions.cxx";
+  };
+  X0005225 = {
+   fileRef = X0005224;
+   isa = PBXBuildFile;
+  };
+  X0005226 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/fltrcfg.cxx";
+  };
+  X0005227 = {
+   fileRef = X0005226;
+   isa = PBXBuildFile;
+  };
+  X0005228 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/fontcfg.cxx";
+  };
+  X0005229 = {
+   fileRef = X0005228;
+   isa = PBXBuildFile;
+  };
+  X000522a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/fontoptions.cxx";
+  };
+  X000522b = {
+   fileRef = X000522a;
+   isa = PBXBuildFile;
+  };
+  X000522c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/historyoptions.cxx";
+  };
+  X000522d = {
+   fileRef = X000522c;
+   isa = PBXBuildFile;
+  };
+  X000522e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/itemholder1.cxx";
+  };
+  X000522f = {
+   fileRef = X000522e;
+   isa = PBXBuildFile;
+  };
+  X0005230 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/lingucfg.cxx";
+  };
+  X0005231 = {
+   fileRef = X0005230;
+   isa = PBXBuildFile;
+  };
+  X0005232 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/misccfg.cxx";
+  };
+  X0005233 = {
+   fileRef = X0005232;
+   isa = PBXBuildFile;
+  };
+  X0005234 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/moduleoptions.cxx";
+  };
+  X0005235 = {
+   fileRef = X0005234;
+   isa = PBXBuildFile;
+  };
+  X0005236 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/options.cxx";
+  };
+  X0005237 = {
+   fileRef = X0005236;
+   isa = PBXBuildFile;
+  };
+  X0005238 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/optionsdlg.cxx";
+  };
+  X0005239 = {
+   fileRef = X0005238;
+   isa = PBXBuildFile;
+  };
+  X000523a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/pathoptions.cxx";
+  };
+  X000523b = {
+   fileRef = X000523a;
+   isa = PBXBuildFile;
+  };
+  X000523c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/printwarningoptions.cxx";
+  };
+  X000523d = {
+   fileRef = X000523c;
+   isa = PBXBuildFile;
+  };
+  X000523e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/saveopt.cxx";
+  };
+  X000523f = {
+   fileRef = X000523e;
+   isa = PBXBuildFile;
+  };
+  X0005240 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/searchopt.cxx";
+  };
+  X0005241 = {
+   fileRef = X0005240;
+   isa = PBXBuildFile;
+  };
+  X0005242 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/securityoptions.cxx";
+  };
+  X0005243 = {
+   fileRef = X0005242;
+   isa = PBXBuildFile;
+  };
+  X0005244 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/syslocaleoptions.cxx";
+  };
+  X0005245 = {
+   fileRef = X0005244;
+   isa = PBXBuildFile;
+  };
+  X0005246 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/useroptions.cxx";
+  };
+  X0005247 = {
+   fileRef = X0005246;
+   isa = PBXBuildFile;
+  };
+  X0005248 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/config/viewoptions.cxx";
+  };
+  X0005249 = {
+   fileRef = X0005248;
+   isa = PBXBuildFile;
+  };
+  X000524a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/calendarwrapper.cxx";
+  };
+  X000524b = {
+   fileRef = X000524a;
+   isa = PBXBuildFile;
+  };
+  X000524c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/caserotate.cxx";
+  };
+  X000524d = {
+   fileRef = X000524c;
+   isa = PBXBuildFile;
+  };
+  X000524e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/charclass.cxx";
+  };
+  X000524f = {
+   fileRef = X000524e;
+   isa = PBXBuildFile;
+  };
+  X0005250 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/collatorwrapper.cxx";
+  };
+  X0005251 = {
+   fileRef = X0005250;
+   isa = PBXBuildFile;
+  };
+  X0005252 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/intlwrapper.cxx";
+  };
+  X0005253 = {
+   fileRef = X0005252;
+   isa = PBXBuildFile;
+  };
+  X0005254 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/localedatawrapper.cxx";
+  };
+  X0005255 = {
+   fileRef = X0005254;
+   isa = PBXBuildFile;
+  };
+  X0005256 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/nativenumberwrapper.cxx";
+  };
+  X0005257 = {
+   fileRef = X0005256;
+   isa = PBXBuildFile;
+  };
+  X0005258 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/readwritemutexguard.cxx";
+  };
+  X0005259 = {
+   fileRef = X0005258;
+   isa = PBXBuildFile;
+  };
+  X000525a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/resmgr.cxx";
+  };
+  X000525b = {
+   fileRef = X000525a;
+   isa = PBXBuildFile;
+  };
+  X000525c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/textsearch.cxx";
+  };
+  X000525d = {
+   fileRef = X000525c;
+   isa = PBXBuildFile;
+  };
+  X000525e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/i18n/transliterationwrapper.cxx";
+  };
+  X000525f = {
+   fileRef = X000525e;
+   isa = PBXBuildFile;
+  };
+  X0005260 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/closeveto.cxx";
+  };
+  X0005261 = {
+   fileRef = X0005260;
+   isa = PBXBuildFile;
+  };
+  X0005262 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/datetime.cxx";
+  };
+  X0005263 = {
+   fileRef = X0005262;
+   isa = PBXBuildFile;
+  };
+  X0005264 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/desktopterminationobserver.cxx";
+  };
+  X0005265 = {
+   fileRef = X0005264;
+   isa = PBXBuildFile;
+  };
+  X0005266 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/eventlisteneradapter.cxx";
+  };
+  X0005267 = {
+   fileRef = X0005266;
+   isa = PBXBuildFile;
+  };
+  X0005268 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/fontcvt.cxx";
+  };
+  X0005269 = {
+   fileRef = X0005268;
+   isa = PBXBuildFile;
+  };
+  X000526a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/fontdefs.cxx";
+  };
+  X000526b = {
+   fileRef = X000526a;
+   isa = PBXBuildFile;
+  };
+  X000526c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/mediadescriptor.cxx";
+  };
+  X000526d = {
+   fileRef = X000526c;
+   isa = PBXBuildFile;
+  };
+  X000526e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/sharedunocomponent.cxx";
+  };
+  X000526f = {
+   fileRef = X000526e;
+   isa = PBXBuildFile;
+  };
+  X0005270 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/syslocale.cxx";
+  };
+  X0005271 = {
+   fileRef = X0005270;
+   isa = PBXBuildFile;
+  };
+  X0005272 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/unotoolsservices.cxx";
+  };
+  X0005273 = {
+   fileRef = X0005272;
+   isa = PBXBuildFile;
+  };
+  X0005274 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/wincodepage.cxx";
+  };
+  X0005275 = {
+   fileRef = X0005274;
+   isa = PBXBuildFile;
+  };
+  X0005276 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/ServiceDocumenter.cxx";
+  };
+  X0005277 = {
+   fileRef = X0005276;
+   isa = PBXBuildFile;
+  };
+  X0005278 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/misc/ZipPackageHelper.cxx";
+  };
+  X0005279 = {
+   fileRef = X0005278;
+   isa = PBXBuildFile;
+  };
+  X000527a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/streaming/streamhelper.cxx";
+  };
+  X000527b = {
+   fileRef = X000527a;
+   isa = PBXBuildFile;
+  };
+  X000527c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/streaming/streamwrap.cxx";
+  };
+  X000527d = {
+   fileRef = X000527c;
+   isa = PBXBuildFile;
+  };
+  X000527e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/ucbhelper/localfilehelper.cxx";
+  };
+  X000527f = {
+   fileRef = X000527e;
+   isa = PBXBuildFile;
+  };
+  X0005280 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/ucbhelper/progresshandlerwrap.cxx";
+  };
+  X0005281 = {
+   fileRef = X0005280;
+   isa = PBXBuildFile;
+  };
+  X0005282 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/ucbhelper/tempfile.cxx";
+  };
+  X0005283 = {
+   fileRef = X0005282;
+   isa = PBXBuildFile;
+  };
+  X0005284 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/ucbhelper/ucbhelper.cxx";
+  };
+  X0005285 = {
+   fileRef = X0005284;
+   isa = PBXBuildFile;
+  };
+  X0005286 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/ucbhelper/ucblockbytes.cxx";
+  };
+  X0005287 = {
+   fileRef = X0005286;
+   isa = PBXBuildFile;
+  };
+  X0005288 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/ucbhelper/ucbstreamhelper.cxx";
+  };
+  X0005289 = {
+   fileRef = X0005288;
+   isa = PBXBuildFile;
+  };
+  X000528a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "unotools/source/ucbhelper/xtempfile.cxx";
+  };
+  X000528b = {
+   fileRef = X000528a;
+   isa = PBXBuildFile;
+  };
+  X000528c = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0005201;
+}

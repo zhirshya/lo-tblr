@@ -1,0 +1,88 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00055f1 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00055ff;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00055f2;
+   productRefGroup = X00055f5;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00055f7;
+  };
+  X00055f2 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00055f3 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00055f6 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00055f7 = {
+   buildConfigurationList = X0005600;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00055f4;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00055f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmaccess/source/classpath.cxx";
+  };
+  X00055f9 = {
+   fileRef = X00055f8;
+   isa = PBXBuildFile;
+  };
+  X00055fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmaccess/source/unovirtualmachine.cxx";
+  };
+  X00055fb = {
+   fileRef = X00055fa;
+   isa = PBXBuildFile;
+  };
+  X00055fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmaccess/source/virtualmachine.cxx";
+  };
+  X00055fd = {
+   fileRef = X00055fc;
+   isa = PBXBuildFile;
+  };
+  X00055fe = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00055f1;
+}

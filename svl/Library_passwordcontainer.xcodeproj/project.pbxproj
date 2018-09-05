@@ -1,0 +1,79 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004945 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004951;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004946;
+   productRefGroup = X0004949;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000494b;
+  };
+  X0004946 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004947 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000494a = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000494b = {
+   buildConfigurationList = X0004952;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004948;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000494c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "svl/source/passwordcontainer/passwordcontainer.cxx";
+  };
+  X000494d = {
+   fileRef = X000494c;
+   isa = PBXBuildFile;
+  };
+  X000494e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "svl/source/passwordcontainer/syscreds.cxx";
+  };
+  X000494f = {
+   fileRef = X000494e;
+   isa = PBXBuildFile;
+  };
+  X0004950 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004945;
+}

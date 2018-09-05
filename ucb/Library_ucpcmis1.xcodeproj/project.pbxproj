@@ -1,0 +1,151 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004553 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000456f;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004554;
+   productRefGroup = X0004557;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004559;
+  };
+  X0004554 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004555 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004558 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004559 = {
+   buildConfigurationList = X0004570;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004556;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000455a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/auth_provider.cxx";
+  };
+  X000455b = {
+   fileRef = X000455a;
+   isa = PBXBuildFile;
+  };
+  X000455c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/certvalidation_handler.cxx";
+  };
+  X000455d = {
+   fileRef = X000455c;
+   isa = PBXBuildFile;
+  };
+  X000455e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/cmis_content.cxx";
+  };
+  X000455f = {
+   fileRef = X000455e;
+   isa = PBXBuildFile;
+  };
+  X0004560 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/cmis_repo_content.cxx";
+  };
+  X0004561 = {
+   fileRef = X0004560;
+   isa = PBXBuildFile;
+  };
+  X0004562 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/cmis_datasupplier.cxx";
+  };
+  X0004563 = {
+   fileRef = X0004562;
+   isa = PBXBuildFile;
+  };
+  X0004564 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/cmis_provider.cxx";
+  };
+  X0004565 = {
+   fileRef = X0004564;
+   isa = PBXBuildFile;
+  };
+  X0004566 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/cmis_resultset.cxx";
+  };
+  X0004567 = {
+   fileRef = X0004566;
+   isa = PBXBuildFile;
+  };
+  X0004568 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/cmis_url.cxx";
+  };
+  X0004569 = {
+   fileRef = X0004568;
+   isa = PBXBuildFile;
+  };
+  X000456a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/std_inputstream.cxx";
+  };
+  X000456b = {
+   fileRef = X000456a;
+   isa = PBXBuildFile;
+  };
+  X000456c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/cmis/std_outputstream.cxx";
+  };
+  X000456d = {
+   fileRef = X000456c;
+   isa = PBXBuildFile;
+  };
+  X000456e = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004553;
+}

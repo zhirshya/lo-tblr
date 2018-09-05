@@ -1,0 +1,1681 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0001ebf = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000202f;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0001ec0;
+   productRefGroup = X0001ec3;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0001ec5;
+  };
+  X0001ec0 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0001ec1 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0001ec4 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0001ec5 = {
+   buildConfigurationList = X0002030;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0001ec2;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0001ec6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/shared/dbu_reghelper.cxx";
+  };
+  X0001ec7 = {
+   fileRef = X0001ec6;
+   isa = PBXBuildFile;
+  };
+  X0001ec8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/AppController.cxx";
+  };
+  X0001ec9 = {
+   fileRef = X0001ec8;
+   isa = PBXBuildFile;
+  };
+  X0001eca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/AppControllerDnD.cxx";
+  };
+  X0001ecb = {
+   fileRef = X0001eca;
+   isa = PBXBuildFile;
+  };
+  X0001ecc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/AppControllerGen.cxx";
+  };
+  X0001ecd = {
+   fileRef = X0001ecc;
+   isa = PBXBuildFile;
+  };
+  X0001ece = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/AppDetailPageHelper.cxx";
+  };
+  X0001ecf = {
+   fileRef = X0001ece;
+   isa = PBXBuildFile;
+  };
+  X0001ed0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/AppDetailView.cxx";
+  };
+  X0001ed1 = {
+   fileRef = X0001ed0;
+   isa = PBXBuildFile;
+  };
+  X0001ed2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/AppIconControl.cxx";
+  };
+  X0001ed3 = {
+   fileRef = X0001ed2;
+   isa = PBXBuildFile;
+  };
+  X0001ed4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/AppSwapWindow.cxx";
+  };
+  X0001ed5 = {
+   fileRef = X0001ed4;
+   isa = PBXBuildFile;
+  };
+  X0001ed6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/AppTitleWindow.cxx";
+  };
+  X0001ed7 = {
+   fileRef = X0001ed6;
+   isa = PBXBuildFile;
+  };
+  X0001ed8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/AppView.cxx";
+  };
+  X0001ed9 = {
+   fileRef = X0001ed8;
+   isa = PBXBuildFile;
+  };
+  X0001eda = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/app/subcomponentmanager.cxx";
+  };
+  X0001edb = {
+   fileRef = X0001eda;
+   isa = PBXBuildFile;
+  };
+  X0001edc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/AsynchronousLink.cxx";
+  };
+  X0001edd = {
+   fileRef = X0001edc;
+   isa = PBXBuildFile;
+  };
+  X0001ede = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/brwctrlr.cxx";
+  };
+  X0001edf = {
+   fileRef = X0001ede;
+   isa = PBXBuildFile;
+  };
+  X0001ee0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/brwview.cxx";
+  };
+  X0001ee1 = {
+   fileRef = X0001ee0;
+   isa = PBXBuildFile;
+  };
+  X0001ee2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/dataview.cxx";
+  };
+  X0001ee3 = {
+   fileRef = X0001ee2;
+   isa = PBXBuildFile;
+  };
+  X0001ee4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/dbexchange.cxx";
+  };
+  X0001ee5 = {
+   fileRef = X0001ee4;
+   isa = PBXBuildFile;
+  };
+  X0001ee6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/dbloader.cxx";
+  };
+  X0001ee7 = {
+   fileRef = X0001ee6;
+   isa = PBXBuildFile;
+  };
+  X0001ee8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/dbtreemodel.cxx";
+  };
+  X0001ee9 = {
+   fileRef = X0001ee8;
+   isa = PBXBuildFile;
+  };
+  X0001eea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/dbtreeview.cxx";
+  };
+  X0001eeb = {
+   fileRef = X0001eea;
+   isa = PBXBuildFile;
+  };
+  X0001eec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/dsbrowserDnD.cxx";
+  };
+  X0001eed = {
+   fileRef = X0001eec;
+   isa = PBXBuildFile;
+  };
+  X0001eee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/dsEntriesNoExp.cxx";
+  };
+  X0001eef = {
+   fileRef = X0001eee;
+   isa = PBXBuildFile;
+  };
+  X0001ef0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/exsrcbrw.cxx";
+  };
+  X0001ef1 = {
+   fileRef = X0001ef0;
+   isa = PBXBuildFile;
+  };
+  X0001ef2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/formadapter.cxx";
+  };
+  X0001ef3 = {
+   fileRef = X0001ef2;
+   isa = PBXBuildFile;
+  };
+  X0001ef4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/genericcontroller.cxx";
+  };
+  X0001ef5 = {
+   fileRef = X0001ef4;
+   isa = PBXBuildFile;
+  };
+  X0001ef6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/sbagrid.cxx";
+  };
+  X0001ef7 = {
+   fileRef = X0001ef6;
+   isa = PBXBuildFile;
+  };
+  X0001ef8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/sbamultiplex.cxx";
+  };
+  X0001ef9 = {
+   fileRef = X0001ef8;
+   isa = PBXBuildFile;
+  };
+  X0001efa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/browser/unodatbr.cxx";
+  };
+  X0001efb = {
+   fileRef = X0001efa;
+   isa = PBXBuildFile;
+  };
+  X0001efc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/charsetlistbox.cxx";
+  };
+  X0001efd = {
+   fileRef = X0001efc;
+   isa = PBXBuildFile;
+  };
+  X0001efe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/ColumnControlWindow.cxx";
+  };
+  X0001eff = {
+   fileRef = X0001efe;
+   isa = PBXBuildFile;
+  };
+  X0001f00 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/curledit.cxx";
+  };
+  X0001f01 = {
+   fileRef = X0001f00;
+   isa = PBXBuildFile;
+  };
+  X0001f02 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/dbtreelistbox.cxx";
+  };
+  X0001f03 = {
+   fileRef = X0001f02;
+   isa = PBXBuildFile;
+  };
+  X0001f04 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/FieldControls.cxx";
+  };
+  X0001f05 = {
+   fileRef = X0001f04;
+   isa = PBXBuildFile;
+  };
+  X0001f06 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/FieldDescControl.cxx";
+  };
+  X0001f07 = {
+   fileRef = X0001f06;
+   isa = PBXBuildFile;
+  };
+  X0001f08 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/listviewitems.cxx";
+  };
+  X0001f09 = {
+   fileRef = X0001f08;
+   isa = PBXBuildFile;
+  };
+  X0001f0a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/marktree.cxx";
+  };
+  X0001f0b = {
+   fileRef = X0001f0a;
+   isa = PBXBuildFile;
+  };
+  X0001f0c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/opendoccontrols.cxx";
+  };
+  X0001f0d = {
+   fileRef = X0001f0c;
+   isa = PBXBuildFile;
+  };
+  X0001f0e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/RelationControl.cxx";
+  };
+  X0001f0f = {
+   fileRef = X0001f0e;
+   isa = PBXBuildFile;
+  };
+  X0001f10 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/ScrollHelper.cxx";
+  };
+  X0001f11 = {
+   fileRef = X0001f10;
+   isa = PBXBuildFile;
+  };
+  X0001f12 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/sqledit.cxx";
+  };
+  X0001f13 = {
+   fileRef = X0001f12;
+   isa = PBXBuildFile;
+  };
+  X0001f14 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/SqlNameEdit.cxx";
+  };
+  X0001f15 = {
+   fileRef = X0001f14;
+   isa = PBXBuildFile;
+  };
+  X0001f16 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/TableGrantCtrl.cxx";
+  };
+  X0001f17 = {
+   fileRef = X0001f16;
+   isa = PBXBuildFile;
+  };
+  X0001f18 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/tabletree.cxx";
+  };
+  X0001f19 = {
+   fileRef = X0001f18;
+   isa = PBXBuildFile;
+  };
+  X0001f1a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/undosqledit.cxx";
+  };
+  X0001f1b = {
+   fileRef = X0001f1a;
+   isa = PBXBuildFile;
+  };
+  X0001f1c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/control/VertSplitView.cxx";
+  };
+  X0001f1d = {
+   fileRef = X0001f1c;
+   isa = PBXBuildFile;
+  };
+  X0001f1e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/admincontrols.cxx";
+  };
+  X0001f1f = {
+   fileRef = X0001f1e;
+   isa = PBXBuildFile;
+  };
+  X0001f20 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/adminpages.cxx";
+  };
+  X0001f21 = {
+   fileRef = X0001f20;
+   isa = PBXBuildFile;
+  };
+  X0001f22 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/adtabdlg.cxx";
+  };
+  X0001f23 = {
+   fileRef = X0001f22;
+   isa = PBXBuildFile;
+  };
+  X0001f24 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/advancedsettings.cxx";
+  };
+  X0001f25 = {
+   fileRef = X0001f24;
+   isa = PBXBuildFile;
+  };
+  X0001f26 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/CollectionView.cxx";
+  };
+  X0001f27 = {
+   fileRef = X0001f26;
+   isa = PBXBuildFile;
+  };
+  X0001f28 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/ConnectionHelper.cxx";
+  };
+  X0001f29 = {
+   fileRef = X0001f28;
+   isa = PBXBuildFile;
+  };
+  X0001f2a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/ConnectionPage.cxx";
+  };
+  X0001f2b = {
+   fileRef = X0001f2a;
+   isa = PBXBuildFile;
+  };
+  X0001f2c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/ConnectionPageSetup.cxx";
+  };
+  X0001f2d = {
+   fileRef = X0001f2c;
+   isa = PBXBuildFile;
+  };
+  X0001f2e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/dbadmin.cxx";
+  };
+  X0001f2f = {
+   fileRef = X0001f2e;
+   isa = PBXBuildFile;
+  };
+  X0001f30 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/DbAdminImpl.cxx";
+  };
+  X0001f31 = {
+   fileRef = X0001f30;
+   isa = PBXBuildFile;
+  };
+  X0001f32 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/dbfindex.cxx";
+  };
+  X0001f33 = {
+   fileRef = X0001f32;
+   isa = PBXBuildFile;
+  };
+  X0001f34 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/DBSetupConnectionPages.cxx";
+  };
+  X0001f35 = {
+   fileRef = X0001f34;
+   isa = PBXBuildFile;
+  };
+  X0001f36 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/dbwiz.cxx";
+  };
+  X0001f37 = {
+   fileRef = X0001f36;
+   isa = PBXBuildFile;
+  };
+  X0001f38 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/dbwizsetup.cxx";
+  };
+  X0001f39 = {
+   fileRef = X0001f38;
+   isa = PBXBuildFile;
+  };
+  X0001f3a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/detailpages.cxx";
+  };
+  X0001f3b = {
+   fileRef = X0001f3a;
+   isa = PBXBuildFile;
+  };
+  X0001f3c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/directsql.cxx";
+  };
+  X0001f3d = {
+   fileRef = X0001f3c;
+   isa = PBXBuildFile;
+  };
+  X0001f3e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/dlgattr.cxx";
+  };
+  X0001f3f = {
+   fileRef = X0001f3e;
+   isa = PBXBuildFile;
+  };
+  X0001f40 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/dlgsave.cxx";
+  };
+  X0001f41 = {
+   fileRef = X0001f40;
+   isa = PBXBuildFile;
+  };
+  X0001f42 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/dlgsize.cxx";
+  };
+  X0001f43 = {
+   fileRef = X0001f42;
+   isa = PBXBuildFile;
+  };
+  X0001f44 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/dsselect.cxx";
+  };
+  X0001f45 = {
+   fileRef = X0001f44;
+   isa = PBXBuildFile;
+  };
+  X0001f46 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/finteraction.cxx";
+  };
+  X0001f47 = {
+   fileRef = X0001f46;
+   isa = PBXBuildFile;
+  };
+  X0001f48 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/generalpage.cxx";
+  };
+  X0001f49 = {
+   fileRef = X0001f48;
+   isa = PBXBuildFile;
+  };
+  X0001f4a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/indexdialog.cxx";
+  };
+  X0001f4b = {
+   fileRef = X0001f4a;
+   isa = PBXBuildFile;
+  };
+  X0001f4c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/indexfieldscontrol.cxx";
+  };
+  X0001f4d = {
+   fileRef = X0001f4c;
+   isa = PBXBuildFile;
+  };
+  X0001f4e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/odbcconfig.cxx";
+  };
+  X0001f4f = {
+   fileRef = X0001f4e;
+   isa = PBXBuildFile;
+  };
+  X0001f50 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/optionalboolitem.cxx";
+  };
+  X0001f51 = {
+   fileRef = X0001f50;
+   isa = PBXBuildFile;
+  };
+  X0001f52 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/paramdialog.cxx";
+  };
+  X0001f53 = {
+   fileRef = X0001f52;
+   isa = PBXBuildFile;
+  };
+  X0001f54 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/queryfilter.cxx";
+  };
+  X0001f55 = {
+   fileRef = X0001f54;
+   isa = PBXBuildFile;
+  };
+  X0001f56 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/queryorder.cxx";
+  };
+  X0001f57 = {
+   fileRef = X0001f56;
+   isa = PBXBuildFile;
+  };
+  X0001f58 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/QueryPropertiesDialog.cxx";
+  };
+  X0001f59 = {
+   fileRef = X0001f58;
+   isa = PBXBuildFile;
+  };
+  X0001f5a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/RelationDlg.cxx";
+  };
+  X0001f5b = {
+   fileRef = X0001f5a;
+   isa = PBXBuildFile;
+  };
+  X0001f5c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/sqlmessage.cxx";
+  };
+  X0001f5d = {
+   fileRef = X0001f5c;
+   isa = PBXBuildFile;
+  };
+  X0001f5e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/tablespage.cxx";
+  };
+  X0001f5f = {
+   fileRef = X0001f5e;
+   isa = PBXBuildFile;
+  };
+  X0001f60 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/TablesSingleDlg.cxx";
+  };
+  X0001f61 = {
+   fileRef = X0001f60;
+   isa = PBXBuildFile;
+  };
+  X0001f62 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/TextConnectionHelper.cxx";
+  };
+  X0001f63 = {
+   fileRef = X0001f62;
+   isa = PBXBuildFile;
+  };
+  X0001f64 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/textconnectionsettings.cxx";
+  };
+  X0001f65 = {
+   fileRef = X0001f64;
+   isa = PBXBuildFile;
+  };
+  X0001f66 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/UserAdmin.cxx";
+  };
+  X0001f67 = {
+   fileRef = X0001f66;
+   isa = PBXBuildFile;
+  };
+  X0001f68 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/dlg/UserAdminDlg.cxx";
+  };
+  X0001f69 = {
+   fileRef = X0001f68;
+   isa = PBXBuildFile;
+  };
+  X0001f6a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/asyncmodaldialog.cxx";
+  };
+  X0001f6b = {
+   fileRef = X0001f6a;
+   isa = PBXBuildFile;
+  };
+  X0001f6c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/charsets.cxx";
+  };
+  X0001f6d = {
+   fileRef = X0001f6c;
+   isa = PBXBuildFile;
+  };
+  X0001f6e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/controllerframe.cxx";
+  };
+  X0001f6f = {
+   fileRef = X0001f6e;
+   isa = PBXBuildFile;
+  };
+  X0001f70 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/databaseobjectview.cxx";
+  };
+  X0001f71 = {
+   fileRef = X0001f70;
+   isa = PBXBuildFile;
+  };
+  X0001f72 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/datasourceconnector.cxx";
+  };
+  X0001f73 = {
+   fileRef = X0001f72;
+   isa = PBXBuildFile;
+  };
+  X0001f74 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/dbaundomanager.cxx";
+  };
+  X0001f75 = {
+   fileRef = X0001f74;
+   isa = PBXBuildFile;
+  };
+  X0001f76 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/dbsubcomponentcontroller.cxx";
+  };
+  X0001f77 = {
+   fileRef = X0001f76;
+   isa = PBXBuildFile;
+  };
+  X0001f78 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/defaultobjectnamecheck.cxx";
+  };
+  X0001f79 = {
+   fileRef = X0001f78;
+   isa = PBXBuildFile;
+  };
+  X0001f7a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/DExport.cxx";
+  };
+  X0001f7b = {
+   fileRef = X0001f7a;
+   isa = PBXBuildFile;
+  };
+  X0001f7c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/dsmeta.cxx";
+  };
+  X0001f7d = {
+   fileRef = X0001f7c;
+   isa = PBXBuildFile;
+  };
+  X0001f7e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/HtmlReader.cxx";
+  };
+  X0001f7f = {
+   fileRef = X0001f7e;
+   isa = PBXBuildFile;
+  };
+  X0001f80 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/imageprovider.cxx";
+  };
+  X0001f81 = {
+   fileRef = X0001f80;
+   isa = PBXBuildFile;
+  };
+  X0001f82 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/indexcollection.cxx";
+  };
+  X0001f83 = {
+   fileRef = X0001f82;
+   isa = PBXBuildFile;
+  };
+  X0001f84 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/linkeddocuments.cxx";
+  };
+  X0001f85 = {
+   fileRef = X0001f84;
+   isa = PBXBuildFile;
+  };
+  X0001f86 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/propertysetitem.cxx";
+  };
+  X0001f87 = {
+   fileRef = X0001f86;
+   isa = PBXBuildFile;
+  };
+  X0001f88 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/propertystorage.cxx";
+  };
+  X0001f89 = {
+   fileRef = X0001f88;
+   isa = PBXBuildFile;
+  };
+  X0001f8a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/RowSetDrop.cxx";
+  };
+  X0001f8b = {
+   fileRef = X0001f8a;
+   isa = PBXBuildFile;
+  };
+  X0001f8c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/RtfReader.cxx";
+  };
+  X0001f8d = {
+   fileRef = X0001f8c;
+   isa = PBXBuildFile;
+  };
+  X0001f8e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/singledoccontroller.cxx";
+  };
+  X0001f8f = {
+   fileRef = X0001f8e;
+   isa = PBXBuildFile;
+  };
+  X0001f90 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/stringlistitem.cxx";
+  };
+  X0001f91 = {
+   fileRef = X0001f90;
+   isa = PBXBuildFile;
+  };
+  X0001f92 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/TableCopyHelper.cxx";
+  };
+  X0001f93 = {
+   fileRef = X0001f92;
+   isa = PBXBuildFile;
+  };
+  X0001f94 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/TokenWriter.cxx";
+  };
+  X0001f95 = {
+   fileRef = X0001f94;
+   isa = PBXBuildFile;
+  };
+  X0001f96 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/ToolBoxHelper.cxx";
+  };
+  X0001f97 = {
+   fileRef = X0001f96;
+   isa = PBXBuildFile;
+  };
+  X0001f98 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/uiservices.cxx";
+  };
+  X0001f99 = {
+   fileRef = X0001f98;
+   isa = PBXBuildFile;
+  };
+  X0001f9a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/UITools.cxx";
+  };
+  X0001f9b = {
+   fileRef = X0001f9a;
+   isa = PBXBuildFile;
+  };
+  X0001f9c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/WColumnSelect.cxx";
+  };
+  X0001f9d = {
+   fileRef = X0001f9c;
+   isa = PBXBuildFile;
+  };
+  X0001f9e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/WCopyTable.cxx";
+  };
+  X0001f9f = {
+   fileRef = X0001f9e;
+   isa = PBXBuildFile;
+  };
+  X0001fa0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/WCPage.cxx";
+  };
+  X0001fa1 = {
+   fileRef = X0001fa0;
+   isa = PBXBuildFile;
+  };
+  X0001fa2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/WExtendPages.cxx";
+  };
+  X0001fa3 = {
+   fileRef = X0001fa2;
+   isa = PBXBuildFile;
+  };
+  X0001fa4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/WNameMatch.cxx";
+  };
+  X0001fa5 = {
+   fileRef = X0001fa4;
+   isa = PBXBuildFile;
+  };
+  X0001fa6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/misc/WTypeSelect.cxx";
+  };
+  X0001fa7 = {
+   fileRef = X0001fa6;
+   isa = PBXBuildFile;
+  };
+  X0001fa8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/ConnectionLine.cxx";
+  };
+  X0001fa9 = {
+   fileRef = X0001fa8;
+   isa = PBXBuildFile;
+  };
+  X0001faa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/ConnectionLineAccess.cxx";
+  };
+  X0001fab = {
+   fileRef = X0001faa;
+   isa = PBXBuildFile;
+  };
+  X0001fac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/ConnectionLineData.cxx";
+  };
+  X0001fad = {
+   fileRef = X0001fac;
+   isa = PBXBuildFile;
+  };
+  X0001fae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/JAccess.cxx";
+  };
+  X0001faf = {
+   fileRef = X0001fae;
+   isa = PBXBuildFile;
+  };
+  X0001fb0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/JoinController.cxx";
+  };
+  X0001fb1 = {
+   fileRef = X0001fb0;
+   isa = PBXBuildFile;
+  };
+  X0001fb2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/JoinDesignView.cxx";
+  };
+  X0001fb3 = {
+   fileRef = X0001fb2;
+   isa = PBXBuildFile;
+  };
+  X0001fb4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/JoinExchange.cxx";
+  };
+  X0001fb5 = {
+   fileRef = X0001fb4;
+   isa = PBXBuildFile;
+  };
+  X0001fb6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/JoinTableView.cxx";
+  };
+  X0001fb7 = {
+   fileRef = X0001fb6;
+   isa = PBXBuildFile;
+  };
+  X0001fb8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/LimitBox.cxx";
+  };
+  X0001fb9 = {
+   fileRef = X0001fb8;
+   isa = PBXBuildFile;
+  };
+  X0001fba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/limitboxcontroller.cxx";
+  };
+  X0001fbb = {
+   fileRef = X0001fba;
+   isa = PBXBuildFile;
+  };
+  X0001fbc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QTableConnection.cxx";
+  };
+  X0001fbd = {
+   fileRef = X0001fbc;
+   isa = PBXBuildFile;
+  };
+  X0001fbe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QTableConnectionData.cxx";
+  };
+  X0001fbf = {
+   fileRef = X0001fbe;
+   isa = PBXBuildFile;
+  };
+  X0001fc0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QTableWindow.cxx";
+  };
+  X0001fc1 = {
+   fileRef = X0001fc0;
+   isa = PBXBuildFile;
+  };
+  X0001fc2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QTableWindowData.cxx";
+  };
+  X0001fc3 = {
+   fileRef = X0001fc2;
+   isa = PBXBuildFile;
+  };
+  X0001fc4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/querycontainerwindow.cxx";
+  };
+  X0001fc5 = {
+   fileRef = X0001fc4;
+   isa = PBXBuildFile;
+  };
+  X0001fc6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/querycontroller.cxx";
+  };
+  X0001fc7 = {
+   fileRef = X0001fc6;
+   isa = PBXBuildFile;
+  };
+  X0001fc8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QueryDesignView.cxx";
+  };
+  X0001fc9 = {
+   fileRef = X0001fc8;
+   isa = PBXBuildFile;
+  };
+  X0001fca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/querydlg.cxx";
+  };
+  X0001fcb = {
+   fileRef = X0001fca;
+   isa = PBXBuildFile;
+  };
+  X0001fcc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QueryMoveTabWinUndoAct.cxx";
+  };
+  X0001fcd = {
+   fileRef = X0001fcc;
+   isa = PBXBuildFile;
+  };
+  X0001fce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QueryTabConnUndoAction.cxx";
+  };
+  X0001fcf = {
+   fileRef = X0001fce;
+   isa = PBXBuildFile;
+  };
+  X0001fd0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QueryTableView.cxx";
+  };
+  X0001fd1 = {
+   fileRef = X0001fd0;
+   isa = PBXBuildFile;
+  };
+  X0001fd2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QueryTabWinUndoAct.cxx";
+  };
+  X0001fd3 = {
+   fileRef = X0001fd2;
+   isa = PBXBuildFile;
+  };
+  X0001fd4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QueryTextView.cxx";
+  };
+  X0001fd5 = {
+   fileRef = X0001fd4;
+   isa = PBXBuildFile;
+  };
+  X0001fd6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/QueryViewSwitch.cxx";
+  };
+  X0001fd7 = {
+   fileRef = X0001fd6;
+   isa = PBXBuildFile;
+  };
+  X0001fd8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/SelectionBrowseBox.cxx";
+  };
+  X0001fd9 = {
+   fileRef = X0001fd8;
+   isa = PBXBuildFile;
+  };
+  X0001fda = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/TableConnection.cxx";
+  };
+  X0001fdb = {
+   fileRef = X0001fda;
+   isa = PBXBuildFile;
+  };
+  X0001fdc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/TableConnectionData.cxx";
+  };
+  X0001fdd = {
+   fileRef = X0001fdc;
+   isa = PBXBuildFile;
+  };
+  X0001fde = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/TableFieldDescription.cxx";
+  };
+  X0001fdf = {
+   fileRef = X0001fde;
+   isa = PBXBuildFile;
+  };
+  X0001fe0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/TableFieldInfo.cxx";
+  };
+  X0001fe1 = {
+   fileRef = X0001fe0;
+   isa = PBXBuildFile;
+  };
+  X0001fe2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/TableWindow.cxx";
+  };
+  X0001fe3 = {
+   fileRef = X0001fe2;
+   isa = PBXBuildFile;
+  };
+  X0001fe4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/TableWindowAccess.cxx";
+  };
+  X0001fe5 = {
+   fileRef = X0001fe4;
+   isa = PBXBuildFile;
+  };
+  X0001fe6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/TableWindowData.cxx";
+  };
+  X0001fe7 = {
+   fileRef = X0001fe6;
+   isa = PBXBuildFile;
+  };
+  X0001fe8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/TableWindowListBox.cxx";
+  };
+  X0001fe9 = {
+   fileRef = X0001fe8;
+   isa = PBXBuildFile;
+  };
+  X0001fea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/querydesign/TableWindowTitle.cxx";
+  };
+  X0001feb = {
+   fileRef = X0001fea;
+   isa = PBXBuildFile;
+  };
+  X0001fec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/relationdesign/RelationController.cxx";
+  };
+  X0001fed = {
+   fileRef = X0001fec;
+   isa = PBXBuildFile;
+  };
+  X0001fee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/relationdesign/RelationDesignView.cxx";
+  };
+  X0001fef = {
+   fileRef = X0001fee;
+   isa = PBXBuildFile;
+  };
+  X0001ff0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/relationdesign/RelationTableView.cxx";
+  };
+  X0001ff1 = {
+   fileRef = X0001ff0;
+   isa = PBXBuildFile;
+  };
+  X0001ff2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/relationdesign/RTableConnection.cxx";
+  };
+  X0001ff3 = {
+   fileRef = X0001ff2;
+   isa = PBXBuildFile;
+  };
+  X0001ff4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/relationdesign/RTableConnectionData.cxx";
+  };
+  X0001ff5 = {
+   fileRef = X0001ff4;
+   isa = PBXBuildFile;
+  };
+  X0001ff6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/FieldDescGenWin.cxx";
+  };
+  X0001ff7 = {
+   fileRef = X0001ff6;
+   isa = PBXBuildFile;
+  };
+  X0001ff8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/FieldDescriptions.cxx";
+  };
+  X0001ff9 = {
+   fileRef = X0001ff8;
+   isa = PBXBuildFile;
+  };
+  X0001ffa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TableController.cxx";
+  };
+  X0001ffb = {
+   fileRef = X0001ffa;
+   isa = PBXBuildFile;
+  };
+  X0001ffc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TableDesignControl.cxx";
+  };
+  X0001ffd = {
+   fileRef = X0001ffc;
+   isa = PBXBuildFile;
+  };
+  X0001ffe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TableDesignHelpBar.cxx";
+  };
+  X0001fff = {
+   fileRef = X0001ffe;
+   isa = PBXBuildFile;
+  };
+  X0002000 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TableDesignView.cxx";
+  };
+  X0002001 = {
+   fileRef = X0002000;
+   isa = PBXBuildFile;
+  };
+  X0002002 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TableFieldControl.cxx";
+  };
+  X0002003 = {
+   fileRef = X0002002;
+   isa = PBXBuildFile;
+  };
+  X0002004 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TableFieldDescWin.cxx";
+  };
+  X0002005 = {
+   fileRef = X0002004;
+   isa = PBXBuildFile;
+  };
+  X0002006 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TableRow.cxx";
+  };
+  X0002007 = {
+   fileRef = X0002006;
+   isa = PBXBuildFile;
+  };
+  X0002008 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TableRowExchange.cxx";
+  };
+  X0002009 = {
+   fileRef = X0002008;
+   isa = PBXBuildFile;
+  };
+  X000200a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TableUndo.cxx";
+  };
+  X000200b = {
+   fileRef = X000200a;
+   isa = PBXBuildFile;
+  };
+  X000200c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/tabledesign/TEditControl.cxx";
+  };
+  X000200d = {
+   fileRef = X000200c;
+   isa = PBXBuildFile;
+  };
+  X000200e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/admindlg.cxx";
+  };
+  X000200f = {
+   fileRef = X000200e;
+   isa = PBXBuildFile;
+  };
+  X0002010 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/AdvancedSettingsDlg.cxx";
+  };
+  X0002011 = {
+   fileRef = X0002010;
+   isa = PBXBuildFile;
+  };
+  X0002012 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/ColumnControl.cxx";
+  };
+  X0002013 = {
+   fileRef = X0002012;
+   isa = PBXBuildFile;
+  };
+  X0002014 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/ColumnModel.cxx";
+  };
+  X0002015 = {
+   fileRef = X0002014;
+   isa = PBXBuildFile;
+  };
+  X0002016 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/ColumnPeer.cxx";
+  };
+  X0002017 = {
+   fileRef = X0002016;
+   isa = PBXBuildFile;
+  };
+  X0002018 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/composerdialogs.cxx";
+  };
+  X0002019 = {
+   fileRef = X0002018;
+   isa = PBXBuildFile;
+  };
+  X000201a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/copytablewizard.cxx";
+  };
+  X000201b = {
+   fileRef = X000201a;
+   isa = PBXBuildFile;
+  };
+  X000201c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/dbinteraction.cxx";
+  };
+  X000201d = {
+   fileRef = X000201c;
+   isa = PBXBuildFile;
+  };
+  X000201e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/DBTypeWizDlg.cxx";
+  };
+  X000201f = {
+   fileRef = X000201e;
+   isa = PBXBuildFile;
+  };
+  X0002020 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/DBTypeWizDlgSetup.cxx";
+  };
+  X0002021 = {
+   fileRef = X0002020;
+   isa = PBXBuildFile;
+  };
+  X0002022 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/TableFilterDlg.cxx";
+  };
+  X0002023 = {
+   fileRef = X0002022;
+   isa = PBXBuildFile;
+  };
+  X0002024 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/textconnectionsettings_uno.cxx";
+  };
+  X0002025 = {
+   fileRef = X0002024;
+   isa = PBXBuildFile;
+  };
+  X0002026 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/unoadmin.cxx";
+  };
+  X0002027 = {
+   fileRef = X0002026;
+   isa = PBXBuildFile;
+  };
+  X0002028 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/unoDirectSql.cxx";
+  };
+  X0002029 = {
+   fileRef = X0002028;
+   isa = PBXBuildFile;
+  };
+  X000202a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/unosqlmessage.cxx";
+  };
+  X000202b = {
+   fileRef = X000202a;
+   isa = PBXBuildFile;
+  };
+  X000202c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ui/uno/UserSettingsDlg.cxx";
+  };
+  X000202d = {
+   fileRef = X000202c;
+   isa = PBXBuildFile;
+  };
+  X000202e = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0001ebf;
+}

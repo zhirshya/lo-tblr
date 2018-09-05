@@ -1,0 +1,79 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004369 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004375;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X000436a;
+   productRefGroup = X000436d;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000436f;
+  };
+  X000436a = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X000436b = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000436e = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000436f = {
+   buildConfigurationList = X0004376;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X000436c;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004370 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "shell/source/backends/localebe/localebackend.cxx";
+  };
+  X0004371 = {
+   fileRef = X0004370;
+   isa = PBXBuildFile;
+  };
+  X0004372 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "shell/source/backends/localebe/localebecdef.cxx";
+  };
+  X0004373 = {
+   fileRef = X0004372;
+   isa = PBXBuildFile;
+  };
+  X0004374 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004369;
+}

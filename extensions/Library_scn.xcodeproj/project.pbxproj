@@ -1,0 +1,115 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X000410f = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004123;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004110;
+   productRefGroup = X0004113;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004115;
+  };
+  X0004110 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004111 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004114 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004115 = {
+   buildConfigurationList = X0004124;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004112;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004116 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/scanner/scnserv.cxx";
+  };
+  X0004117 = {
+   fileRef = X0004116;
+   isa = PBXBuildFile;
+  };
+  X0004118 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/scanner/scanner.cxx";
+  };
+  X0004119 = {
+   fileRef = X0004118;
+   isa = PBXBuildFile;
+  };
+  X000411a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/scanner/grid.cxx";
+  };
+  X000411b = {
+   fileRef = X000411a;
+   isa = PBXBuildFile;
+  };
+  X000411c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/scanner/sane.cxx";
+  };
+  X000411d = {
+   fileRef = X000411c;
+   isa = PBXBuildFile;
+  };
+  X000411e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/scanner/sanedlg.cxx";
+  };
+  X000411f = {
+   fileRef = X000411e;
+   isa = PBXBuildFile;
+  };
+  X0004120 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/scanner/scanunx.cxx";
+  };
+  X0004121 = {
+   fileRef = X0004120;
+   isa = PBXBuildFile;
+  };
+  X0004122 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X000410f;
+}

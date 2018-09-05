@@ -1,0 +1,961 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X000439f = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000446f;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00043a0;
+   productRefGroup = X00043a3;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00043a5;
+  };
+  X00043a0 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00043a1 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00043a4 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00043a5 = {
+   buildConfigurationList = X0004470;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00043a2;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00043a6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/compare/AnyCompareFactory.cxx";
+  };
+  X00043a7 = {
+   fileRef = X00043a6;
+   isa = PBXBuildFile;
+  };
+  X00043a8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/container/IndexedPropertyValuesContainer.cxx";
+  };
+  X00043a9 = {
+   fileRef = X00043a8;
+   isa = PBXBuildFile;
+  };
+  X00043aa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/container/NamedPropertyValuesContainer.cxx";
+  };
+  X00043ab = {
+   fileRef = X00043aa;
+   isa = PBXBuildFile;
+  };
+  X00043ac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/container/container.cxx";
+  };
+  X00043ad = {
+   fileRef = X00043ac;
+   isa = PBXBuildFile;
+  };
+  X00043ae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/container/containermultiplexer.cxx";
+  };
+  X00043af = {
+   fileRef = X00043ae;
+   isa = PBXBuildFile;
+  };
+  X00043b0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/container/interfacecontainer2.cxx";
+  };
+  X00043b1 = {
+   fileRef = X00043b0;
+   isa = PBXBuildFile;
+  };
+  X00043b2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/container/embeddedobjectcontainer.cxx";
+  };
+  X00043b3 = {
+   fileRef = X00043b2;
+   isa = PBXBuildFile;
+  };
+  X00043b4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/container/enumerablemap.cxx";
+  };
+  X00043b5 = {
+   fileRef = X00043b4;
+   isa = PBXBuildFile;
+  };
+  X00043b6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/container/enumhelper.cxx";
+  };
+  X00043b7 = {
+   fileRef = X00043b6;
+   isa = PBXBuildFile;
+  };
+  X00043b8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/container/namecontainer.cxx";
+  };
+  X00043b9 = {
+   fileRef = X00043b8;
+   isa = PBXBuildFile;
+  };
+  X00043ba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/eventattachermgr/eventattachermgr.cxx";
+  };
+  X00043bb = {
+   fileRef = X00043ba;
+   isa = PBXBuildFile;
+  };
+  X00043bc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/accessiblecomponenthelper.cxx";
+  };
+  X00043bd = {
+   fileRef = X00043bc;
+   isa = PBXBuildFile;
+  };
+  X00043be = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/accessiblecontexthelper.cxx";
+  };
+  X00043bf = {
+   fileRef = X00043be;
+   isa = PBXBuildFile;
+  };
+  X00043c0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/accessibleeventnotifier.cxx";
+  };
+  X00043c1 = {
+   fileRef = X00043c0;
+   isa = PBXBuildFile;
+  };
+  X00043c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/accessiblekeybindinghelper.cxx";
+  };
+  X00043c3 = {
+   fileRef = X00043c2;
+   isa = PBXBuildFile;
+  };
+  X00043c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/accessibleselectionhelper.cxx";
+  };
+  X00043c5 = {
+   fileRef = X00043c4;
+   isa = PBXBuildFile;
+  };
+  X00043c6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/accessibletexthelper.cxx";
+  };
+  X00043c7 = {
+   fileRef = X00043c6;
+   isa = PBXBuildFile;
+  };
+  X00043c8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/accessiblewrapper.cxx";
+  };
+  X00043c9 = {
+   fileRef = X00043c8;
+   isa = PBXBuildFile;
+  };
+  X00043ca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/accimplaccess.cxx";
+  };
+  X00043cb = {
+   fileRef = X00043ca;
+   isa = PBXBuildFile;
+  };
+  X00043cc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/anytostring.cxx";
+  };
+  X00043cd = {
+   fileRef = X00043cc;
+   isa = PBXBuildFile;
+  };
+  X00043ce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/asyncnotification.cxx";
+  };
+  X00043cf = {
+   fileRef = X00043ce;
+   isa = PBXBuildFile;
+  };
+  X00043d0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/backupfilehelper.cxx";
+  };
+  X00043d1 = {
+   fileRef = X00043d0;
+   isa = PBXBuildFile;
+  };
+  X00043d2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/base64.cxx";
+  };
+  X00043d3 = {
+   fileRef = X00043d2;
+   isa = PBXBuildFile;
+  };
+  X00043d4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/comphelper_module.cxx";
+  };
+  X00043d5 = {
+   fileRef = X00043d4;
+   isa = PBXBuildFile;
+  };
+  X00043d6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/comphelper_services.cxx";
+  };
+  X00043d7 = {
+   fileRef = X00043d6;
+   isa = PBXBuildFile;
+  };
+  X00043d8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/componentbase.cxx";
+  };
+  X00043d9 = {
+   fileRef = X00043d8;
+   isa = PBXBuildFile;
+  };
+  X00043da = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/componentmodule.cxx";
+  };
+  X00043db = {
+   fileRef = X00043da;
+   isa = PBXBuildFile;
+  };
+  X00043dc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/configuration.cxx";
+  };
+  X00043dd = {
+   fileRef = X00043dc;
+   isa = PBXBuildFile;
+  };
+  X00043de = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/configurationhelper.cxx";
+  };
+  X00043df = {
+   fileRef = X00043de;
+   isa = PBXBuildFile;
+  };
+  X00043e0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/dispatchcommand.cxx";
+  };
+  X00043e1 = {
+   fileRef = X00043e0;
+   isa = PBXBuildFile;
+  };
+  X00043e2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/docpasswordhelper.cxx";
+  };
+  X00043e3 = {
+   fileRef = X00043e2;
+   isa = PBXBuildFile;
+  };
+  X00043e4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/docpasswordrequest.cxx";
+  };
+  X00043e5 = {
+   fileRef = X00043e4;
+   isa = PBXBuildFile;
+  };
+  X00043e6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/documentinfo.cxx";
+  };
+  X00043e7 = {
+   fileRef = X00043e6;
+   isa = PBXBuildFile;
+  };
+  X00043e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/evtlistenerhlp.cxx";
+  };
+  X00043e9 = {
+   fileRef = X00043e8;
+   isa = PBXBuildFile;
+  };
+  X00043ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/evtmethodhelper.cxx";
+  };
+  X00043eb = {
+   fileRef = X00043ea;
+   isa = PBXBuildFile;
+  };
+  X00043ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/fileurl.cxx";
+  };
+  X00043ed = {
+   fileRef = X00043ec;
+   isa = PBXBuildFile;
+  };
+  X00043ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/getexpandeduri.cxx";
+  };
+  X00043ef = {
+   fileRef = X00043ee;
+   isa = PBXBuildFile;
+  };
+  X00043f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/graphicmimetype.cxx";
+  };
+  X00043f1 = {
+   fileRef = X00043f0;
+   isa = PBXBuildFile;
+  };
+  X00043f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/hash.cxx";
+  };
+  X00043f3 = {
+   fileRef = X00043f2;
+   isa = PBXBuildFile;
+  };
+  X00043f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/instancelocker.cxx";
+  };
+  X00043f5 = {
+   fileRef = X00043f4;
+   isa = PBXBuildFile;
+  };
+  X00043f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/interaction.cxx";
+  };
+  X00043f7 = {
+   fileRef = X00043f6;
+   isa = PBXBuildFile;
+  };
+  X00043f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/listenernotification.cxx";
+  };
+  X00043f9 = {
+   fileRef = X00043f8;
+   isa = PBXBuildFile;
+  };
+  X00043fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/logging.cxx";
+  };
+  X00043fb = {
+   fileRef = X00043fa;
+   isa = PBXBuildFile;
+  };
+  X00043fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/lok.cxx";
+  };
+  X00043fd = {
+   fileRef = X00043fc;
+   isa = PBXBuildFile;
+  };
+  X00043fe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/mimeconfighelper.cxx";
+  };
+  X00043ff = {
+   fileRef = X00043fe;
+   isa = PBXBuildFile;
+  };
+  X0004400 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/namedvaluecollection.cxx";
+  };
+  X0004401 = {
+   fileRef = X0004400;
+   isa = PBXBuildFile;
+  };
+  X0004402 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/numberedcollection.cxx";
+  };
+  X0004403 = {
+   fileRef = X0004402;
+   isa = PBXBuildFile;
+  };
+  X0004404 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/numbers.cxx";
+  };
+  X0004405 = {
+   fileRef = X0004404;
+   isa = PBXBuildFile;
+  };
+  X0004406 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/officerestartmanager.cxx";
+  };
+  X0004407 = {
+   fileRef = X0004406;
+   isa = PBXBuildFile;
+  };
+  X0004408 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/profilezone.cxx";
+  };
+  X0004409 = {
+   fileRef = X0004408;
+   isa = PBXBuildFile;
+  };
+  X000440a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/proxyaggregation.cxx";
+  };
+  X000440b = {
+   fileRef = X000440a;
+   isa = PBXBuildFile;
+  };
+  X000440c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/random.cxx";
+  };
+  X000440d = {
+   fileRef = X000440c;
+   isa = PBXBuildFile;
+  };
+  X000440e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/scopeguard.cxx";
+  };
+  X000440f = {
+   fileRef = X000440e;
+   isa = PBXBuildFile;
+  };
+  X0004410 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/SelectionMultiplex.cxx";
+  };
+  X0004411 = {
+   fileRef = X0004410;
+   isa = PBXBuildFile;
+  };
+  X0004412 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/sequenceashashmap.cxx";
+  };
+  X0004413 = {
+   fileRef = X0004412;
+   isa = PBXBuildFile;
+  };
+  X0004414 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/sequence.cxx";
+  };
+  X0004415 = {
+   fileRef = X0004414;
+   isa = PBXBuildFile;
+  };
+  X0004416 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/servicedecl.cxx";
+  };
+  X0004417 = {
+   fileRef = X0004416;
+   isa = PBXBuildFile;
+  };
+  X0004418 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/serviceinfohelper.cxx";
+  };
+  X0004419 = {
+   fileRef = X0004418;
+   isa = PBXBuildFile;
+  };
+  X000441a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/sharedmutex.cxx";
+  };
+  X000441b = {
+   fileRef = X000441a;
+   isa = PBXBuildFile;
+  };
+  X000441c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/simplefileaccessinteraction.cxx";
+  };
+  X000441d = {
+   fileRef = X000441c;
+   isa = PBXBuildFile;
+  };
+  X000441e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/solarmutex.cxx";
+  };
+  X000441f = {
+   fileRef = X000441e;
+   isa = PBXBuildFile;
+  };
+  X0004420 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/stillreadwriteinteraction.cxx";
+  };
+  X0004421 = {
+   fileRef = X0004420;
+   isa = PBXBuildFile;
+  };
+  X0004422 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/anycompare.cxx";
+  };
+  X0004423 = {
+   fileRef = X0004422;
+   isa = PBXBuildFile;
+  };
+  X0004424 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/storagehelper.cxx";
+  };
+  X0004425 = {
+   fileRef = X0004424;
+   isa = PBXBuildFile;
+  };
+  X0004426 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/string.cxx";
+  };
+  X0004427 = {
+   fileRef = X0004426;
+   isa = PBXBuildFile;
+  };
+  X0004428 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/synchronousdispatch.cxx";
+  };
+  X0004429 = {
+   fileRef = X0004428;
+   isa = PBXBuildFile;
+  };
+  X000442a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/syntaxhighlight.cxx";
+  };
+  X000442b = {
+   fileRef = X000442a;
+   isa = PBXBuildFile;
+  };
+  X000442c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/threadpool.cxx";
+  };
+  X000442d = {
+   fileRef = X000442c;
+   isa = PBXBuildFile;
+  };
+  X000442e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/types.cxx";
+  };
+  X000442f = {
+   fileRef = X000442e;
+   isa = PBXBuildFile;
+  };
+  X0004430 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/weak.cxx";
+  };
+  X0004431 = {
+   fileRef = X0004430;
+   isa = PBXBuildFile;
+  };
+  X0004432 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/misc/weakeventlistener.cxx";
+  };
+  X0004433 = {
+   fileRef = X0004432;
+   isa = PBXBuildFile;
+  };
+  X0004434 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/officeinstdir/officeinstallationdirectories.cxx";
+  };
+  X0004435 = {
+   fileRef = X0004434;
+   isa = PBXBuildFile;
+  };
+  X0004436 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/processfactory/processfactory.cxx";
+  };
+  X0004437 = {
+   fileRef = X0004436;
+   isa = PBXBuildFile;
+  };
+  X0004438 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/ChainablePropertySet.cxx";
+  };
+  X0004439 = {
+   fileRef = X0004438;
+   isa = PBXBuildFile;
+  };
+  X000443a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/ChainablePropertySetInfo.cxx";
+  };
+  X000443b = {
+   fileRef = X000443a;
+   isa = PBXBuildFile;
+  };
+  X000443c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/genericpropertyset.cxx";
+  };
+  X000443d = {
+   fileRef = X000443c;
+   isa = PBXBuildFile;
+  };
+  X000443e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/MasterPropertySet.cxx";
+  };
+  X000443f = {
+   fileRef = X000443e;
+   isa = PBXBuildFile;
+  };
+  X0004440 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/MasterPropertySetInfo.cxx";
+  };
+  X0004441 = {
+   fileRef = X0004440;
+   isa = PBXBuildFile;
+  };
+  X0004442 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/opropertybag.cxx";
+  };
+  X0004443 = {
+   fileRef = X0004442;
+   isa = PBXBuildFile;
+  };
+  X0004444 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/propagg.cxx";
+  };
+  X0004445 = {
+   fileRef = X0004444;
+   isa = PBXBuildFile;
+  };
+  X0004446 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/propertybag.cxx";
+  };
+  X0004447 = {
+   fileRef = X0004446;
+   isa = PBXBuildFile;
+  };
+  X0004448 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/propertycontainer.cxx";
+  };
+  X0004449 = {
+   fileRef = X0004448;
+   isa = PBXBuildFile;
+  };
+  X000444a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/propertycontainerhelper.cxx";
+  };
+  X000444b = {
+   fileRef = X000444a;
+   isa = PBXBuildFile;
+  };
+  X000444c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/property.cxx";
+  };
+  X000444d = {
+   fileRef = X000444c;
+   isa = PBXBuildFile;
+  };
+  X000444e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/propertysethelper.cxx";
+  };
+  X000444f = {
+   fileRef = X000444e;
+   isa = PBXBuildFile;
+  };
+  X0004450 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/propertysetinfo.cxx";
+  };
+  X0004451 = {
+   fileRef = X0004450;
+   isa = PBXBuildFile;
+  };
+  X0004452 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/propertystatecontainer.cxx";
+  };
+  X0004453 = {
+   fileRef = X0004452;
+   isa = PBXBuildFile;
+  };
+  X0004454 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/propmultiplex.cxx";
+  };
+  X0004455 = {
+   fileRef = X0004454;
+   isa = PBXBuildFile;
+  };
+  X0004456 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/property/propstate.cxx";
+  };
+  X0004457 = {
+   fileRef = X0004456;
+   isa = PBXBuildFile;
+  };
+  X0004458 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/streaming/basicio.cxx";
+  };
+  X0004459 = {
+   fileRef = X0004458;
+   isa = PBXBuildFile;
+  };
+  X000445a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/streaming/memorystream.cxx";
+  };
+  X000445b = {
+   fileRef = X000445a;
+   isa = PBXBuildFile;
+  };
+  X000445c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/streaming/oslfile2streamwrap.cxx";
+  };
+  X000445d = {
+   fileRef = X000445c;
+   isa = PBXBuildFile;
+  };
+  X000445e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/streaming/seekableinput.cxx";
+  };
+  X000445f = {
+   fileRef = X000445e;
+   isa = PBXBuildFile;
+  };
+  X0004460 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/streaming/seqinputstreamserv.cxx";
+  };
+  X0004461 = {
+   fileRef = X0004460;
+   isa = PBXBuildFile;
+  };
+  X0004462 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/streaming/seqoutputstreamserv.cxx";
+  };
+  X0004463 = {
+   fileRef = X0004462;
+   isa = PBXBuildFile;
+  };
+  X0004464 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/streaming/seqstream.cxx";
+  };
+  X0004465 = {
+   fileRef = X0004464;
+   isa = PBXBuildFile;
+  };
+  X0004466 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/streaming/streamsection.cxx";
+  };
+  X0004467 = {
+   fileRef = X0004466;
+   isa = PBXBuildFile;
+  };
+  X0004468 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/xml/attributelist.cxx";
+  };
+  X0004469 = {
+   fileRef = X0004468;
+   isa = PBXBuildFile;
+  };
+  X000446a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/xml/ofopxmlhelper.cxx";
+  };
+  X000446b = {
+   fileRef = X000446a;
+   isa = PBXBuildFile;
+  };
+  X000446c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/source/xml/xmltools.cxx";
+  };
+  X000446d = {
+   fileRef = X000446c;
+   isa = PBXBuildFile;
+  };
+  X000446e = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X000439f;
+}

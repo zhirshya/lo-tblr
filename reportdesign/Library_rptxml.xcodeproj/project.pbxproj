@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004e1f = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004e5f;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004e20;
+   productRefGroup = X0004e23;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004e25;
+  };
+  X0004e20 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004e21 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004e24 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004e25 = {
+   buildConfigurationList = X0004e60;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004e22;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004e26 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/dbloader2.cxx";
+  };
+  X0004e27 = {
+   fileRef = X0004e26;
+   isa = PBXBuildFile;
+  };
+  X0004e28 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlAutoStyle.cxx";
+  };
+  X0004e29 = {
+   fileRef = X0004e28;
+   isa = PBXBuildFile;
+  };
+  X0004e2a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlCell.cxx";
+  };
+  X0004e2b = {
+   fileRef = X0004e2a;
+   isa = PBXBuildFile;
+  };
+  X0004e2c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlColumn.cxx";
+  };
+  X0004e2d = {
+   fileRef = X0004e2c;
+   isa = PBXBuildFile;
+  };
+  X0004e2e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlComponent.cxx";
+  };
+  X0004e2f = {
+   fileRef = X0004e2e;
+   isa = PBXBuildFile;
+  };
+  X0004e30 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlCondPrtExpr.cxx";
+  };
+  X0004e31 = {
+   fileRef = X0004e30;
+   isa = PBXBuildFile;
+  };
+  X0004e32 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlControlProperty.cxx";
+  };
+  X0004e33 = {
+   fileRef = X0004e32;
+   isa = PBXBuildFile;
+  };
+  X0004e34 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlExport.cxx";
+  };
+  X0004e35 = {
+   fileRef = X0004e34;
+   isa = PBXBuildFile;
+  };
+  X0004e36 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlExportDocumentHandler.cxx";
+  };
+  X0004e37 = {
+   fileRef = X0004e36;
+   isa = PBXBuildFile;
+  };
+  X0004e38 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlfilter.cxx";
+  };
+  X0004e39 = {
+   fileRef = X0004e38;
+   isa = PBXBuildFile;
+  };
+  X0004e3a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlFixedContent.cxx";
+  };
+  X0004e3b = {
+   fileRef = X0004e3a;
+   isa = PBXBuildFile;
+  };
+  X0004e3c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlFormatCondition.cxx";
+  };
+  X0004e3d = {
+   fileRef = X0004e3c;
+   isa = PBXBuildFile;
+  };
+  X0004e3e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlFormattedField.cxx";
+  };
+  X0004e3f = {
+   fileRef = X0004e3e;
+   isa = PBXBuildFile;
+  };
+  X0004e40 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlFunction.cxx";
+  };
+  X0004e41 = {
+   fileRef = X0004e40;
+   isa = PBXBuildFile;
+  };
+  X0004e42 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlGroup.cxx";
+  };
+  X0004e43 = {
+   fileRef = X0004e42;
+   isa = PBXBuildFile;
+  };
+  X0004e44 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlHelper.cxx";
+  };
+  X0004e45 = {
+   fileRef = X0004e44;
+   isa = PBXBuildFile;
+  };
+  X0004e46 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlImage.cxx";
+  };
+  X0004e47 = {
+   fileRef = X0004e46;
+   isa = PBXBuildFile;
+  };
+  X0004e48 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlImportDocumentHandler.cxx";
+  };
+  X0004e49 = {
+   fileRef = X0004e48;
+   isa = PBXBuildFile;
+  };
+  X0004e4a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlMasterFields.cxx";
+  };
+  X0004e4b = {
+   fileRef = X0004e4a;
+   isa = PBXBuildFile;
+  };
+  X0004e4c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlPropertyHandler.cxx";
+  };
+  X0004e4d = {
+   fileRef = X0004e4c;
+   isa = PBXBuildFile;
+  };
+  X0004e4e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlReport.cxx";
+  };
+  X0004e4f = {
+   fileRef = X0004e4e;
+   isa = PBXBuildFile;
+  };
+  X0004e50 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlReportElement.cxx";
+  };
+  X0004e51 = {
+   fileRef = X0004e50;
+   isa = PBXBuildFile;
+  };
+  X0004e52 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlReportElementBase.cxx";
+  };
+  X0004e53 = {
+   fileRef = X0004e52;
+   isa = PBXBuildFile;
+  };
+  X0004e54 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlSection.cxx";
+  };
+  X0004e55 = {
+   fileRef = X0004e54;
+   isa = PBXBuildFile;
+  };
+  X0004e56 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlservices.cxx";
+  };
+  X0004e57 = {
+   fileRef = X0004e56;
+   isa = PBXBuildFile;
+  };
+  X0004e58 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlStyleImport.cxx";
+  };
+  X0004e59 = {
+   fileRef = X0004e58;
+   isa = PBXBuildFile;
+  };
+  X0004e5a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlSubDocument.cxx";
+  };
+  X0004e5b = {
+   fileRef = X0004e5a;
+   isa = PBXBuildFile;
+  };
+  X0004e5c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "reportdesign/source/filter/xml/xmlTable.cxx";
+  };
+  X0004e5d = {
+   fileRef = X0004e5c;
+   isa = PBXBuildFile;
+  };
+  X0004e5e = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004e1f;
+}

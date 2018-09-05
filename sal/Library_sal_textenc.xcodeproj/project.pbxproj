@@ -1,0 +1,178 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002ba7 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002bc9;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002ba8;
+   productRefGroup = X0002bab;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002bad;
+  };
+  X0002ba8 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002ba9 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002bac = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002bad = {
+   buildConfigurationList = X0002bca;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002baa;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0002bae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/context.cxx";
+  };
+  X0002baf = {
+   fileRef = X0002bae;
+   isa = PBXBuildFile;
+  };
+  X0002bb0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/convertbig5hkscs.cxx";
+  };
+  X0002bb1 = {
+   fileRef = X0002bb0;
+   isa = PBXBuildFile;
+  };
+  X0002bb2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/converteuctw.cxx";
+  };
+  X0002bb3 = {
+   fileRef = X0002bb2;
+   isa = PBXBuildFile;
+  };
+  X0002bb4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/convertgb18030.cxx";
+  };
+  X0002bb5 = {
+   fileRef = X0002bb4;
+   isa = PBXBuildFile;
+  };
+  X0002bb6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/convertisciidevangari.cxx";
+  };
+  X0002bb7 = {
+   fileRef = X0002bb6;
+   isa = PBXBuildFile;
+  };
+  X0002bb8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/convertiso2022cn.cxx";
+  };
+  X0002bb9 = {
+   fileRef = X0002bb8;
+   isa = PBXBuildFile;
+  };
+  X0002bba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/convertiso2022jp.cxx";
+  };
+  X0002bbb = {
+   fileRef = X0002bba;
+   isa = PBXBuildFile;
+  };
+  X0002bbc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/convertiso2022kr.cxx";
+  };
+  X0002bbd = {
+   fileRef = X0002bbc;
+   isa = PBXBuildFile;
+  };
+  X0002bbe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/convertsinglebytetobmpunicode.cxx";
+  };
+  X0002bbf = {
+   fileRef = X0002bbe;
+   isa = PBXBuildFile;
+  };
+  X0002bc0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/tables.cxx";
+  };
+  X0002bc1 = {
+   fileRef = X0002bc0;
+   isa = PBXBuildFile;
+  };
+  X0002bc2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/tcvtbyte.cxx";
+  };
+  X0002bc3 = {
+   fileRef = X0002bc2;
+   isa = PBXBuildFile;
+  };
+  X0002bc4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/tcvtmb.cxx";
+  };
+  X0002bc5 = {
+   fileRef = X0002bc4;
+   isa = PBXBuildFile;
+  };
+  X0002bc6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/tcvtutf7.cxx";
+  };
+  X0002bc7 = {
+   fileRef = X0002bc6;
+   isa = PBXBuildFile;
+  };
+  X0002bc8 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002ba7;
+}

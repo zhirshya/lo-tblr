@@ -1,0 +1,115 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004b23 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004b37;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004b24;
+   productRefGroup = X0004b27;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004b29;
+  };
+  X0004b24 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004b25 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004b28 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004b29 = {
+   buildConfigurationList = X0004b38;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004b26;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004b2a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "registry/source/keyimpl.cxx";
+  };
+  X0004b2b = {
+   fileRef = X0004b2a;
+   isa = PBXBuildFile;
+  };
+  X0004b2c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "registry/source/reflread.cxx";
+  };
+  X0004b2d = {
+   fileRef = X0004b2c;
+   isa = PBXBuildFile;
+  };
+  X0004b2e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "registry/source/reflwrit.cxx";
+  };
+  X0004b2f = {
+   fileRef = X0004b2e;
+   isa = PBXBuildFile;
+  };
+  X0004b30 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "registry/source/regimpl.cxx";
+  };
+  X0004b31 = {
+   fileRef = X0004b30;
+   isa = PBXBuildFile;
+  };
+  X0004b32 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "registry/source/registry.cxx";
+  };
+  X0004b33 = {
+   fileRef = X0004b32;
+   isa = PBXBuildFile;
+  };
+  X0004b34 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "registry/source/regkey.cxx";
+  };
+  X0004b35 = {
+   fileRef = X0004b34;
+   isa = PBXBuildFile;
+  };
+  X0004b36 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004b23;
+}

@@ -1,0 +1,106 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002f5b = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002f6d;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002f5c;
+   productRefGroup = X0002f5f;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002f61;
+  };
+  X0002f5c = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002f5d = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002f60 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002f61 = {
+   buildConfigurationList = X0002f6e;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002f5e;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0002f62 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sax/source/expatwrap/sax_expat.cxx";
+  };
+  X0002f63 = {
+   fileRef = X0002f62;
+   isa = PBXBuildFile;
+  };
+  X0002f64 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sax/source/expatwrap/saxwriter.cxx";
+  };
+  X0002f65 = {
+   fileRef = X0002f64;
+   isa = PBXBuildFile;
+  };
+  X0002f66 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sax/source/expatwrap/xml2utf.cxx";
+  };
+  X0002f67 = {
+   fileRef = X0002f66;
+   isa = PBXBuildFile;
+  };
+  X0002f68 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sax/source/fastparser/fastparser.cxx";
+  };
+  X0002f69 = {
+   fileRef = X0002f68;
+   isa = PBXBuildFile;
+  };
+  X0002f6a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sax/source/fastparser/legacyfastparser.cxx";
+  };
+  X0002f6b = {
+   fileRef = X0002f6a;
+   isa = PBXBuildFile;
+  };
+  X0002f6c = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002f5b;
+}

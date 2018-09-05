@@ -1,0 +1,187 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004571 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004595;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004572;
+   productRefGroup = X0004575;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004577;
+  };
+  X0004572 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004573 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004576 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004577 = {
+   buildConfigurationList = X0004596;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004574;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004578 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/bc.cxx";
+  };
+  X0004579 = {
+   fileRef = X0004578;
+   isa = PBXBuildFile;
+  };
+  X000457a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filcmd.cxx";
+  };
+  X000457b = {
+   fileRef = X000457a;
+   isa = PBXBuildFile;
+  };
+  X000457c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filglob.cxx";
+  };
+  X000457d = {
+   fileRef = X000457c;
+   isa = PBXBuildFile;
+  };
+  X000457e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filid.cxx";
+  };
+  X000457f = {
+   fileRef = X000457e;
+   isa = PBXBuildFile;
+  };
+  X0004580 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filinpstr.cxx";
+  };
+  X0004581 = {
+   fileRef = X0004580;
+   isa = PBXBuildFile;
+  };
+  X0004582 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filinsreq.cxx";
+  };
+  X0004583 = {
+   fileRef = X0004582;
+   isa = PBXBuildFile;
+  };
+  X0004584 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filnot.cxx";
+  };
+  X0004585 = {
+   fileRef = X0004584;
+   isa = PBXBuildFile;
+  };
+  X0004586 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filprp.cxx";
+  };
+  X0004587 = {
+   fileRef = X0004586;
+   isa = PBXBuildFile;
+  };
+  X0004588 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filrec.cxx";
+  };
+  X0004589 = {
+   fileRef = X0004588;
+   isa = PBXBuildFile;
+  };
+  X000458a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filrow.cxx";
+  };
+  X000458b = {
+   fileRef = X000458a;
+   isa = PBXBuildFile;
+  };
+  X000458c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filrset.cxx";
+  };
+  X000458d = {
+   fileRef = X000458c;
+   isa = PBXBuildFile;
+  };
+  X000458e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filstr.cxx";
+  };
+  X000458f = {
+   fileRef = X000458e;
+   isa = PBXBuildFile;
+  };
+  X0004590 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/filtask.cxx";
+  };
+  X0004591 = {
+   fileRef = X0004590;
+   isa = PBXBuildFile;
+  };
+  X0004592 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/file/prov.cxx";
+  };
+  X0004593 = {
+   fileRef = X0004592;
+   isa = PBXBuildFile;
+  };
+  X0004594 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004571;
+}

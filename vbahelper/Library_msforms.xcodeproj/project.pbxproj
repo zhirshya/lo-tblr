@@ -1,0 +1,259 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004c21 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004c55;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004c22;
+   productRefGroup = X0004c25;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004c27;
+  };
+  X0004c22 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004c23 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004c26 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004c27 = {
+   buildConfigurationList = X0004c56;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004c24;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004c28 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/service.cxx";
+  };
+  X0004c29 = {
+   fileRef = X0004c28;
+   isa = PBXBuildFile;
+  };
+  X0004c2a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbabutton.cxx";
+  };
+  X0004c2b = {
+   fileRef = X0004c2a;
+   isa = PBXBuildFile;
+  };
+  X0004c2c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbacheckbox.cxx";
+  };
+  X0004c2d = {
+   fileRef = X0004c2c;
+   isa = PBXBuildFile;
+  };
+  X0004c2e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbacombobox.cxx";
+  };
+  X0004c2f = {
+   fileRef = X0004c2e;
+   isa = PBXBuildFile;
+  };
+  X0004c30 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbacontrol.cxx";
+  };
+  X0004c31 = {
+   fileRef = X0004c30;
+   isa = PBXBuildFile;
+  };
+  X0004c32 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbacontrols.cxx";
+  };
+  X0004c33 = {
+   fileRef = X0004c32;
+   isa = PBXBuildFile;
+  };
+  X0004c34 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbaframe.cxx";
+  };
+  X0004c35 = {
+   fileRef = X0004c34;
+   isa = PBXBuildFile;
+  };
+  X0004c36 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbaimage.cxx";
+  };
+  X0004c37 = {
+   fileRef = X0004c36;
+   isa = PBXBuildFile;
+  };
+  X0004c38 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbalabel.cxx";
+  };
+  X0004c39 = {
+   fileRef = X0004c38;
+   isa = PBXBuildFile;
+  };
+  X0004c3a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbalistbox.cxx";
+  };
+  X0004c3b = {
+   fileRef = X0004c3a;
+   isa = PBXBuildFile;
+  };
+  X0004c3c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbalistcontrolhelper.cxx";
+  };
+  X0004c3d = {
+   fileRef = X0004c3c;
+   isa = PBXBuildFile;
+  };
+  X0004c3e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbamultipage.cxx";
+  };
+  X0004c3f = {
+   fileRef = X0004c3e;
+   isa = PBXBuildFile;
+  };
+  X0004c40 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbanewfont.cxx";
+  };
+  X0004c41 = {
+   fileRef = X0004c40;
+   isa = PBXBuildFile;
+  };
+  X0004c42 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbapages.cxx";
+  };
+  X0004c43 = {
+   fileRef = X0004c42;
+   isa = PBXBuildFile;
+  };
+  X0004c44 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbaprogressbar.cxx";
+  };
+  X0004c45 = {
+   fileRef = X0004c44;
+   isa = PBXBuildFile;
+  };
+  X0004c46 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbaradiobutton.cxx";
+  };
+  X0004c47 = {
+   fileRef = X0004c46;
+   isa = PBXBuildFile;
+  };
+  X0004c48 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbascrollbar.cxx";
+  };
+  X0004c49 = {
+   fileRef = X0004c48;
+   isa = PBXBuildFile;
+  };
+  X0004c4a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbaspinbutton.cxx";
+  };
+  X0004c4b = {
+   fileRef = X0004c4a;
+   isa = PBXBuildFile;
+  };
+  X0004c4c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbasystemaxcontrol.cxx";
+  };
+  X0004c4d = {
+   fileRef = X0004c4c;
+   isa = PBXBuildFile;
+  };
+  X0004c4e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbatextbox.cxx";
+  };
+  X0004c4f = {
+   fileRef = X0004c4e;
+   isa = PBXBuildFile;
+  };
+  X0004c50 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbatogglebutton.cxx";
+  };
+  X0004c51 = {
+   fileRef = X0004c50;
+   isa = PBXBuildFile;
+  };
+  X0004c52 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "vbahelper/source/msforms/vbauserform.cxx";
+  };
+  X0004c53 = {
+   fileRef = X0004c52;
+   isa = PBXBuildFile;
+  };
+  X0004c54 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004c21;
+}

@@ -1,0 +1,142 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0005361 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000537b;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0005362;
+   productRefGroup = X0005365;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0005367;
+  };
+  X0005362 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0005363 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0005366 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0005367 = {
+   buildConfigurationList = X000537c;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0005364;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0005368 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "test/source/bootstrapfixture.cxx";
+  };
+  X0005369 = {
+   fileRef = X0005368;
+   isa = PBXBuildFile;
+  };
+  X000536a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "test/source/diff/diff.cxx";
+  };
+  X000536b = {
+   fileRef = X000536a;
+   isa = PBXBuildFile;
+  };
+  X000536c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "test/source/callgrind.cxx";
+  };
+  X000536d = {
+   fileRef = X000536c;
+   isa = PBXBuildFile;
+  };
+  X000536e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "test/source/xmltesttools.cxx";
+  };
+  X000536f = {
+   fileRef = X000536e;
+   isa = PBXBuildFile;
+  };
+  X0005370 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "test/source/htmltesttools.cxx";
+  };
+  X0005371 = {
+   fileRef = X0005370;
+   isa = PBXBuildFile;
+  };
+  X0005372 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "test/source/mtfxmldump.cxx";
+  };
+  X0005373 = {
+   fileRef = X0005372;
+   isa = PBXBuildFile;
+  };
+  X0005374 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "test/source/primitive2dxmldump.cxx";
+  };
+  X0005375 = {
+   fileRef = X0005374;
+   isa = PBXBuildFile;
+  };
+  X0005376 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "test/source/screenshot_test.cxx";
+  };
+  X0005377 = {
+   fileRef = X0005376;
+   isa = PBXBuildFile;
+  };
+  X0005378 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "test/source/unoapi_property_testers.cxx";
+  };
+  X0005379 = {
+   fileRef = X0005378;
+   isa = PBXBuildFile;
+  };
+  X000537a = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0005361;
+}

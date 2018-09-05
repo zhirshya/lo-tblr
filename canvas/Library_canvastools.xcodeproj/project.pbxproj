@@ -1,0 +1,178 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0003967 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0003989;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0003968;
+   productRefGroup = X000396b;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000396d;
+  };
+  X0003968 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0003969 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000396c = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000396d = {
+   buildConfigurationList = X000398a;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X000396a;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000396e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/cachedprimitivebase.cxx";
+  };
+  X000396f = {
+   fileRef = X000396e;
+   isa = PBXBuildFile;
+  };
+  X0003970 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/canvascustomspritehelper.cxx";
+  };
+  X0003971 = {
+   fileRef = X0003970;
+   isa = PBXBuildFile;
+  };
+  X0003972 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/canvastools.cxx";
+  };
+  X0003973 = {
+   fileRef = X0003972;
+   isa = PBXBuildFile;
+  };
+  X0003974 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/elapsedtime.cxx";
+  };
+  X0003975 = {
+   fileRef = X0003974;
+   isa = PBXBuildFile;
+  };
+  X0003976 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/page.cxx";
+  };
+  X0003977 = {
+   fileRef = X0003976;
+   isa = PBXBuildFile;
+  };
+  X0003978 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/pagemanager.cxx";
+  };
+  X0003979 = {
+   fileRef = X0003978;
+   isa = PBXBuildFile;
+  };
+  X000397a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/parametricpolypolygon.cxx";
+  };
+  X000397b = {
+   fileRef = X000397a;
+   isa = PBXBuildFile;
+  };
+  X000397c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/propertysethelper.cxx";
+  };
+  X000397d = {
+   fileRef = X000397c;
+   isa = PBXBuildFile;
+  };
+  X000397e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/spriteredrawmanager.cxx";
+  };
+  X000397f = {
+   fileRef = X000397e;
+   isa = PBXBuildFile;
+  };
+  X0003980 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/surface.cxx";
+  };
+  X0003981 = {
+   fileRef = X0003980;
+   isa = PBXBuildFile;
+  };
+  X0003982 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/surfaceproxy.cxx";
+  };
+  X0003983 = {
+   fileRef = X0003982;
+   isa = PBXBuildFile;
+  };
+  X0003984 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/surfaceproxymanager.cxx";
+  };
+  X0003985 = {
+   fileRef = X0003984;
+   isa = PBXBuildFile;
+  };
+  X0003986 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "canvas/source/tools/verifyinput.cxx";
+  };
+  X0003987 = {
+   fileRef = X0003986;
+   isa = PBXBuildFile;
+  };
+  X0003988 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0003967;
+}

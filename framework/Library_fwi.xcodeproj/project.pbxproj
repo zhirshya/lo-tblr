@@ -1,0 +1,151 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002541 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000255d;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002542;
+   productRefGroup = X0002545;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002547;
+  };
+  X0002542 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002543 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002546 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002547 = {
+   buildConfigurationList = X000255e;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002544;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0002548 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/classes/converter.cxx";
+  };
+  X0002549 = {
+   fileRef = X0002548;
+   isa = PBXBuildFile;
+  };
+  X000254a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/classes/protocolhandlercache.cxx";
+  };
+  X000254b = {
+   fileRef = X000254a;
+   isa = PBXBuildFile;
+  };
+  X000254c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/helper/mischelper.cxx";
+  };
+  X000254d = {
+   fileRef = X000254c;
+   isa = PBXBuildFile;
+  };
+  X000254e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/helper/shareablemutex.cxx";
+  };
+  X000254f = {
+   fileRef = X000254e;
+   isa = PBXBuildFile;
+  };
+  X0002550 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/jobs/configaccess.cxx";
+  };
+  X0002551 = {
+   fileRef = X0002550;
+   isa = PBXBuildFile;
+  };
+  X0002552 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/jobs/jobconst.cxx";
+  };
+  X0002553 = {
+   fileRef = X0002552;
+   isa = PBXBuildFile;
+  };
+  X0002554 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/threadhelp/transactionmanager.cxx";
+  };
+  X0002555 = {
+   fileRef = X0002554;
+   isa = PBXBuildFile;
+  };
+  X0002556 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/uielement/constitemcontainer.cxx";
+  };
+  X0002557 = {
+   fileRef = X0002556;
+   isa = PBXBuildFile;
+  };
+  X0002558 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/uielement/itemcontainer.cxx";
+  };
+  X0002559 = {
+   fileRef = X0002558;
+   isa = PBXBuildFile;
+  };
+  X000255a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "framework/source/fwi/uielement/rootitemcontainer.cxx";
+  };
+  X000255b = {
+   fileRef = X000255a;
+   isa = PBXBuildFile;
+  };
+  X000255c = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002541;
+}

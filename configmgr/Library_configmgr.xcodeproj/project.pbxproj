@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0005557 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000559f;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0005558;
+   productRefGroup = X000555b;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000555d;
+  };
+  X0005558 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0005559 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000555c = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000555d = {
+   buildConfigurationList = X00055a0;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X000555a;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000555e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/access.cxx";
+  };
+  X000555f = {
+   fileRef = X000555e;
+   isa = PBXBuildFile;
+  };
+  X0005560 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/broadcaster.cxx";
+  };
+  X0005561 = {
+   fileRef = X0005560;
+   isa = PBXBuildFile;
+  };
+  X0005562 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/childaccess.cxx";
+  };
+  X0005563 = {
+   fileRef = X0005562;
+   isa = PBXBuildFile;
+  };
+  X0005564 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/components.cxx";
+  };
+  X0005565 = {
+   fileRef = X0005564;
+   isa = PBXBuildFile;
+  };
+  X0005566 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/configurationprovider.cxx";
+  };
+  X0005567 = {
+   fileRef = X0005566;
+   isa = PBXBuildFile;
+  };
+  X0005568 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/configurationregistry.cxx";
+  };
+  X0005569 = {
+   fileRef = X0005568;
+   isa = PBXBuildFile;
+  };
+  X000556a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/data.cxx";
+  };
+  X000556b = {
+   fileRef = X000556a;
+   isa = PBXBuildFile;
+  };
+  X000556c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/defaultprovider.cxx";
+  };
+  X000556d = {
+   fileRef = X000556c;
+   isa = PBXBuildFile;
+  };
+  X000556e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/groupnode.cxx";
+  };
+  X000556f = {
+   fileRef = X000556e;
+   isa = PBXBuildFile;
+  };
+  X0005570 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/localizedpropertynode.cxx";
+  };
+  X0005571 = {
+   fileRef = X0005570;
+   isa = PBXBuildFile;
+  };
+  X0005572 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/localizedvaluenode.cxx";
+  };
+  X0005573 = {
+   fileRef = X0005572;
+   isa = PBXBuildFile;
+  };
+  X0005574 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/lock.cxx";
+  };
+  X0005575 = {
+   fileRef = X0005574;
+   isa = PBXBuildFile;
+  };
+  X0005576 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/modifications.cxx";
+  };
+  X0005577 = {
+   fileRef = X0005576;
+   isa = PBXBuildFile;
+  };
+  X0005578 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/node.cxx";
+  };
+  X0005579 = {
+   fileRef = X0005578;
+   isa = PBXBuildFile;
+  };
+  X000557a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/nodemap.cxx";
+  };
+  X000557b = {
+   fileRef = X000557a;
+   isa = PBXBuildFile;
+  };
+  X000557c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/parsemanager.cxx";
+  };
+  X000557d = {
+   fileRef = X000557c;
+   isa = PBXBuildFile;
+  };
+  X000557e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/partial.cxx";
+  };
+  X000557f = {
+   fileRef = X000557e;
+   isa = PBXBuildFile;
+  };
+  X0005580 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/propertynode.cxx";
+  };
+  X0005581 = {
+   fileRef = X0005580;
+   isa = PBXBuildFile;
+  };
+  X0005582 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/readonlyaccess.cxx";
+  };
+  X0005583 = {
+   fileRef = X0005582;
+   isa = PBXBuildFile;
+  };
+  X0005584 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/readwriteaccess.cxx";
+  };
+  X0005585 = {
+   fileRef = X0005584;
+   isa = PBXBuildFile;
+  };
+  X0005586 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/rootaccess.cxx";
+  };
+  X0005587 = {
+   fileRef = X0005586;
+   isa = PBXBuildFile;
+  };
+  X0005588 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/rootnode.cxx";
+  };
+  X0005589 = {
+   fileRef = X0005588;
+   isa = PBXBuildFile;
+  };
+  X000558a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/services.cxx";
+  };
+  X000558b = {
+   fileRef = X000558a;
+   isa = PBXBuildFile;
+  };
+  X000558c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/setnode.cxx";
+  };
+  X000558d = {
+   fileRef = X000558c;
+   isa = PBXBuildFile;
+  };
+  X000558e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/type.cxx";
+  };
+  X000558f = {
+   fileRef = X000558e;
+   isa = PBXBuildFile;
+  };
+  X0005590 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/update.cxx";
+  };
+  X0005591 = {
+   fileRef = X0005590;
+   isa = PBXBuildFile;
+  };
+  X0005592 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/valueparser.cxx";
+  };
+  X0005593 = {
+   fileRef = X0005592;
+   isa = PBXBuildFile;
+  };
+  X0005594 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/writemodfile.cxx";
+  };
+  X0005595 = {
+   fileRef = X0005594;
+   isa = PBXBuildFile;
+  };
+  X0005596 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/xcdparser.cxx";
+  };
+  X0005597 = {
+   fileRef = X0005596;
+   isa = PBXBuildFile;
+  };
+  X0005598 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/xcsparser.cxx";
+  };
+  X0005599 = {
+   fileRef = X0005598;
+   isa = PBXBuildFile;
+  };
+  X000559a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/xcuparser.cxx";
+  };
+  X000559b = {
+   fileRef = X000559a;
+   isa = PBXBuildFile;
+  };
+  X000559c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "configmgr/source/xmldata.cxx";
+  };
+  X000559d = {
+   fileRef = X000559c;
+   isa = PBXBuildFile;
+  };
+  X000559e = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0005557;
+}

@@ -1,0 +1,97 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002355 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002365;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002356;
+   productRefGroup = X0002359;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000235b;
+  };
+  X0002356 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002357 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000235a = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000235b = {
+   buildConfigurationList = X0002366;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002358;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000235c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/calc/MSWorksCalcImportFilter.cxx";
+  };
+  X000235d = {
+   fileRef = X000235c;
+   isa = PBXBuildFile;
+  };
+  X000235e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/calc/MWAWCalcImportFilter.cxx";
+  };
+  X000235f = {
+   fileRef = X000235e;
+   isa = PBXBuildFile;
+  };
+  X0002360 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/calc/NumbersImportFilter.cxx";
+  };
+  X0002361 = {
+   fileRef = X0002360;
+   isa = PBXBuildFile;
+  };
+  X0002362 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/source/calc/StarOfficeCalcImportFilter.cxx";
+  };
+  X0002363 = {
+   fileRef = X0002362;
+   isa = PBXBuildFile;
+  };
+  X0002364 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002355;
+}

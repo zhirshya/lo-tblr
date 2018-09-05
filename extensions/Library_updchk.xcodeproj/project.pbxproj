@@ -1,0 +1,115 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004125 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004139;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004126;
+   productRefGroup = X0004129;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000412b;
+  };
+  X0004126 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004127 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000412a = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000412b = {
+   buildConfigurationList = X000413a;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004128;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000412c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/update/check/download.cxx";
+  };
+  X000412d = {
+   fileRef = X000412c;
+   isa = PBXBuildFile;
+  };
+  X000412e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/update/check/updatecheck.cxx";
+  };
+  X000412f = {
+   fileRef = X000412e;
+   isa = PBXBuildFile;
+  };
+  X0004130 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/update/check/updatecheckconfig.cxx";
+  };
+  X0004131 = {
+   fileRef = X0004130;
+   isa = PBXBuildFile;
+  };
+  X0004132 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/update/check/updatecheckjob.cxx";
+  };
+  X0004133 = {
+   fileRef = X0004132;
+   isa = PBXBuildFile;
+  };
+  X0004134 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/update/check/updatehdl.cxx";
+  };
+  X0004135 = {
+   fileRef = X0004134;
+   isa = PBXBuildFile;
+  };
+  X0004136 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "extensions/source/update/check/updateprotocol.cxx";
+  };
+  X0004137 = {
+   fileRef = X0004136;
+   isa = PBXBuildFile;
+  };
+  X0004138 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004125;
+}

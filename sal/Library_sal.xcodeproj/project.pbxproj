@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002ab9 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002b47;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002aba;
+   productRefGroup = X0002abd;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002abf;
+  };
+  X0002aba = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002abb = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002abe = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002abf = {
+   buildConfigurationList = X0002b48;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002abc;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0002ac0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/all/compat.cxx";
+  };
+  X0002ac1 = {
+   fileRef = X0002ac0;
+   isa = PBXBuildFile;
+  };
+  X0002ac2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/all/debugbase.cxx";
+  };
+  X0002ac3 = {
+   fileRef = X0002ac2;
+   isa = PBXBuildFile;
+  };
+  X0002ac4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/all/filepath.cxx";
+  };
+  X0002ac5 = {
+   fileRef = X0002ac4;
+   isa = PBXBuildFile;
+  };
+  X0002ac6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/all/loadmodulerelative.cxx";
+  };
+  X0002ac7 = {
+   fileRef = X0002ac6;
+   isa = PBXBuildFile;
+  };
+  X0002ac8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/all/log.cxx";
+  };
+  X0002ac9 = {
+   fileRef = X0002ac8;
+   isa = PBXBuildFile;
+  };
+  X0002aca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/all/signalshared.cxx";
+  };
+  X0002acb = {
+   fileRef = X0002aca;
+   isa = PBXBuildFile;
+  };
+  X0002acc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/all/utility.cxx";
+  };
+  X0002acd = {
+   fileRef = X0002acc;
+   isa = PBXBuildFile;
+  };
+  X0002ace = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/alloc_arena.cxx";
+  };
+  X0002acf = {
+   fileRef = X0002ace;
+   isa = PBXBuildFile;
+  };
+  X0002ad0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/alloc_cache.cxx";
+  };
+  X0002ad1 = {
+   fileRef = X0002ad0;
+   isa = PBXBuildFile;
+  };
+  X0002ad2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/alloc_fini.cxx";
+  };
+  X0002ad3 = {
+   fileRef = X0002ad2;
+   isa = PBXBuildFile;
+  };
+  X0002ad4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/alloc_global.cxx";
+  };
+  X0002ad5 = {
+   fileRef = X0002ad4;
+   isa = PBXBuildFile;
+  };
+  X0002ad6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/bootstrap.cxx";
+  };
+  X0002ad7 = {
+   fileRef = X0002ad6;
+   isa = PBXBuildFile;
+  };
+  X0002ad8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/byteseq.cxx";
+  };
+  X0002ad9 = {
+   fileRef = X0002ad8;
+   isa = PBXBuildFile;
+  };
+  X0002ada = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/cipher.cxx";
+  };
+  X0002adb = {
+   fileRef = X0002ada;
+   isa = PBXBuildFile;
+  };
+  X0002adc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/cmdargs.cxx";
+  };
+  X0002add = {
+   fileRef = X0002adc;
+   isa = PBXBuildFile;
+  };
+  X0002ade = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/crc.cxx";
+  };
+  X0002adf = {
+   fileRef = X0002ade;
+   isa = PBXBuildFile;
+  };
+  X0002ae0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/digest.cxx";
+  };
+  X0002ae1 = {
+   fileRef = X0002ae0;
+   isa = PBXBuildFile;
+  };
+  X0002ae2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/hash.cxx";
+  };
+  X0002ae3 = {
+   fileRef = X0002ae2;
+   isa = PBXBuildFile;
+  };
+  X0002ae4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/locale.cxx";
+  };
+  X0002ae5 = {
+   fileRef = X0002ae4;
+   isa = PBXBuildFile;
+  };
+  X0002ae6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/math.cxx";
+  };
+  X0002ae7 = {
+   fileRef = X0002ae6;
+   isa = PBXBuildFile;
+  };
+  X0002ae8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/random.cxx";
+  };
+  X0002ae9 = {
+   fileRef = X0002ae8;
+   isa = PBXBuildFile;
+  };
+  X0002aea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/rtl_process.cxx";
+  };
+  X0002aeb = {
+   fileRef = X0002aea;
+   isa = PBXBuildFile;
+  };
+  X0002aec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/strbuf.cxx";
+  };
+  X0002aed = {
+   fileRef = X0002aec;
+   isa = PBXBuildFile;
+  };
+  X0002aee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/strimp.cxx";
+  };
+  X0002aef = {
+   fileRef = X0002aee;
+   isa = PBXBuildFile;
+  };
+  X0002af0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/string.cxx";
+  };
+  X0002af1 = {
+   fileRef = X0002af0;
+   isa = PBXBuildFile;
+  };
+  X0002af2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/unload.cxx";
+  };
+  X0002af3 = {
+   fileRef = X0002af2;
+   isa = PBXBuildFile;
+  };
+  X0002af4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/uri.cxx";
+  };
+  X0002af5 = {
+   fileRef = X0002af4;
+   isa = PBXBuildFile;
+  };
+  X0002af6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/ustrbuf.cxx";
+  };
+  X0002af7 = {
+   fileRef = X0002af6;
+   isa = PBXBuildFile;
+  };
+  X0002af8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/ustring.cxx";
+  };
+  X0002af9 = {
+   fileRef = X0002af8;
+   isa = PBXBuildFile;
+  };
+  X0002afa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/rtl/uuid.cxx";
+  };
+  X0002afb = {
+   fileRef = X0002afa;
+   isa = PBXBuildFile;
+  };
+  X0002afc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/converter.cxx";
+  };
+  X0002afd = {
+   fileRef = X0002afc;
+   isa = PBXBuildFile;
+  };
+  X0002afe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/convertsimple.cxx";
+  };
+  X0002aff = {
+   fileRef = X0002afe;
+   isa = PBXBuildFile;
+  };
+  X0002b00 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/handleundefinedunicodetotextchar.cxx";
+  };
+  X0002b01 = {
+   fileRef = X0002b00;
+   isa = PBXBuildFile;
+  };
+  X0002b02 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/tcvtutf8.cxx";
+  };
+  X0002b03 = {
+   fileRef = X0002b02;
+   isa = PBXBuildFile;
+  };
+  X0002b04 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/tencinfo.cxx";
+  };
+  X0002b05 = {
+   fileRef = X0002b04;
+   isa = PBXBuildFile;
+  };
+  X0002b06 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/textcvt.cxx";
+  };
+  X0002b07 = {
+   fileRef = X0002b06;
+   isa = PBXBuildFile;
+  };
+  X0002b08 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/textenc.cxx";
+  };
+  X0002b09 = {
+   fileRef = X0002b08;
+   isa = PBXBuildFile;
+  };
+  X0002b0a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/textenc/unichars.cxx";
+  };
+  X0002b0b = {
+   fileRef = X0002b0a;
+   isa = PBXBuildFile;
+  };
+  X0002b0c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/backtraceapi.cxx";
+  };
+  X0002b0d = {
+   fileRef = X0002b0c;
+   isa = PBXBuildFile;
+  };
+  X0002b0e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/conditn.cxx";
+  };
+  X0002b0f = {
+   fileRef = X0002b0e;
+   isa = PBXBuildFile;
+  };
+  X0002b10 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/file.cxx";
+  };
+  X0002b11 = {
+   fileRef = X0002b10;
+   isa = PBXBuildFile;
+  };
+  X0002b12 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/file_error_transl.cxx";
+  };
+  X0002b13 = {
+   fileRef = X0002b12;
+   isa = PBXBuildFile;
+  };
+  X0002b14 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/file_misc.cxx";
+  };
+  X0002b15 = {
+   fileRef = X0002b14;
+   isa = PBXBuildFile;
+  };
+  X0002b16 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/file_path_helper.cxx";
+  };
+  X0002b17 = {
+   fileRef = X0002b16;
+   isa = PBXBuildFile;
+  };
+  X0002b18 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/file_stat.cxx";
+  };
+  X0002b19 = {
+   fileRef = X0002b18;
+   isa = PBXBuildFile;
+  };
+  X0002b1a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/file_url.cxx";
+  };
+  X0002b1b = {
+   fileRef = X0002b1a;
+   isa = PBXBuildFile;
+  };
+  X0002b1c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/file_volume.cxx";
+  };
+  X0002b1d = {
+   fileRef = X0002b1c;
+   isa = PBXBuildFile;
+  };
+  X0002b1e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/memory.cxx";
+  };
+  X0002b1f = {
+   fileRef = X0002b1e;
+   isa = PBXBuildFile;
+  };
+  X0002b20 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/module.cxx";
+  };
+  X0002b21 = {
+   fileRef = X0002b20;
+   isa = PBXBuildFile;
+  };
+  X0002b22 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/mutex.cxx";
+  };
+  X0002b23 = {
+   fileRef = X0002b22;
+   isa = PBXBuildFile;
+  };
+  X0002b24 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/nlsupport.cxx";
+  };
+  X0002b25 = {
+   fileRef = X0002b24;
+   isa = PBXBuildFile;
+  };
+  X0002b26 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/pipe.cxx";
+  };
+  X0002b27 = {
+   fileRef = X0002b26;
+   isa = PBXBuildFile;
+  };
+  X0002b28 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/process.cxx";
+  };
+  X0002b29 = {
+   fileRef = X0002b28;
+   isa = PBXBuildFile;
+  };
+  X0002b2a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/process_impl.cxx";
+  };
+  X0002b2b = {
+   fileRef = X0002b2a;
+   isa = PBXBuildFile;
+  };
+  X0002b2c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/profile.cxx";
+  };
+  X0002b2d = {
+   fileRef = X0002b2c;
+   isa = PBXBuildFile;
+  };
+  X0002b2e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/random.cxx";
+  };
+  X0002b2f = {
+   fileRef = X0002b2e;
+   isa = PBXBuildFile;
+  };
+  X0002b30 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/readwrite_helper.cxx";
+  };
+  X0002b31 = {
+   fileRef = X0002b30;
+   isa = PBXBuildFile;
+  };
+  X0002b32 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/security.cxx";
+  };
+  X0002b33 = {
+   fileRef = X0002b32;
+   isa = PBXBuildFile;
+  };
+  X0002b34 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/signal.cxx";
+  };
+  X0002b35 = {
+   fileRef = X0002b34;
+   isa = PBXBuildFile;
+  };
+  X0002b36 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/socket.cxx";
+  };
+  X0002b37 = {
+   fileRef = X0002b36;
+   isa = PBXBuildFile;
+  };
+  X0002b38 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/system.cxx";
+  };
+  X0002b39 = {
+   fileRef = X0002b38;
+   isa = PBXBuildFile;
+  };
+  X0002b3a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/tempfile.cxx";
+  };
+  X0002b3b = {
+   fileRef = X0002b3a;
+   isa = PBXBuildFile;
+  };
+  X0002b3c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/thread.cxx";
+  };
+  X0002b3d = {
+   fileRef = X0002b3c;
+   isa = PBXBuildFile;
+  };
+  X0002b3e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/time.cxx";
+  };
+  X0002b3f = {
+   fileRef = X0002b3e;
+   isa = PBXBuildFile;
+  };
+  X0002b40 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/salinit.cxx";
+  };
+  X0002b41 = {
+   fileRef = X0002b40;
+   isa = PBXBuildFile;
+  };
+  X0002b42 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/osxlocale.cxx";
+  };
+  X0002b43 = {
+   fileRef = X0002b42;
+   isa = PBXBuildFile;
+  };
+  X0002b44 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/osl/unx/interlck.cxx";
+  };
+  X0002b45 = {
+   fileRef = X0002b44;
+   isa = PBXBuildFile;
+  };
+  X0002b46 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002ab9;
+}

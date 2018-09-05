@@ -1,0 +1,178 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X000452f = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004551;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004530;
+   productRefGroup = X0004533;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004535;
+  };
+  X0004530 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004531 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004534 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004535 = {
+   buildConfigurationList = X0004552;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004532;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004536 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpcfunc.cxx";
+  };
+  X0004537 = {
+   fileRef = X0004536;
+   isa = PBXBuildFile;
+  };
+  X0004538 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpcontentcaps.cxx";
+  };
+  X0004539 = {
+   fileRef = X0004538;
+   isa = PBXBuildFile;
+  };
+  X000453a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpcontent.cxx";
+  };
+  X000453b = {
+   fileRef = X000453a;
+   isa = PBXBuildFile;
+  };
+  X000453c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpcontentidentifier.cxx";
+  };
+  X000453d = {
+   fileRef = X000453c;
+   isa = PBXBuildFile;
+  };
+  X000453e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpcontentprovider.cxx";
+  };
+  X000453f = {
+   fileRef = X000453e;
+   isa = PBXBuildFile;
+  };
+  X0004540 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpdirp.cxx";
+  };
+  X0004541 = {
+   fileRef = X0004540;
+   isa = PBXBuildFile;
+  };
+  X0004542 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpdynresultset.cxx";
+  };
+  X0004543 = {
+   fileRef = X0004542;
+   isa = PBXBuildFile;
+  };
+  X0004544 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpintreq.cxx";
+  };
+  X0004545 = {
+   fileRef = X0004544;
+   isa = PBXBuildFile;
+  };
+  X0004546 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftploaderthread.cxx";
+  };
+  X0004547 = {
+   fileRef = X0004546;
+   isa = PBXBuildFile;
+  };
+  X0004548 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpresultsetbase.cxx";
+  };
+  X0004549 = {
+   fileRef = X0004548;
+   isa = PBXBuildFile;
+  };
+  X000454a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpresultsetI.cxx";
+  };
+  X000454b = {
+   fileRef = X000454a;
+   isa = PBXBuildFile;
+  };
+  X000454c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpservices.cxx";
+  };
+  X000454d = {
+   fileRef = X000454c;
+   isa = PBXBuildFile;
+  };
+  X000454e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/ftp/ftpurl.cxx";
+  };
+  X000454f = {
+   fileRef = X000454e;
+   isa = PBXBuildFile;
+  };
+  X0004550 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X000452f;
+}

@@ -1,0 +1,142 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00026fd = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002717;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00026fe;
+   productRefGroup = X0002701;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002703;
+  };
+  X00026fe = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00026ff = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002702 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002703 = {
+   buildConfigurationList = X0002718;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002700;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0002704 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/deployment/gui/dp_gui_dependencydialog.cxx";
+  };
+  X0002705 = {
+   fileRef = X0002704;
+   isa = PBXBuildFile;
+  };
+  X0002706 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/deployment/gui/dp_gui_dialog2.cxx";
+  };
+  X0002707 = {
+   fileRef = X0002706;
+   isa = PBXBuildFile;
+  };
+  X0002708 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/deployment/gui/dp_gui_extensioncmdqueue.cxx";
+  };
+  X0002709 = {
+   fileRef = X0002708;
+   isa = PBXBuildFile;
+  };
+  X000270a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/deployment/gui/dp_gui_extlistbox.cxx";
+  };
+  X000270b = {
+   fileRef = X000270a;
+   isa = PBXBuildFile;
+  };
+  X000270c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/deployment/gui/dp_gui_service.cxx";
+  };
+  X000270d = {
+   fileRef = X000270c;
+   isa = PBXBuildFile;
+  };
+  X000270e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/deployment/gui/dp_gui_theextmgr.cxx";
+  };
+  X000270f = {
+   fileRef = X000270e;
+   isa = PBXBuildFile;
+  };
+  X0002710 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/deployment/gui/dp_gui_updatedialog.cxx";
+  };
+  X0002711 = {
+   fileRef = X0002710;
+   isa = PBXBuildFile;
+  };
+  X0002712 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/deployment/gui/dp_gui_updateinstalldialog.cxx";
+  };
+  X0002713 = {
+   fileRef = X0002712;
+   isa = PBXBuildFile;
+  };
+  X0002714 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/deployment/gui/license_dialog.cxx";
+  };
+  X0002715 = {
+   fileRef = X0002714;
+   isa = PBXBuildFile;
+  };
+  X0002716 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00026fd;
+}

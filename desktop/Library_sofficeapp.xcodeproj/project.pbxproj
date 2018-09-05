@@ -1,0 +1,214 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002747 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002771;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002748;
+   productRefGroup = X000274b;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000274d;
+  };
+  X0002748 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002749 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000274c = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000274d = {
+   buildConfigurationList = X0002772;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X000274a;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000274e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/app.cxx";
+  };
+  X000274f = {
+   fileRef = X000274e;
+   isa = PBXBuildFile;
+  };
+  X0002750 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/appinit.cxx";
+  };
+  X0002751 = {
+   fileRef = X0002750;
+   isa = PBXBuildFile;
+  };
+  X0002752 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/check_ext_deps.cxx";
+  };
+  X0002753 = {
+   fileRef = X0002752;
+   isa = PBXBuildFile;
+  };
+  X0002754 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/cmdlineargs.cxx";
+  };
+  X0002755 = {
+   fileRef = X0002754;
+   isa = PBXBuildFile;
+  };
+  X0002756 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/cmdlinehelp.cxx";
+  };
+  X0002757 = {
+   fileRef = X0002756;
+   isa = PBXBuildFile;
+  };
+  X0002758 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/desktopcontext.cxx";
+  };
+  X0002759 = {
+   fileRef = X0002758;
+   isa = PBXBuildFile;
+  };
+  X000275a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/dispatchwatcher.cxx";
+  };
+  X000275b = {
+   fileRef = X000275a;
+   isa = PBXBuildFile;
+  };
+  X000275c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/langselect.cxx";
+  };
+  X000275d = {
+   fileRef = X000275c;
+   isa = PBXBuildFile;
+  };
+  X000275e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/lockfile2.cxx";
+  };
+  X000275f = {
+   fileRef = X000275e;
+   isa = PBXBuildFile;
+  };
+  X0002760 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/officeipcthread.cxx";
+  };
+  X0002761 = {
+   fileRef = X0002760;
+   isa = PBXBuildFile;
+  };
+  X0002762 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/opencl.cxx";
+  };
+  X0002763 = {
+   fileRef = X0002762;
+   isa = PBXBuildFile;
+  };
+  X0002764 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/sofficemain.cxx";
+  };
+  X0002765 = {
+   fileRef = X0002764;
+   isa = PBXBuildFile;
+  };
+  X0002766 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/app/userinstall.cxx";
+  };
+  X0002767 = {
+   fileRef = X0002766;
+   isa = PBXBuildFile;
+  };
+  X0002768 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/migration/migration.cxx";
+  };
+  X0002769 = {
+   fileRef = X0002768;
+   isa = PBXBuildFile;
+  };
+  X000276a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/lib/init.cxx";
+  };
+  X000276b = {
+   fileRef = X000276a;
+   isa = PBXBuildFile;
+  };
+  X000276c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/lib/lokinteractionhandler.cxx";
+  };
+  X000276d = {
+   fileRef = X000276c;
+   isa = PBXBuildFile;
+  };
+  X000276e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "desktop/source/lib/lokclipboard.cxx";
+  };
+  X000276f = {
+   fileRef = X000276e;
+   isa = PBXBuildFile;
+  };
+  X0002770 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002747;
+}

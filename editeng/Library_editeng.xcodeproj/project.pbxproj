@@ -1,0 +1,853 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00034d3 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000358b;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00034d4;
+   productRefGroup = X00034d7;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00034d9;
+  };
+  X00034d4 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00034d5 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00034d8 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00034d9 = {
+   buildConfigurationList = X000358c;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00034d6;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00034da = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/accessibility/AccessibleComponentBase.cxx";
+  };
+  X00034db = {
+   fileRef = X00034da;
+   isa = PBXBuildFile;
+  };
+  X00034dc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/accessibility/AccessibleContextBase.cxx";
+  };
+  X00034dd = {
+   fileRef = X00034dc;
+   isa = PBXBuildFile;
+  };
+  X00034de = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/accessibility/AccessibleEditableTextPara.cxx";
+  };
+  X00034df = {
+   fileRef = X00034de;
+   isa = PBXBuildFile;
+  };
+  X00034e0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/accessibility/AccessibleHyperlink.cxx";
+  };
+  X00034e1 = {
+   fileRef = X00034e0;
+   isa = PBXBuildFile;
+  };
+  X00034e2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/accessibility/AccessibleImageBullet.cxx";
+  };
+  X00034e3 = {
+   fileRef = X00034e2;
+   isa = PBXBuildFile;
+  };
+  X00034e4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/accessibility/AccessibleParaManager.cxx";
+  };
+  X00034e5 = {
+   fileRef = X00034e4;
+   isa = PBXBuildFile;
+  };
+  X00034e6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/accessibility/AccessibleSelectionBase.cxx";
+  };
+  X00034e7 = {
+   fileRef = X00034e6;
+   isa = PBXBuildFile;
+  };
+  X00034e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/accessibility/AccessibleStaticTextBase.cxx";
+  };
+  X00034e9 = {
+   fileRef = X00034e8;
+   isa = PBXBuildFile;
+  };
+  X00034ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/accessibility/AccessibleStringWrap.cxx";
+  };
+  X00034eb = {
+   fileRef = X00034ea;
+   isa = PBXBuildFile;
+  };
+  X00034ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/editattr.cxx";
+  };
+  X00034ed = {
+   fileRef = X00034ec;
+   isa = PBXBuildFile;
+  };
+  X00034ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/editdata.cxx";
+  };
+  X00034ef = {
+   fileRef = X00034ee;
+   isa = PBXBuildFile;
+  };
+  X00034f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/editdbg.cxx";
+  };
+  X00034f1 = {
+   fileRef = X00034f0;
+   isa = PBXBuildFile;
+  };
+  X00034f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/editdoc.cxx";
+  };
+  X00034f3 = {
+   fileRef = X00034f2;
+   isa = PBXBuildFile;
+  };
+  X00034f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/editeng.cxx";
+  };
+  X00034f5 = {
+   fileRef = X00034f4;
+   isa = PBXBuildFile;
+  };
+  X00034f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/editobj.cxx";
+  };
+  X00034f7 = {
+   fileRef = X00034f6;
+   isa = PBXBuildFile;
+  };
+  X00034f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/editsel.cxx";
+  };
+  X00034f9 = {
+   fileRef = X00034f8;
+   isa = PBXBuildFile;
+  };
+  X00034fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/editundo.cxx";
+  };
+  X00034fb = {
+   fileRef = X00034fa;
+   isa = PBXBuildFile;
+  };
+  X00034fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/editview.cxx";
+  };
+  X00034fd = {
+   fileRef = X00034fc;
+   isa = PBXBuildFile;
+  };
+  X00034fe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/edtspell.cxx";
+  };
+  X00034ff = {
+   fileRef = X00034fe;
+   isa = PBXBuildFile;
+  };
+  X0003500 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/eehtml.cxx";
+  };
+  X0003501 = {
+   fileRef = X0003500;
+   isa = PBXBuildFile;
+  };
+  X0003502 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/eeobj.cxx";
+  };
+  X0003503 = {
+   fileRef = X0003502;
+   isa = PBXBuildFile;
+  };
+  X0003504 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/eerdll.cxx";
+  };
+  X0003505 = {
+   fileRef = X0003504;
+   isa = PBXBuildFile;
+  };
+  X0003506 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/eertfpar.cxx";
+  };
+  X0003507 = {
+   fileRef = X0003506;
+   isa = PBXBuildFile;
+  };
+  X0003508 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/fieldupdater.cxx";
+  };
+  X0003509 = {
+   fileRef = X0003508;
+   isa = PBXBuildFile;
+  };
+  X000350a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/impedit.cxx";
+  };
+  X000350b = {
+   fileRef = X000350a;
+   isa = PBXBuildFile;
+  };
+  X000350c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/impedit2.cxx";
+  };
+  X000350d = {
+   fileRef = X000350c;
+   isa = PBXBuildFile;
+  };
+  X000350e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/impedit3.cxx";
+  };
+  X000350f = {
+   fileRef = X000350e;
+   isa = PBXBuildFile;
+  };
+  X0003510 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/impedit4.cxx";
+  };
+  X0003511 = {
+   fileRef = X0003510;
+   isa = PBXBuildFile;
+  };
+  X0003512 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/impedit5.cxx";
+  };
+  X0003513 = {
+   fileRef = X0003512;
+   isa = PBXBuildFile;
+  };
+  X0003514 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/misspellrange.cxx";
+  };
+  X0003515 = {
+   fileRef = X0003514;
+   isa = PBXBuildFile;
+  };
+  X0003516 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/section.cxx";
+  };
+  X0003517 = {
+   fileRef = X0003516;
+   isa = PBXBuildFile;
+  };
+  X0003518 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/editeng/textconv.cxx";
+  };
+  X0003519 = {
+   fileRef = X0003518;
+   isa = PBXBuildFile;
+  };
+  X000351a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/borderline.cxx";
+  };
+  X000351b = {
+   fileRef = X000351a;
+   isa = PBXBuildFile;
+  };
+  X000351c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/bulitem.cxx";
+  };
+  X000351d = {
+   fileRef = X000351c;
+   isa = PBXBuildFile;
+  };
+  X000351e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/CustomPropertyField.cxx";
+  };
+  X000351f = {
+   fileRef = X000351e;
+   isa = PBXBuildFile;
+  };
+  X0003520 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/charhiddenitem.cxx";
+  };
+  X0003521 = {
+   fileRef = X0003520;
+   isa = PBXBuildFile;
+  };
+  X0003522 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/flditem.cxx";
+  };
+  X0003523 = {
+   fileRef = X0003522;
+   isa = PBXBuildFile;
+  };
+  X0003524 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/frmitems.cxx";
+  };
+  X0003525 = {
+   fileRef = X0003524;
+   isa = PBXBuildFile;
+  };
+  X0003526 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/itemtype.cxx";
+  };
+  X0003527 = {
+   fileRef = X0003526;
+   isa = PBXBuildFile;
+  };
+  X0003528 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/justifyitem.cxx";
+  };
+  X0003529 = {
+   fileRef = X0003528;
+   isa = PBXBuildFile;
+  };
+  X000352a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/numitem.cxx";
+  };
+  X000352b = {
+   fileRef = X000352a;
+   isa = PBXBuildFile;
+  };
+  X000352c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/optitems.cxx";
+  };
+  X000352d = {
+   fileRef = X000352c;
+   isa = PBXBuildFile;
+  };
+  X000352e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/paperinf.cxx";
+  };
+  X000352f = {
+   fileRef = X000352e;
+   isa = PBXBuildFile;
+  };
+  X0003530 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/paraitem.cxx";
+  };
+  X0003531 = {
+   fileRef = X0003530;
+   isa = PBXBuildFile;
+  };
+  X0003532 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/svdfield.cxx";
+  };
+  X0003533 = {
+   fileRef = X0003532;
+   isa = PBXBuildFile;
+  };
+  X0003534 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/svxfont.cxx";
+  };
+  X0003535 = {
+   fileRef = X0003534;
+   isa = PBXBuildFile;
+  };
+  X0003536 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/textitem.cxx";
+  };
+  X0003537 = {
+   fileRef = X0003536;
+   isa = PBXBuildFile;
+  };
+  X0003538 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/writingmodeitem.cxx";
+  };
+  X0003539 = {
+   fileRef = X0003538;
+   isa = PBXBuildFile;
+  };
+  X000353a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/items/xmlcnitm.cxx";
+  };
+  X000353b = {
+   fileRef = X000353a;
+   isa = PBXBuildFile;
+  };
+  X000353c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/acorrcfg.cxx";
+  };
+  X000353d = {
+   fileRef = X000353c;
+   isa = PBXBuildFile;
+  };
+  X000353e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/edtdlg.cxx";
+  };
+  X000353f = {
+   fileRef = X000353e;
+   isa = PBXBuildFile;
+  };
+  X0003540 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/forbiddencharacterstable.cxx";
+  };
+  X0003541 = {
+   fileRef = X0003540;
+   isa = PBXBuildFile;
+  };
+  X0003542 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/hangulhanja.cxx";
+  };
+  X0003543 = {
+   fileRef = X0003542;
+   isa = PBXBuildFile;
+  };
+  X0003544 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/splwrap.cxx";
+  };
+  X0003545 = {
+   fileRef = X0003544;
+   isa = PBXBuildFile;
+  };
+  X0003546 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/svxacorr.cxx";
+  };
+  X0003547 = {
+   fileRef = X0003546;
+   isa = PBXBuildFile;
+  };
+  X0003548 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/SvXMLAutoCorrectTokenHandler.cxx";
+  };
+  X0003549 = {
+   fileRef = X0003548;
+   isa = PBXBuildFile;
+  };
+  X000354a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/SvXMLAutoCorrectExport.cxx";
+  };
+  X000354b = {
+   fileRef = X000354a;
+   isa = PBXBuildFile;
+  };
+  X000354c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/SvXMLAutoCorrectImport.cxx";
+  };
+  X000354d = {
+   fileRef = X000354c;
+   isa = PBXBuildFile;
+  };
+  X000354e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/swafopt.cxx";
+  };
+  X000354f = {
+   fileRef = X000354e;
+   isa = PBXBuildFile;
+  };
+  X0003550 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/txtrange.cxx";
+  };
+  X0003551 = {
+   fileRef = X0003550;
+   isa = PBXBuildFile;
+  };
+  X0003552 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/misc/unolingu.cxx";
+  };
+  X0003553 = {
+   fileRef = X0003552;
+   isa = PBXBuildFile;
+  };
+  X0003554 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/outliner/outleeng.cxx";
+  };
+  X0003555 = {
+   fileRef = X0003554;
+   isa = PBXBuildFile;
+  };
+  X0003556 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/outliner/outlin2.cxx";
+  };
+  X0003557 = {
+   fileRef = X0003556;
+   isa = PBXBuildFile;
+  };
+  X0003558 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/outliner/outliner.cxx";
+  };
+  X0003559 = {
+   fileRef = X0003558;
+   isa = PBXBuildFile;
+  };
+  X000355a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/outliner/outlobj.cxx";
+  };
+  X000355b = {
+   fileRef = X000355a;
+   isa = PBXBuildFile;
+  };
+  X000355c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/outliner/outlundo.cxx";
+  };
+  X000355d = {
+   fileRef = X000355c;
+   isa = PBXBuildFile;
+  };
+  X000355e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/outliner/outlvw.cxx";
+  };
+  X000355f = {
+   fileRef = X000355e;
+   isa = PBXBuildFile;
+  };
+  X0003560 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/outliner/overflowingtxt.cxx";
+  };
+  X0003561 = {
+   fileRef = X0003560;
+   isa = PBXBuildFile;
+  };
+  X0003562 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/outliner/paralist.cxx";
+  };
+  X0003563 = {
+   fileRef = X0003562;
+   isa = PBXBuildFile;
+  };
+  X0003564 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/rtf/rtfitem.cxx";
+  };
+  X0003565 = {
+   fileRef = X0003564;
+   isa = PBXBuildFile;
+  };
+  X0003566 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/rtf/svxrtf.cxx";
+  };
+  X0003567 = {
+   fileRef = X0003566;
+   isa = PBXBuildFile;
+  };
+  X0003568 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unoedhlp.cxx";
+  };
+  X0003569 = {
+   fileRef = X0003568;
+   isa = PBXBuildFile;
+  };
+  X000356a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unoedprx.cxx";
+  };
+  X000356b = {
+   fileRef = X000356a;
+   isa = PBXBuildFile;
+  };
+  X000356c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unoedsrc.cxx";
+  };
+  X000356d = {
+   fileRef = X000356c;
+   isa = PBXBuildFile;
+  };
+  X000356e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unofdesc.cxx";
+  };
+  X000356f = {
+   fileRef = X000356e;
+   isa = PBXBuildFile;
+  };
+  X0003570 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unofield.cxx";
+  };
+  X0003571 = {
+   fileRef = X0003570;
+   isa = PBXBuildFile;
+  };
+  X0003572 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/UnoForbiddenCharsTable.cxx";
+  };
+  X0003573 = {
+   fileRef = X0003572;
+   isa = PBXBuildFile;
+  };
+  X0003574 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unofored.cxx";
+  };
+  X0003575 = {
+   fileRef = X0003574;
+   isa = PBXBuildFile;
+  };
+  X0003576 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unoforou.cxx";
+  };
+  X0003577 = {
+   fileRef = X0003576;
+   isa = PBXBuildFile;
+  };
+  X0003578 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unoipset.cxx";
+  };
+  X0003579 = {
+   fileRef = X0003578;
+   isa = PBXBuildFile;
+  };
+  X000357a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unonrule.cxx";
+  };
+  X000357b = {
+   fileRef = X000357a;
+   isa = PBXBuildFile;
+  };
+  X000357c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unopracc.cxx";
+  };
+  X000357d = {
+   fileRef = X000357c;
+   isa = PBXBuildFile;
+  };
+  X000357e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unotext.cxx";
+  };
+  X000357f = {
+   fileRef = X000357e;
+   isa = PBXBuildFile;
+  };
+  X0003580 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unotext2.cxx";
+  };
+  X0003581 = {
+   fileRef = X0003580;
+   isa = PBXBuildFile;
+  };
+  X0003582 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/uno/unoviwou.cxx";
+  };
+  X0003583 = {
+   fileRef = X0003582;
+   isa = PBXBuildFile;
+  };
+  X0003584 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/xml/xmltxtexp.cxx";
+  };
+  X0003585 = {
+   fileRef = X0003584;
+   isa = PBXBuildFile;
+  };
+  X0003586 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/xml/xmltxtimp.cxx";
+  };
+  X0003587 = {
+   fileRef = X0003586;
+   isa = PBXBuildFile;
+  };
+  X0003588 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "editeng/source/lookuptree/Trie.cxx";
+  };
+  X0003589 = {
+   fileRef = X0003588;
+   isa = PBXBuildFile;
+  };
+  X000358a = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00034d3;
+}

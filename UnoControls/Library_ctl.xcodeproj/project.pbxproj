@@ -1,0 +1,151 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0005773 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000578f;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0005774;
+   productRefGroup = X0005777;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0005779;
+  };
+  X0005774 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0005775 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0005778 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0005779 = {
+   buildConfigurationList = X0005790;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0005776;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000577a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/base/basecontainercontrol.cxx";
+  };
+  X000577b = {
+   fileRef = X000577a;
+   isa = PBXBuildFile;
+  };
+  X000577c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/base/basecontrol.cxx";
+  };
+  X000577d = {
+   fileRef = X000577c;
+   isa = PBXBuildFile;
+  };
+  X000577e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/base/multiplexer.cxx";
+  };
+  X000577f = {
+   fileRef = X000577e;
+   isa = PBXBuildFile;
+  };
+  X0005780 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/base/registercontrols.cxx";
+  };
+  X0005781 = {
+   fileRef = X0005780;
+   isa = PBXBuildFile;
+  };
+  X0005782 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/controls/OConnectionPointContainerHelper.cxx";
+  };
+  X0005783 = {
+   fileRef = X0005782;
+   isa = PBXBuildFile;
+  };
+  X0005784 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/controls/OConnectionPointHelper.cxx";
+  };
+  X0005785 = {
+   fileRef = X0005784;
+   isa = PBXBuildFile;
+  };
+  X0005786 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/controls/framecontrol.cxx";
+  };
+  X0005787 = {
+   fileRef = X0005786;
+   isa = PBXBuildFile;
+  };
+  X0005788 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/controls/progressbar.cxx";
+  };
+  X0005789 = {
+   fileRef = X0005788;
+   isa = PBXBuildFile;
+  };
+  X000578a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/controls/progressmonitor.cxx";
+  };
+  X000578b = {
+   fileRef = X000578a;
+   isa = PBXBuildFile;
+  };
+  X000578c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "UnoControls/source/controls/statusindicator.cxx";
+  };
+  X000578d = {
+   fileRef = X000578c;
+   isa = PBXBuildFile;
+  };
+  X000578e = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0005773;
+}

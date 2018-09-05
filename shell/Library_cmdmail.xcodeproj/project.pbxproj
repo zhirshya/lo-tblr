@@ -1,0 +1,88 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004331 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000433f;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004332;
+   productRefGroup = X0004335;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004337;
+  };
+  X0004332 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004333 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004336 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004337 = {
+   buildConfigurationList = X0004340;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004334;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004338 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "shell/source/cmdmail/cmdmailentry.cxx";
+  };
+  X0004339 = {
+   fileRef = X0004338;
+   isa = PBXBuildFile;
+  };
+  X000433a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "shell/source/cmdmail/cmdmailmsg.cxx";
+  };
+  X000433b = {
+   fileRef = X000433a;
+   isa = PBXBuildFile;
+  };
+  X000433c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "shell/source/cmdmail/cmdmailsuppl.cxx";
+  };
+  X000433d = {
+   fileRef = X000433c;
+   isa = PBXBuildFile;
+  };
+  X000433e = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004331;
+}

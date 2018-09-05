@@ -1,0 +1,106 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004b97 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004ba9;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004b98;
+   productRefGroup = X0004b9b;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004b9d;
+  };
+  X0004b98 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004b99 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004b9c = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004b9d = {
+   buildConfigurationList = X0004baa;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004b9a;
+   productType = ;
+  };
+  X0004b9e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "starmath/qa/cppunit/test_cursor.cxx";
+  };
+  X0004b9f = {
+   fileRef = X0004b9e;
+   isa = PBXBuildFile;
+  };
+  X0004ba0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "starmath/qa/cppunit/test_node.cxx";
+  };
+  X0004ba1 = {
+   fileRef = X0004ba0;
+   isa = PBXBuildFile;
+  };
+  X0004ba2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "starmath/qa/cppunit/test_nodetotextvisitors.cxx";
+  };
+  X0004ba3 = {
+   fileRef = X0004ba2;
+   isa = PBXBuildFile;
+  };
+  X0004ba4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "starmath/qa/cppunit/test_parse.cxx";
+  };
+  X0004ba5 = {
+   fileRef = X0004ba4;
+   isa = PBXBuildFile;
+  };
+  X0004ba6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "starmath/qa/cppunit/test_starmath.cxx";
+  };
+  X0004ba7 = {
+   fileRef = X0004ba6;
+   isa = PBXBuildFile;
+  };
+  X0004ba8 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004b97;
+}

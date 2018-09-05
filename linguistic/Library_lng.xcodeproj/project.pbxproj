@@ -1,0 +1,232 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00055ad = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00055db;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00055ae;
+   productRefGroup = X00055b1;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00055b3;
+  };
+  X00055ae = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00055af = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00055b2 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00055b3 = {
+   buildConfigurationList = X00055dc;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00055b0;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00055b4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/convdic.cxx";
+  };
+  X00055b5 = {
+   fileRef = X00055b4;
+   isa = PBXBuildFile;
+  };
+  X00055b6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/convdiclist.cxx";
+  };
+  X00055b7 = {
+   fileRef = X00055b6;
+   isa = PBXBuildFile;
+  };
+  X00055b8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/convdicxml.cxx";
+  };
+  X00055b9 = {
+   fileRef = X00055b8;
+   isa = PBXBuildFile;
+  };
+  X00055ba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/dicimp.cxx";
+  };
+  X00055bb = {
+   fileRef = X00055ba;
+   isa = PBXBuildFile;
+  };
+  X00055bc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/dlistimp.cxx";
+  };
+  X00055bd = {
+   fileRef = X00055bc;
+   isa = PBXBuildFile;
+  };
+  X00055be = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/gciterator.cxx";
+  };
+  X00055bf = {
+   fileRef = X00055be;
+   isa = PBXBuildFile;
+  };
+  X00055c0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/hhconvdic.cxx";
+  };
+  X00055c1 = {
+   fileRef = X00055c0;
+   isa = PBXBuildFile;
+  };
+  X00055c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/hyphdsp.cxx";
+  };
+  X00055c3 = {
+   fileRef = X00055c2;
+   isa = PBXBuildFile;
+  };
+  X00055c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/hyphdta.cxx";
+  };
+  X00055c5 = {
+   fileRef = X00055c4;
+   isa = PBXBuildFile;
+  };
+  X00055c6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/iprcache.cxx";
+  };
+  X00055c7 = {
+   fileRef = X00055c6;
+   isa = PBXBuildFile;
+  };
+  X00055c8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/lngopt.cxx";
+  };
+  X00055c9 = {
+   fileRef = X00055c8;
+   isa = PBXBuildFile;
+  };
+  X00055ca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/lngprophelp.cxx";
+  };
+  X00055cb = {
+   fileRef = X00055ca;
+   isa = PBXBuildFile;
+  };
+  X00055cc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/lngreg.cxx";
+  };
+  X00055cd = {
+   fileRef = X00055cc;
+   isa = PBXBuildFile;
+  };
+  X00055ce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/lngsvcmgr.cxx";
+  };
+  X00055cf = {
+   fileRef = X00055ce;
+   isa = PBXBuildFile;
+  };
+  X00055d0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/misc.cxx";
+  };
+  X00055d1 = {
+   fileRef = X00055d0;
+   isa = PBXBuildFile;
+  };
+  X00055d2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/misc2.cxx";
+  };
+  X00055d3 = {
+   fileRef = X00055d2;
+   isa = PBXBuildFile;
+  };
+  X00055d4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/spelldsp.cxx";
+  };
+  X00055d5 = {
+   fileRef = X00055d4;
+   isa = PBXBuildFile;
+  };
+  X00055d6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/spelldta.cxx";
+  };
+  X00055d7 = {
+   fileRef = X00055d6;
+   isa = PBXBuildFile;
+  };
+  X00055d8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "linguistic/source/thesdsp.cxx";
+  };
+  X00055d9 = {
+   fileRef = X00055d8;
+   isa = PBXBuildFile;
+  };
+  X00055da = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00055ad;
+}

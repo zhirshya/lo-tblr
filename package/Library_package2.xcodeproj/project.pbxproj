@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004d15 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004d53;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004d16;
+   productRefGroup = X0004d19;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004d1b;
+  };
+  X0004d16 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004d17 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004d1a = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004d1b = {
+   buildConfigurationList = X0004d54;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004d18;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0004d1c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/manifest/ManifestExport.cxx";
+  };
+  X0004d1d = {
+   fileRef = X0004d1c;
+   isa = PBXBuildFile;
+  };
+  X0004d1e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/manifest/ManifestImport.cxx";
+  };
+  X0004d1f = {
+   fileRef = X0004d1e;
+   isa = PBXBuildFile;
+  };
+  X0004d20 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/manifest/ManifestReader.cxx";
+  };
+  X0004d21 = {
+   fileRef = X0004d20;
+   isa = PBXBuildFile;
+  };
+  X0004d22 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/manifest/ManifestWriter.cxx";
+  };
+  X0004d23 = {
+   fileRef = X0004d22;
+   isa = PBXBuildFile;
+  };
+  X0004d24 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/manifest/UnoRegister.cxx";
+  };
+  X0004d25 = {
+   fileRef = X0004d24;
+   isa = PBXBuildFile;
+  };
+  X0004d26 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/blowfishcontext.cxx";
+  };
+  X0004d27 = {
+   fileRef = X0004d26;
+   isa = PBXBuildFile;
+  };
+  X0004d28 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/ByteChucker.cxx";
+  };
+  X0004d29 = {
+   fileRef = X0004d28;
+   isa = PBXBuildFile;
+  };
+  X0004d2a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/ByteGrabber.cxx";
+  };
+  X0004d2b = {
+   fileRef = X0004d2a;
+   isa = PBXBuildFile;
+  };
+  X0004d2c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/CRC32.cxx";
+  };
+  X0004d2d = {
+   fileRef = X0004d2c;
+   isa = PBXBuildFile;
+  };
+  X0004d2e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/Deflater.cxx";
+  };
+  X0004d2f = {
+   fileRef = X0004d2e;
+   isa = PBXBuildFile;
+  };
+  X0004d30 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/Inflater.cxx";
+  };
+  X0004d31 = {
+   fileRef = X0004d30;
+   isa = PBXBuildFile;
+  };
+  X0004d32 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/sha1context.cxx";
+  };
+  X0004d33 = {
+   fileRef = X0004d32;
+   isa = PBXBuildFile;
+  };
+  X0004d34 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/XBufferedThreadedStream.cxx";
+  };
+  X0004d35 = {
+   fileRef = X0004d34;
+   isa = PBXBuildFile;
+  };
+  X0004d36 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/XUnbufferedStream.cxx";
+  };
+  X0004d37 = {
+   fileRef = X0004d36;
+   isa = PBXBuildFile;
+  };
+  X0004d38 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/ZipEnumeration.cxx";
+  };
+  X0004d39 = {
+   fileRef = X0004d38;
+   isa = PBXBuildFile;
+  };
+  X0004d3a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/ZipFile.cxx";
+  };
+  X0004d3b = {
+   fileRef = X0004d3a;
+   isa = PBXBuildFile;
+  };
+  X0004d3c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/ZipOutputEntry.cxx";
+  };
+  X0004d3d = {
+   fileRef = X0004d3c;
+   isa = PBXBuildFile;
+  };
+  X0004d3e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zipapi/ZipOutputStream.cxx";
+  };
+  X0004d3f = {
+   fileRef = X0004d3e;
+   isa = PBXBuildFile;
+  };
+  X0004d40 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zippackage/wrapstreamforshare.cxx";
+  };
+  X0004d41 = {
+   fileRef = X0004d40;
+   isa = PBXBuildFile;
+  };
+  X0004d42 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zippackage/zipfileaccess.cxx";
+  };
+  X0004d43 = {
+   fileRef = X0004d42;
+   isa = PBXBuildFile;
+  };
+  X0004d44 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zippackage/ZipPackageBuffer.cxx";
+  };
+  X0004d45 = {
+   fileRef = X0004d44;
+   isa = PBXBuildFile;
+  };
+  X0004d46 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zippackage/ZipPackage.cxx";
+  };
+  X0004d47 = {
+   fileRef = X0004d46;
+   isa = PBXBuildFile;
+  };
+  X0004d48 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zippackage/ZipPackageEntry.cxx";
+  };
+  X0004d49 = {
+   fileRef = X0004d48;
+   isa = PBXBuildFile;
+  };
+  X0004d4a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zippackage/ZipPackageFolder.cxx";
+  };
+  X0004d4b = {
+   fileRef = X0004d4a;
+   isa = PBXBuildFile;
+  };
+  X0004d4c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zippackage/ZipPackageFolderEnumeration.cxx";
+  };
+  X0004d4d = {
+   fileRef = X0004d4c;
+   isa = PBXBuildFile;
+  };
+  X0004d4e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zippackage/ZipPackageSink.cxx";
+  };
+  X0004d4f = {
+   fileRef = X0004d4e;
+   isa = PBXBuildFile;
+  };
+  X0004d50 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "package/source/zippackage/ZipPackageStream.cxx";
+  };
+  X0004d51 = {
+   fileRef = X0004d50;
+   isa = PBXBuildFile;
+  };
+  X0004d52 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004d15;
+}

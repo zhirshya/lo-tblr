@@ -1,0 +1,106 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X000550f = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0005521;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0005510;
+   productRefGroup = X0005513;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0005515;
+  };
+  X0005510 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0005511 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0005514 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0005515 = {
+   buildConfigurationList = X0005522;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0005512;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0005516 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nlangtag/source/isolang/insys.cxx";
+  };
+  X0005517 = {
+   fileRef = X0005516;
+   isa = PBXBuildFile;
+  };
+  X0005518 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nlangtag/source/isolang/isolang.cxx";
+  };
+  X0005519 = {
+   fileRef = X0005518;
+   isa = PBXBuildFile;
+  };
+  X000551a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nlangtag/source/isolang/mslangid.cxx";
+  };
+  X000551b = {
+   fileRef = X000551a;
+   isa = PBXBuildFile;
+  };
+  X000551c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nlangtag/source/languagetag/languagetag.cxx";
+  };
+  X000551d = {
+   fileRef = X000551c;
+   isa = PBXBuildFile;
+  };
+  X000551e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18nlangtag/source/languagetag/languagetagicu.cxx";
+  };
+  X000551f = {
+   fileRef = X000551e;
+   isa = PBXBuildFile;
+  };
+  X0005520 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X000550f;
+}

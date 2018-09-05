@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0005175 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00051e7;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0005176;
+   productRefGroup = X0005179;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000517b;
+  };
+  X0005176 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0005177 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000517a = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000517b = {
+   buildConfigurationList = X00051e8;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0005178;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000517c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/color/bcolormodifier.cxx";
+  };
+  X000517d = {
+   fileRef = X000517c;
+   isa = PBXBuildFile;
+  };
+  X000517e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/color/bcolortools.cxx";
+  };
+  X000517f = {
+   fileRef = X000517e;
+   isa = PBXBuildFile;
+  };
+  X0005180 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/curve/b2dbeziertools.cxx";
+  };
+  X0005181 = {
+   fileRef = X0005180;
+   isa = PBXBuildFile;
+  };
+  X0005182 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/curve/b2dcubicbezier.cxx";
+  };
+  X0005183 = {
+   fileRef = X0005182;
+   isa = PBXBuildFile;
+  };
+  X0005184 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/matrix/b2dhommatrix.cxx";
+  };
+  X0005185 = {
+   fileRef = X0005184;
+   isa = PBXBuildFile;
+  };
+  X0005186 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/matrix/b2dhommatrixtools.cxx";
+  };
+  X0005187 = {
+   fileRef = X0005186;
+   isa = PBXBuildFile;
+  };
+  X0005188 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/matrix/b3dhommatrix.cxx";
+  };
+  X0005189 = {
+   fileRef = X0005188;
+   isa = PBXBuildFile;
+  };
+  X000518a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/matrix/b3dhommatrixtools.cxx";
+  };
+  X000518b = {
+   fileRef = X000518a;
+   isa = PBXBuildFile;
+  };
+  X000518c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/numeric/ftools.cxx";
+  };
+  X000518d = {
+   fileRef = X000518c;
+   isa = PBXBuildFile;
+  };
+  X000518e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/pixel/bpixel.cxx";
+  };
+  X000518f = {
+   fileRef = X000518e;
+   isa = PBXBuildFile;
+  };
+  X0005190 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/point/b2dpoint.cxx";
+  };
+  X0005191 = {
+   fileRef = X0005190;
+   isa = PBXBuildFile;
+  };
+  X0005192 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/point/b2ipoint.cxx";
+  };
+  X0005193 = {
+   fileRef = X0005192;
+   isa = PBXBuildFile;
+  };
+  X0005194 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/point/b3dpoint.cxx";
+  };
+  X0005195 = {
+   fileRef = X0005194;
+   isa = PBXBuildFile;
+  };
+  X0005196 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dlinegeometry.cxx";
+  };
+  X0005197 = {
+   fileRef = X0005196;
+   isa = PBXBuildFile;
+  };
+  X0005198 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dpolygon.cxx";
+  };
+  X0005199 = {
+   fileRef = X0005198;
+   isa = PBXBuildFile;
+  };
+  X000519a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dpolygonclipper.cxx";
+  };
+  X000519b = {
+   fileRef = X000519a;
+   isa = PBXBuildFile;
+  };
+  X000519c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dpolygoncutandtouch.cxx";
+  };
+  X000519d = {
+   fileRef = X000519c;
+   isa = PBXBuildFile;
+  };
+  X000519e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dpolygontools.cxx";
+  };
+  X000519f = {
+   fileRef = X000519e;
+   isa = PBXBuildFile;
+  };
+  X00051a0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dpolygontriangulator.cxx";
+  };
+  X00051a1 = {
+   fileRef = X00051a0;
+   isa = PBXBuildFile;
+  };
+  X00051a2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dpolypolygon.cxx";
+  };
+  X00051a3 = {
+   fileRef = X00051a2;
+   isa = PBXBuildFile;
+  };
+  X00051a4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dpolypolygoncutter.cxx";
+  };
+  X00051a5 = {
+   fileRef = X00051a4;
+   isa = PBXBuildFile;
+  };
+  X00051a6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dpolypolygontools.cxx";
+  };
+  X00051a7 = {
+   fileRef = X00051a6;
+   isa = PBXBuildFile;
+  };
+  X00051a8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dsvgpolypolygon.cxx";
+  };
+  X00051a9 = {
+   fileRef = X00051a8;
+   isa = PBXBuildFile;
+  };
+  X00051aa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b2dtrapezoid.cxx";
+  };
+  X00051ab = {
+   fileRef = X00051aa;
+   isa = PBXBuildFile;
+  };
+  X00051ac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b3dpolygon.cxx";
+  };
+  X00051ad = {
+   fileRef = X00051ac;
+   isa = PBXBuildFile;
+  };
+  X00051ae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b3dpolygontools.cxx";
+  };
+  X00051af = {
+   fileRef = X00051ae;
+   isa = PBXBuildFile;
+  };
+  X00051b0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b3dpolypolygon.cxx";
+  };
+  X00051b1 = {
+   fileRef = X00051b0;
+   isa = PBXBuildFile;
+  };
+  X00051b2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/polygon/b3dpolypolygontools.cxx";
+  };
+  X00051b3 = {
+   fileRef = X00051b2;
+   isa = PBXBuildFile;
+  };
+  X00051b4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/range/b1drange.cxx";
+  };
+  X00051b5 = {
+   fileRef = X00051b4;
+   isa = PBXBuildFile;
+  };
+  X00051b6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/range/b2dpolyrange.cxx";
+  };
+  X00051b7 = {
+   fileRef = X00051b6;
+   isa = PBXBuildFile;
+  };
+  X00051b8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/range/b2drange.cxx";
+  };
+  X00051b9 = {
+   fileRef = X00051b8;
+   isa = PBXBuildFile;
+  };
+  X00051ba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/range/b2drangeclipper.cxx";
+  };
+  X00051bb = {
+   fileRef = X00051ba;
+   isa = PBXBuildFile;
+  };
+  X00051bc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/range/b2xrange.cxx";
+  };
+  X00051bd = {
+   fileRef = X00051bc;
+   isa = PBXBuildFile;
+  };
+  X00051be = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/range/b3drange.cxx";
+  };
+  X00051bf = {
+   fileRef = X00051be;
+   isa = PBXBuildFile;
+  };
+  X00051c0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/raster/rasterconvert3d.cxx";
+  };
+  X00051c1 = {
+   fileRef = X00051c0;
+   isa = PBXBuildFile;
+  };
+  X00051c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/b2dclipstate.cxx";
+  };
+  X00051c3 = {
+   fileRef = X00051c2;
+   isa = PBXBuildFile;
+  };
+  X00051c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/canvastools.cxx";
+  };
+  X00051c5 = {
+   fileRef = X00051c4;
+   isa = PBXBuildFile;
+  };
+  X00051c6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/gradienttools.cxx";
+  };
+  X00051c7 = {
+   fileRef = X00051c6;
+   isa = PBXBuildFile;
+  };
+  X00051c8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/keystoplerp.cxx";
+  };
+  X00051c9 = {
+   fileRef = X00051c8;
+   isa = PBXBuildFile;
+  };
+  X00051ca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/numbertools.cxx";
+  };
+  X00051cb = {
+   fileRef = X00051ca;
+   isa = PBXBuildFile;
+  };
+  X00051cc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/stringconversiontools.cxx";
+  };
+  X00051cd = {
+   fileRef = X00051cc;
+   isa = PBXBuildFile;
+  };
+  X00051ce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/tools.cxx";
+  };
+  X00051cf = {
+   fileRef = X00051ce;
+   isa = PBXBuildFile;
+  };
+  X00051d0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/unopolypolygon.cxx";
+  };
+  X00051d1 = {
+   fileRef = X00051d0;
+   isa = PBXBuildFile;
+  };
+  X00051d2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/unotools.cxx";
+  };
+  X00051d3 = {
+   fileRef = X00051d2;
+   isa = PBXBuildFile;
+  };
+  X00051d4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tools/zoomtools.cxx";
+  };
+  X00051d5 = {
+   fileRef = X00051d4;
+   isa = PBXBuildFile;
+  };
+  X00051d6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tuple/b2dtuple.cxx";
+  };
+  X00051d7 = {
+   fileRef = X00051d6;
+   isa = PBXBuildFile;
+  };
+  X00051d8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tuple/b2i64tuple.cxx";
+  };
+  X00051d9 = {
+   fileRef = X00051d8;
+   isa = PBXBuildFile;
+  };
+  X00051da = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tuple/b2ituple.cxx";
+  };
+  X00051db = {
+   fileRef = X00051da;
+   isa = PBXBuildFile;
+  };
+  X00051dc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tuple/b3dtuple.cxx";
+  };
+  X00051dd = {
+   fileRef = X00051dc;
+   isa = PBXBuildFile;
+  };
+  X00051de = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/tuple/b3ituple.cxx";
+  };
+  X00051df = {
+   fileRef = X00051de;
+   isa = PBXBuildFile;
+  };
+  X00051e0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/vector/b2dvector.cxx";
+  };
+  X00051e1 = {
+   fileRef = X00051e0;
+   isa = PBXBuildFile;
+  };
+  X00051e2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/vector/b2ivector.cxx";
+  };
+  X00051e3 = {
+   fileRef = X00051e2;
+   isa = PBXBuildFile;
+  };
+  X00051e4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "basegfx/source/vector/b3dvector.cxx";
+  };
+  X00051e5 = {
+   fileRef = X00051e4;
+   isa = PBXBuildFile;
+  };
+  X00051e6 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0005175;
+}

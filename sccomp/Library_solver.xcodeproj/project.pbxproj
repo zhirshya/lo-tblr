@@ -1,0 +1,97 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00052b7 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00052c7;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00052b8;
+   productRefGroup = X00052bb;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00052bd;
+  };
+  X00052b8 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00052b9 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00052bc = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00052bd = {
+   buildConfigurationList = X00052c8;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00052ba;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00052be = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sccomp/source/solver/SwarmSolver.cxx";
+  };
+  X00052bf = {
+   fileRef = X00052be;
+   isa = PBXBuildFile;
+  };
+  X00052c0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sccomp/source/solver/SolverComponent.cxx";
+  };
+  X00052c1 = {
+   fileRef = X00052c0;
+   isa = PBXBuildFile;
+  };
+  X00052c2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sccomp/source/solver/CoinMPSolver.cxx";
+  };
+  X00052c3 = {
+   fileRef = X00052c2;
+   isa = PBXBuildFile;
+  };
+  X00052c4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sccomp/source/solver/LpsolveSolver.cxx";
+  };
+  X00052c5 = {
+   fileRef = X00052c4;
+   isa = PBXBuildFile;
+  };
+  X00052c6 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00052b7;
+}

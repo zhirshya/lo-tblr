@@ -1,0 +1,151 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0001db9 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0001dd5;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0001dba;
+   productRefGroup = X0001dbd;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0001dbf;
+  };
+  X0001dba = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0001dbb = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0001dbe = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0001dbf = {
+   buildConfigurationList = X0001dd6;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0001dbc;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0001dc0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/dbmm_services.cxx";
+  };
+  X0001dc1 = {
+   fileRef = X0001dc0;
+   isa = PBXBuildFile;
+  };
+  X0001dc2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/dbmm_types.cxx";
+  };
+  X0001dc3 = {
+   fileRef = X0001dc2;
+   isa = PBXBuildFile;
+  };
+  X0001dc4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/docinteraction.cxx";
+  };
+  X0001dc5 = {
+   fileRef = X0001dc4;
+   isa = PBXBuildFile;
+  };
+  X0001dc6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/macromigrationdialog.cxx";
+  };
+  X0001dc7 = {
+   fileRef = X0001dc6;
+   isa = PBXBuildFile;
+  };
+  X0001dc8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/macromigrationpages.cxx";
+  };
+  X0001dc9 = {
+   fileRef = X0001dc8;
+   isa = PBXBuildFile;
+  };
+  X0001dca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/macromigrationwizard.cxx";
+  };
+  X0001dcb = {
+   fileRef = X0001dca;
+   isa = PBXBuildFile;
+  };
+  X0001dcc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/migrationengine.cxx";
+  };
+  X0001dcd = {
+   fileRef = X0001dcc;
+   isa = PBXBuildFile;
+  };
+  X0001dce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/migrationlog.cxx";
+  };
+  X0001dcf = {
+   fileRef = X0001dce;
+   isa = PBXBuildFile;
+  };
+  X0001dd0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/progresscapture.cxx";
+  };
+  X0001dd1 = {
+   fileRef = X0001dd0;
+   isa = PBXBuildFile;
+  };
+  X0001dd2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "dbaccess/source/ext/macromigration/progressmixer.cxx";
+  };
+  X0001dd3 = {
+   fileRef = X0001dd2;
+   isa = PBXBuildFile;
+  };
+  X0001dd4 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0001db9;
+}

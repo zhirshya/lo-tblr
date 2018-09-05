@@ -1,0 +1,277 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002c11 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002c49;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002c12;
+   productRefGroup = X0002c15;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002c17;
+  };
+  X0002c12 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002c13 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002c16 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002c17 = {
+   buildConfigurationList = X0002c4a;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002c14;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0002c18 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/access_control.cxx";
+  };
+  X0002c19 = {
+   fileRef = X0002c18;
+   isa = PBXBuildFile;
+  };
+  X0002c1a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/bootstrap.cxx";
+  };
+  X0002c1b = {
+   fileRef = X0002c1a;
+   isa = PBXBuildFile;
+  };
+  X0002c1c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/compat.cxx";
+  };
+  X0002c1d = {
+   fileRef = X0002c1c;
+   isa = PBXBuildFile;
+  };
+  X0002c1e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/component_context.cxx";
+  };
+  X0002c1f = {
+   fileRef = X0002c1e;
+   isa = PBXBuildFile;
+  };
+  X0002c20 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/component.cxx";
+  };
+  X0002c21 = {
+   fileRef = X0002c20;
+   isa = PBXBuildFile;
+  };
+  X0002c22 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/defaultbootstrap.cxx";
+  };
+  X0002c23 = {
+   fileRef = X0002c22;
+   isa = PBXBuildFile;
+  };
+  X0002c24 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/exc_thrower.cxx";
+  };
+  X0002c25 = {
+   fileRef = X0002c24;
+   isa = PBXBuildFile;
+  };
+  X0002c26 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/factory.cxx";
+  };
+  X0002c27 = {
+   fileRef = X0002c26;
+   isa = PBXBuildFile;
+  };
+  X0002c28 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/implbase.cxx";
+  };
+  X0002c29 = {
+   fileRef = X0002c28;
+   isa = PBXBuildFile;
+  };
+  X0002c2a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/implbase_ex.cxx";
+  };
+  X0002c2b = {
+   fileRef = X0002c2a;
+   isa = PBXBuildFile;
+  };
+  X0002c2c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/implementationentry.cxx";
+  };
+  X0002c2d = {
+   fileRef = X0002c2c;
+   isa = PBXBuildFile;
+  };
+  X0002c2e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/interfacecontainer.cxx";
+  };
+  X0002c2f = {
+   fileRef = X0002c2e;
+   isa = PBXBuildFile;
+  };
+  X0002c30 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/macro_expander.cxx";
+  };
+  X0002c31 = {
+   fileRef = X0002c30;
+   isa = PBXBuildFile;
+  };
+  X0002c32 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/paths.cxx";
+  };
+  X0002c33 = {
+   fileRef = X0002c32;
+   isa = PBXBuildFile;
+  };
+  X0002c34 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/propertysetmixin.cxx";
+  };
+  X0002c35 = {
+   fileRef = X0002c34;
+   isa = PBXBuildFile;
+  };
+  X0002c36 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/propshlp.cxx";
+  };
+  X0002c37 = {
+   fileRef = X0002c36;
+   isa = PBXBuildFile;
+  };
+  X0002c38 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/servicemanager.cxx";
+  };
+  X0002c39 = {
+   fileRef = X0002c38;
+   isa = PBXBuildFile;
+  };
+  X0002c3a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/shlib.cxx";
+  };
+  X0002c3b = {
+   fileRef = X0002c3a;
+   isa = PBXBuildFile;
+  };
+  X0002c3c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/supportsservice.cxx";
+  };
+  X0002c3d = {
+   fileRef = X0002c3c;
+   isa = PBXBuildFile;
+  };
+  X0002c3e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/tdmgr.cxx";
+  };
+  X0002c3f = {
+   fileRef = X0002c3e;
+   isa = PBXBuildFile;
+  };
+  X0002c40 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/typemanager.cxx";
+  };
+  X0002c41 = {
+   fileRef = X0002c40;
+   isa = PBXBuildFile;
+  };
+  X0002c42 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/typeprovider.cxx";
+  };
+  X0002c43 = {
+   fileRef = X0002c42;
+   isa = PBXBuildFile;
+  };
+  X0002c44 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/unourl.cxx";
+  };
+  X0002c45 = {
+   fileRef = X0002c44;
+   isa = PBXBuildFile;
+  };
+  X0002c46 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "cppuhelper/source/weak.cxx";
+  };
+  X0002c47 = {
+   fileRef = X0002c46;
+   isa = PBXBuildFile;
+  };
+  X0002c48 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002c11;
+}

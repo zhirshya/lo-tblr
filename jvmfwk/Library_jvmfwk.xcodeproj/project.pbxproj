@@ -1,0 +1,178 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00054db = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00054fd;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00054dc;
+   productRefGroup = X00054df;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00054e1;
+  };
+  X00054dc = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00054dd = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00054e0 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00054e1 = {
+   buildConfigurationList = X00054fe;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00054de;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00054e2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/plugins/sunmajor/pluginlib/gnujre.cxx";
+  };
+  X00054e3 = {
+   fileRef = X00054e2;
+   isa = PBXBuildFile;
+  };
+  X00054e4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/plugins/sunmajor/pluginlib/otherjre.cxx";
+  };
+  X00054e5 = {
+   fileRef = X00054e4;
+   isa = PBXBuildFile;
+  };
+  X00054e6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/plugins/sunmajor/pluginlib/sunjavaplugin.cxx";
+  };
+  X00054e7 = {
+   fileRef = X00054e6;
+   isa = PBXBuildFile;
+  };
+  X00054e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/plugins/sunmajor/pluginlib/sunjre.cxx";
+  };
+  X00054e9 = {
+   fileRef = X00054e8;
+   isa = PBXBuildFile;
+  };
+  X00054ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/plugins/sunmajor/pluginlib/sunversion.cxx";
+  };
+  X00054eb = {
+   fileRef = X00054ea;
+   isa = PBXBuildFile;
+  };
+  X00054ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/plugins/sunmajor/pluginlib/util.cxx";
+  };
+  X00054ed = {
+   fileRef = X00054ec;
+   isa = PBXBuildFile;
+  };
+  X00054ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/plugins/sunmajor/pluginlib/vendorbase.cxx";
+  };
+  X00054ef = {
+   fileRef = X00054ee;
+   isa = PBXBuildFile;
+  };
+  X00054f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/plugins/sunmajor/pluginlib/vendorlist.cxx";
+  };
+  X00054f1 = {
+   fileRef = X00054f0;
+   isa = PBXBuildFile;
+  };
+  X00054f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/source/elements.cxx";
+  };
+  X00054f3 = {
+   fileRef = X00054f2;
+   isa = PBXBuildFile;
+  };
+  X00054f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/source/framework.cxx";
+  };
+  X00054f5 = {
+   fileRef = X00054f4;
+   isa = PBXBuildFile;
+  };
+  X00054f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/source/fwkbase.cxx";
+  };
+  X00054f7 = {
+   fileRef = X00054f6;
+   isa = PBXBuildFile;
+  };
+  X00054f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/source/fwkutil.cxx";
+  };
+  X00054f9 = {
+   fileRef = X00054f8;
+   isa = PBXBuildFile;
+  };
+  X00054fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "jvmfwk/source/libxmlutil.cxx";
+  };
+  X00054fb = {
+   fileRef = X00054fa;
+   isa = PBXBuildFile;
+  };
+  X00054fc = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00054db;
+}

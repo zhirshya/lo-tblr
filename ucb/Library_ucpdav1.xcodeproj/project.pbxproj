@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00044df = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004515;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00044e0;
+   productRefGroup = X00044e3;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X00044e5;
+  };
+  X00044e0 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00044e1 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X00044e4 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X00044e5 = {
+   buildConfigurationList = X0004516;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X00044e2;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X00044e6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/ContentProperties.cxx";
+  };
+  X00044e7 = {
+   fileRef = X00044e6;
+   isa = PBXBuildFile;
+  };
+  X00044e8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/DateTimeHelper.cxx";
+  };
+  X00044e9 = {
+   fileRef = X00044e8;
+   isa = PBXBuildFile;
+  };
+  X00044ea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/DAVProperties.cxx";
+  };
+  X00044eb = {
+   fileRef = X00044ea;
+   isa = PBXBuildFile;
+  };
+  X00044ec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/DAVResourceAccess.cxx";
+  };
+  X00044ed = {
+   fileRef = X00044ec;
+   isa = PBXBuildFile;
+  };
+  X00044ee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/DAVSessionFactory.cxx";
+  };
+  X00044ef = {
+   fileRef = X00044ee;
+   isa = PBXBuildFile;
+  };
+  X00044f0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/DAVTypes.cxx";
+  };
+  X00044f1 = {
+   fileRef = X00044f0;
+   isa = PBXBuildFile;
+  };
+  X00044f2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/LinkSequence.cxx";
+  };
+  X00044f3 = {
+   fileRef = X00044f2;
+   isa = PBXBuildFile;
+  };
+  X00044f4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/LockEntrySequence.cxx";
+  };
+  X00044f5 = {
+   fileRef = X00044f4;
+   isa = PBXBuildFile;
+  };
+  X00044f6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/LockSequence.cxx";
+  };
+  X00044f7 = {
+   fileRef = X00044f6;
+   isa = PBXBuildFile;
+  };
+  X00044f8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/NeonHeadRequest.cxx";
+  };
+  X00044f9 = {
+   fileRef = X00044f8;
+   isa = PBXBuildFile;
+  };
+  X00044fa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/NeonInputStream.cxx";
+  };
+  X00044fb = {
+   fileRef = X00044fa;
+   isa = PBXBuildFile;
+  };
+  X00044fc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/NeonLockStore.cxx";
+  };
+  X00044fd = {
+   fileRef = X00044fc;
+   isa = PBXBuildFile;
+  };
+  X00044fe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/NeonPropFindRequest.cxx";
+  };
+  X00044ff = {
+   fileRef = X00044fe;
+   isa = PBXBuildFile;
+  };
+  X0004500 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/NeonSession.cxx";
+  };
+  X0004501 = {
+   fileRef = X0004500;
+   isa = PBXBuildFile;
+  };
+  X0004502 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/NeonUri.cxx";
+  };
+  X0004503 = {
+   fileRef = X0004502;
+   isa = PBXBuildFile;
+  };
+  X0004504 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/PropfindCache.cxx";
+  };
+  X0004505 = {
+   fileRef = X0004504;
+   isa = PBXBuildFile;
+  };
+  X0004506 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/UCBDeadPropertyValue.cxx";
+  };
+  X0004507 = {
+   fileRef = X0004506;
+   isa = PBXBuildFile;
+  };
+  X0004508 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/webdavcontentcaps.cxx";
+  };
+  X0004509 = {
+   fileRef = X0004508;
+   isa = PBXBuildFile;
+  };
+  X000450a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/webdavcontent.cxx";
+  };
+  X000450b = {
+   fileRef = X000450a;
+   isa = PBXBuildFile;
+  };
+  X000450c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/webdavdatasupplier.cxx";
+  };
+  X000450d = {
+   fileRef = X000450c;
+   isa = PBXBuildFile;
+  };
+  X000450e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/webdavprovider.cxx";
+  };
+  X000450f = {
+   fileRef = X000450e;
+   isa = PBXBuildFile;
+  };
+  X0004510 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/webdavresultset.cxx";
+  };
+  X0004511 = {
+   fileRef = X0004510;
+   isa = PBXBuildFile;
+  };
+  X0004512 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "ucb/source/ucp/webdav-neon/webdavservices.cxx";
+  };
+  X0004513 = {
+   fileRef = X0004512;
+   isa = PBXBuildFile;
+  };
+  X0004514 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00044df;
+}

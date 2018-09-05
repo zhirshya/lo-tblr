@@ -1,0 +1,97 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004381 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004391;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004382;
+   productRefGroup = X0004385;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004387;
+  };
+  X0004382 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004383 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004386 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004387 = {
+   buildConfigurationList = X0004392;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004384;
+   productType = ;
+  };
+  X0004388 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/qa/string/test_string.cxx";
+  };
+  X0004389 = {
+   fileRef = X0004388;
+   isa = PBXBuildFile;
+  };
+  X000438a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/qa/container/testifcontainer.cxx";
+  };
+  X000438b = {
+   fileRef = X000438a;
+   isa = PBXBuildFile;
+  };
+  X000438c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/qa/unit/test_hash.cxx";
+  };
+  X000438d = {
+   fileRef = X000438c;
+   isa = PBXBuildFile;
+  };
+  X000438e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "comphelper/qa/unit/base64_test.cxx";
+  };
+  X000438f = {
+   fileRef = X000438e;
+   isa = PBXBuildFile;
+  };
+  X0004390 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004381;
+}

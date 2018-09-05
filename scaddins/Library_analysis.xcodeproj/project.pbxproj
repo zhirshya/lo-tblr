@@ -1,0 +1,97 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0003fdd = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0003fed;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0003fde;
+   productRefGroup = X0003fe1;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0003fe3;
+  };
+  X0003fde = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0003fdf = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0003fe2 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0003fe3 = {
+   buildConfigurationList = X0003fee;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0003fe0;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0003fe4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "scaddins/source/analysis/analysis.cxx";
+  };
+  X0003fe5 = {
+   fileRef = X0003fe4;
+   isa = PBXBuildFile;
+  };
+  X0003fe6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "scaddins/source/analysis/analysishelper.cxx";
+  };
+  X0003fe7 = {
+   fileRef = X0003fe6;
+   isa = PBXBuildFile;
+  };
+  X0003fe8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "scaddins/source/analysis/bessel.cxx";
+  };
+  X0003fe9 = {
+   fileRef = X0003fe8;
+   isa = PBXBuildFile;
+  };
+  X0003fea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "scaddins/source/analysis/financial.cxx";
+  };
+  X0003feb = {
+   fileRef = X0003fea;
+   isa = PBXBuildFile;
+  };
+  X0003fec = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0003fdd;
+}

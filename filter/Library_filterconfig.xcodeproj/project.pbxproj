@@ -1,0 +1,160 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X00029fd = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002a1b;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X00029fe;
+   productRefGroup = X0002a01;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002a03;
+  };
+  X00029fe = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X00029ff = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002a02 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002a03 = {
+   buildConfigurationList = X0002a1c;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002a00;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0002a04 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/basecontainer.cxx";
+  };
+  X0002a05 = {
+   fileRef = X0002a04;
+   isa = PBXBuildFile;
+  };
+  X0002a06 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/cacheitem.cxx";
+  };
+  X0002a07 = {
+   fileRef = X0002a06;
+   isa = PBXBuildFile;
+  };
+  X0002a08 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/cacheupdatelistener.cxx";
+  };
+  X0002a09 = {
+   fileRef = X0002a08;
+   isa = PBXBuildFile;
+  };
+  X0002a0a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/configflush.cxx";
+  };
+  X0002a0b = {
+   fileRef = X0002a0a;
+   isa = PBXBuildFile;
+  };
+  X0002a0c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/contenthandlerfactory.cxx";
+  };
+  X0002a0d = {
+   fileRef = X0002a0c;
+   isa = PBXBuildFile;
+  };
+  X0002a0e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/filtercache.cxx";
+  };
+  X0002a0f = {
+   fileRef = X0002a0e;
+   isa = PBXBuildFile;
+  };
+  X0002a10 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/filterfactory.cxx";
+  };
+  X0002a11 = {
+   fileRef = X0002a10;
+   isa = PBXBuildFile;
+  };
+  X0002a12 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/frameloaderfactory.cxx";
+  };
+  X0002a13 = {
+   fileRef = X0002a12;
+   isa = PBXBuildFile;
+  };
+  X0002a14 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/querytokenizer.cxx";
+  };
+  X0002a15 = {
+   fileRef = X0002a14;
+   isa = PBXBuildFile;
+  };
+  X0002a16 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/registration.cxx";
+  };
+  X0002a17 = {
+   fileRef = X0002a16;
+   isa = PBXBuildFile;
+  };
+  X0002a18 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "filter/source/config/cache/typedetection.cxx";
+  };
+  X0002a19 = {
+   fileRef = X0002a18;
+   isa = PBXBuildFile;
+  };
+  X0002a1a = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X00029fd;
+}

@@ -1,0 +1,88 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0003ac7 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0003ad5;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0003ac8;
+   productRefGroup = X0003acb;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0003acd;
+  };
+  X0003ac8 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0003ac9 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0003acc = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0003acd = {
+   buildConfigurationList = X0003ad6;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0003aca;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0003ace = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/opengl/TransitionerImpl.cxx";
+  };
+  X0003acf = {
+   fileRef = X0003ace;
+   isa = PBXBuildFile;
+  };
+  X0003ad0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/opengl/TransitionImpl.cxx";
+  };
+  X0003ad1 = {
+   fileRef = X0003ad0;
+   isa = PBXBuildFile;
+  };
+  X0003ad2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "slideshow/source/engine/opengl/Operation.cxx";
+  };
+  X0003ad3 = {
+   fileRef = X0003ad2;
+   isa = PBXBuildFile;
+  };
+  X0003ad4 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0003ac7;
+}

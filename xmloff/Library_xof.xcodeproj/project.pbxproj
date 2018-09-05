@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0003cb3 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0003d09;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0003cb4;
+   productRefGroup = X0003cb7;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0003cb9;
+  };
+  X0003cb4 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0003cb5 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0003cb8 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0003cb9 = {
+   buildConfigurationList = X0003d0a;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0003cb6;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0003cba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/ChartOASISTContext.cxx";
+  };
+  X0003cbb = {
+   fileRef = X0003cba;
+   isa = PBXBuildFile;
+  };
+  X0003cbc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/ChartOOoTContext.cxx";
+  };
+  X0003cbd = {
+   fileRef = X0003cbc;
+   isa = PBXBuildFile;
+  };
+  X0003cbe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/ChartPlotAreaOASISTContext.cxx";
+  };
+  X0003cbf = {
+   fileRef = X0003cbe;
+   isa = PBXBuildFile;
+  };
+  X0003cc0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/ChartPlotAreaOOoTContext.cxx";
+  };
+  X0003cc1 = {
+   fileRef = X0003cc0;
+   isa = PBXBuildFile;
+  };
+  X0003cc2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/ControlOASISTContext.cxx";
+  };
+  X0003cc3 = {
+   fileRef = X0003cc2;
+   isa = PBXBuildFile;
+  };
+  X0003cc4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/ControlOOoTContext.cxx";
+  };
+  X0003cc5 = {
+   fileRef = X0003cc4;
+   isa = PBXBuildFile;
+  };
+  X0003cc6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/CreateElemTContext.cxx";
+  };
+  X0003cc7 = {
+   fileRef = X0003cc6;
+   isa = PBXBuildFile;
+  };
+  X0003cc8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/DeepTContext.cxx";
+  };
+  X0003cc9 = {
+   fileRef = X0003cc8;
+   isa = PBXBuildFile;
+  };
+  X0003cca = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/DlgOASISTContext.cxx";
+  };
+  X0003ccb = {
+   fileRef = X0003cca;
+   isa = PBXBuildFile;
+  };
+  X0003ccc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/DocumentTContext.cxx";
+  };
+  X0003ccd = {
+   fileRef = X0003ccc;
+   isa = PBXBuildFile;
+  };
+  X0003cce = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/EventMap.cxx";
+  };
+  X0003ccf = {
+   fileRef = X0003cce;
+   isa = PBXBuildFile;
+  };
+  X0003cd0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/EventOASISTContext.cxx";
+  };
+  X0003cd1 = {
+   fileRef = X0003cd0;
+   isa = PBXBuildFile;
+  };
+  X0003cd2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/EventOOoTContext.cxx";
+  };
+  X0003cd3 = {
+   fileRef = X0003cd2;
+   isa = PBXBuildFile;
+  };
+  X0003cd4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/FlatTContext.cxx";
+  };
+  X0003cd5 = {
+   fileRef = X0003cd4;
+   isa = PBXBuildFile;
+  };
+  X0003cd6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/FormPropOASISTContext.cxx";
+  };
+  X0003cd7 = {
+   fileRef = X0003cd6;
+   isa = PBXBuildFile;
+  };
+  X0003cd8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/FormPropOOoTContext.cxx";
+  };
+  X0003cd9 = {
+   fileRef = X0003cd8;
+   isa = PBXBuildFile;
+  };
+  X0003cda = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/FrameOASISTContext.cxx";
+  };
+  X0003cdb = {
+   fileRef = X0003cda;
+   isa = PBXBuildFile;
+  };
+  X0003cdc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/FrameOOoTContext.cxx";
+  };
+  X0003cdd = {
+   fileRef = X0003cdc;
+   isa = PBXBuildFile;
+  };
+  X0003cde = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/IgnoreTContext.cxx";
+  };
+  X0003cdf = {
+   fileRef = X0003cde;
+   isa = PBXBuildFile;
+  };
+  X0003ce0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/MergeElemTContext.cxx";
+  };
+  X0003ce1 = {
+   fileRef = X0003ce0;
+   isa = PBXBuildFile;
+  };
+  X0003ce2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/MetaTContext.cxx";
+  };
+  X0003ce3 = {
+   fileRef = X0003ce2;
+   isa = PBXBuildFile;
+  };
+  X0003ce4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/MutableAttrList.cxx";
+  };
+  X0003ce5 = {
+   fileRef = X0003ce4;
+   isa = PBXBuildFile;
+  };
+  X0003ce6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/NotesTContext.cxx";
+  };
+  X0003ce7 = {
+   fileRef = X0003ce6;
+   isa = PBXBuildFile;
+  };
+  X0003ce8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/OOo2Oasis.cxx";
+  };
+  X0003ce9 = {
+   fileRef = X0003ce8;
+   isa = PBXBuildFile;
+  };
+  X0003cea = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/Oasis2OOo.cxx";
+  };
+  X0003ceb = {
+   fileRef = X0003cea;
+   isa = PBXBuildFile;
+  };
+  X0003cec = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/PersAttrListTContext.cxx";
+  };
+  X0003ced = {
+   fileRef = X0003cec;
+   isa = PBXBuildFile;
+  };
+  X0003cee = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/PersMixedContentTContext.cxx";
+  };
+  X0003cef = {
+   fileRef = X0003cee;
+   isa = PBXBuildFile;
+  };
+  X0003cf0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/ProcAddAttrTContext.cxx";
+  };
+  X0003cf1 = {
+   fileRef = X0003cf0;
+   isa = PBXBuildFile;
+  };
+  X0003cf2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/ProcAttrTContext.cxx";
+  };
+  X0003cf3 = {
+   fileRef = X0003cf2;
+   isa = PBXBuildFile;
+  };
+  X0003cf4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/PropertyActionsOASIS.cxx";
+  };
+  X0003cf5 = {
+   fileRef = X0003cf4;
+   isa = PBXBuildFile;
+  };
+  X0003cf6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/PropertyActionsOOo.cxx";
+  };
+  X0003cf7 = {
+   fileRef = X0003cf6;
+   isa = PBXBuildFile;
+  };
+  X0003cf8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/RenameElemTContext.cxx";
+  };
+  X0003cf9 = {
+   fileRef = X0003cf8;
+   isa = PBXBuildFile;
+  };
+  X0003cfa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/StyleOASISTContext.cxx";
+  };
+  X0003cfb = {
+   fileRef = X0003cfa;
+   isa = PBXBuildFile;
+  };
+  X0003cfc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/StyleOOoTContext.cxx";
+  };
+  X0003cfd = {
+   fileRef = X0003cfc;
+   isa = PBXBuildFile;
+  };
+  X0003cfe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/TransformerActions.cxx";
+  };
+  X0003cff = {
+   fileRef = X0003cfe;
+   isa = PBXBuildFile;
+  };
+  X0003d00 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/TransformerBase.cxx";
+  };
+  X0003d01 = {
+   fileRef = X0003d00;
+   isa = PBXBuildFile;
+  };
+  X0003d02 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/TransformerContext.cxx";
+  };
+  X0003d03 = {
+   fileRef = X0003d02;
+   isa = PBXBuildFile;
+  };
+  X0003d04 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/TransformerTokenMap.cxx";
+  };
+  X0003d05 = {
+   fileRef = X0003d04;
+   isa = PBXBuildFile;
+  };
+  X0003d06 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "xmloff/source/transform/XMLFilterRegistration.cxx";
+  };
+  X0003d07 = {
+   fileRef = X0003d06;
+   isa = PBXBuildFile;
+  };
+  X0003d08 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0003cb3;
+}

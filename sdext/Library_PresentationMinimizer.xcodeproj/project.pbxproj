@@ -1,0 +1,187 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0001979 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X000199d;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X000197a;
+   productRefGroup = X000197d;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000197f;
+  };
+  X000197a = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X000197b = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000197e = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000197f = {
+   buildConfigurationList = X000199e;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X000197c;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X0001980 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/configurationaccess.cxx";
+  };
+  X0001981 = {
+   fileRef = X0001980;
+   isa = PBXBuildFile;
+  };
+  X0001982 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/fileopendialog.cxx";
+  };
+  X0001983 = {
+   fileRef = X0001982;
+   isa = PBXBuildFile;
+  };
+  X0001984 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/graphiccollector.cxx";
+  };
+  X0001985 = {
+   fileRef = X0001984;
+   isa = PBXBuildFile;
+  };
+  X0001986 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/impoptimizer.cxx";
+  };
+  X0001987 = {
+   fileRef = X0001986;
+   isa = PBXBuildFile;
+  };
+  X0001988 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/informationdialog.cxx";
+  };
+  X0001989 = {
+   fileRef = X0001988;
+   isa = PBXBuildFile;
+  };
+  X000198a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/optimizationstats.cxx";
+  };
+  X000198b = {
+   fileRef = X000198a;
+   isa = PBXBuildFile;
+  };
+  X000198c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/optimizerdialog.cxx";
+  };
+  X000198d = {
+   fileRef = X000198c;
+   isa = PBXBuildFile;
+  };
+  X000198e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/optimizerdialogcontrols.cxx";
+  };
+  X000198f = {
+   fileRef = X000198e;
+   isa = PBXBuildFile;
+  };
+  X0001990 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/pagecollector.cxx";
+  };
+  X0001991 = {
+   fileRef = X0001990;
+   isa = PBXBuildFile;
+  };
+  X0001992 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/pppoptimizer.cxx";
+  };
+  X0001993 = {
+   fileRef = X0001992;
+   isa = PBXBuildFile;
+  };
+  X0001994 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/pppoptimizerdialog.cxx";
+  };
+  X0001995 = {
+   fileRef = X0001994;
+   isa = PBXBuildFile;
+  };
+  X0001996 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/pppoptimizertoken.cxx";
+  };
+  X0001997 = {
+   fileRef = X0001996;
+   isa = PBXBuildFile;
+  };
+  X0001998 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/pppoptimizeruno.cxx";
+  };
+  X0001999 = {
+   fileRef = X0001998;
+   isa = PBXBuildFile;
+  };
+  X000199a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sdext/source/minimizer/unodialog.cxx";
+  };
+  X000199b = {
+   fileRef = X000199a;
+   isa = PBXBuildFile;
+  };
+  X000199c = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0001979;
+}

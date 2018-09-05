@@ -1,0 +1,88 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002395 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00023a3;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002396;
+   productRefGroup = X0002399;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X000239b;
+  };
+  X0002396 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002397 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X000239a = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X000239b = {
+   buildConfigurationList = X00023a4;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002398;
+   productType = ;
+  };
+  X000239c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/qa/unit/DirectoryStreamTest.cxx";
+  };
+  X000239d = {
+   fileRef = X000239c;
+   isa = PBXBuildFile;
+  };
+  X000239e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/qa/unit/WPXSvStreamTest.cxx";
+  };
+  X000239f = {
+   fileRef = X000239e;
+   isa = PBXBuildFile;
+  };
+  X00023a0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "writerperfect/qa/unit/stream.cxx";
+  };
+  X00023a1 = {
+   fileRef = X00023a0;
+   isa = PBXBuildFile;
+  };
+  X00023a2 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002395;
+}

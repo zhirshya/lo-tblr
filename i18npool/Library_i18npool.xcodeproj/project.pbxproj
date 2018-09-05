@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002423 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X00024bd;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002424;
+   productRefGroup = X0002427;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002429;
+  };
+  X0002424 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002425 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002428 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002429 = {
+   buildConfigurationList = X00024be;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002426;
+   productType = "com.apple.product-type.library.dynamic";
+  };
+  X000242a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/breakiterator/breakiterator_cjk.cxx";
+  };
+  X000242b = {
+   fileRef = X000242a;
+   isa = PBXBuildFile;
+  };
+  X000242c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/breakiterator/breakiterator_ctl.cxx";
+  };
+  X000242d = {
+   fileRef = X000242c;
+   isa = PBXBuildFile;
+  };
+  X000242e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/breakiterator/breakiteratorImpl.cxx";
+  };
+  X000242f = {
+   fileRef = X000242e;
+   isa = PBXBuildFile;
+  };
+  X0002430 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/breakiterator/breakiterator_th.cxx";
+  };
+  X0002431 = {
+   fileRef = X0002430;
+   isa = PBXBuildFile;
+  };
+  X0002432 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/breakiterator/breakiterator_unicode.cxx";
+  };
+  X0002433 = {
+   fileRef = X0002432;
+   isa = PBXBuildFile;
+  };
+  X0002434 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/breakiterator/xdictionary.cxx";
+  };
+  X0002435 = {
+   fileRef = X0002434;
+   isa = PBXBuildFile;
+  };
+  X0002436 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/calendar/calendarImpl.cxx";
+  };
+  X0002437 = {
+   fileRef = X0002436;
+   isa = PBXBuildFile;
+  };
+  X0002438 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/calendar/calendar_gregorian.cxx";
+  };
+  X0002439 = {
+   fileRef = X0002438;
+   isa = PBXBuildFile;
+  };
+  X000243a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/calendar/calendar_hijri.cxx";
+  };
+  X000243b = {
+   fileRef = X000243a;
+   isa = PBXBuildFile;
+  };
+  X000243c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/calendar/calendar_jewish.cxx";
+  };
+  X000243d = {
+   fileRef = X000243c;
+   isa = PBXBuildFile;
+  };
+  X000243e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/characterclassification/cclass_unicode.cxx";
+  };
+  X000243f = {
+   fileRef = X000243e;
+   isa = PBXBuildFile;
+  };
+  X0002440 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/characterclassification/cclass_unicode_parser.cxx";
+  };
+  X0002441 = {
+   fileRef = X0002440;
+   isa = PBXBuildFile;
+  };
+  X0002442 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/characterclassification/characterclassificationImpl.cxx";
+  };
+  X0002443 = {
+   fileRef = X0002442;
+   isa = PBXBuildFile;
+  };
+  X0002444 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/characterclassification/unoscripttypedetector.cxx";
+  };
+  X0002445 = {
+   fileRef = X0002444;
+   isa = PBXBuildFile;
+  };
+  X0002446 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/collator/chaptercollator.cxx";
+  };
+  X0002447 = {
+   fileRef = X0002446;
+   isa = PBXBuildFile;
+  };
+  X0002448 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/collator/collatorImpl.cxx";
+  };
+  X0002449 = {
+   fileRef = X0002448;
+   isa = PBXBuildFile;
+  };
+  X000244a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/collator/collator_unicode.cxx";
+  };
+  X000244b = {
+   fileRef = X000244a;
+   isa = PBXBuildFile;
+  };
+  X000244c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/defaultnumberingprovider/defaultnumberingprovider.cxx";
+  };
+  X000244d = {
+   fileRef = X000244c;
+   isa = PBXBuildFile;
+  };
+  X000244e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/indexentry/indexentrysupplier.cxx";
+  };
+  X000244f = {
+   fileRef = X000244e;
+   isa = PBXBuildFile;
+  };
+  X0002450 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/indexentry/indexentrysupplier_asian.cxx";
+  };
+  X0002451 = {
+   fileRef = X0002450;
+   isa = PBXBuildFile;
+  };
+  X0002452 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/indexentry/indexentrysupplier_common.cxx";
+  };
+  X0002453 = {
+   fileRef = X0002452;
+   isa = PBXBuildFile;
+  };
+  X0002454 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/indexentry/indexentrysupplier_default.cxx";
+  };
+  X0002455 = {
+   fileRef = X0002454;
+   isa = PBXBuildFile;
+  };
+  X0002456 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/indexentry/indexentrysupplier_ja_phonetic.cxx";
+  };
+  X0002457 = {
+   fileRef = X0002456;
+   isa = PBXBuildFile;
+  };
+  X0002458 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/inputchecker/inputsequencechecker.cxx";
+  };
+  X0002459 = {
+   fileRef = X0002458;
+   isa = PBXBuildFile;
+  };
+  X000245a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/inputchecker/inputsequencechecker_hi.cxx";
+  };
+  X000245b = {
+   fileRef = X000245a;
+   isa = PBXBuildFile;
+  };
+  X000245c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/inputchecker/inputsequencechecker_th.cxx";
+  };
+  X000245d = {
+   fileRef = X000245c;
+   isa = PBXBuildFile;
+  };
+  X000245e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/localedata/localedata.cxx";
+  };
+  X000245f = {
+   fileRef = X000245e;
+   isa = PBXBuildFile;
+  };
+  X0002460 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/nativenumber/nativenumbersupplier.cxx";
+  };
+  X0002461 = {
+   fileRef = X0002460;
+   isa = PBXBuildFile;
+  };
+  X0002462 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/numberformatcode/numberformatcode.cxx";
+  };
+  X0002463 = {
+   fileRef = X0002462;
+   isa = PBXBuildFile;
+  };
+  X0002464 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/ordinalsuffix/ordinalsuffix.cxx";
+  };
+  X0002465 = {
+   fileRef = X0002464;
+   isa = PBXBuildFile;
+  };
+  X0002466 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/registerservices/registerservices.cxx";
+  };
+  X0002467 = {
+   fileRef = X0002466;
+   isa = PBXBuildFile;
+  };
+  X0002468 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/textconversion/textconversion.cxx";
+  };
+  X0002469 = {
+   fileRef = X0002468;
+   isa = PBXBuildFile;
+  };
+  X000246a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/textconversion/textconversionImpl.cxx";
+  };
+  X000246b = {
+   fileRef = X000246a;
+   isa = PBXBuildFile;
+  };
+  X000246c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/textconversion/textconversion_ko.cxx";
+  };
+  X000246d = {
+   fileRef = X000246c;
+   isa = PBXBuildFile;
+  };
+  X000246e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/textconversion/textconversion_zh.cxx";
+  };
+  X000246f = {
+   fileRef = X000246e;
+   isa = PBXBuildFile;
+  };
+  X0002470 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/chartonum.cxx";
+  };
+  X0002471 = {
+   fileRef = X0002470;
+   isa = PBXBuildFile;
+  };
+  X0002472 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/fullwidthToHalfwidth.cxx";
+  };
+  X0002473 = {
+   fileRef = X0002472;
+   isa = PBXBuildFile;
+  };
+  X0002474 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/halfwidthToFullwidth.cxx";
+  };
+  X0002475 = {
+   fileRef = X0002474;
+   isa = PBXBuildFile;
+  };
+  X0002476 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/hiraganaToKatakana.cxx";
+  };
+  X0002477 = {
+   fileRef = X0002476;
+   isa = PBXBuildFile;
+  };
+  X0002478 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreBaFa_ja_JP.cxx";
+  };
+  X0002479 = {
+   fileRef = X0002478;
+   isa = PBXBuildFile;
+  };
+  X000247a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreHyuByu_ja_JP.cxx";
+  };
+  X000247b = {
+   fileRef = X000247a;
+   isa = PBXBuildFile;
+  };
+  X000247c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreIandEfollowedByYa_ja_JP.cxx";
+  };
+  X000247d = {
+   fileRef = X000247c;
+   isa = PBXBuildFile;
+  };
+  X000247e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreIterationMark_ja_JP.cxx";
+  };
+  X000247f = {
+   fileRef = X000247e;
+   isa = PBXBuildFile;
+  };
+  X0002480 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreKana.cxx";
+  };
+  X0002481 = {
+   fileRef = X0002480;
+   isa = PBXBuildFile;
+  };
+  X0002482 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreKiKuFollowedBySa_ja_JP.cxx";
+  };
+  X0002483 = {
+   fileRef = X0002482;
+   isa = PBXBuildFile;
+  };
+  X0002484 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreMiddleDot_ja_JP.cxx";
+  };
+  X0002485 = {
+   fileRef = X0002484;
+   isa = PBXBuildFile;
+  };
+  X0002486 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreMinusSign_ja_JP.cxx";
+  };
+  X0002487 = {
+   fileRef = X0002486;
+   isa = PBXBuildFile;
+  };
+  X0002488 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreProlongedSoundMark_ja_JP.cxx";
+  };
+  X0002489 = {
+   fileRef = X0002488;
+   isa = PBXBuildFile;
+  };
+  X000248a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreSeparator_ja_JP.cxx";
+  };
+  X000248b = {
+   fileRef = X000248a;
+   isa = PBXBuildFile;
+  };
+  X000248c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreSeZe_ja_JP.cxx";
+  };
+  X000248d = {
+   fileRef = X000248c;
+   isa = PBXBuildFile;
+  };
+  X000248e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreSize_ja_JP.cxx";
+  };
+  X000248f = {
+   fileRef = X000248e;
+   isa = PBXBuildFile;
+  };
+  X0002490 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreSpace_ja_JP.cxx";
+  };
+  X0002491 = {
+   fileRef = X0002490;
+   isa = PBXBuildFile;
+  };
+  X0002492 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreTiJi_ja_JP.cxx";
+  };
+  X0002493 = {
+   fileRef = X0002492;
+   isa = PBXBuildFile;
+  };
+  X0002494 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreTraditionalKana_ja_JP.cxx";
+  };
+  X0002495 = {
+   fileRef = X0002494;
+   isa = PBXBuildFile;
+  };
+  X0002496 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreTraditionalKanji_ja_JP.cxx";
+  };
+  X0002497 = {
+   fileRef = X0002496;
+   isa = PBXBuildFile;
+  };
+  X0002498 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreWidth.cxx";
+  };
+  X0002499 = {
+   fileRef = X0002498;
+   isa = PBXBuildFile;
+  };
+  X000249a = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreZiZu_ja_JP.cxx";
+  };
+  X000249b = {
+   fileRef = X000249a;
+   isa = PBXBuildFile;
+  };
+  X000249c = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreDiacritics_CTL.cxx";
+  };
+  X000249d = {
+   fileRef = X000249c;
+   isa = PBXBuildFile;
+  };
+  X000249e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/ignoreKashida_CTL.cxx";
+  };
+  X000249f = {
+   fileRef = X000249e;
+   isa = PBXBuildFile;
+  };
+  X00024a0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/katakanaToHiragana.cxx";
+  };
+  X00024a1 = {
+   fileRef = X00024a0;
+   isa = PBXBuildFile;
+  };
+  X00024a2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/largeToSmall_ja_JP.cxx";
+  };
+  X00024a3 = {
+   fileRef = X00024a2;
+   isa = PBXBuildFile;
+  };
+  X00024a4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/numtochar.cxx";
+  };
+  X00024a5 = {
+   fileRef = X00024a4;
+   isa = PBXBuildFile;
+  };
+  X00024a6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/numtotext_cjk.cxx";
+  };
+  X00024a7 = {
+   fileRef = X00024a6;
+   isa = PBXBuildFile;
+  };
+  X00024a8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/smallToLarge_ja_JP.cxx";
+  };
+  X00024a9 = {
+   fileRef = X00024a8;
+   isa = PBXBuildFile;
+  };
+  X00024aa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/texttonum.cxx";
+  };
+  X00024ab = {
+   fileRef = X00024aa;
+   isa = PBXBuildFile;
+  };
+  X00024ac = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/textToPronounce_zh.cxx";
+  };
+  X00024ad = {
+   fileRef = X00024ac;
+   isa = PBXBuildFile;
+  };
+  X00024ae = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/transliteration_body.cxx";
+  };
+  X00024af = {
+   fileRef = X00024ae;
+   isa = PBXBuildFile;
+  };
+  X00024b0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/transliteration_caseignore.cxx";
+  };
+  X00024b1 = {
+   fileRef = X00024b0;
+   isa = PBXBuildFile;
+  };
+  X00024b2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/transliteration_commonclass.cxx";
+  };
+  X00024b3 = {
+   fileRef = X00024b2;
+   isa = PBXBuildFile;
+  };
+  X00024b4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/transliteration_Ignore.cxx";
+  };
+  X00024b5 = {
+   fileRef = X00024b4;
+   isa = PBXBuildFile;
+  };
+  X00024b6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/transliterationImpl.cxx";
+  };
+  X00024b7 = {
+   fileRef = X00024b6;
+   isa = PBXBuildFile;
+  };
+  X00024b8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/transliteration_Numeric.cxx";
+  };
+  X00024b9 = {
+   fileRef = X00024b8;
+   isa = PBXBuildFile;
+  };
+  X00024ba = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "i18npool/source/transliteration/transliteration_OneToOne.cxx";
+  };
+  X00024bb = {
+   fileRef = X00024ba;
+   isa = PBXBuildFile;
+  };
+  X00024bc = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002423;
+}

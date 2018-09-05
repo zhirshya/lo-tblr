@@ -1,0 +1,151 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0004ceb = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0004d07;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0004cec;
+   productRefGroup = X0004cef;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0004cf1;
+  };
+  X0004cec = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0004ced = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0004cf0 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0004cf1 = {
+   buildConfigurationList = X0004d08;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0004cee;
+   productType = ;
+  };
+  X0004cf2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/cow_wrapper_clients.cxx";
+  };
+  X0004cf3 = {
+   fileRef = X0004cf2;
+   isa = PBXBuildFile;
+  };
+  X0004cf4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/test-array_view.cxx";
+  };
+  X0004cf5 = {
+   fileRef = X0004cf4;
+   isa = PBXBuildFile;
+  };
+  X0004cf6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/test-cow_wrapper.cxx";
+  };
+  X0004cf7 = {
+   fileRef = X0004cf6;
+   isa = PBXBuildFile;
+  };
+  X0004cf8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/test-enumarray.cxx";
+  };
+  X0004cf9 = {
+   fileRef = X0004cf8;
+   isa = PBXBuildFile;
+  };
+  X0004cfa = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/test-lru_map.cxx";
+  };
+  X0004cfb = {
+   fileRef = X0004cfa;
+   isa = PBXBuildFile;
+  };
+  X0004cfc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/test-safeint.cxx";
+  };
+  X0004cfd = {
+   fileRef = X0004cfc;
+   isa = PBXBuildFile;
+  };
+  X0004cfe = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/test-sorted_vector.cxx";
+  };
+  X0004cff = {
+   fileRef = X0004cfe;
+   isa = PBXBuildFile;
+  };
+  X0004d00 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/test-string_view.cxx";
+  };
+  X0004d01 = {
+   fileRef = X0004d00;
+   isa = PBXBuildFile;
+  };
+  X0004d02 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/test-typed_flags.cxx";
+  };
+  X0004d03 = {
+   fileRef = X0004d02;
+   isa = PBXBuildFile;
+  };
+  X0004d04 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "o3tl/qa/test-vector_pool.cxx";
+  };
+  X0004d05 = {
+   fileRef = X0004d04;
+   isa = PBXBuildFile;
+  };
+  X0004d06 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0004ceb;
+}

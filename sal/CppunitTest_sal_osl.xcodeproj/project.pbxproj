@@ -1,0 +1,169 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0002bcb = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0002beb;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0002bcc;
+   productRefGroup = X0002bcf;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0002bd1;
+  };
+  X0002bcc = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0002bcd = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0002bd0 = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0002bd1 = {
+   buildConfigurationList = X0002bec;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0002bce;
+   productType = ;
+  };
+  X0002bd2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/condition/osl_Condition.cxx";
+  };
+  X0002bd3 = {
+   fileRef = X0002bd2;
+   isa = PBXBuildFile;
+  };
+  X0002bd4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/file/osl_File.cxx";
+  };
+  X0002bd5 = {
+   fileRef = X0002bd4;
+   isa = PBXBuildFile;
+  };
+  X0002bd6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/file/osl_old_test_file.cxx";
+  };
+  X0002bd7 = {
+   fileRef = X0002bd6;
+   isa = PBXBuildFile;
+  };
+  X0002bd8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/file/test_cpy_wrt_file.cxx";
+  };
+  X0002bd9 = {
+   fileRef = X0002bd8;
+   isa = PBXBuildFile;
+  };
+  X0002bda = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/getsystempathfromfileurl/test-getsystempathfromfileurl.cxx";
+  };
+  X0002bdb = {
+   fileRef = X0002bda;
+   isa = PBXBuildFile;
+  };
+  X0002bdc = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/module/osl_Module.cxx";
+  };
+  X0002bdd = {
+   fileRef = X0002bdc;
+   isa = PBXBuildFile;
+  };
+  X0002bde = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/mutex/osl_Mutex.cxx";
+  };
+  X0002bdf = {
+   fileRef = X0002bde;
+   isa = PBXBuildFile;
+  };
+  X0002be0 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/pipe/osl_Pipe.cxx";
+  };
+  X0002be1 = {
+   fileRef = X0002be0;
+   isa = PBXBuildFile;
+  };
+  X0002be2 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/process/osl_process.cxx";
+  };
+  X0002be3 = {
+   fileRef = X0002be2;
+   isa = PBXBuildFile;
+  };
+  X0002be4 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/process/osl_Thread.cxx";
+  };
+  X0002be5 = {
+   fileRef = X0002be4;
+   isa = PBXBuildFile;
+  };
+  X0002be6 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/profile/osl_old_testprofile.cxx";
+  };
+  X0002be7 = {
+   fileRef = X0002be6;
+   isa = PBXBuildFile;
+  };
+  X0002be8 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "sal/qa/osl/setthreadname/test-setthreadname.cxx";
+  };
+  X0002be9 = {
+   fileRef = X0002be8;
+   isa = PBXBuildFile;
+  };
+  X0002bea = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0002bcb;
+}

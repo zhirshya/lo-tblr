@@ -1,0 +1,79 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {
+ };
+ objectVersion = 46;
+ objects = {
+  X0003b27 = {
+   attributes = {
+    LastUpgradeCheck = 0500;
+    ORGANIZATIONNAME = LibreOffice;
+   };
+   buildConfigurationList = X0003b33;
+   compatibilityVersion = "Xcode 3.2";
+   hasScannedForEncodings = 0;
+   isa = PBXProject;
+   knownRegions = ;
+   mainGroup = X0003b28;
+   productRefGroup = X0003b2b;
+   projectDirPath = ;
+   projectRoot = ;
+   targets = X0003b2d;
+  };
+  X0003b28 = {
+   children = ;
+   isa = PBXGroup;
+   sourceTree = "<group>";
+  };
+  X0003b29 = {
+   children = {
+   };
+   isa = PBXGroup;
+   path = ;
+   sourceTree = "<group>";
+  };
+  X0003b2c = {
+   children = ;
+   isa = PBXGroup;
+   name = Products;
+   sourceTree = "<group>";
+  };
+  X0003b2d = {
+   buildConfigurationList = X0003b34;
+   buildPhases = ;
+   buildRules = ;
+   dependencies = ;
+   isa = PBXNativeTarget;
+   name = ;
+   productName = ;
+   productReference = X0003b2a;
+   productType = ;
+  };
+  X0003b2e = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "svtools/qa/unit/testHtmlReader.cxx";
+  };
+  X0003b2f = {
+   fileRef = X0003b2e;
+   isa = PBXBuildFile;
+  };
+  X0003b30 = {
+   isa = PBXFileReference;
+   lastKnownFileType = "sourcecode.cpp.cpp";
+   path = "svtools/qa/unit/testHtmlWriter.cxx";
+  };
+  X0003b31 = {
+   fileRef = X0003b30;
+   isa = PBXBuildFile;
+  };
+  X0003b32 = {
+   buildActionMask = 2147483647;
+   files = ;
+   isa = PBXSourcesBuildPhase;
+   runOnlyForDeploymentPostprocessing = 0;
+  };
+ };
+ rootObject = X0003b27;
+}
