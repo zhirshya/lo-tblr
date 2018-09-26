@@ -2740,8 +2740,11 @@ if test $_os = Darwin -o $_os = iOS; then
     10.13)
         MACOSX_SDK_VERSION=101300
         ;;
+    10.14)
+        MACOSX_SDK_VERSION=101400
+    ;;
     *)
-        AC_MSG_ERROR([with-macosx-sdk $with_macosx_sdk is not a supported value, supported values are 10.9--13])
+        AC_MSG_ERROR([with-macosx-sdk $with_macosx_sdk is not a supported value, supported values are 10.9--14])
         ;;
     esac
 
@@ -2817,8 +2820,11 @@ if test $_os = Darwin -o $_os = iOS; then
     10.13)
         MAC_OS_X_VERSION_MAX_ALLOWED="101300"
         ;;
+    10.14)
+        MAC_OS_X_VERSION_MAX_ALLOWED="101400"
+        ;;
     *)
-        AC_MSG_ERROR([with-macosx-version-max-allowed $with_macosx_version_max_allowed is not a supported value, supported values are 10.9--13])
+        AC_MSG_ERROR([with-macosx-version-max-allowed $with_macosx_version_max_allowed is not a supported value, supported values are 10.9--14])
         ;;
     esac
 
